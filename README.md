@@ -1,0 +1,4 @@
+veredus
+=======
+
+Veredus Theme
