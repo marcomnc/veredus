@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Crea gli head necessari per facebook
+ * 
+ * 
+ */
+if (!is_null(Mage::registry('current_product')->getId()) && $this->isEnabled()):
+    $product = Mage::getModel('catalog/product')->Load(Mage::registry('current_product')->getId());
+    $imgUrl = '';
+    $mediaGallery = $product->getData();
+
+    if (isset ($mediaGallery['fb_like_image']) && $mediaGallery['fb_like_image'] != 'no_selection'):
+        $imgUrl = Mage::helper('catalog/image')->init($product, 'fb_like_image', $product->getColorImage())->resize(490).'';
+    endif;    
+    if ($imgUrl == "" && isset($mediaGallery['image'])):
+        $imgUrl = Mage::helper('catalog/image')->init($product, 'image', $product->getColorImage())->resize(490).'';
+    endif;
+    if ($imgUrl != ""):    
+?>
+<meta property="og:image" content="<?php echo $imgUrl; ?>"/> 
+<?php
+  $title = Mage::app()->getStore()->getName()." - ".$product->getShortDescription();
+  $maxtitlelen = 100;
+  if(strlen($title)>$maxtitlelen){
+    $title = substr($title, 0, $maxtitlelen-3)."...";
+  }
+  $title = htmlentities($title,ENT_COMPAT | ENT_HTML401 | ENT_SUBSTITUTE , "UTF-8");
+?>
+<meta property="og:title" content="<?php echo $title ?>"/>
+
+<?php 
+    endif;
+endif;
+?>
+<meta property="og:type" content="product" />
+<meta property="og:url" content="<?php echo $this->helper('core/url')->getCurrentUrl(); ?>" />
+<meta property="og:site_name" content=" <?php echo  Mage::getStoreConfig('general/store_information/name') ?> " />
+<meta property="fb:app_id" content="<?php echo Mage::Helper('mcsocial/fb')->getAppId();?>" />
+

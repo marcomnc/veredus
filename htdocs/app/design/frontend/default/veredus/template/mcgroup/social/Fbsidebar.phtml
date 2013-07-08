@@ -1,0 +1,16 @@
+<div class="social-fbSideBar">
+<?php
+    $site = $this->getFBSiteUrl();
+    if ($this->isEnabled())://Social Plugin enabled
+    ?>
+    <iframe src="http://www.facebook.com/plugins/like.php?app_id=149097005161752&amp;href=<?php echo $this->getFBSiteUrl();?>&amp;send=false&amp;layout=standard&amp;width=235&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" 
+            scrolling="no" 
+            frameborder="0" 
+            style="border:none; overflow:hidden; width:220px; height:110px;" 
+            allowTransparency="true"></iframe>
+    <?php
+    endif;
+        
+
+?>
+</div>

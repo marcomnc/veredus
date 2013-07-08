@@ -1,0 +1,22 @@
+<div id="privacy">
+   <!-- <input id="privacy-input" type="checkbox" class="required-entry" value="1"
+           name="privacy_agreement"/>
+    <a id="privacy-href" href="<?php echo $this->getUrl('mpscontacts/contacts/privacy/')?>"> 
+        <?php echo $this->__("Accetto i termini e le condizioni del servizio");?></a>-->
+    <script type="text/javascript">
+    //<![CDATA[        
+        $j(document).ready(function() {
+            $j("#privacy-href").fancybox({
+                'autoScale' : true,
+                'transitionIn' : 'elastic',
+                'transitionOut' : 'fade',
+                'type' : 'ajax',
+                'padding': 10,
+                onClosed: function (links, index ) {
+                    $j("#privacy-input").attr('checked', true);
+                }
+            });            
+        });
+    //]]>
+    </script>                
+</div>

@@ -1,0 +1,17 @@
+<?php //@@ToDo Sistemare ?>
+<div class="contenitore" id="shippingDestination">
+    <div id="testoShipping">
+        <?php echo $this->__('Select your shipping destination.');?>
+    <ul>
+        <?php $_destinationList = Mage::GetModel('mpspricezone/pricezone')
+                                        ->getCollection()
+                                        ->addStoreFilter();                                        
+              foreach ($_destinationList as $_destination): ?>
+                  <li><a href="<?php echo $this->getUrl('mpspricezone/pricezone/set/',
+                                                        array ('zone'   => $_destination->getId(),
+                                                               'acturl' => $this->getCurrenturl()));?>">
+                          <?php echo $this->__($_destination->getDescription()); ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+    </div>
+</div>

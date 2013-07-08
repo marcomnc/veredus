@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- Autore Marco Mancinelli
+     Permette di impostare le varie voci relative ai social.
+-->
+<layout version="0.1.0">
+    <!-- Default su tutte le pagine -->
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/social.js</name></action>
+            <block type="mcsocial/fbabstract" name="fbconnect.open.graph.home" as="fbconnect_open_graph_home" translate="label" template="mcgroup/social/fbhead-home.phtml"/> 
+        </reference>
+    </default>
+    
+    <customer_logged_out>
+        <reference name="customer_ajax_login">
+            <block type="mcsocial/fbconnect" 
+                   name="fb.mini.fbconnect" 
+                   as="fb-mini-connect" 
+                   translate="label" 
+                   template="mcgroup/social/mini.connect.phtml"/> 
+        </reference>               
+        <action method="addItem"><type>skin_js</type><name>js/jItalianSet.js</name></action>
+    </customer_logged_out>
+    
+    <!-- Pagina login utente -->
+    <customer_account_login translate="label">        
+        <reference name="after_body_start">
+<!--            <remove name="mini.fbconnect"/>-->
+        </reference>
+        <!-- Il blocco viene creato da codice -->
+    </customer_account_login>
+
+    <!-- Pagina di check out -->
+    <checkout_onepage_index translate="label">
+        <reference name="header">
+<!--            <remove name="mini.fbconnect"/>-->
+        </reference>
+        <!-- Il blocco viene creato da codice -->
+    </checkout_onepage_index>
+
+    <!-- Pagine del prodotto aggiungo l'open graph nell'head-->
+    <catalog_product_view translate="label">
+        <reference name="head">
+            <remove name="fbconnect.open.graph.home"/>
+            <block type="mcsocial/fbabstract" name="fbconnect.open.graph.catalog" as="fbconnect_open_graph_cataog" translate="label" template="mcgroup/social/fbhead-catalog.phtml"/>
+        </reference>
+    </catalog_product_view>
+</layout>

@@ -1,0 +1,43 @@
+<?php $categories = $this->getCollection();
+?>
+<div class="category-listing-head">
+ <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('category_listing_head')->toHtml() ?> 
+</div>
+<?php echo $this->getToolbarHtml() ?>
+<!--<h2><?php echo $this->__('Browse Products') ?> </h2>-->
+<div class="subcat-listing">
+<?php
+  $index = 0; 
+  foreach ($categories as $_category){ 
+    if($_category->getIsActive()){
+      $cur_category=Mage::getModel('catalog/category')->load($_category->getId());
+      $layer = Mage::getSingleton('catalog/layer');
+      $layer->setCurrentCategory($cur_category);
+      $_imageUrl=Mage::getBaseUrl('media').'catalog/category/'.$this->getCurrentCategory()->getThumbnail();
+      if($index%3==0){
+        echo "<ul class=\"subcat-products\">";
+      }
+ ?>
+      <li>
+        <?php echo $this->__('is'); ?>
+        <span class="titoloGrassetto"><?php echo $this->htmlEscape($_category->getName()) ?></span>
+        <a class="sfondoSet" href="<?php echo $this->getCategoryUrl($_category) ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>">
+          <img src="<?php echo $_imageUrl ?>"  alt="<?php echo $this->htmlEscape($_category->getName()) ?>" />
+        </a>
+        <span class="sottotitoloSet">
+          <a href="<?php echo $this->getCategoryUrl($_category) ?>"><?php echo $this->__('READ&SHOP'); ?></a>
+        </span>
+        <?php if($_description=$this->getCurrentCategory()->getDescription()){?>
+          <p class="category-description">
+          </p>
+        <?php } //if?>
+      </li>
+     <?php 
+          if($index%3==2 || $index == count($_categories)-1){
+            echo "</ul>";
+            echo "<hr class=\"spaziatoreLungo spaziatoreLungoBrands\">";
+          }
+          $index = $index+1;
+           } //if?>
+<?php } //foreach?>
+</div>

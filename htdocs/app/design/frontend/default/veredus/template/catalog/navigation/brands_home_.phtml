@@ -1,0 +1,85 @@
+<?php	$_maincategorylisting=$this->getCurrentCategory();
+$categoryIds = $this->getData("category_ids");
+$categoryIds = explode(",", $categoryIds);
+$brandsCategoryId = $this->getData("brands_category_id");
+$brandsCategory = Mage::getModel('catalog/category')->load($brandsCategoryId);
+?>
+<!-- DEVO DIVIDERE LE DUE PARTI COMPOSTE DA 4 ELEMENTI ............ -->
+<div class="subcat-listing home-category-list">
+<?php
+$index = 0;
+$cont_display = 0 ;
+foreach ($categoryIds as $categoryId)
+{
+$_category = Mage::getModel('catalog/category')->load($categoryId);
+if($_category->getIsActive())
+{
+
+// Modifica Emanuele Bittante per far vedere fino a 7 Elementi...
+// attualmente non serve ....
+$store_online = Mage::getStoreConfig('general/locale/code', Mage::app()->getStore()->getId()); // mi ricavo il store che sto utilizzando .. ES: en_GB
+$home_url = Mage::helper('core/url')->getHomeUrl();
+$link_contattaci = $home_url .'contacts/' ; // questo per il form contatti ....
+$link_contattaci = 'mailto:buyers@veredus.it?Subject=Contatto nuovo fornitore'; // questo per aprire una mail
+// **************************************************************************************
+$cont_display++;
+
+$cur_category=Mage::getModel('catalog/category')->load($_category->getId());
+$layer = Mage::getSingleton('catalog/layer');
+$layer->setCurrentCategory($cur_category);
+$_imageUrl=Mage::getBaseUrl('media').'catalog/category/'.$this->getCurrentCategory()->getThumbnail();
+$prodCollection = Mage::getResourceModel('catalog/product_collection')->addCategoryFilter($_category);
+Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($prodCollection);
+Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($prodCollection);
+$hasVisibleProduct = ($prodCollection->count()>0);
+
+if($index%4==0){
+	echo "<ul class=\"subcat-products\">";
+}
+?>
+
+	<?php if($cont_display <= 4) {?>
+	  <li>
+
+
+		<span class="titoloRegular"><?php echo 'IS '.$this->htmlEscape($_category->getName()) ?></span>
+		<a class="sfondoSet" href="<?php echo $this->getCategoryUrl($_category) ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>">
+
+		<img src="<?php echo $_imageUrl ?>"  alt="<?php echo $this->htmlEscape($_category->getName()) ?>" />
+        </a>
+
+
+      </li>
+     <?php
+	}
+ 	if($cont_display > 4) {?>
+	  <li  class="subcat-products_stretto" >
+
+		 <a class="sfondoSet_nocornice" href="<?php echo $this->getCategoryUrl($_category) ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>">
+
+		<img src="<?php echo $_imageUrl ?>"  alt="<?php echo $this->htmlEscape($_category->getName()) ?>" />
+        </a>
+
+
+      </li>
+     <?php
+}
+if($cont_display == 7)
+{
+	// per il timbro postale mi sono creato uno static block e lo visualizzo in ottava posizione..quando arrivo alla settima visualizzo anche l'ottava ...
+	echo $this->getLayout()->createBlock('cms/block')->setBlockId('timbropostalehome')->toHtml();
+	echo "</ul>";
+	echo "<hr class=\"spaziatoreLungo\">";
+}
+
+if($index%4==3 || $index == count($_categories)-1){
+	echo "</ul>";
+	echo "<hr class=\"spaziatoreLungo\">";
+}
+$index = $index+1;
+} //if?>
+<?php } //foreach?>
+     <!-- <div id="all-set-title"><a href="<?php echo $this->getCategoryUrl($brandsCategory) ?>"><?php echo $this->__('See all brands')?></a></div>
+</div>
+<?php $layer->setCurrentCategory($_maincategorylisting); ?>-->
+

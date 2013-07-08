@@ -1,0 +1,206 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+$_product    = $this->getProduct();
+$_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
+$_config = Mage::helper('core')->jsonDecode($this->getJsonConfig());
+$_children=array();
+foreach ($_config['attributes'] as $k=>$v):
+    $_add = false;
+    foreach ($_config['attributes'] as $k1=>$v1):
+        if ($k == $k1):
+            $_add = true;
+        endif;
+        if ($_add):
+            $_children[$k][] = 'attribute'.$k1;
+        endif;    
+    endforeach;        
+endforeach;
+$_isSize = "";
+?>
+<?php if ($_product->isSaleable() && count($_attributes)):?>
+    <dl>
+    <?php foreach($_attributes as $_attribute): ?>
+        
+<?php 
+    $_curAtt = Mage::getModel('catalog/resource_eav_attribute')->load($_attribute->getAttributeId());
+    $_typeLayout = "";
+    if (isset($_config['attributes'][$_curAtt->getId()])):
+        $_attrConfig = $_config['attributes'][$_curAtt->getId()];
+        foreach (unserialize(Mage::getStoreConfig('veredus/settings/attribute_type_layout')) as $_att):
+            if ($_att['attribute'] == $_curAtt->getAttributeCode()):
+                $_typeLayout = $_att['type'];
+                break;
+            endif;
+        endforeach;    
+    endif;
+?>  
+
+            <dt class="<?php if ($_typeLayout != ""): echo 'dt-'.$_typeLayout; endif; ?>"><label class="required"><!--<em>*</em>--><?php echo $_attribute->getLabel() ?></label></dt>
+            <dd class="<?php if ($_attribute->decoratedIsLast){?>last<?php } ?> <?php if ($_typeLayout != ""): echo 'dd-'.$_typeLayout; endif; ?>">
+<?php if ($_typeLayout != ""): ?>
+            <div class="attribute-list 
+            	<?php if (strtolower($_typeLayout) == "color"): echo "attribute-color"; elseif (strtolower($_typeLayout) == "size"): echo "attribute-taglia"; endif;?> 
+            	attribute-<?php echo $_attrConfig['code'];?>">
+                <ul class="custom-layout" name="attribute<?php echo $_attrConfig['id'];?>" rel="<?php echo str_replace('"', '\\\'',Mage::helper('core')->jsonEncode($_children[$_attrConfig['id']]));?>">
+<?php $_first=true;
+       foreach ($_attrConfig['options'] as $_attOpt): ?>
+                <li <?php if ($_first):?> class="first" <?php endif; ?> rel="<?php echo $_attOpt['id'];?>" >
+                    <div class="attribute-switch 
+                    <?php if (strtolower($_typeLayout) == "color"): echo "color-switch"; elseif (strtolower($_typeLayout) == "size"): echo "taglia-switch"; endif;?>
+                    	<?php echo $_attrConfig['code'];?>-switch">
+<?php
+    if (strtolower($_typeLayout) == "color"):
+        $_colorImmage = "";
+        $_attributeImmageColor = Mage::getStoreConfig('veredus/settings/attribute_image_color')."";
+        if ($_attributeImmageColor != ""):
+            foreach ($_attOpt['products'] as $_pSimpleId):
+                $_pSimple = Mage::getModel('catalog/product')->Load($_pSimpleId);        
+                if ($_pSimple->getData($_attributeImmageColor)."" != "" && $_pSimple->getData($_attributeImmageColor)."" != "no_selection"):
+                    $_colorImmage = Mage::helper('catalog/image')->init($_pSimple, $_attributeImmageColor, $_pSimple->getData($_attributeImmageColor))->resize(19).'';
+                endif;
+            endforeach;
+        endif;
+    endif;
+    if (strtolower($_typeLayout) == "size"):
+        $_isSize = $_attrConfig['id'];
+    endif;
+?>
+<?php if (strtolower($_typeLayout) == "size"): ?>
+                        <div>
+                            <?php echo $_attOpt["label"];?>
+                        </div>                       
+<?php endif;?>
+<?php if (strtolower($_typeLayout) == "color"): 
+        if ($_colorImmage != ""):?>
+                        <div>
+                        <img class="color-image" 
+                             src="<?php echo $_colorImmage?>"
+                             title="<?php echo $_attOpt['label'];?>"/>
+                        </div>
+<?php  else: 
+            $_attrOptSelect = Mage::getModel('eav/entity_attribute_option')->getCollection();
+            $_attrOptSelect->getSelect()
+                   ->join(array('_opts' => Mage::getSingleton('core/resource')->getTableName('eav_attribute_option_value')),
+                                '_opts.option_id = main_table.option_id')
+                   ->where('_opts.option_id = ' . $_attOpt['id'])
+                   ->where('_opts.store_id = 0');
+            foreach ($_attrOptSelect as $_aos):              
+                if (substr($_aos['value'],0,1) == '#'):
+                    $_colorImmage = $_aos['value'];
+                endif;
+            endforeach;
+?>
+                        <div style="background-color: <?php echo $_colorImmage;?>">     
+                            &nbsp;
+                        </div>
+
+<?php   endif; 
+        endif;?>
+                    </div>                    
+                </li>
+<?php   $_first = false; ?>     
+<?php endforeach;?>                     
+                </ul>
+            </div>
+    
+<?php endif; ?>
+			<?php if ($_typeLayout == ""):?>
+            <div class="input-box styleOptions">
+        	<?php endif; ?>
+                <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select"
+                	<?php if ($_typeLayout != ''):?> style="visibility:hidden; width: 0px; height: 0px"<?php endif?>>
+                    <option><?php echo $this->__('Choose an Option...') ?></option>
+                  </select>
+          	<?php if ($_typeLayout == ""):?>
+            </div>
+            <?php endif; ?>
+
+<?php $_pageId = Mage::getStoreConfig('veredus/settings/cms-block-sizeguide');
+      if (strtolower($_typeLayout) == "size" && !is_null($_pageId) && $_pageId != "" ): ?>
+            <div class="clearer"></div>
+            <div class="info" style="margin: 5px 0">
+                <a id="sizeguide" href="<?php echo Mage::Helper('cms/page')->getPageUrl($_pageId);?>">
+                        <?php echo $this->__("Size Guide");?>
+                </a>
+            </div>
+<?php endif; ?>                 
+
+        </dd>        
+    <?php endforeach; ?>
+    </dl>
+    <script type="text/javascript">
+        var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
+        var selectedAssocProducts = {}; // Added
+        
+        jQuery(document).ready(function () {
+
+                jQuery('.custom-layout li').each (function() {
+                jQuery(this).bind('click', function() {
+                  if(!jQuery(this).hasClass("enabled")){
+                    return;
+                  }
+                  var ul=jQuery(this).parent("ul").attr("name");
+                  var ch=jQuery.parseJSON(jQuery(this).parent("ul").attr('rel').replace(/\\\'/g, "\""));
+                  if (jQuery("#"+ul+" option").length>1) {                        
+                      jQuery('#'+ul).val(jQuery(this).attr("rel") );
+                      //Prototype Call
+                      spConfig.configureElement($(ul));                        
+                      ch.each(function(idx) {
+                          var ix=idx;
+                          jQuery('[name="'+ix+'"] li').removeClass("selected");
+                          jQuery('[name="'+ix+'"] li').removeClass("enabled");
+                          //Azzero eventuali avvisi di selezione
+                          jQuery('#advice-required-entry-'+idx).remove();
+                          jQuery('#'+idx+' option').each(function() {
+                              var id=jQuery(this).attr('value');
+                              if (id!="") {
+                                  jQuery('[name="'+ix+'"] [rel="'+id+'"]').addClass("enabled");
+                              }
+                          })
+                      });
+                      jQuery(this).addClass("selected");
+                  }                    
+                  return 0;
+                });
+                  
+                  var element = jQuery(".super-attribute-select").get(0);
+                  var isEnabled = true;
+                  spConfig.updateCustomComponent(element, isEnabled);
+            });
+            
+            
+<?php if ($_isSize): 
+        //Sposto la quantità?>
+           var diff=jQuery('.qty-to-cart').offset().top-jQuery('.dt-size').offset().top;
+           jQuery('.qty-to-cart').css({"float":"right", "margin-top": "-"+diff+"px", "margin-right":"160px", "padding":"0px"});
+            
+
+<?php endif;?>
+        })        
+    </script>
+<?php endif;?>

@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Crea gli head necessari per facebook
+ * 
+ * 
+ */
+?>
+
+<meta property="og:title" content="<?php echo $this->getLogoAlt()?>" />
+<meta property="og:type" content="product" />
+<meta property="og:url" content="<?php echo $this->getUrl(); ?>" />
+<meta property="og:image" content="<?php echo $this->getLogoSrc() ?>" />
+<meta property="og:site_name" content="<?php echo $this->getLogoAlt()?>" />
+<meta property="fb:app_id" content="<?php echo Mage::Helper('mcsocial/fb')->getAppId();?>" />
+

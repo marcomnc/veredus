@@ -30,7 +30,16 @@ htdocs/.htaccess
 htdocs/index.php.sample
 htdocs/install.php
 htdocs/js/
-htdocs/lib/
+htdocs/lib/3Dsecure/
+htdocs/lib/flex/
+htdocs/lib/googlecheckout/
+htdocs/lib/LinLibertineFont/
+htdocs/lib/Mage/
+htdocs/lib/PEAR/
+htdocs/lib/phpseclib/
+htdocs/lib/Varien/
+htdocs/lib/Zend
+htdocs/lib/.htaccess
 htdocs/LICENSE_AFL.txt
 htdocs/LICENSE.html
 htdocs/LICENSE.txt

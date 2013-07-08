@@ -1,0 +1,83 @@
+<config>
+    <modules>
+        <Veredus_Social>
+            <version>0.1.0</version>
+        </Veredus_Social>
+    </modules>
+    <global>
+        <blocks>
+            <vsocial>
+                    <class>Veredus_Social_Block</class>
+            </vsocial>
+        </blocks>
+        <helpers>
+            <vsocial>
+                <class>Veredus_Social_Helper</class>
+            </vsocial>
+        </helpers>
+        <!-- ... -->
+        <models>
+            <vsocial>
+                <class>Veredus_Social_Model</class>
+            </vsocial>
+        </models> 
+        <!-- ... -->
+        <resources>
+        </resources>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <vsocial>
+                    <file>vsocial.xml</file>
+                </vsocial>
+            </updates>
+        </layout>        
+    </frontend>
+
+    <admin>
+        <routers>
+            <vsocial>
+                <use>admin</use>
+                <args>
+                    <module>Veredus_Social</module>
+                    <frontName>vsocial</frontName>
+                </args>
+            </vsocial>
+        </routers>
+    </admin>
+
+    
+    <adminhtml>           
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <vsocial>
+                                            <title>Veredus - Social Plugin</title>
+                                        </vsocial>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <vsocial>
+            <settings>
+                <enabled>0</enabled>
+                <refernecedWeb></refernecedWeb>
+            </settings>
+        </vsocial>
+    </default>
+    
+</config>
+

@@ -1,0 +1,112 @@
+/* 
+    Document   : about-us
+    Created on : 3-set-2012, 10.16.41
+    Author     : alessandro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#about-us {
+  width: 100%;
+  text-align: center;
+}
+
+#about-us .spaziatoreLungo {
+  width: 975px;
+  height: 5px;
+}
+#about-us-header-image{
+  width: 975px;
+  margin-top: 10px;
+}
+
+#about-us-columns {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+
+#about-us-columns{
+  padding: 10px;
+}
+
+#about-us-title{
+  text-align: left;
+  font-family: "Oswald";
+  font-size: 25px;
+  font-weight: normal;
+  word-spacing: 2px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#about-us-col1,
+#about-us-col2 {
+  width: 455px;
+  padding: 5px;
+  text-align: left;
+  font-family: "Cardo";
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+#about-us-col1 {
+  float: left;
+}
+
+#about-us-col2 {
+  float: right;
+}
+
+#about-us-header,
+#about-us-footer {
+  overflow: auto;
+}
+
+#about-us-footer {
+  margin-bottom: 20px;
+  padding: 0px 15px 15px 15px;
+}
+
+.about-us-box {
+  font-family: "Cardo";
+  font-weight: normal;
+  font-size: 15px;
+  width: 235px;
+  text-align: left;
+  float: left;
+}
+
+.about-us-box-title {
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about-us-box-email {
+}
+
+.about-us-box-content {
+  font-size: 12px;
+}
+
+.post-stamp-container {
+  float: right;
+  margin-top: 20px;
+  vertical-align: middle;
+  width: 342px;
+}
+
+.post-stamp-text {
+  display: inline;
+  float: left;
+  font-size: 14px;
+  width: 140px;
+}
+
+.post-stamp-image {
+  display: inline;
+  float: right;
+  width: 199px;
+}

@@ -1,0 +1,94 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.2
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.s-w {
+	background-image:url(../images/nivo/layer.png);
+	height: 413px;
+	width: 991px
+}
+
+.theme-italianset .nivoSlider {
+	position:relative;	
+	margin:auto;
+	height: 415px;
+	width: 958px
+	
+}
+.theme-italianset .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+
+}
+.theme-italianset .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-italianset .nivo-controlNav {
+	text-align: center;
+	padding: 0;
+	margin-top: -20px;
+}
+.theme-italianset .nivo-controlNav a {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	background:url(../images/nivo/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin: 0;
+}
+.theme-italianset .nivo-controlNav a.active {
+	background-position:0 -20px;
+}
+
+.theme-italianset .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:34px;
+	background:url(../images/nivo/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-italianset a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-italianset a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-italianset .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-italianset .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-italianset .nivo-caption a:hover {
+    color:#fff;
+}
+
+.theme-italianset .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+.theme-italianset .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.theme-italianset .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}

@@ -1,0 +1,18 @@
+<?php
+/**
+ * Blocco per il pulsante facebook connect da inserire 
+ * Marco 16-08-20111
+ */
+?>
+<?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
+<div class="fbconnect"><div class="mini">
+        <div id="fb-root"></div>    
+	      <img id="fb-connect" src="<?php echo $this->getSkinUrl('images/social/fb_light.gif');?>">
+<script type="text/javascript">
+    //<![CDATA[        
+        var fbConn = new Social.FBConnect("<?php echo $this->getFBSetting("appId");?>", 'fb-connect', '<?php echo $this->getFBAjaxConnectUrl();?>');
+        fbConn.setLoaderUrl('<?php echo $this->getImageLoading()?>');
+    //]]>
+</script>
+</div></div>
+<?php endif;?>

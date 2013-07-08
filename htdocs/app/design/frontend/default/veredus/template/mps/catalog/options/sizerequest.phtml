@@ -1,0 +1,125 @@
+<form id="send_size_request_mail">
+<div class="size-request">
+    <table>         
+        <tr>            
+            <td colspan="2"> <strong>
+<?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>                          
+        <?php echo $this->__('Per essere avvisato/a quando la tua misura 
+                              è disponibile in stock, compila i campi qui sotto');?>
+<?php else:?>                     
+        <?php $customer = Mage::getModel('customer/customer')->load(Mage::getSingleton('customer/session')->getId());
+                echo $customer->getName(). ' ' . $this->__(' seleziona la tua taglia
+                                            per essere avvisato/a quando è disponibile in stock.');?>
+<?php endif; ?>                    
+            </strong></td>
+        </tr>
+        <tr>
+            <td class="left"><?php echo $this->__('Il tuo nome');?></td>
+            <td>
+                <input class="required-entry" name="rsName" type="text" id="rsName" 
+                <?php if (Mage::getSingleton('customer/session')->isLoggedIn()):
+                        echo 'value="'.$customer->getName().'"';
+                      endif;?>/>
+            </td>
+        </tr>
+        <tr>
+            <td class="left"><?php echo $this->__('Il tuo indirizzo Mail');?></td>
+            <td>
+                <input class="required-entry validate-email" name="rsEmailAddress" type="text" id="rsEmailAddress" 
+                <?php if (Mage::getSingleton('customer/session')->isLoggedIn()):
+                        echo 'value="'.$customer->getEmail().'"';
+                      endif;?>/>
+            </td>
+        </tr>      
+        <tr style="height: 65px">
+            <td align="left"><?php echo $this->__('La tua taglia');?></td>
+            <td>
+<div class="product-options">    
+    <ul class="size_series">
+        <?php foreach ($this->getAttributeOptionArray () as $k=>$v): ?>
+        <?php if (!is_null ($k) && $k != "") : ?>
+        <li attrib_value="<?php echo $k ?>" onclick="selectSizeRequestMail(<?php echo $k; ?>, <?php echo $v;?>)" class="">
+            <?php echo $v; ?>            
+        </li> 
+        <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<div class ="size-request-bottom">
+<input name="rsSize" type="hidden" id="rsSize" class="required-entry" />
+<input name="rsSizeDescr" type="hidden" id="rsSizeDescr"  />
+<input name="rsSize" type="hidden" id="rsColor" value="<?php $this->getColor();?>" />
+</div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                
+            <button style="float: left;" class="button" type="button" onclick="$j.fancybox.close()"><span><span>Annulla</span></span></button>
+            <span id="loader" style="display: none;width: 300px;margin: 0 0 0 30px;float: left;"><?php echo $this->__('Sto inoltrando la richiesta....'); ?></span>
+            <button id="btSend" class="button" style="float: right" type="button" onclick="sendSizeRequest();return false;"><span><span>Invia la Mail</span></span></button>            
+            </td>
+        </tr>
+    </table>
+<div id="requestok" style="display: none">
+    <span><?php echo $this->__('La tua richiesta è stata inoltrata tra pochi secondi potrai continuare con lo shopping');?></span>
+</div>
+<div id="requestfault" style="display: none">
+    <span><?php echo $this->__('Si è verificato un errore nella richiesta. Riprova o contatta la nostra assistenza per eventuali informazioni');?></span>
+</div>
+</div>    
+</form>
+      
+ <script type="text/javascript">
+     
+     $('rsName').focus();
+     
+    //<![CDATA[
+    function selectSizeRequestMail(vv, dd){
+        $$('.size_series .mysize').each(function(ee) { 
+           $(ee).removeClassName('mysize');
+        });
+        $$('[attrib_value="'+vv+'"]').each(function(ee) {
+            $(ee).addClassName('mysize');        
+        })        
+        $('rsSize').value=vv;
+        $('rsSizeDescr').value=dd;
+    }
+    
+    function sendSizeRequest (){
+        var validator = new Validation($('send_size_request_mail'));
+        if(validator && validator.validate()) {
+            var colorAttribute = '<?php echo Mage::getStoreConfig('contacts/contacts/color_attribute_code',Mage::app()->getStore()->getId());?>';
+            var productId=null
+            if (colorAttribute == '') colorAttribute = 'color';            
+            var colorparams='';
+            if (spConfig != 'undefined'){            
+                for (var attrib in spConfig.config.attributes) {
+                    if (spConfig.config.attributes[attrib].code==colorAttribute){
+                        colorparams=eval('spConfig.state['+spConfig.config.attributes[attrib].id+']');
+                    }
+                }
+                productId=spConfig.config.productId;
+            }
+            $('loader').setStyle ({display: 'block'});
+            new Ajax.Request('<?php echo MAge::getUrL('mpscatalog/sizerequest/sendrequest/');?>', {
+                method: 'post',
+                asynchronous: false, 
+                parameters:  {name: $('rsName').value, 
+                              email: $('rsEmailAddress').value, 
+                              size: $('rsSize').value, 
+                              color: colorparams, 
+                              productid: productId,
+                              sizedescription: $('rsSizeDescr').value},
+                onComplete: function(transport) {
+                    var result = transport.responseText.evalJSON()
+                    if (result[0] == 'ok') { $('loader').innerHTML = $('requestok').innerHTML;
+                    } else {$('loader').innerHTML = $('requestok').innerHTML;}
+                    setTimeout("$j.fancybox.close()", 2000);
+                }
+            });
+        }
+        return false;
+    }
+    //]]>
+</script>

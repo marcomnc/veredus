@@ -1,0 +1,28 @@
+<?php //@@ToDo Sistemare ?>
+<?php 
+        $_zoneDestination = Mage::getSingleton('customer/session')->getZoneDestination();        
+        if (!is_null($_zoneDestination)):?> 
+<div>
+        <?php echo $this->__('Your shipping destination ');?>
+        <a id="select-zone" href="<?php echo $this->getUrl('mpspricezone/pricezone/viewpopup', array('acturl' => Mage::helper('core/url')->urlEncode(Mage::helper('core/url')->getCurrentUrl()))) ;?>">
+        <?php echo $this->getSettingZoneDescription();?></a>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $j(document).ready(function() {
+        $j("#select-zone").fancybox({
+            'autoScale' : true,
+            'transitionIn' : 'elastic',
+            'transitionOut' : 'fade',
+            'type' : 'ajax',
+            'height' : '250px',
+            'whidth' : '670px',
+            'autoDimensions' : false
+        });
+    });
+    //]]>
+</script>
+
+    
+<?php   endif; ?>

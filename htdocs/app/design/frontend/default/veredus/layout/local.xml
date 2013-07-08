@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+
+<layout version="0.1.0">
+
+<!--
+Default layout, loads most of the pages
+-->
+
+    <default>
+        
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>                
+            </action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/jquery.fancybox-1.3.4.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery-1.7.2.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/json2.js</name><params/><if>lt IE 7</if></action><!-- for ie7-->
+            <action method="addItem"><type>skin_js</type><name>js/jquery.fancybox-1.3.4.pack.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.jclock.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.mousewheel.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jItalianSetAPI.js</name></action>
+        </reference>
+        <reference name="left">
+            <remove name="left.permanent.callout"/>
+            <remove name="catalog.compare.sidebar" />            
+        </reference> 
+        <reference name="top.menu">
+            <block type="catalog/navigation" name="catalog.topnav" template="catalog/navigation/top.phtml"/>
+        </reference>
+        
+    </default>
+    
+    <catalog_category_default>
+        <reference name="left">
+            <block type="catalog/navigation" name="catalog.catnav" after="-" template="catalog/navigation/left.phtml"/>
+            <block type="catalog/layer_view" name="catalog.leftnav" after="-" template="catalog/layer/view.phtml"/>
+        </reference>
+        <reference name="after-content">
+                <block type="reports/product_viewed" name="right.reports.product.viewed" template="reports/product_viewed.phtml" /> 
+        </reference>
+        <reference name="content">
+            
+        </reference>
+    </catalog_category_default>
+    
+    <catalog_product_view>
+         <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>            
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/jquery.minitabs.js</name></action>
+
+            <action method="addCss"><stylesheet>css/cloud-zoom.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/cloud-zoom.1.0.2.js</name></action>
+            
+            <block type="core/template" name="fbconnect.open.graph" as="fbconnect_open_graph" translate="label" template="mcgroup/social/fbhead.phtml"/>
+        </reference>        
+        <reference name="content">
+            <block type="catalog/product_list_related" name="catalog.product.related" as="product_related" template="catalog/product/list/related.phtml"/>			
+            <block type="reports/product_viewed" name="reports.product.viewed" as="reports_product_viewed" template="reports/product_viewed.phtml" /> 
+        </reference>
+        
+    </catalog_product_view>
+
+</layout>

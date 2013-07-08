@@ -1,0 +1,27 @@
+<pre>xxxxxxxxxxxx
+<?php echo "<br>sku -->" . $this->getSku();
+    $_product = Mage::getModel('catalog/product')->loadByAttribute('sku', $this->getSku());    
+?>
+<div class="size-tooltip" style="display: block " id="tooltip-<?php echo $_product->getId();?>">
+    <div class="tool-title"><?php echo $_product->getSku(); ?></div>
+    <div><?php echo $_product->getName();?></div> 
+    <?php echo $this->__('Disponibilità Taglie');?>
+    <?php $_stocks = Mage::getModel('catalog/product_option_fashionattribute')
+                                ->getStock($_product->getId());    
+          $_first = true;
+          for ($_is = 0; $_is < sizeof ($_stocks); $_is++ ):
+              $_stock = current ($_stocks);        
+              if ($_first) :
+                    $_first=false;?>
+        <div><span class="tool-breaker"><?php echo $_stock['color']; ?>:</span>
+        <?php endif; ?>
+        <?php if ($_stock['status'] && $_stock['qty']>0):?>
+        <spam class="tool-data"><?php echo $_stock['size'] ?></spam>
+        <?php endif; ?>
+        <?php $_s = next($_stocks);
+        if ($_s['color'] !=  $_stock['color']) : 
+            $_first=true;?>
+        </div>
+  <?php endif; 
+    endfor; ?>
+</div>

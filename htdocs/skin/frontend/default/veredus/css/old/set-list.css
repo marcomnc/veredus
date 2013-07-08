@@ -1,0 +1,107 @@
+.suppliers-row {
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+.supplier-image{
+	width: 250px;
+	height: 175px;
+	background: url(/media/template/static-block/set-list/imagesStack.png);
+	background-repeat: no-repeat;
+    background-size: 242px auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.supplier-image a {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.supplier-image img {
+  margin-top: 14px;
+  margin-right: 9px;
+  border: 0px;
+  width: 212px;
+  height: auto;
+}
+
+.supplier-box {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #3E3D40;
+  text-align: center;
+}
+
+/*supplier title*/
+.supplier-title {
+	text-transform: uppercase;
+	font-family: 'Oswald', Serif;
+	font-size: 17px;
+	font-weight: normal;
+    padding: 15px 0px 7px 0px;
+}
+
+/*read and shop link*/
+.read-and-shop-link {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	color: #3e3d40;
+	text-decoration: none;
+	margin-top: 20px;
+    font-family: 'Cardo';
+}
+
+.long-horizontal-separator {
+  padding: 2px 0;
+  margin: 2px 0;
+  width: 990px;
+  height: 4px;
+  background-repeat: no-repeat;
+  border: none;
+  clear: both;
+}
+
+.long-horizontal-separator-up {
+	background-image: url(/media/template/static-block/set-list/longSeparator_up.png);
+}
+
+.long-horizontal-separator-down {
+	background-image: url(/media/template/static-block/set-list/longSeparator_down.png);
+}
+
+.supplier-rows-separator {
+  margin-top: 10px;	
+}
+
+.home-category-list ul{
+  padding: 0px;
+  margin-left: 10px;
+}
+
+.home-category-list li {
+  list-style: none;
+}
+
+#all-set-title {
+  position: relative;
+  border: solid 1px #BCBCBC;
+  top: -20px;
+  text-transform: uppercase;
+  width: 150px;
+  height: 16px;
+  padding-top: 1px;
+  text-align: center;
+  background-image: url(../images/sfondoBottoneSetAll.jpg);
+  background-repeat: repeat-x;
+  font-size: 11px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#all-set-title a {
+  text-decoration: none;
+  color: #3E3D40;
+  font-family: "Cardo";
+}

@@ -1,0 +1,130 @@
+<config>
+    <modules>
+        <Veredus_Veredus>
+            <version>0.1.0</version>
+        </Veredus_Veredus>
+    </modules>
+    
+    <frontend> 
+        <routers>
+            <veredus>
+                <use>standard</use>
+                    <args>
+                        <module>Veredus_Veredus</module>
+                        <frontName>veredus</frontName>
+                    </args>
+            </veredus>            
+        </routers>    
+    </frontend>
+    
+    <admin>
+        <routers>
+            <veredus>
+                <use>admin</use>
+                <args>
+                    <module>Veredus_Veredus</module>
+                    <frontName>veredus</frontName>
+                </args>
+            </veredus>
+        </routers>
+    </admin>    
+    
+    <global>
+<!--
+Overload controller per gestione campagne ad su registrazione news letter
+http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_development_in_magento/how_to_overload_a_controller
+-->     
+        <rewrite>
+            <Veredus_Veredus_checkout_cart>
+                <from><![CDATA[#^/checkout/cart/#]]></from>
+                <to>/veredus/checkout_cart/</to> 
+                <!-- Corrisponde  a Veredus_Veredus_Checkout_CartController -->
+            </Veredus_Veredus_checkout_cart>
+        </rewrite>
+        
+        <blocks>
+            <veredus>
+                    <class>Veredus_Veredus_Block</class>
+            </veredus>
+        </blocks>
+        <helpers>
+            <veredus>
+                <class>Veredus_Veredus_Helper</class>
+            </veredus>
+        </helpers>
+
+        <models>
+            <veredus>
+                <class>Veredus_Veredus_Model</class>                
+                <resourceModel>veredus_mysql4</resourceModel>
+            </veredus>     
+        </models> 
+        <!-- ... -->
+        <resources>
+        </resources>
+        <template>
+        </template>    
+    </global>
+    
+    <adminhtml>           
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <veredus>
+                                            <title>Template configuration</title>
+                                        </veredus>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+            <resources>
+                <admin>
+                    <children>
+                        <!--<veredus>
+                            <children>
+                                <checkcountry>
+                                    <title>Controllo Assegnazione Paesi</title>
+                                </checkcountry>
+                            </children>
+                        </veredus>-->
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <menu>
+            <!-- <veredus translate="title">
+                <title>veredus</title>
+                <sort_order>99</sort_order>  
+                <children>
+                    <checkcountry  translate="title">
+                        <title>Controllo Assegnazione Paesi</title>
+                        <sort_order>50</sort_order>
+                        <action>veredus/adminhtml_directory/check</action>
+                     </checkcountry>
+                    <countrylist>
+                        <title>Ordinamento dei Paesi</title>
+                        <sort_order>10</sort_order>
+                        <action>veredus/adminhtml_directory/sort</action>
+                    </countrylist>
+                </children> 
+             </veredus>-->
+        </menu>         
+    </adminhtml>
+
+    
+    
+    <crontab>
+        <jobs>
+        </jobs>
+    </crontab>
+    
+</config>
+

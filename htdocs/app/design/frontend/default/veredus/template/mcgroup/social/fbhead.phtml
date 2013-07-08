@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Crea gli head necessari per facebook
+ * 
+ * Dove c'è like it che anche pus one
+ * 
+ */
+if (!is_null(Mage::registry('current_product')->getId()) && Mage::getStoreConfig('Mcsocial/settings/enabled', Mage::app()->getStore()->getId())):
+    $product = Mage::getModel('catalog/product')->Load(Mage::registry('current_product')->getId());
+    $imgUrl = '';
+    $mediaGallery = $product->getData();
+
+    if (isset ($mediaGallery['fb_like_image']) && $mediaGallery['fb_like_image'] != 'no_selection'):
+        $imgUrl = Mage::helper('catalog/image')->init($product, 'fb_like_image', $product->getColorImage())->resize(50).'';
+    endif;    
+    if ($imgUrl == "" && isset($mediaGallery['image'])):
+        $imgUrl = Mage::helper('catalog/image')->init($product, 'image', $product->getColorImage())->resize(50).'';
+    endif;
+    if ($imgUrl != ""):    
+?>
+<meta property="og:image" content="<?php echo $imgUrl; ?>"/> 
+<meta property="og:title" content="<?php echo Mage::app()->getStore()->getName()?> - <?php echo $this->getShortDescription() ?>"/>
+
+<!-- Add the following three tags inside head -->
+<meta itemprop="name" content="<?php echo Mage::app()->getStore()->getName()?> - <?php echo $product->getShortDescription()  ?>">
+<meta itemprop="description" content="<?php echo $product->getName() ?>">
+<meta itemprop="image" content="<?php echo $imgUrl; ?>">
+<?php 
+    endif;
+endif;
+?>
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>

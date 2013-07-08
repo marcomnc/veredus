@@ -1,0 +1,388 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+    var assocIMG =  <?php echo $this->helper('veredus')->getProductImageArrayForJavascript($this, $_product, 490); ?>;
+    var assocZoomIMG = <?php echo $this->helper('veredus')->getProductImageArrayForJavascript($this, $_product, 1500); ?>;
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+</div>
+<button onclick="window.location='<?php echo Mage::getBaseUrl() ?>checkout/cart';" 
+        id="product-added-to-cart-conclude-shopping" style="display: none;" title="<?php echo $this->__('Conclude shopping');?>" 
+        type="button"><span><span><?php echo $this->__('Conclude shopping');?></span></span>
+</button>
+<div class="product-view">
+    <div class="product-essential">
+    <form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <div class="no-display">
+            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+            <input type="hidden" name="related_product" id="related-products-field" value="" />
+        </div>
+
+        <div class="product-shop">
+        <div class="product-shop-wrapper">
+            <div class="product-name">
+				
+                <h1><?php /*echo $_product->getSKU() . " - " .*/ echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                <div class="spaziatoreDettaglio">
+					<hr/>
+				</div>
+				<h2 class="produttore"><?php echo $_product->getAttributeText('manufacturer');?></h2>
+				<div class="prezzo">
+				<?php echo $this->getPriceHtml($_product, false); ?>
+				</div>
+				<div class="spaziatoreDettaglio">
+					<hr/>
+				</div>
+            </div>
+<div id="tabber">
+	<ul>
+		<li style="float: left"><a rel="#description" class="detail"><?php echo $this->__('Description'); ?></a> 
+		</li>
+<?php if ($_product->getCare()."" != ""): ?>
+		<li style="float: left"><a rel="#care" class="care"><?php echo $this->__('Care info'); ?></a> 
+		</li>
+<?php endif;?>
+<?php 
+    $_block =$this->getLayout()->createBlock("catalog/product_view_attributes");
+    $_addData = ($_block->getAdditionalData())?true:false;
+    if ($_addData): ?>
+		<li style="float: left"><a rel="#additional" class="additional">
+                    <?php echo $this->__('Additional Data'); ?></a> 
+		</li>                
+<?php        
+    endif;
+?>
+<?php if ($_product->getDeliveryInfo()."" != ""): ?>
+		<li style="float: left"><a rel="#delivery" class="delivery"><?php echo $this->__('Delivery info'); ?></a> 
+		</li>
+<?php endif;?>
+                
+	</ul>
+	<div id="description" class="desc">
+		<?php if ($_product->getShortDescription()):?>
+			<div class="short-description">
+				<div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+				<div class="codiceDettaglio"><?php echo $this->__('Codice Prodotto:') ?>
+					<?php echo $_product->getSKU()?> - <a href="<?php echo Mage::getUrl('contacts') ?>">
+						<strong><?php echo $this->__('Contact us') ?></strong>
+					</a>
+				</div>
+			</div>
+		<?php endif;?>            
+	</div>
+	<div id="care" class="desc">
+		<?php if ($_product->getCare()):?>
+			<div class="short-description">
+				<div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getCare()), 'care') ?></div>
+			</div>
+		<?php endif;?>            
+	</div>
+	<div id="delivery" class="desc">
+		<?php if ($_product->getDeliveryInfo()):?>
+			<div class="short-description">
+				<div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getDeliveryInfo()), 'delivery_info') ?></div>
+			</div>
+		<?php endif;?>            
+	</div>
+	<div id="additional" class="desc">
+		<?php if ($_addData):
+                        echo $_block->setTemplate("catalog/product/view/attributes.phtml")->toHtml();
+                       endif;?>            
+	</div>	    
+</div>			
+            <div class="product-options" id="product-options-wrapper">
+                <?php   
+                        
+                        echo $this->getChildHtml('product_options_wrapper');
+                        if ($_product->getTypeId()=="grouped"):
+                            echo $this->getChildHtml("product_type_data");
+                        endif;
+?>
+                
+            </div>
+            <br/><div class="clearer"></div>            
+            
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                <?php     echo $this->getLayout()     
+                            ->createBlock('catalog/product_view')
+                            ->setTemplate('catalog/product/view/addtocart.phtml')
+                            ->toHtml();?>                
+            <?php endif;?>	
+			
+            <div class="add-to-box">
+                <?php if (!$this->hasOptions()):?>                
+                        <?php if($_product->isSaleable()): ?>
+                            <?php echo $this->getChildHtml('addtocart') ?>
+                        <?php endif; ?>
+                <?php else:?>
+                    <?php echo $this->getChildHtml('addto') ?>
+                <?php endif; ?> 
+<?php if (Mage::getStoreConfig('mcsocial/settings/enabled') == 1): ?>                
+<div class="social-share">
+<p> <?php echo $this->__("Share");?></p>
+<?php if ($this->canEmailToFriend()): ?>
+    <div class="email-friend">
+        <a title="<?php echo $this->__('Email to a Friend') ?>"href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>">
+            <img src="<?php echo $this->getSkinUrl('images/email-friend.png');?>">
+        </a>
+    </div>
+<?php endif; ?>   
+    <div class="pint-rest">  
+        <div class="social-set">
+        </div>
+        <div class="social-real">
+<a href="http://pinterest.com/pin/create/button/?url=<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(490).'';?>&media=<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(490).'';?>&description=<?php echo ($_product->getShortDescription().''!='')?$_product->getShortDescription():$this->getDescription();?>" 
+   class="pin-it-button" 
+<?php switch (Mage::getStoreConfig('mcsocial/pinterest/show-counter')) :
+       case 1:
+            echo 'count-layout="horizontal"';
+           break;
+       case 2:
+            echo 'count-layout="vertical"';
+           break;
+       default:
+           echo 'count-layout="none"';
+           break;
+     endswitch;   ?>
+   >
+    <img border="0" src="<?php echo $this->getSkinUrl('images/pin-it.png');?>" 
+         title="Pin It" /></a>    
+    <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+    </div> 
+    <div class="twitter">
+        <div class="social-set">
+        </div>
+        <div class="social-real">
+        <a href="<?php echo $_product->getProductUrl() ?>" class="twitter-share-button" 
+           data-text="<?php echo $_product->getName() ?>" 
+           <?php if (Mage::getStoreConfig('mcsocial/twitter/via') != ""): ?> data-via="<?php echo Mage::getStoreConfig('mcsocial/twitter/via')?>" <?php endif; ?>
+           data-lang="<?php echo substr(Mage::app()->getStore()->getLocale(),2);?>" 
+           <?php if (Mage::getStoreConfig('mcsocial/twitter/big-button') == 1): ?> data-size="large" <?php endif; ?>
+           <?php if (Mage::getStoreConfig('mcsocial/twitter/recommend') != ""): ?> data-related="<?php echo Mage::getStoreConfig('mcsocial/twitter/recommend');?>" <?php endif; ?>
+           <?php if (Mage::getStoreConfig('mcsocial/twitter/show-counter') == 0): ?> data-count="none"  <?php endif; ?>
+           <?php if (Mage::getStoreConfig('mcsocial/twitter/hastag') != ""): ?> data-hashtags="<?php echo Mage::getStoreConfig('mcsocial/twitter/hastag');?>"  <?php endif; ?>           
+           data-dnt="true">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+<div class="facebook">
+    <div class="social-set">
+    </div>
+    <div class="social-real-fb" style="left: -10000px;">
+      <a id="fb-share-link" href="http://www.facebook.com/dialog/feed?
+          app_id=<?php echo Mage::Helper('mcsocial/fb')->getAppId();?>&
+          link=<?php echo Mage::Helper("catalog/product")->getProductUrl($_product)?>&
+          picture=<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(490) ?>&
+          name=<?php echo urlencode($_product->getName())?>&
+          caption=<?php echo urlencode($_product->getName())?>&
+          description=<?php echo urlencode($_product->getShortDescription())?>&
+          redirect_uri=<?php echo Mage::Helper("catalog/product")->getProductUrl($_product)?>"
+          target="_blank">
+          <img src="<?php echo $this->getSkinUrl('images/social/facebook_share_icon.png') ?>"/>
+        </a>
+      <!--
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=365586336834382";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    <fb:like id="fb-like-component" send="false" layout="button_count" width="100" show_faces="false"></fb:like>  
+    -->
+    <!--<iframe src="//www.facebook.com/plugins/like.php?locale=<?php echo Mage::App()->getStore()->getLocale()?>&amp;href=<?php echo Mage::Helper("catalog/product")->getProductUrl($_product)?>&amp;send=false&amp;layout=<?php switch (Mage::getStoreConfig('mcsocial/settings/show-counter')) :
+       case 1:
+            echo 'standard';
+           break;
+       case 2:
+            echo 'box_count';
+           break;
+       default:
+           echo 'button_count';
+           break;
+   endswitch;?>&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;appId=<?php echo Mage::Helper('mcsocial/fb')->getAppId();?>" 
+        scrolling="no" 
+        frameborder="0" 
+        style="border:none; " allowTransparency="true">
+    </iframe>-->
+    </div>
+</div>    
+</div>
+<script>
+    jQuery(document).ready(function() {
+        jQuery('.social-share > div').each(function() {
+            if (jQuery(this).children('.social-set').length>0) {
+                jQuery(this).bind('mouseover', function() {   
+                    jQuery('.social-real').css({display:'none'});
+                    jQuery('.social-real-fb').css({display:'none'});
+                    jQuery(this).children('.social-real').css({"display": "block"});
+                    jQuery(this).children('.social-real-fb').css({"display": "block"});
+                    jQuery(this).children('.social-real-fb').css({"left": "0"});
+                });
+            }
+        }).bind('mouseleave', function() {                    
+            jQuery('.social-real').css({display:'none'});
+            jQuery('.social-real-fb').css({display:'none'});
+        });
+        
+        jQuery('.success-msg').each(function() {
+          jQuery('#product-added-to-cart-conclude-shopping').css("display", "block");
+          jQuery('.messages li li').css("width", "720px");
+        });
+        
+        
+    })
+</script>        
+            
+<?php endif; ?>              
+                
+            </div>
+
+            <?php //echo $this->getReviewsSummaryHtml($_product, false, true)?>
+            <?php //echo $this->getChildHtml('alert_urls') ?>
+            <?php //echo $this->getChildHtml('product_type_data') ?>
+            <?php //echo $this->getTierPriceHtml() ?>
+            <?php //echo $this->getChildHtml('extrahint') ?>
+	</div>            
+            <?php $_isBrand = false;
+                  foreach ($_product->getCategoryIds() as $_catId):
+                    $_cat = Mage::getModel('catalog/category')->Load($_catId);
+                    if ($_cat->getParentId() == Mage::getStoreConfig('veredus/settings/category-brands')):                        
+                        $_isBrand = true;?>
+            <div class="box-collateral brand">
+                <h2><?php echo $this->__('View More') ?></h2>
+                <div>
+                    <a href="<?php echo $_cat->getUrl();?>" title="<?php echo $_cat->getName()?>" >
+                        <img alt="<?php echo $_cat->getName();?>"src="<?php if(Mage::getStoreConfig('veredus/settings/img-brands') == "thm"): echo  Mage::getBaseUrl('media').'catalog/category/'.$_cat->getThumbnail(); else: echo $_cat->getImageUrl(); endif; ?>"/>
+                    </a>
+                </div>                
+            </div>    
+            <?php   break;
+                    endif;
+                  endforeach;?>
+
+            <?php // Non uso l'xml per passare dei parametri echo $this->getChildHtml("upsell_products"); 
+            echo $this->getLayout()->createBlock('catalog/product_list_upsell')
+                      ->setBrand($_isBrand)
+                      ->setColumnCount(($_isBrand)?3:4)
+                      ->setTemplate('catalog/product/list/upsell.phtml')
+                      ->toHtml();?>			
+</div>			
+        <div class="product-img-box">
+            <?php echo $this->getChildHtml('media') ?>
+        </div>
+
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+    //<![CDATA[
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if (url) {
+                   form.action = url;
+                }
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {
+                }
+                this.form.action = oldUrl;
+                if (e) {
+                    throw e;
+                }
+
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(productAddToCartForm);
+
+        productAddToCartForm.submitLight = function(button, url){
+            if(this.validator) {
+                var nv = Validation.methods;
+                delete Validation.methods['required-entry'];
+                delete Validation.methods['validate-one-required'];
+                delete Validation.methods['validate-one-required-by-name'];
+                if (this.validator.validate()) {
+                    if (url) {
+                        this.form.action = url;
+                    }
+                    this.form.submit();
+                }
+                Object.extend(Validation.methods, nv);
+            }
+        }.bind(productAddToCartForm);
+
+            
+        $j(document).ready(function() {
+            $j("#sizeguide").fancybox({
+                'autoScale' : true,
+                'transitionIn' : 'elastic',
+                'transitionOut' : 'fade'                
+            });            
+        
+        
+            $j('#sizeguide').fancybox({
+                'height': "640px",
+                'width': "800px",
+                'transitionIn' : 'elastic',
+                'transitionOut' : 'fade',
+                'type' : 'ajax'
+            });
+                        
+        });
+
+    //]]>
+    </script>
+    </div>
+	
+    <div class="product-collateral">
+		<?php echo $this->getChildHtml("product_related"); ?>
+		<?php echo $this->getChildHtml("reports_product_viewed"); ?>
+	</div>
+	<div id="spaziatoreCollateral" class="spaziatoreLungo">
+      <hr>
+	</div>
+</div>

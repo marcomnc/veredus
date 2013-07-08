@@ -1,0 +1,47 @@
+<?php $_maincategorylisting=$this->getCurrentCategory()?>
+<?php $_categories=$this->getCurrentChildCategories()?>
+<div class="block-title last-new-set-title">
+<strong>
+<span><?php echo $this->__('The last New Set') ?> </span>
+</strong>
+</div>
+<?php // get_Class($_categories);
+$_categories->getSelect()->reset(Zend_Db_Select::ORDER)->order('e.entity_id desc');
+//echo $_categories->getSelect()->__toString();
+?>
+<div class="subcat-listing">
+<ul class="subcat-products">
+<? //foreach ($_categories as $_category):
+    $_category = $_categories->getFirstItem()?>
+<? if($_category->getIsActive()): ?>
+<?php $cur_category=Mage::getModel('catalog/category')->load($_category->getId()); ?>
+<?php $layer = Mage::getSingleton('catalog/layer'); ?>
+<?php $layer->setCurrentCategory($cur_category); ?>
+<? //if($_imageUrl=$this->getCurrentCategory()->getImageUrl()):?>
+<? $_imageUrl=Mage::getBaseUrl('media').'catalog/category/'.$this->getCurrentCategory()->getThumbnail();
+ ?>
+<li>
+<?php echo $this->__('is'); ?> <span class="titoloGrassetto"><?php echo $this->htmlEscape($_category->getName()) ?></span>
+<a class="sfondoSet-left-column" href="<?php echo $this->getCategoryUrl($_category) ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>">
+<img src="<?php echo $_imageUrl ?>"  alt="<?php echo $this->htmlEscape($_category->getName()) ?>" />
+</a>
+<? if($_description=$this->getCurrentCategory()->getDescription()):?>
+<p class="category-description">
+<?php echo $_description ?>
+<a href="<?php echo $this->getCategoryUrl($_category) ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>">
+<!-- MODIFICA FATTA DA EMANUELE per togliere la scritta READ MODE,c'erano anche tre puntini prima del Read Mode (mode??! poteva essere more al limite .....)
+<!-- (<?php echo $this->__('read mode');    ?>) -->
+</a>
+</p>
+
+<?php endif; ?>
+<? //endif; ?>
+<? endif; ?>
+</li>
+  <?php
+
+//return;// prende solo il primo
+//endforeach; ?>
+</ul>
+</div>
+<?php $layer->setCurrentCategory($_maincategorylisting); ?>

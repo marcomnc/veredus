@@ -1,0 +1,63 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php $isSaleable = $_product->isSaleable();?>
+<?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
+
+<div class="qty-to-cart">
+<?php if(!$_product->isGrouped()): ?>
+    <label for="qty">
+        <?php echo $this->__('Qty:') ?>
+    </label>
+<div>
+
+    <input disabled="<?php if ($isSaleable.""!="1"): echo 'disabled'; else: echo ''; endif;?>" type="text" name="qty" 
+           id="qty" maxlength="12" value="<?php if ($isSaleable): echo $this->getProductDefaultQty() * 1 ; else: echo '1'; endif; ?>" 
+           title="<?php echo $this->__('Qty') ?>" class="input-text qty"/>
+<img src="<?php echo $this->getSkinUrl('images/add-qty-cart.gif');?>" 
+     <?php if ($isSaleable): ?>
+        onclick="$('qty').value=parseInt($('qty').value)+1; return false;"
+        style="cursor: pointer"
+    <?php endif; ?>
+/>
+<img src="<?php echo $this->getSkinUrl('images/rem-qty-cart.gif');?>" 
+     <?php if ($isSaleable): ?>
+        onclick="if (parseInt($('qty').value)>1) $('qty').value=parseInt($('qty').value)-1; return false;"
+        style="cursor: pointer"
+     <?php endif; ?>
+/>
+</div>
+<?php endif; ?>
+</div>
+
+<div class="add-to-cart">
+    <button type="button" id="btn-product-add-to-cart" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>           
+</div>
+<div class="add-to-wish">
+    <button type="button" title="<?php echo $this->__('Add to Wishlist') ?>" class="button btn-wish" onclick="productAddToCartForm.submitLight(this, '<?php echo $_wishlistSubmitUrl ?>'); return false;"><span><span><?php echo $this->__('Add to Wishlist') ?></span></span></button>
+</div>    

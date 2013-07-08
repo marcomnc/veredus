@@ -1,0 +1,17 @@
+<?php $_helper = Mage::helper('General/controll'); ?>
+<div class="mps_size"<?php $_script = $_helper->getParam('script'); if (!is_null($_script)): echo 'onclick="'.$_helper->getParam('script').'"'; endif;?>>
+<div <?php if ($_helper->getParam('isSelect')) : 
+            echo 'class="selected"'; 
+           elseif ($_helper->getParam('isAvaiable')):
+            echo 'class="enabled"'; 
+           else:
+            echo 'class="disabled"'; 
+         endif; ?>>
+    <?php if ($_helper->middleSize($_helper->getParam('size')) != ""): 
+            echo $_helper->intSize($_helper->getParam('size')); ?>            
+        <span class="middle-size"><?php echo $_helper->middleSize($_helper->getParam('size')); ?></span>
+    <?php else: 
+            echo $_helper->getParam('size'); 
+          endif; ?>
+    </div>   
+</div>           
