@@ -26,35 +26,26 @@
 ?>
 <?php
 /**
- * Language switcher template
+ * Currency switcher
  *
- * @see Mage_Page_Block_Switch
+ * @see Mage_Directory_Block_Currency
  */
 ?>
 
-<div class="form-language header-selector" rel="language-selector">
-    <ul>
-        <li>
-            <a id="language-selector" class="selected">
-                <?php echo $this->htmlEscape(Mage::app()->getStore()->getName()) ?>
-            </a>       
-        </li>
-        <li>
-            <div id="language-selector" class="dd-select selected">
-            </div>
-        </li>
-    </ul>
+<div class="block-currency header-selector">
+    <a id="currency-selector" class="selected">
+        <?php echo Mage::app()->getLocale()->currency($this->getCurrentCurrencyCode())->getSymbol(); ?>
+    </a>
 </div>
 
-<div class="language-switcher header-selector-pop-up" rel="language-selector" style="display:none">
-<?php foreach ($this->getStores() as $_lang): ?>
-    <?php if ($_lang->getId() != $this->getCurrentStoreId()): ?>
-    <div class="form-language header-selector" >        
-        <a href="<?php echo $_lang->getCurrentUrl();?>" >
-                <?php echo $this->htmlEscape($_lang->getName()) ?>
-        </a>       
+<div class="block-content currency-switcher header-selector-pop-up" style="display: none">
+    <?php foreach ($this->getCurrencies() as $_code => $_name):
+           if ($_code != $this->getCurrentCurrencyCode()): ?>
+    <div class="block-currency header-selector">
+        <a href="<?php echo $this->getSwitchCurrencyUrl($_code) ?>">
+             <?php echo Mage::app()->getLocale()->currency($_code)->getSymbol(); ?>        
+        </a>
     </div>
-    <?php endif; ?>
-    <?php endforeach; ?>    
+    <?php endif;
+    endforeach; ?>
 </div>
-

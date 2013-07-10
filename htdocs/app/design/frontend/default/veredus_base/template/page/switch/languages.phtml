@@ -32,21 +32,13 @@
  */
 ?>
 
-<div class="form-language header-selector" rel="language-selector">
-    <ul>
-        <li>
-            <a id="language-selector" class="selected">
-                <?php echo $this->htmlEscape(Mage::app()->getStore()->getName()) ?>
-            </a>       
-        </li>
-        <li>
-            <div id="language-selector" class="dd-select selected">
-            </div>
-        </li>
-    </ul>
+<div class="form-language header-selector">
+    <a id="language-selector" class="selected">
+        <?php echo $this->htmlEscape(Mage::app()->getStore()->getName()) ?>
+    </a>    
 </div>
 
-<div class="language-switcher header-selector-pop-up" rel="language-selector" style="display:none">
+<div class="language-switcher header-selector-pop-up" style="display:none">
 <?php foreach ($this->getStores() as $_lang): ?>
     <?php if ($_lang->getId() != $this->getCurrentStoreId()): ?>
     <div class="form-language header-selector" >        

@@ -20,23 +20,28 @@
  *
  * @category    design
  * @package     base_default
- * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-
-<div class="footer">
-  <div class="indent-footer"> 
-	<div class="blocchi-footer">
-	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('link-bottom')->toHtml();?>
+<div class="footer-container">
+    <div class="footer">
+        <div class="section clearer">
+            <?php for ($i=1; $i<=4; $i++ ): ?>
+                <div class="persistent-grid footer-grid grid-<?php echo $i; ?>">
+                    <?php echo $this->getLayout()->createBlock('cms/block')
+                                    ->setBlockId("footer-column-block-$i")->toHtml();?>
+                </div>
+            <?php endfor; ?>
+            <div class="persistent-grid footer-grid footer-grid-news-letter">
+                <?php echo $this->getChildHtml('footer_newsletter') ?>
+            </div>
+        </div>
     </div>
-	<div class="clr"></div>
-	<div class="col-footer">
-		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payment-block')->toHtml();?>
-		<div class="term">
-        <?php echo $this->getChildHtml('cms_footer_links') ?>
-        <p class="legality"><?php echo $this->getCopyright() ?></p>
-		</div>
+    <div class="address">
+        <?php echo $this->getLayout()->createBlock('cms/block')
+                                     ->setBlockId("address_link")->toHtml();?>
+        <div class="clearer"></div>
+        <address><?php echo $this->getCopyright() ?></address>
     </div>
-
 </div>

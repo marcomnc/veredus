@@ -9,7 +9,7 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/afl-3.0.php
  * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wcide-web, please send an email
+ * obtain it through the world-wide-web, please send an email
  * to license@magentocommerce.com so we can send you a copy immediately.
  *
  * DISCLAIMER
@@ -20,7 +20,7 @@
  *
  * @category    design
  * @package     base_default
- * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
@@ -34,7 +34,6 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml"
       xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
-    <!--<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>" itemscope itemtype="http://schema.org/Product">-->
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
@@ -44,20 +43,14 @@
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
         <?php echo $this->getChildHtml('header') ?>
-		<?php echo $this->getChildHtml('breadcrumbs') ?>
         <div class="main-container col2-right-layout">
             <div class="main">
-            	<div class="devider-left">
-                	<div class="devider-right">
-                        <div class="col-main">
-                            <div class="indent-col-main">
-                                <?php echo $this->getChildHtml('global_messages') ?>
-                                <?php echo $this->getChildHtml('content') ?>
-                            </div>
-                        </div>
-                        <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div><br class="clear-block" />
-                    </div>
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-main">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
                 </div>
+                <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
             </div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>

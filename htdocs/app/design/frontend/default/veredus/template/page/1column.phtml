@@ -20,7 +20,7 @@
  *
  * @category    design
  * @package     base_default
- * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
@@ -34,6 +34,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml"
       xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
@@ -43,18 +44,12 @@
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
         <?php echo $this->getChildHtml('header') ?>
-		<?php echo $this->getChildHtml('breadcrumbs') ?>
         <div class="main-container col1-layout">
             <div class="main">
-            	<div class="devider-left">
-                	<div class="devider-right">
-                        <div class="col-main">
-                            <div class="indent-col-main">
-                            	<?php echo $this->getChildHtml('global_messages') ?>
-								<?php echo $this->getChildHtml('content') ?>
-                            </div>
-                        </div>
-                    </div>
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-main">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
                 </div>
             </div>
         </div>

@@ -26,35 +26,17 @@
 ?>
 <?php
 /**
- * Language switcher template
- *
- * @see Mage_Page_Block_Switch
+ * Template for Mage_Page_Block_Html
  */
 ?>
-
-<div class="form-language header-selector" rel="language-selector">
-    <ul>
-        <li>
-            <a id="language-selector" class="selected">
-                <?php echo $this->htmlEscape(Mage::app()->getStore()->getName()) ?>
-            </a>       
-        </li>
-        <li>
-            <div id="language-selector" class="dd-select selected">
-            </div>
-        </li>
-    </ul>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"
+      xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<div class="page-popup">
+    <?php echo $this->getChildHtml('after_body_start') ?>
+    <?php echo $this->getChildHtml('content') ?>
+    <?php echo $this->getChildHtml('before_body_end') ?>
 </div>
-
-<div class="language-switcher header-selector-pop-up" rel="language-selector" style="display:none">
-<?php foreach ($this->getStores() as $_lang): ?>
-    <?php if ($_lang->getId() != $this->getCurrentStoreId()): ?>
-    <div class="form-language header-selector" >        
-        <a href="<?php echo $_lang->getCurrentUrl();?>" >
-                <?php echo $this->htmlEscape($_lang->getName()) ?>
-        </a>       
-    </div>
-    <?php endif; ?>
-    <?php endforeach; ?>    
-</div>
-
+</html>

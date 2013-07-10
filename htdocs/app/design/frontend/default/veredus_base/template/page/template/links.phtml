@@ -26,35 +26,21 @@
 ?>
 <?php
 /**
- * Language switcher template
- *
- * @see Mage_Page_Block_Switch
+ * @see Mage_Page_Block_Template_Links
  */
 ?>
 
-<div class="form-language header-selector" rel="language-selector">
-    <ul>
-        <li>
-            <a id="language-selector" class="selected">
-                <?php echo $this->htmlEscape(Mage::app()->getStore()->getName()) ?>
-            </a>       
-        </li>
-        <li>
-            <div id="language-selector" class="dd-select selected">
-            </div>
-        </li>
-    </ul>
-</div>
-
-<div class="language-switcher header-selector-pop-up" rel="language-selector" style="display:none">
-<?php foreach ($this->getStores() as $_lang): ?>
-    <?php if ($_lang->getId() != $this->getCurrentStoreId()): ?>
-    <div class="form-language header-selector" >        
-        <a href="<?php echo $_lang->getCurrentUrl();?>" >
-                <?php echo $this->htmlEscape($_lang->getName()) ?>
-        </a>       
-    </div>
-    <?php endif; ?>
-    <?php endforeach; ?>    
-</div>
-
+<?php $_links = $this->getLinks(); ?>
+<?php $a=1?>
+<?php if(count($_links)>0): ?>
+<ul class="links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
+    <?php foreach($_links as $_link): ?>
+        <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
+            <?php echo $_link->toHtml() ?> /
+        <?php else: ?>
+            <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php if ($a!=count($_links)): ?> / <?php endif; ?><?php echo $_link->getAfterText() ?> </li>
+        <?php endif;?>
+		<?php $a++; ?>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>

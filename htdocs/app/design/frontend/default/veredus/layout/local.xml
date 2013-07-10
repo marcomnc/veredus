@@ -8,7 +8,17 @@ Default layout, loads most of the pages
 -->
 
     <default>
-        
+        <reference name="top.links">
+            <remove name="checkout_cart_link"/>
+            <action method="addLink" translate="label title" module="contacts" ifconfig="contacts/contacts/enabled">
+                <label>Contact Us</label>
+                <url>contacts</url>
+                <title>Contact Us</title>
+                <prepare>true</prepare>
+                <urlParams />
+                <position>1000</position>
+            </action>
+        </reference>
         <reference name="root">
             <action method="setTemplate">
                 <template>page/1column.phtml</template>                
@@ -16,19 +26,27 @@ Default layout, loads most of the pages
         </reference>
         <reference name="head">
             <action method="addCss"><stylesheet>css/jquery.fancybox-1.3.4.css</stylesheet></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery-1.7.2.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/json2.js</name><params/><if>lt IE 7</if></action><!-- for ie7-->
+            <action method="addItem"><type>skin_js</type><name>js/jQuery.js</name></action>
+<!--            <action method="addItem"><type>skin_js</type><name>js/json2.js</name><params/><if>lt IE 7</if></action>
             <action method="addItem"><type>skin_js</type><name>js/jquery.fancybox-1.3.4.pack.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/jquery.jclock.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery.mousewheel.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jItalianSetAPI.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.mousewheel.js</name></action>-->
+            <action method="addItem"><type>skin_js</type><name>js/JVApi.js</name></action>
+        </reference>
+        <reference name="header">
+            <block type="directory/currency" name="currency" as="currency" template="directory/currency.phtml"/>
         </reference>
         <reference name="left">
             <remove name="left.permanent.callout"/>
-            <remove name="catalog.compare.sidebar" />            
+            <remove name="catalog.compare.sidebar" />      
+            <remove name="left.newsletter" />      
         </reference> 
-        <reference name="top.menu">
-            <block type="catalog/navigation" name="catalog.topnav" template="catalog/navigation/top.phtml"/>
+        <reference name="right">
+            <remove name="cart_sidebar" />
+        </reference>
+        <reference name="footer">
+            <block type="newsletter/subscribe" name="footer.newsletter" as="footer_newsletter" template="newsletter/subscribe.phtml"/>
+            <remove name="store_switcher"/>
         </reference>
         
     </default>
@@ -64,5 +82,45 @@ Default layout, loads most of the pages
         </reference>
         
     </catalog_product_view>
+    
+    <customer_logged_in>
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="customer">
+                <label>Log Out</label>
+                <url helper="customer/getLogoutUrl"/>
+                <title>Log Out</title>
+                <prepare/>
+                <urlParams/>
+                <position>100</position>
+            </action>
+        </reference>
+    </customer_logged_in>
+ 
+    <customer_logged_out>
+    <!-- Mage_Customer -->
+        <reference name="top.links">
+            <action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+            <action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>
+            <action method="addLink" translate="label title" module="customer">
+                <label>Account</label>
+                <url helper="customer/getAccountUrl"/>
+                <title>My Account</title>
+                <prepare/>
+                <urlParams/>
+                <position>10</position>
+                <liparams/>
+<!-- Use for Ajax Login -->                
+                <aprams>id="ajax-login"</aprams>
+            </action>
+        </reference>
+<!-- Use for ajax login -->        
+        <reference name="header">
+            <block type="core/template" name="customer_ajax_login" as="customer_ajax_login" template="customer/form/ajax-login.phtml"/>
+        </reference>
+    </customer_logged_out>
+    
+    <customer_account>
+        <remove name="footer.newsletter"/>
+    </customer_account>
 
 </layout>

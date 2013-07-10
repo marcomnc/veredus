@@ -32,13 +32,20 @@
  */
 ?>
 
-<div class="block-currency header-selector">
-    <a id="currency-selector" class="selected">
-        <?php echo Mage::app()->getLocale()->currency($this->getCurrentCurrencyCode())->getSymbol(); ?>
-    </a>
+<div class="block-currency header-selector" rel="currency-selector">
+    <ul>
+        <li>
+            <a id="currency-selector" class="selected">
+                <?php echo Mage::app()->getLocale()->currency($this->getCurrentCurrencyCode())->getSymbol(); ?>
+            </a>
+        </li>
+        <li>
+         <div id="currency-selector" class="dd-select"></div>   
+        </li>
+    </ul>
 </div>
 
-<div class="block-content currency-switcher header-selector-pop-up" style="display: none">
+<div class="block-content currency-switcher header-selector-pop-up"  rel="currency-selector" style="display: none">
     <?php foreach ($this->getCurrencies() as $_code => $_name):
            if ($_code != $this->getCurrentCurrencyCode()): ?>
     <div class="block-currency header-selector">
