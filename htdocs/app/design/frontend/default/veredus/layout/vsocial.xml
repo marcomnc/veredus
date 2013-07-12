@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- Autore Marco Mancinelli
+     Permette di impostare le varie voci relative ai social.
+-->
+<layout version="0.1.0">
+    <!-- Default su tutte le pagine -->
+    <default>
+        <reference name="head">
+            <block type="core/template" name="fbconnect.open.graph" as="fbconnect_open_graph" translate="label" template="veredus/social/fbhead.phtml"/>
+        </reference>
+        <reference name="footer">
+            <block type="core/template" name="social.footer" as="social_footer" translate="label" template="veredus/social/footer.phtml"/>
+        </reference>
+        <reference name="after_body_start">
+            <block type="core/template" name="fb.init.sdk" template="veredus/social/fb.init.sdk.phtml"/>
+        </reference>
+    </default>
+    
+    <customer_logged_out>
+<!--        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/social.js</name></action>
+        </reference>-->
+    </customer_logged_out>
+    <!-- Pagina login utente -->
+    <customer_account_login translate="label">        
+        <!-- Il blocco viene creato da codice -->
+    </customer_account_login>
+
+    <!-- Pagina di check out -->
+    <checkout_onepage_index translate="label">
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/social.js</name></action>
+        </reference>    
+        <!-- Il blocco viene creato da codice -->
+    </checkout_onepage_index>
+
+    <!-- Pagine del prodotto aggiungo l'open graph nell'head-->
+    <catalog_product_view translate="label">
+
+    </catalog_product_view>
+</layout>

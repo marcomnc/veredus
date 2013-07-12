@@ -76,6 +76,14 @@
                             <show_in_store>1</show_in_store>
                             <comment>Group to be assigned when the customer is created</comment>
                         </fb_customer_group>
+                        <follow translate="label">
+                            <label>Follow us link</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </follow>
                     </fields>
                 </settings>
              </groups>
@@ -129,7 +137,15 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </show-counter>     
+                        </show-counter> 
+                        <follow translate="label">
+                            <label>Follow us link</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </follow>    
                     </fields>
                 </twitter>
             </groups>
@@ -150,7 +166,15 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </show-counter>     
+                        </show-counter>    
+                        <follow translate="label">
+                            <label>Follow us link</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </follow> 
                     </fields>
                </pinterest>
            </groups>

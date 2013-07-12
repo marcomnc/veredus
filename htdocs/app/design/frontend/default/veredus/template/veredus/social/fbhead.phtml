@@ -4,7 +4,7 @@
  * Crea gli head necessari per facebook
  * 
  */
-if (Mage::getStoreConfig('autelsocial/settings/enabled', Mage::app()->getStore()->getId())): ?>
+if (Mage::getStoreConfig('vsocial/settings/enabled', Mage::app()->getStore()->getId())): ?>
 
     <meta property="og:site_name" content="<?php echo Mage::getStoreConfig('general/store_information/name', Mage::app()->getStore()->getId()); ?>" />
     <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@ if (Mage::getStoreConfig('autelsocial/settings/enabled', Mage::app()->getStore()
         <meta property="og:description" content="<?php echo  $product->getDescription(); ?>" />
     <?php else: ?>
         <meta property="og:title" content="<?php echo  Mage::getStoreConfig('design/head/default_title', Mage::app()->getStore()->getId()); ?>"/>  
-        <meta property="og:image" content="<?php echo $this->getSkinUrl("images/logo_alpha.png");?>" />
+        <meta property="og:image" content="<?php echo $this->getSkinUrl("images/logo.gif");?>" />
         <meta property="og:url" content="<?php echo $this->getUrl(); ?>" />
         <meta property="og:description" content="<?php echo  Mage::getStoreConfig('design/head/default_title', Mage::app()->getStore()->getId()); ?>" />
     <?php endif; ?>    

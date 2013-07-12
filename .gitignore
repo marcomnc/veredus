@@ -45,7 +45,12 @@ htdocs/LICENSE.html
 htdocs/LICENSE.txt
 htdocs/LICENSE_EE*
 htdocs/mage
-htdocs/media/
+htdocs/media/customer/
+htdocs/media/dhl/
+htdocs/media/downloadable/
+htdocs/media/favicon/
+htdocs/media/xmlconnect
+htdocs/media/.htaccess
 htdocs/pear
 htdocs/pear/
 htdocs/php.ini.sample

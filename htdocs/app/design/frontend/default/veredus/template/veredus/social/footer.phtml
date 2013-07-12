@@ -1,0 +1,20 @@
+<div class="linkSocial">
+<div>
+    <p><?php echo $this->__('Follow Us');?></p>
+    <p>
+        <a href="<?php echo Mage::getStoreConfig('vsocial/settings/follow'); ?>">
+            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)?>template/iconaFaceBook.png" border="0" alt="">
+        </a> 
+        <a href="<?php echo Mage::getStoreConfig('vsocial/twitter/follow'); ?>">
+            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)?>template/iconaTube.png" border="0" alt="">
+        </a> 
+        <a href="<?php echo Mage::getStoreConfig('vsocial/pinterest/follow'); ?>">
+            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)?>template/iconaPint.png" border="0" alt="">
+        </a>
+    </p>
+</div>
+<div class="like">
+    <fb:like href="<?php echo Mage::getStoreConfig('vsocial/settings/refernecedWeb'); ?>" send="false" 
+             layout="button_count" width="450" show_faces="false" font="verdana"></fb:like>
+</div>
+</div>
