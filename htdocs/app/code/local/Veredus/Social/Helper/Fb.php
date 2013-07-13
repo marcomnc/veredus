@@ -21,7 +21,7 @@
  * @author      MPS Sistemi S.a.s - Marco Mancinelli <marco.mancinelli@mps-sistemi.it>
  *
  */
-class Veredus_Social_Helper_Fb extends Mcgroup_Social_Helper_Data
+class Veredus_Social_Helper_Fb extends Veredus_Social_Helper_Data
 {
     
     protected $_isEnable;

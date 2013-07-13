@@ -1,16 +1,20 @@
 
-jQuery(window).load(function(){
-
+jQuery(document).ready(function(){
+    //on load function
     jQuery(".header-selector .selected").headerSwitchers();
+    jQuery.fn.MpsUi();
+    jQuery("#ajax-login").ajaxLogin()
 });
 
+//Header Switcher
 (function ($, window, undefined) {
-    jQuery.fn.headerSwitchers = function() {        
+    $.fn.headerSwitchers = function() {        
         return $(this).each(function(idx,el) {
             $.fn.headerSwitcher(el);
         })
     }
-    jQuery.fn.headerSwitcher = function(elem) {        
+    
+    $.fn.headerSwitcher = function(elem) {        
         var rel ='[rel="'+$(elem).attr('id')+'"]';
         var select = rel+'.header-selector';
         var view = rel+'.header-selector-pop-up';
@@ -50,4 +54,130 @@ jQuery(window).load(function(){
         });
 
     }
+    
 }) (jQuery, this);
+
+/**
+ * Manage Login Form
+ *
+ */
+(function ($, window, undefined) {
+    $.fn.ajaxLogin = function() {
+        var t=$(this);
+        var l=$(".popup-login-content");
+        var p=new Object();
+        p.o=5;
+        p.t=new Object();
+        p.t.x=0;p.t.y=0;
+        p.s=new Object();
+        p.s.x=0;p.s.y=0;p.s.z=0;
+        p.l=new Object();
+        p.l.x=0;p.l.y=0;p.l.z=0;
+
+        function init () {
+            p.t.x=t.offset().left;
+            p.t.y=t.offset().top;
+            p.l.z=parseInt(l.css("z-index"))||20000;
+            p.s.x=0;
+            p.s.y=0;
+            p.s.z=p.l.z+1;
+            p.l.x=p.t.x+t.outerWidth()-l.outerWidth()/2;
+            p.l.y=p.t.y+t.outerHeight()+p.o;
+            
+            l.css({"display": "none",
+                   "top": p.l.y+"px",
+                   "left": p.l.x+"px"});
+            hideLoginForm();
+        }
+
+        function showLoginForm() {
+            if ((t.offset().left+t.outerWidth()/2+l.outerWidth()/2)>$(window).width()) {
+                p.l.x=p.t.x+t.outerWidth()+p.o-l.outerWidth();
+                if (p.l.x<0) p.l.x=0;
+            } else {p.l.x=p.t.x+t.outerWidth()-l.outerWidth()/2;}
+            l.css({"left": p.l.x+"px"}).fadeIn(500);
+            $.fn.layerShow(true,'strong',false, null,function() { hideLoginForm(); });
+            t.unbind("click").bind("click", function() {
+                hideLoginForm();
+                return false;
+            });
+
+        }
+
+
+        function hideLoginForm() {
+            l.fadeOut(500);
+            t.unbind("click").bind("click", function() {
+                showLoginForm();
+                return false;
+            })
+            $.fn.layerShow(false);
+        }
+
+        init();
+    }
+}) (jQuery, this);
+
+
+//UI
+(function ($, window, undefined){
+    // Inizializzazione grafica
+    $.fn.MpsUi =  function() {
+        $('[type="checkbox"]').each(function(idx, elem) {
+            var $this = $(elem);
+            $this.wrapAll('<span class="mps-ui-checkbox"/>');
+        });
+        
+        $('.mps-ui-checkbox').on('mouseover mouseout click', function(evt) {
+            switch(evt.type) {
+                case 'mouseover':
+                    $(this).addClass('over');
+                    break;
+                case 'mouseout':
+                    $(this).removeClass('over');
+                    break;
+                default:
+                    if ($(this).hasClass('checked')) {
+                        $(this).find('input').prop("checked", true);
+                        $(this).removeClass('checked');
+                    } else {
+                        $(this).find('input').prop("checked", false);
+                        $(this).addClass('checked');
+                    }
+                    break;
+            }
+        });
+    };
+    $.fn.layerShow = function(show, type,loading, zIndex, callback) {
+        if (!type) type="medium";
+        if (!loading) loading=false;
+        
+        var hide=function(){
+            $('.popup-loading').fadeOut(100,function(){$('.popup-loading-layer').fadeOut(100)});
+            if (callback) {
+                callback();
+            }
+        };
+        
+        if (show) {
+            if (zIndex){
+                $('.popup-loading-layer').css({'z-index': zIndex});
+            }
+            $('.popup-loading-layer').addClass(type).fadeIn(100,function(){if (loading) {$('.popup-loading').fadeIn(100);}});
+            $(window).on('keydown', function(evt) {
+                if (evt.keyCode===27) {
+                    hide();
+                }
+                evt.stopPropagation();
+            });
+            $('.popup-loading-layer').click(function(evt) {
+               hide(); 
+               evt.stopPropagation(); 
+            });
+        } else {
+            hide();
+            $(window).off('keydown');
+            $('.popup-loading-layer').off('click');
+        }
+    };
+})(jQuery, this);

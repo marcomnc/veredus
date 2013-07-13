@@ -93,7 +93,7 @@
                         </defaul-country>
                     </fields>
                 </settings>
-                <country translate="label">
+                <!--<country translate="label">
                     <label>Country Configuration</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>10</sort_order>
@@ -109,7 +109,7 @@
                             <show_in_default>1</show_in_default>                            
                         </list_order>
                     </fields>
-                </country>
+                </country>-->
              </groups>
         </veredus>
     </sections>

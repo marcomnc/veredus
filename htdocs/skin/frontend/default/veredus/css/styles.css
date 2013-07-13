@@ -106,8 +106,8 @@ ul,ol         { list-style:none; }
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
-.main-container { background:#fbfaf6 url(../images/bkg_main1.gif) 50% 0 no-repeat; }
-.main { width:900px; margin:0 auto; min-height:400px; padding:25px 25px 80px; background:#fffffe url(../images/bkg_main2.gif) 0 0 no-repeat; text-align:left; }
+.main-container { background:transparent }
+.main { width:900px; margin:0 auto; min-height:400px; padding:25px 25px 80px; background:transparent; text-align:left; }
 
 /* Base Columns */
 .col-left { float:left; width:195px; padding:0 0 1px; }
@@ -147,7 +147,9 @@ ul,ol         { list-style:none; }
 /* Form Elements */
 input,select,textarea,button { font:12px/15px Arial, Helvetica, sans-serif; vertical-align:middle; color:#2f2f2f; }
 input.input-text,select,textarea { background:#fff; border:1px solid #b6b6b6; }
-input.input-text,textarea { padding:2px; }
+input.input-text,textarea { padding:2px; -webkit-border-radius: 4px;
+                                        -moz-border-radius: 4px;
+                                        border-radius: 4px;}
 select { padding:1px; }
 select option { padding-right:10px; }
 select.multiselect option { border-bottom:1px solid #b6b6b6; padding:2px 5px; }
@@ -158,9 +160,30 @@ input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
-button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
-button.button span { display:block; height:19px; border:1px solid #de5400; background:#f18200; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
+button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; cursor:pointer; 
+
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+
+    -webkit-box-shadow: 0px 1px 1px rgba(181, 118, 100, 0.5);
+    -moz-box-shadow:    0px 1px 1px rgba(181, 118, 100, 0.5);
+    box-shadow:         0px 1px 1px rgba(181, 118, 100, 0.5);
+    
+    border: 1px solid #829E97;
+
+    background: #F8F8F6; /* Old browsers */
+    background: -moz-linear-gradient(top, #8ba5a1 0%, #729088 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(top, #8ba5a1 0%, #729088 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #8ba5a1 0%, #729088 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #8ba5a1 0%, #729088 100%); /* IE10+ */
+    background: linear-gradient(top, #8ba5a1 0%, #729088 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ba5a1', endColorstr='#729088',GradientType=0 ); /* IE6-8 */}
+button.button span { display:block; height:20px; 
+                     background:#7b9790; padding:1px 8px 0; font-weight: bold; 
+                     font-size: 12px; text-align:center; white-space:nowrap; color:#fff;
+                     background: transparent }
 button.button span span { border:0; padding:0; }
+
 button.disabled span { border-color:#bbb !important; background:#bbb !important; }
 
 button.btn-checkout span { height:40px; border:0; background:url(../images/btn_checkout.gif) 0 0 no-repeat; padding:0 0 0 9px; font:bold 15px/40px Arial, Helvetica, sans-serif; color:#fff; }
@@ -171,10 +194,7 @@ button.btn-checkout.no-checkout span span { background-position:100% 100%; }
 p.control input.checkbox,
 p.control input.radio { margin-right:6px; }
 /* Form Highlight */
-input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -36px ; 
-                                                    -webkit-border-radius: 1px;
-                                                    -moz-border-radius: 1px;
-                                                    border-radius: 1px;}
+input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -36px ; }
 /*.highlight { background:#efefef; }*/
 
 /* Form lists */
@@ -308,7 +328,7 @@ input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../
 .buttons-set-order .please-wait { padding:12px 7px 0 0; }
 
 .fieldset { border:1px solid #bbafa0; background:#fbfaf6; padding:22px 25px 12px 33px; margin:28px 0; }
-.fieldset .legend { float:left; font-weight:bold; font-size:13px; border:1px solid #f19900; background:#f9f3e3; color:#e76200; margin:-33px 0 0 -10px; padding:0 8px; position:relative; }
+.fieldset .legend { float:left; font-weight:bold; font-size:13px; border:1px solid #89a39f; background:#FFFFFF; color:#89a39f; margin:-33px 0 0 -10px; padding:0 8px; position:relative; }
 
 /* Form Validation */
 .validation-advice { clear:both; min-height:13px; margin:3px 0 0; padding-left:17px; font-size:11px; font-weight:bold; line-height:13px; background:url(../images/validation_advice_bg.gif) 2px 0 no-repeat; color:#eb340a; }
@@ -534,9 +554,13 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-search { height: 24px; padding:3px 8px 0 0px; }
 .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; }
 .header .form-search input.input-text { float:left; border:none; width:185px; margin-right:0px;
-                                        background: url('../images/veredus_v_1_0.png') -5px -100px no-repeat; height: 26px}
-.header .form-search button.button { float:left; }
-.header .form-search button.button span { border:0; width:27px; height: 26px; background: url('../images/veredus_v_1_0.png') -190px -100px no-repeat; }
+                                        background: url('../images/veredus_v_1_0.png') -5px -100px no-repeat; height: 26px;
+                                        -webkit-border-radius: 4px 0px 0px 4px;
+                                        -moz-border-radius: 4px 0px 0px 4px;
+                                        border-radius: 4px 0px 0px 4px;}
+.header .form-search button.button { float:left; border: 0px; background: transparent; -webkit-border-radius: 0px;border-radius: 0px;
+                                    -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
+.header .form-search button.button span { border:0; width:27px; height: 26px; background: url('../images/veredus_v_1_0.png') -190px -100px no-repeat; padding: 0px}
 .header .form-search button.button span span {  }
 .header .form-search .search-autocomplete { z-index:999; left:40px !important; top:22px !important; }
 .header .form-search .search-autocomplete ul { border:1px solid #5c7989; background-color:#f9f5f0; }
@@ -621,7 +645,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Sidebar =============================================================================== */
 .block { margin:0 0 15px; }
 .block .block-title { padding:2px 9px; }
-.block .block-title strong { display:block; font:bold 12px/16px Arial, Helvetica, sans-serif; min-height:16px; padding:1px 0 1px; text-transform:uppercase; color:#FFFFFF; }
+.block .block-title strong { display:block; min-height:16px; padding:1px 0 1px; text-transform:uppercase; color:#FFFFFF; }
 .block .block-title strong span {}
 .block .block-title a { text-decoration:none !important; }
 .block .block-subtitle { margin:0; padding:5px 9px; font-size:1em; font-weight:bold; color:#0a263c; }
@@ -1529,7 +1553,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Remember Me Popup ===================================================================== */
 .window-overlay { background:url(../images/window_overlay.png) repeat; background:rgba(0, 0, 0, 0.35); position:absolute; top:0; left:0; height:100%; width:100%; z-index:990; }
 
-.remember-me label { float:none; margin:0 6px; }
+.remember-me label { float:left; margin:0 6px; }
 .remember-me-popup { background:#fff; border:1px solid #ccc; left:50%; top:50%; position:absolute; margin:-85px 0 0 -200px; width:400px; text-align:left; -moz-box-shadow:0 0 6px #ccc; -webkit-box-shadow:0 0 6px #ccc; -box-shadow:0 0 6px #ccc; z-index:1000; }
 .remember-me-popup h3 { background:#d9e5ee; border-bottom:1px solid #ccc; font-size:14px; padding:5px 10px; }
 .remember-me-popup .remember-me-popup-head { position:relative; }
@@ -1722,7 +1746,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 .footer-container .address { padding: 5px 10px 5px 5px; background: #4C4C4C; text-align: right; }
 .footer-container .address a ,
-.footer-container .address a:hover { text-decoration:none; }
+.footer-container .address a:hover { text-decoration:none; color:#fff;  }
 .footer-container .address li {float: right}
 
 .footer { height: 160px; border-top: 1px solid#ADADAD; border-bottom:  1px solid#ADADAD;
@@ -1833,3 +1857,34 @@ tr.summary-details-excluded { font-style:italic; }
 .linkSocial a {margin-right: 5px }
 .linkSocial div {float: left}
 .linkSocial .like {margin: 26px 0 0 35px}
+
+.popup-loading-layer {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; text-align: center;
+                      background: #000000;}
+.popup-loading-layer.strong {opacity:0.4; filter:alpha(opacity=40); /* For IE8 and earlier */}
+.popup-loading-layer.medium {opacity:0.2; filter:alpha(opacity=20); /* For IE8 and earlier */}
+
+.popup-loading {position: absolute; top: 50%; left: 50% }
+
+
+.popup-login-content { background-image: url('../images/sfondoMenu.png'); z-index: 20000; 
+                         border:solid 2px #89a39f; float:left; padding: 15px 10px 10px; position: absolute;
+                         width: 350px; height: 175px;
+                         -webkit-border-radius: 6px;
+                         -moz-border-radius: 6px;
+                         border-radius: 6px;}
+.popup-login-content .registered-users {float: left; font-size: 14px}
+.popup-login-content .form-list .input-box { width: 160px}
+.popup-login-content .form-list input.input-text { width: 160px}
+.popup-login-content .new-users {float: left; width: 50%; font-size: 16px; font-weight: bold; text-align: center}
+.popup-login-content .new-users>div {padding: 5px 0}
+.popup-login-content .create {margin-right: 35px}
+.popup-login-content .forgot {margin-top: 10px}
+.popup-login-content button#send2 {float: left}
+.popup-login-content button {margin-top: 5px}
+
+INPUT[type="checkbox"], 
+.mps-ui-checkbox input {display: none}
+.mps-ui-checkbox,
+.mps-ui-checkbox.checked { width: 13px; height: 14px; float: left }
+.mps-ui-checkbox {background: transparent url('../images/veredus_v_1_0.png') -2px -14px no-repeat;}
+.mps-ui-checkbox.checked {background-position:  -18px -14px;}

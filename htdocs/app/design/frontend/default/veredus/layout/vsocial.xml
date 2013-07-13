@@ -14,20 +14,21 @@
         <reference name="after_body_start">
             <block type="core/template" name="fb.init.sdk" template="veredus/social/fb.init.sdk.phtml"/>
         </reference>
+        
     </default>
     
     <customer_logged_out>
-<!--        <reference name="head">
+        <reference name="head">
             <action method="addItem"><type>skin_js</type><name>js/social.js</name></action>
-        </reference>-->
+        </reference>
     </customer_logged_out>
     <!-- Pagina login utente -->
-    <customer_account_login translate="label">        
+    <customer_account_login>
         <!-- Il blocco viene creato da codice -->
     </customer_account_login>
 
     <!-- Pagina di check out -->
-    <checkout_onepage_index translate="label">
+    <checkout_onepage_index>
         <reference name="head">
             <action method="addItem"><type>skin_js</type><name>js/social.js</name></action>
         </reference>    
@@ -35,7 +36,9 @@
     </checkout_onepage_index>
 
     <!-- Pagine del prodotto aggiungo l'open graph nell'head-->
-    <catalog_product_view translate="label">
-
+    <catalog_product_view>
+        <reference name="head">
+            <block type="core/template" name="fbconnect.open.graph" as="fbconnect_open_graph" translate="label" template="veredus/social/fbhead.phtml"/>
+        </reference>
     </catalog_product_view>
 </layout>

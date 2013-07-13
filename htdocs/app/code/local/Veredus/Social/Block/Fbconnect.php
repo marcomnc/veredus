@@ -21,7 +21,7 @@
  * @author      MPS Sistemi S.a.s - Marco Mancinelli <marco.mancinelli@mps-sistemi.it>
  *
  */
-class Veredus_Social_Block_Fbconnect extends Mcgroup_Social_Block_Fbabstract {
+class Veredus_Social_Block_Fbconnect extends Veredus_Social_Block_Fbabstract {
     
     protected $_fbSettings = array();
     
