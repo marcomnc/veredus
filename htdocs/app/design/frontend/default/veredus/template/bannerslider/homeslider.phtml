@@ -1,0 +1,55 @@
+<?php
+	$bannerCollection = $this->getBannerCollection();
+	$i = 0;
+?>
+<?php $timeDelay = $this->getDelayTime() ?>
+<?php $imagewidth = $this->getImageWidth() ?>
+<?php $imageheight = $this->getImageHeight() ?>
+
+<?php if (count($bannerCollection)>0):?>
+<div id="slider-1" class="slide-container flex-container"
+     style="height: <?php echo $imageheight+20;?>px;
+            width: 1023px; padding-left: <?php echo (1023 - $imagewidth)/2;?>px; margin-left: -<?php echo (1023 - $imagewidth)/2;?>px;"
+     >
+    <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery.flexslider-min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery-easing-1.3.pack.js') ?>"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/slider/flexslider.css');?>" media="all" />
+
+    <div id="slide-images" class="slide-show flexslider" style="width:<?php echo $imagewidth;?>px; height:<?php echo $imageheight;?>px;">
+        <ul class="banner-content-style1 slides"> 
+                <?php $i = 0; foreach ($bannerCollection as $banner): $i++; ?>
+             <li id="tab<?php echo $i;?>" class="tabcontent" style="width:<?php echo $imagewidth;?>px; height:<?php echo $imageheight;?>px;" alt="Slide" >
+                        <?php if ($banner['weblink'].'' != ''): ?>
+                        <a href="<?php echo $banner['weblink'];?>">
+                        <?php endif; ?>
+                            <?php if ($banner['filename'].'' != ''): ?>
+                            
+                            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $banner['filename']?>" 
+                                 title="<?php echo $banner['title']?>" alt="<?php echo $banner['title']?>" 
+                                 style="width:<?php echo $imagewidth;?>px; height:<?php echo $imageheight;?>px;"/>				
+                            <?php endif; ?>
+                        <?php if ($banner['weblink'].'' != ''): ?>
+                        </a>
+                        <?php endif;?>
+                        <div class="banner_content" style="width:<?php echo $imagewidth - 20?>px;">
+                            <?php $helper = Mage::helper('cms');
+                                  $processor = $helper->getBlockTemplateProcessor();
+                                  echo $processor->filter($banner['content']); ?>
+                        </div>                        
+                </li>
+                <?php endforeach; ?>
+        </ul>
+    </div>
+	<script type="text/javascript">
+		<?php echo 'var delay = ' . $timeDelay . ';'; ?>
+                <?php echo 'var width = ' . $imagewidth . ';'; ?>
+  jQuery(window).load(function() {
+    jQuery('.flexslider').flexslider({animation: "slide",
+                                      slideshowSpeed: delay,
+                                      });
+  });
+	</script>
+</div>
+
+<?php endif;?>
+<div class="clear"></div>

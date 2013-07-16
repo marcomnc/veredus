@@ -107,7 +107,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container { background:transparent }
-.main { width:900px; margin:0 auto; min-height:400px; padding:25px 25px 80px; background:transparent; text-align:left; }
+.main { width:970px; margin:0 auto; min-height:400px; padding:0px 15px 80px; background:transparent; text-align:left; }
 
 /* Base Columns */
 .col-left { float:left; width:195px; padding:0 0 1px; }
@@ -482,7 +482,7 @@ tr.summary-details-excluded { font-style:italic; }
 .std p,
 .std address,
 .std blockquote { margin:0 0 1em; padding:0; }
-.std ul { list-style:disc outside; padding-left:1.5em; }
+.std ul {  }
 .std ol { list-style:decimal outside; padding-left:1.5em; }
 .std ul ul { list-style-type:circle; }
 .std ul ul,
@@ -544,7 +544,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Header ================================================================================ */
 .logo { float:left; }
 .header-container {}
-.header { width:930px; margin:0 auto; padding:2px; text-align:right; position:relative; z-index:10; }
+.header { width:1000px; margin:0 auto; padding:2px; text-align:right; position:relative; z-index:10; }
 .header .logo { float:left; margin:3px 0 10px 12px; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header h1.logo { margin:0; }
@@ -582,7 +582,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .header-right {float: right; position: relative; background: transparent url('../images/veredus_v_1_0.png') 0px -140px repeat}
 .header .header-right li {float: left}
 /******* CArrello ****/
-.header .block-cart { float: right; margin: 18px 18px 0 0; }
+.header .block-cart { position: absolute; top: 50px; right: 18px}
 .header .block-cart>div { float: left; }
 .header .block-cart .cart-text {margin: 5px 10px }
 .header .block-cart .cart-status {height: 35px; width: 35px; background: transparent url('../images/veredus_v_1_0.png') -35px 0px no-repeat; position: relative}
@@ -617,7 +617,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .block-cart .cart-status .cart-items a:visited {color: white; text-decoration: none}
 /**********  Navigation */
 .nav-container { background:transparent }
-#nav { width:918px; margin:0 auto; padding:0 16px; font-size:17px; border-bottom: 3px solid #89a39f }
+#nav { width:1000px; margin:0 auto; padding:0 2px; font-size:17px; border-bottom: 3px solid #89a39f }
 
 /* All Levels */ /* Style consistent throughout all nav levels */
 #nav li { position:relative; text-align:left; }
@@ -1775,7 +1775,7 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-container { color: #FFFFFF }
 
 .footer-container .address,
-.footer-container .footer {width:935px; margin:0 auto; }
+.footer-container .footer {width:989px; margin:0 auto; }
 
 .footer-container .address { padding: 5px 10px 5px 5px; background: #4C4C4C; text-align: right; }
 .footer-container .address a ,

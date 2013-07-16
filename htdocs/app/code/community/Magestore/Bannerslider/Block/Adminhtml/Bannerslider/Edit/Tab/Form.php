@@ -85,7 +85,7 @@ class Magestore_Bannerslider_Block_Adminhtml_Bannerslider_Edit_Tab_Form extends 
           'title'     => Mage::helper('bannerslider')->__('Content'),
           'style'     => 'width:280px; height:100px;',
           'wysiwyg'   => true,
-          'required'  => true,
+          'required'  => false,
           'config'    => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
       ));
 	
