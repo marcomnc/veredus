@@ -1,8 +1,10 @@
 nbproject/
-htdocs/app/code/community/
+htdocs/app/code/community/Phoenix/
 htdocs/app/code/core/
 htdocs/app/code/local/MpsSistemi/
-htdocs/app/design/adminhtml/
+htdocs/app/design/adminhtml/default/default/layout/
+htdocs/app/design/adminhtml/default/default/locale/
+htdocs/app/design/adminhtml/default/default/template/
 htdocs/app/design/frontend/base/
 htdocs/app/design/frontend/default/blank/
 htdocs/app/design/frontend/default/default/
@@ -61,7 +63,7 @@ htdocs/shell/abstract.php
 htdocs/shell/compiler.php
 htdocs/shell/indexer.php
 htdocs/shell/log.php
-htdocs/skin/adminhtml/
+htdocs/skin/adminhtml/default/default/
 htdocs/skin/frontend/base/
 htdocs/skin/frontend/default/blank/
 htdocs/skin/frontend/default/blue/

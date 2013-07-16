@@ -194,7 +194,7 @@ button.btn-checkout.no-checkout span span { background-position:100% 100%; }
 p.control input.checkbox,
 p.control input.radio { margin-right:6px; }
 /* Form Highlight */
-input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -36px ; }
+input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -38px ; }
 /*.highlight { background:#efefef; }*/
 
 /* Form lists */
@@ -581,8 +581,17 @@ tr.summary-details-excluded { font-style:italic; }
 .header-container .top-container a { font-size:11px; color:#ebbc58; }
 .header .header-right {float: right; position: relative; background: transparent url('../images/veredus_v_1_0.png') 0px -140px repeat}
 .header .header-right li {float: left}
+/******* CArrello ****/
+.header .block-cart { float: right; margin: 18px 18px 0 0; }
+.header .block-cart>div { float: left; }
+.header .block-cart .cart-text {margin: 5px 10px }
+.header .block-cart .cart-status {height: 35px; width: 35px; background: transparent url('../images/veredus_v_1_0.png') -35px 0px no-repeat; position: relative}
+.header .block-cart .cart-status .cart-items { overflow: hidden; background: transparent url('../images/veredus_v_1_0.png') -72px -0px no-repeat; position: absolute;
+                                               top: 45px; right: -5px}
+.header .block-cart .cart-status .cart-items span { height: 19px; float: left; margin-left: 3px; margin-top: 1px; }
+.header .block-cart .cart-status .cart-items span span { background: transparent url('../images/veredus_v_1_0.png') -105px -18px no-repeat;}
 
-/********** < Navigation */
+/**********  Navigation */
 .nav-container { background:transparent }
 #nav { width:918px; margin:0 auto; padding:0 16px; font-size:17px; border-bottom: 3px solid #89a39f }
 

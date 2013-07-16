@@ -38,6 +38,7 @@ Default layout, loads most of the pages
         </reference>
         <reference name="header">
             <block type="directory/currency" name="currency" as="currency" template="directory/currency.phtml"/>
+            <block type="checkout/cart_sidebar" name="header-cart-info" as="header-cart-info" template="checkout/cart/header-info.phtml" />
         </reference>
         <reference name="left">
             <remove name="left.permanent.callout"/>
