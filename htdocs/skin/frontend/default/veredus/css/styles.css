@@ -586,11 +586,36 @@ tr.summary-details-excluded { font-style:italic; }
 .header .block-cart>div { float: left; }
 .header .block-cart .cart-text {margin: 5px 10px }
 .header .block-cart .cart-status {height: 35px; width: 35px; background: transparent url('../images/veredus_v_1_0.png') -35px 0px no-repeat; position: relative}
-.header .block-cart .cart-status .cart-items { overflow: hidden; background: transparent url('../images/veredus_v_1_0.png') -72px -0px no-repeat; position: absolute;
+/*.header .block-cart .cart-status .cart-items { background: transparent url('../images/veredus_v_1_0.png') -154px -0px no-repeat; position: absolute;
                                                top: 45px; right: -5px}
-.header .block-cart .cart-status .cart-items span { height: 19px; float: left; margin-left: 3px; margin-top: 1px; }
-.header .block-cart .cart-status .cart-items span span { background: transparent url('../images/veredus_v_1_0.png') -105px -18px no-repeat;}
+.header .block-cart .cart-status .cart-items span { height: 19px; float: left; margin-left: 3px; background: transparent url('../images/veredus_v_1_0.png') 100% 0px no-repeat; overflow: hidden; }
+.header .block-cart .cart-status .cart-items span span {  }
+*/
 
+.header .block-cart .cart-status .cart-items {
+    background:    radial-gradient( 5px -9px, circle, #8BA5A1 8%, #8BA5A1#6C8881 26px );
+    background:    -moz-radial-gradient( 5px -9px, circle, #8BA5A1 8%, #6C8881 26px );
+    background:    -ms-radial-gradient( 5px -9px, circle, #8BA5A1 8%, #6C8881 26px );
+    background:    -o-radial-gradient( 5px -9px, circle, #8BA5A1 8%, #6C8881 26px );
+    background:    -webkit-radial-gradient( 5px -9px, circle, #8BA5A1 8%, #6C8881 26px );
+    background-color: #8BA5A1;
+
+    -webkit-border-radius: 12px;
+    border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+    
+    -webkit-box-shadow: 0px 1px 1px #509078;
+    -moz-box-shadow:    0px 1px 1px #509078;
+    box-shadow: 1px 1px 1px #509078;
+    
+    color: white;
+    font: bold 15px/13px Helvetica, Verdana, Tahoma;
+    height: 16px; 
+    padding: 4px 3px 0 3px;
+    text-align: center;
+    min-width: 14px;
+    position: absolute;
+    top: -10px; right: -5px
+}
 /**********  Navigation */
 .nav-container { background:transparent }
 #nav { width:918px; margin:0 auto; padding:0 16px; font-size:17px; border-bottom: 3px solid #89a39f }
