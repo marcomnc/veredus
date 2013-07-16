@@ -45,12 +45,10 @@
     </div>
     <div class="cart-status">
         <?php if ($_cartQty > 0 || true): ?>
-            <div class="cart-items" onclick="setlocation('<?php echo $this->getUrl('checkout/cart/'); ?>')">
-                <span>
-                    <span>
+            <div class="cart-items">
+                <a id="header-cart-link" href="<?php echo $this->getUrl('checkout/cart/'); ?>">
                         <?php echo 1;//$_cartQty; ?>
-                    </span>
-                </span>
+                </a>
             </div>
         <?php endif; ?>
     </div>
