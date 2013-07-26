@@ -15,7 +15,7 @@ class Veredus_Veredus_Model_Adminhtml_System_Config_Source_Catalog_Product_Yesno
     
     public function toOptionArray() {
         $_attList =  $attributes = Mage::getResourceModel('catalog/product_attribute_collection')
-                        ->addFieldToFilter('frontend_input',array("in" => array("select")))
+                        ->addFieldToFilter('frontend_input',array("in" => array("select","boolean")))
                         ->addStoreLabel(Mage::app()->getStore()->getId())
                         ->setOrder('main_table.attribute_id', 'asc')
                         ->load();

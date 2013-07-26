@@ -34,7 +34,7 @@
                         <cms-block-1>
                             <label>Blocco 1 della Home</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>veredus/adminhtml_system_config_Source_cms_block</source_model>
+                            <source_model>veredus/adminhtml_system_config_source_cms_block</source_model>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -51,7 +51,7 @@
                         <cms-block-2>
                             <label>Blocco 2 della Home</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>veredus/adminhtml_system_config_Source_cms_block</source_model>
+                            <source_model>veredus/adminhtml_system_config_source_cms_block</source_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -68,7 +68,7 @@
                         <cms-block-3>
                             <label>Blocco 3 della Home</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>veredus/adminhtml_system_config_Source_cms_block</source_model>
+                            <source_model>veredus/adminhtml_system_config_source_cms_block</source_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -88,19 +88,35 @@
                             <source_model>veredus/adminhtml_system_config_source_catalog_product_yesnoattribute</source_model>
                             <sort_order>40</sort_order>
                             <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>
+                                <model>
+                                    veredus/adminhtml_system_config_source_home_block
+                                </model>
+                                <text>Gli articoli che hanno questo attributo attivo vengono visualizzati nella home (max 3 articoli)
+                                </text>
+                            </comment>
+                        </attribute_home_product>
+                        <attribute_home_image>
+                            <label>Attributo che identifica l'immagine per i prodotti in home</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>veredus/adminhtml_system_config_source_media_imagecolor</source_model>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
                             <comment>
                                 <model>
                                     veredus/adminhtml_system_config_source_home_block
                                 </model>
                                 <imgname>
                                     template/adminhtml/home_structure_b_p.png
-                                </imgname>
-                                <text>Gli articoli che hanno questo attributo attivo vengono visualizzati nella home (max 3 articoli)
+                                </imgname>  
+                                <text>Il tipo di immagine che viene utilizzato per visualizzare gli articoli in home. Se non attivo viene presa l'immagine di catalogo
                                 </text>
                             </comment>
-                        </attribute_home_product>
+                        </attribute_home_image>
                     </fields>
                 </home>
                 <settings translate="label">
