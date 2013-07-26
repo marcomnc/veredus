@@ -101,13 +101,13 @@ ul,ol         { list-style:none; }
 
 
 /* Layout ================================================================================ */
-.wrapper { min-width:954px; }
+.wrapper { width:1024px; margin: auto}
 .page {}
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container { background:transparent }
-.main { width:970px; margin:0 auto; min-height:400px; padding:0px 15px 80px; background:transparent; text-align:left; }
+.main { /*width:970px;*/ width: 100%; margin:0 auto; min-height:400px; padding:0px 15px 80px; background:transparent; text-align:left; }
 
 /* Base Columns */
 .col-left { float:left; width:195px; padding:0 0 1px; }
@@ -544,7 +544,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Header ================================================================================ */
 .logo { float:left; }
 .header-container {}
-.header { width:1000px; margin:0 auto; padding:2px; text-align:right; position:relative; z-index:10; }
+.header { /*width:1000px;*/ margin:0 auto; padding:2px; text-align:right; position:relative; z-index:10; }
 .header .logo { float:left; margin:3px 0 10px 12px; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header h1.logo { margin:0; }
@@ -617,7 +617,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .block-cart .cart-status .cart-items a:visited {color: white; text-decoration: none}
 /**********  Navigation */
 .nav-container { background:transparent }
-#nav { width:1000px; margin:0 auto; padding:0 2px; font-size:17px; border-bottom: 3px solid #89a39f }
+#nav { /*width:1000px;*/ margin:0 auto; padding:0 2px; font-size:17px; border-bottom: 3px solid #89a39f }
 
 /* All Levels */ /* Style consistent throughout all nav levels */
 #nav li { position:relative; text-align:left; }
@@ -837,7 +837,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-subscribe input {float: left}
 .block-subscribe input.input-text { display:block; width:160px; margin:3px 0; }
 .block-subscribe .actions { background:none; padding:0; margin:3px 0 0; text-align:left; float: left}
-.block-subscribe .actions button.button { float:none; }
+.block-subscribe .actions button.button { float:none; background: none; border: none; -webkit-box-shadow: none; -moz-box-shadow:none; box-shadow:none; }
 .block-subscribe .actions button.button span { border-color:transparent; background:transparent; }
 
 /* Block: Reorder */
@@ -1775,7 +1775,7 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-container { color: #FFFFFF }
 
 .footer-container .address,
-.footer-container .footer {width:989px; margin:0 auto; }
+.footer-container .footer {/*width:989px;*/ margin:0 auto; }
 
 .footer-container .address { padding: 5px 10px 5px 5px; background: #4C4C4C; text-align: right; }
 .footer-container .address a ,
@@ -1921,3 +1921,8 @@ INPUT[type="checkbox"],
 .mps-ui-checkbox.checked { width: 13px; height: 14px; float: left }
 .mps-ui-checkbox {background: transparent url('../images/veredus_v_1_0.png') -2px -14px no-repeat;}
 .mps-ui-checkbox.checked {background-position:  -18px -14px;}
+
+.set-container {width: 100%; height: auto;}
+.set-container .set-left {float: left}
+.set-container .set-right {float: right} 
+.set-container>div {margin-right: 10px;}    

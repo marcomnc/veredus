@@ -23,6 +23,7 @@ class Veredus_Veredus_Model_Adminhtml_System_Config_Source_Cms_Block
                  $this->_options[] = array('value' => $_block->getId(), 'label' => $_block->getTitle());
              }
         }
+        $this->_options[] = array('value' => '', 'label' => Mage::helper('veredus')->__('Seleziona un blocco'));
         return $this->_options;
     }
 
