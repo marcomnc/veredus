@@ -20,8 +20,8 @@
             <depends>
             	<Mage_Catalog />
             	<Mage_CatalogSearch />
-				<Mana_Core />
-				<Mana_Db />
+                <Mana_Core />
+                <Mana_Db />
             </depends>
         </Mana_Filters>
     </modules>

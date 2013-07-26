@@ -26,8 +26,8 @@ examples on what kind of actions can be applied to referenced blocks.
     </default>
     <jquery_core>
 		<reference name="head">
-            <action method="addJs" ifconfig="mana_dev/debug/jquery"><script>jquery/jquery.js</script></action>
-            <action method="addJs" ifconfig="mana_dev/debug/jquery_min"><script>jquery/jquery.min.js</script></action>
+<!--            <action method="addJs" ifconfig="mana_dev/debug/jquery"><script>jquery/jquery.js</script></action>
+            <action method="addJs" ifconfig="mana_dev/debug/jquery_min"><script>jquery/jquery.min.js</script></action>-->
             <action method="addJs"><script>jquery/jquery.printf.js</script></action>
             <action method="addJs"><script>mana/core.js</script></action>
 			<action method="addCss"><stylesheet>css/mana_core.css</stylesheet></action>
@@ -57,11 +57,11 @@ examples on what kind of actions can be applied to referenced blocks.
 		</reference>
 	</jquery_basic_effects>
 	<jquery_ui>
-		<reference name="head">
-			<action method="addCss"><stylesheet>css/jquery/ui.css</stylesheet></action>
-            <action method="addJs" ifconfig="mana_dev/debug/jquery"><script>jquery/jquery-ui.js</script></action>
-            <action method="addJs" ifconfig="mana_dev/debug/jquery_min"><script>jquery/jquery-ui.min.js</script></action>
-            <action method="addJs"><script>jquery/validate/jquery.validate.js</script></action>
-		</reference>
+            <reference name="head">
+                <action method="addCss"><stylesheet>css/jquery/ui.css</stylesheet></action>
+                <action method="addJs" ifconfig="mana_dev/debug/jquery"><script>jquery/jquery-ui.js</script></action>
+                <action method="addJs" ifconfig="mana_dev/debug/jquery_min"><script>jquery/jquery-ui.min.js</script></action>
+                <action method="addJs"><script>jquery/validate/jquery.validate.js</script></action>
+            </reference>
 	</jquery_ui>
 </layout>

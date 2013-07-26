@@ -359,7 +359,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .notice-msg { border-color:#fcd344; background-color:#fafaec; background-image:url(../images/i_msg-note.gif); color:#3d6611; }
 
 /* BreadCrumbs */
-.breadcrumbs { font-size:11px; line-height:1.25; margin:0 0 13px; }
+.breadcrumbs { font-size:11px; line-height:1.25; margin:6px 0 13px; }
 .breadcrumbs li { display:inline; }
 .breadcrumbs li strong { font-weight:bold; }
 
