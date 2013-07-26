@@ -33,7 +33,7 @@ class Veredus_Veredus_Block_Template_Home extends Mage_Core_Block_Template {
         
         $this->_cache = Mage::getModel("core/cache");        
         $this->_block = unserialize($this->_cache->load(self::HOME_BLOCK_TEMPLATE_CACHE_KEY . Mage::app()->getStore()->getId()));
-Mage::Log($this->_block);        
+
         for ($i = 1; $i <= 3; $i++) {
             if (!isset($this->_block['id'][$i]) && Mage::getStoreConfig("veredus/home/cms-block-$i").'' != '') {
                 $this->_block['id'][$i] = Mage::getStoreConfig("veredus/home/cms-block-$i").'';

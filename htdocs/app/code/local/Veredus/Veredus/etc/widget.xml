@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<widgets>
+    <veredus_widget_product_list type="veredus/widget_product_list">
+        <name>Custom Product List</name>
+        <description type="desc">Permette di inserire una lista configurabile di prodotti</description>
+        
+        <parameters>
+            <row translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <value>5</value>
+                <label>Numero di righe</label>
+                <type>text</type>
+            </row>
+            <column translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>Numero di Colonne</label>
+                <type>text</type>
+                <value>3</value>
+            </column>
+            <attribute_home_product translate="label description">
+                <label>Attributo che identifica l'attributo per i prodotti da Selezionare</label>
+                <required>1</required>
+                <visible>1</visible>                
+                <type>select</type>
+                <source_model>veredus/adminhtml_system_config_source_catalog_product_yesnoattribute</source_model>
+                <show_in_store>0</show_in_store>
+                <description>Gli articoli che hanno questo attributo attivo vengono visualizzati nella home (max 3 articoli)</description>
+            </attribute_home_product>
+            <attribute_home_image translate="label description">
+                <label>Attributo che identifica l'immagine per i prodotti in home</label>
+                <required>1</required>
+                <visible>1</visible>                
+                <type>select</type>
+                <source_model>veredus/adminhtml_system_config_source_media_imagecolor</source_model>
+                <description>Il tipo di immagine che viene utilizzato per visualizzare gli articoli in home. Se non attivo viene presa l'immagine di catalogo</description>
+            </attribute_home_image>
+        </parameters>
+    </veredus_widget_product_list>
+</widgets> 

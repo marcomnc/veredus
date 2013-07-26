@@ -1,0 +1,38 @@
+<div class="clearer"></div>
+
+<?php
+$_productCollection = $this->getProductCollection();
+if ($_productCollection->count() > 0): ?> 
+<div class="category-products custom">
+<?php
+$i = 0;
+foreach ($_productCollection as $_product): 
+    if ($i++%$this->getColumn()==0): ?>
+    <ul class="products-grid">
+<?php endif; ?>
+
+        <li class="item<?php if(($i-1)%$this->getColumn()==0): ?> first<?php elseif($i%$this->getColumn()==0): ?> last<?php endif; ?>">
+            
+            <div class="product-container">
+                <img src="<?php echo $this->helper('catalog/image')->init($_product, (($_product->getImageViewHome() != "") ? 'image_view_home' : 'small_image'))->resize(320, 270); ?>" width="320" height="270" alt="<?php echo $this->stripTags($this->getImageLabel($_product, (($_product->getImageViewHome() != "") ? 'image_view_home' : 'small_image')), null, true) ?>" />
+                <button type="button" title="<?php echo $this->__('Buy Now') ?>" class="button btn-cart" onclick="setLocation('<?php echo $_product->getUrlModel()->getUrl($_product) ?>')"><span><span><?php echo $this->__('Buy Now') ?></span></span></button>
+            </div>
+            
+        </li>
+
+<?php
+    if ($i%$this->getColumn() == 0): ?>
+    </ul>
+<?php
+    endif;
+endforeach;?>
+    
+</div>
+<?php
+else : ?>
+<p class="note-msg"><?php echo Mage::helper(catalog)->__('There are no products matching the selection.') ?></p>
+<?php
+endif;
+?>
+
+</pre>
