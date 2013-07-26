@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: Lug 26, 2013 alle 10:18
+-- Generato il: Lug 26, 2013 alle 16:26
 -- Versione del server: 5.5.29-log
 -- Versione PHP: 5.4.10
 
@@ -39,7 +39,7 @@ CREATE TABLE `adminnotification_inbox` (
   KEY `IDX_ADMINNOTIFICATION_INBOX_SEVERITY` (`severity`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_READ` (`is_read`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_REMOVE` (`is_remove`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox' AUTO_INCREMENT=128 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox' AUTO_INCREMENT=140 ;
 
 --
 -- Dump dei dati per la tabella `adminnotification_inbox`
@@ -172,7 +172,19 @@ INSERT INTO `adminnotification_inbox` (`notification_id`, `severity`, `date_adde
 (124, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
 (125, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
 (126, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
-(127, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
+(127, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(128, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(129, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(130, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(131, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(132, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(133, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(134, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(135, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(136, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(137, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(138, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(139, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -271,7 +283,7 @@ CREATE TABLE `admin_user` (
 --
 
 INSERT INTO `admin_user` (`user_id`, `firstname`, `lastname`, `email`, `username`, `password`, `created`, `modified`, `logdate`, `lognum`, `reload_acl_flag`, `is_active`, `extra`, `rp_token`, `rp_token_created_at`) VALUES
-(1, 'Marco', 'Mancinelli', 'marco@mancinellimarco.it', 'marcoma', '3988e15cd7c881d90f387edbe77bf0e0:LK', '2013-07-26 09:34:45', '2013-07-07 12:54:44', '2013-07-26 07:34:45', 17, 0, 1, 'a:1:{s:11:"configState";a:47:{s:14:"design_package";s:1:"0";s:12:"design_theme";s:1:"1";s:11:"design_head";s:1:"0";s:13:"design_header";s:1:"0";s:13:"design_footer";s:1:"0";s:16:"design_watermark";s:1:"1";s:17:"design_pagination";s:1:"0";s:12:"design_email";s:1:"0";s:15:"general_country";s:1:"0";s:14:"general_locale";s:1:"0";s:25:"general_store_information";s:1:"1";s:14:"general_region";s:1:"0";s:16:"currency_options";s:1:"1";s:20:"currency_webservicex";s:1:"0";s:15:"currency_import";s:1:"0";s:16:"vsocial_settings";s:1:"1";s:17:"vsocial_pinterest";s:1:"1";s:15:"vsocial_twitter";s:1:"1";s:12:"dev_restrict";s:1:"0";s:9:"dev_debug";s:1:"0";s:12:"dev_template";s:1:"0";s:20:"dev_translate_inline";s:1:"0";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:22:"customer_account_share";s:1:"1";s:25:"customer_online_customers";s:1:"1";s:23:"customer_create_account";s:1:"1";s:17:"customer_password";s:1:"0";s:16:"customer_address";s:1:"0";s:16:"customer_startup";s:1:"1";s:26:"customer_address_templates";s:1:"0";s:16:"customer_captcha";s:1:"0";s:18:"persistent_options";s:1:"1";s:12:"design_admin";s:1:"1";s:21:"bannerslider_settings";s:1:"1";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"1";s:12:"web_unsecure";s:1:"1";s:10:"web_secure";s:1:"1";s:11:"web_default";s:1:"0";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";s:12:"veredus_home";s:1:"1";s:16:"veredus_settings";s:1:"0";}}', NULL, NULL);
+(1, 'Marco', 'Mancinelli', 'marco@mancinellimarco.it', 'marcoma', '3988e15cd7c881d90f387edbe77bf0e0:LK', '2013-07-26 13:13:33', '2013-07-07 12:54:44', '2013-07-26 11:13:33', 18, 0, 1, 'a:1:{s:11:"configState";a:47:{s:14:"design_package";s:1:"0";s:12:"design_theme";s:1:"1";s:11:"design_head";s:1:"0";s:13:"design_header";s:1:"0";s:13:"design_footer";s:1:"0";s:16:"design_watermark";s:1:"1";s:17:"design_pagination";s:1:"0";s:12:"design_email";s:1:"0";s:15:"general_country";s:1:"0";s:14:"general_locale";s:1:"0";s:25:"general_store_information";s:1:"1";s:14:"general_region";s:1:"0";s:16:"currency_options";s:1:"1";s:20:"currency_webservicex";s:1:"0";s:15:"currency_import";s:1:"0";s:16:"vsocial_settings";s:1:"1";s:17:"vsocial_pinterest";s:1:"1";s:15:"vsocial_twitter";s:1:"1";s:12:"dev_restrict";s:1:"0";s:9:"dev_debug";s:1:"0";s:12:"dev_template";s:1:"0";s:20:"dev_translate_inline";s:1:"0";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:22:"customer_account_share";s:1:"1";s:25:"customer_online_customers";s:1:"1";s:23:"customer_create_account";s:1:"1";s:17:"customer_password";s:1:"0";s:16:"customer_address";s:1:"0";s:16:"customer_startup";s:1:"1";s:26:"customer_address_templates";s:1:"0";s:16:"customer_captcha";s:1:"0";s:18:"persistent_options";s:1:"1";s:12:"design_admin";s:1:"1";s:21:"bannerslider_settings";s:1:"1";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"1";s:12:"web_unsecure";s:1:"1";s:10:"web_secure";s:1:"1";s:11:"web_default";s:1:"0";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";s:12:"veredus_home";s:1:"1";s:16:"veredus_settings";s:1:"0";}}', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -530,14 +542,18 @@ CREATE TABLE `cataloginventory_stock_item` (
   UNIQUE KEY `UNQ_CATALOGINVENTORY_STOCK_ITEM_PRODUCT_ID_STOCK_ID` (`product_id`,`stock_id`),
   KEY `IDX_CATALOGINVENTORY_STOCK_ITEM_PRODUCT_ID` (`product_id`),
   KEY `IDX_CATALOGINVENTORY_STOCK_ITEM_STOCK_ID` (`stock_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item' AUTO_INCREMENT=6 ;
 
 --
 -- Dump dei dati per la tabella `cataloginventory_stock_item`
 --
 
 INSERT INTO `cataloginventory_stock_item` (`item_id`, `product_id`, `stock_id`, `qty`, `min_qty`, `use_config_min_qty`, `is_qty_decimal`, `backorders`, `use_config_backorders`, `min_sale_qty`, `use_config_min_sale_qty`, `max_sale_qty`, `use_config_max_sale_qty`, `is_in_stock`, `low_stock_date`, `notify_stock_qty`, `use_config_notify_stock_qty`, `manage_stock`, `use_config_manage_stock`, `stock_status_changed_auto`, `use_config_qty_increments`, `qty_increments`, `use_config_enable_qty_inc`, `enable_qty_increments`, `is_decimal_divided`) VALUES
-(1, 1, 1, 10000.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 0, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0);
+(1, 1, 1, 10000.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
+(2, 2, 1, 100.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
+(3, 3, 1, 8888.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
+(4, 4, 1, 1000.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
+(5, 5, 1, 1000.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -561,7 +577,11 @@ CREATE TABLE `cataloginventory_stock_status` (
 --
 
 INSERT INTO `cataloginventory_stock_status` (`product_id`, `website_id`, `stock_id`, `qty`, `stock_status`) VALUES
-(1, 1, 1, 10000.0000, 0);
+(1, 1, 1, 10000.0000, 1),
+(2, 1, 1, 100.0000, 1),
+(3, 1, 1, 8888.0000, 1),
+(4, 1, 1, 1000.0000, 1),
+(5, 1, 1, 1000.0000, 1);
 
 -- --------------------------------------------------------
 
@@ -585,7 +605,11 @@ CREATE TABLE `cataloginventory_stock_status_idx` (
 --
 
 INSERT INTO `cataloginventory_stock_status_idx` (`product_id`, `website_id`, `stock_id`, `qty`, `stock_status`) VALUES
-(1, 1, 1, 10000.0000, 0);
+(1, 1, 1, 10000.0000, 1),
+(2, 1, 1, 100.0000, 1),
+(3, 1, 1, 8888.0000, 1),
+(4, 1, 1, 1000.0000, 1),
+(5, 1, 1, 1000.0000, 1);
 
 -- --------------------------------------------------------
 
@@ -751,17 +775,33 @@ CREATE TABLE `catalogsearch_fulltext` (
   PRIMARY KEY (`fulltext_id`),
   UNIQUE KEY `UNQ_CATALOGSEARCH_FULLTEXT_PRODUCT_ID_STORE_ID` (`product_id`,`store_id`),
   FULLTEXT KEY `FTI_CATALOGSEARCH_FULLTEXT_DATA_INDEX` (`data_index`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Catalog search result table' AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Catalog search result table' AUTO_INCREMENT=77 ;
 
 --
 -- Dump dei dati per la tabella `catalogsearch_fulltext`
 --
 
 INSERT INTO `catalogsearch_fulltext` (`fulltext_id`, `product_id`, `store_id`, `data_index`) VALUES
-(5, 1, 1, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|0'),
-(6, 1, 2, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|0'),
-(7, 1, 3, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|0'),
-(8, 1, 4, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|0');
+(73, 5, 1, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
+(74, 5, 2, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
+(75, 5, 3, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
+(76, 5, 4, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
+(36, 4, 1, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
+(41, 4, 2, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
+(46, 4, 3, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
+(51, 4, 4, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
+(69, 3, 1, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
+(70, 3, 2, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
+(71, 3, 3, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
+(72, 3, 4, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
+(34, 2, 1, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
+(39, 2, 2, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
+(44, 2, 3, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
+(49, 2, 4, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
+(65, 1, 1, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1'),
+(66, 1, 2, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1'),
+(67, 1, 3, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1'),
+(68, 1, 4, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1');
 
 -- --------------------------------------------------------
 
@@ -1199,10 +1239,13 @@ CREATE TABLE `catalog_category_flat_store_1` (
 --
 
 INSERT INTO `catalog_category_flat_store_1` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 3, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 2, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
 (3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html');
+(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
 
 -- --------------------------------------------------------
 
@@ -1258,10 +1301,13 @@ CREATE TABLE `catalog_category_flat_store_2` (
 --
 
 INSERT INTO `catalog_category_flat_store_2` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 3, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 2, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
 (3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html');
+(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
 
 -- --------------------------------------------------------
 
@@ -1317,10 +1363,13 @@ CREATE TABLE `catalog_category_flat_store_3` (
 --
 
 INSERT INTO `catalog_category_flat_store_3` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 3, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 2, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
 (3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html');
+(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
 
 -- --------------------------------------------------------
 
@@ -1376,10 +1425,13 @@ CREATE TABLE `catalog_category_flat_store_4` (
 --
 
 INSERT INTO `catalog_category_flat_store_4` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 3, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 2, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
 (3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html');
+(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
 
 -- --------------------------------------------------------
 
@@ -1401,10 +1453,30 @@ CREATE TABLE `catalog_category_product` (
 
 INSERT INTO `catalog_category_product` (`category_id`, `product_id`, `position`) VALUES
 (3, 1, 1),
+(3, 2, 1),
+(3, 3, 1),
+(3, 4, 1),
+(3, 5, 1),
 (4, 1, 1),
+(4, 2, 1),
+(4, 3, 1),
+(4, 4, 1),
+(4, 5, 1),
 (5, 1, 0),
+(5, 2, 1),
+(5, 3, 1),
+(5, 4, 1),
+(5, 5, 1),
 (6, 1, 0),
-(7, 1, 0);
+(6, 2, 1),
+(6, 3, 1),
+(6, 4, 1),
+(6, 5, 1),
+(7, 1, 0),
+(7, 2, 1),
+(7, 3, 1),
+(7, 4, 1),
+(7, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -1430,29 +1502,125 @@ CREATE TABLE `catalog_category_product_index` (
 
 INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `position`, `is_parent`, `store_id`, `visibility`) VALUES
 (2, 1, 20005, 0, 1, 4),
+(2, 2, 20005, 0, 1, 4),
+(2, 3, 20005, 0, 1, 4),
+(2, 4, 20005, 0, 1, 4),
+(2, 5, 20005, 0, 1, 4),
 (3, 1, 1, 1, 1, 4),
+(3, 2, 1, 1, 1, 4),
+(3, 3, 1, 1, 1, 4),
+(3, 4, 1, 1, 1, 4),
+(3, 5, 1, 1, 1, 4),
 (4, 1, 1, 1, 1, 4),
+(4, 2, 1, 1, 1, 4),
+(4, 3, 1, 1, 1, 4),
+(4, 4, 1, 1, 1, 4),
+(4, 5, 1, 1, 1, 4),
 (5, 1, 0, 1, 1, 4),
+(5, 2, 1, 1, 1, 4),
+(5, 3, 1, 1, 1, 4),
+(5, 4, 1, 1, 1, 4),
+(5, 5, 1, 1, 1, 4),
 (6, 1, 0, 1, 1, 4),
+(6, 2, 1, 1, 1, 4),
+(6, 3, 1, 1, 1, 4),
+(6, 4, 1, 1, 1, 4),
+(6, 5, 1, 1, 1, 4),
 (7, 1, 0, 1, 1, 4),
+(7, 2, 1, 1, 1, 4),
+(7, 3, 1, 1, 1, 4),
+(7, 4, 1, 1, 1, 4),
+(7, 5, 1, 1, 1, 4),
 (2, 1, 20005, 0, 2, 4),
+(2, 2, 20005, 0, 2, 4),
+(2, 3, 20005, 0, 2, 4),
+(2, 4, 20005, 0, 2, 4),
+(2, 5, 20005, 0, 2, 4),
 (3, 1, 1, 1, 2, 4),
+(3, 2, 1, 1, 2, 4),
+(3, 3, 1, 1, 2, 4),
+(3, 4, 1, 1, 2, 4),
+(3, 5, 1, 1, 2, 4),
 (4, 1, 1, 1, 2, 4),
+(4, 2, 1, 1, 2, 4),
+(4, 3, 1, 1, 2, 4),
+(4, 4, 1, 1, 2, 4),
+(4, 5, 1, 1, 2, 4),
 (5, 1, 0, 1, 2, 4),
+(5, 2, 1, 1, 2, 4),
+(5, 3, 1, 1, 2, 4),
+(5, 4, 1, 1, 2, 4),
+(5, 5, 1, 1, 2, 4),
 (6, 1, 0, 1, 2, 4),
+(6, 2, 1, 1, 2, 4),
+(6, 3, 1, 1, 2, 4),
+(6, 4, 1, 1, 2, 4),
+(6, 5, 1, 1, 2, 4),
 (7, 1, 0, 1, 2, 4),
+(7, 2, 1, 1, 2, 4),
+(7, 3, 1, 1, 2, 4),
+(7, 4, 1, 1, 2, 4),
+(7, 5, 1, 1, 2, 4),
 (2, 1, 20005, 0, 3, 4),
+(2, 2, 20005, 0, 3, 4),
+(2, 3, 20005, 0, 3, 4),
+(2, 4, 20005, 0, 3, 4),
+(2, 5, 20005, 0, 3, 4),
 (3, 1, 1, 1, 3, 4),
+(3, 2, 1, 1, 3, 4),
+(3, 3, 1, 1, 3, 4),
+(3, 4, 1, 1, 3, 4),
+(3, 5, 1, 1, 3, 4),
 (4, 1, 1, 1, 3, 4),
+(4, 2, 1, 1, 3, 4),
+(4, 3, 1, 1, 3, 4),
+(4, 4, 1, 1, 3, 4),
+(4, 5, 1, 1, 3, 4),
 (5, 1, 0, 1, 3, 4),
+(5, 2, 1, 1, 3, 4),
+(5, 3, 1, 1, 3, 4),
+(5, 4, 1, 1, 3, 4),
+(5, 5, 1, 1, 3, 4),
 (6, 1, 0, 1, 3, 4),
+(6, 2, 1, 1, 3, 4),
+(6, 3, 1, 1, 3, 4),
+(6, 4, 1, 1, 3, 4),
+(6, 5, 1, 1, 3, 4),
 (7, 1, 0, 1, 3, 4),
+(7, 2, 1, 1, 3, 4),
+(7, 3, 1, 1, 3, 4),
+(7, 4, 1, 1, 3, 4),
+(7, 5, 1, 1, 3, 4),
 (2, 1, 20005, 0, 4, 4),
+(2, 2, 20005, 0, 4, 4),
+(2, 3, 20005, 0, 4, 4),
+(2, 4, 20005, 0, 4, 4),
+(2, 5, 20005, 0, 4, 4),
 (3, 1, 1, 1, 4, 4),
+(3, 2, 1, 1, 4, 4),
+(3, 3, 1, 1, 4, 4),
+(3, 4, 1, 1, 4, 4),
+(3, 5, 1, 1, 4, 4),
 (4, 1, 1, 1, 4, 4),
+(4, 2, 1, 1, 4, 4),
+(4, 3, 1, 1, 4, 4),
+(4, 4, 1, 1, 4, 4),
+(4, 5, 1, 1, 4, 4),
 (5, 1, 0, 1, 4, 4),
+(5, 2, 1, 1, 4, 4),
+(5, 3, 1, 1, 4, 4),
+(5, 4, 1, 1, 4, 4),
+(5, 5, 1, 1, 4, 4),
 (6, 1, 0, 1, 4, 4),
-(7, 1, 0, 1, 4, 4);
+(6, 2, 1, 1, 4, 4),
+(6, 3, 1, 1, 4, 4),
+(6, 4, 1, 1, 4, 4),
+(6, 5, 1, 1, 4, 4),
+(7, 1, 0, 1, 4, 4),
+(7, 2, 1, 1, 4, 4),
+(7, 3, 1, 1, 4, 4),
+(7, 4, 1, 1, 4, 4),
+(7, 5, 1, 1, 4, 4);
 
 -- --------------------------------------------------------
 
@@ -1658,7 +1826,9 @@ INSERT INTO `catalog_eav_attribute` (`attribute_id`, `frontend_input_renderer`, 
 (130, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'downloadable', 0, 0, 0, 0),
 (131, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'downloadable', 0, 0, 0, 0),
 (132, NULL, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 'downloadable', 0, 0, 0, 0),
-(133, NULL, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 0, 0, 0);
+(133, NULL, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 0, 0, 0),
+(142, NULL, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0),
+(143, NULL, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1794,14 +1964,18 @@ CREATE TABLE `catalog_product_entity` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_ENTITY_TYPE_ID` (`entity_type_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_ATTRIBUTE_SET_ID` (`attribute_set_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_SKU` (`sku`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Table' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Table' AUTO_INCREMENT=6 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity`
 --
 
 INSERT INTO `catalog_product_entity` (`entity_id`, `entity_type_id`, `attribute_set_id`, `type_id`, `sku`, `has_options`, `required_options`, `created_at`, `updated_at`) VALUES
-(1, 4, 4, 'simple', 'PO', 0, 0, '2013-07-08 03:08:27', '2013-07-08 03:08:27');
+(1, 4, 4, 'simple', 'PO', 0, 0, '2013-07-08 03:08:27', '2013-07-26 11:14:13'),
+(2, 4, 4, 'simple', 'P2', 0, 0, '2013-07-26 08:39:05', '2013-07-26 08:40:15'),
+(3, 4, 4, 'simple', 'P2B', 0, 0, '2013-07-26 08:40:21', '2013-07-26 11:18:04'),
+(4, 4, 4, 'simple', 'P3', 0, 0, '2013-07-26 08:40:31', '2013-07-26 08:41:20'),
+(5, 4, 4, 'simple', 'P4', 0, 0, '2013-07-26 08:41:26', '2013-07-26 11:19:26');
 
 -- --------------------------------------------------------
 
@@ -1821,7 +1995,7 @@ CREATE TABLE `catalog_product_entity_datetime` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DATETIME_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DATETIME_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DATETIME_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Datetime Attribute Backend Table' AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Datetime Attribute Backend Table' AUTO_INCREMENT=49 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_datetime`
@@ -1833,7 +2007,31 @@ INSERT INTO `catalog_product_entity_datetime` (`value_id`, `entity_type_id`, `at
 (3, 4, 77, 0, 1, NULL),
 (4, 4, 78, 0, 1, NULL),
 (5, 4, 104, 0, 1, NULL),
-(6, 4, 105, 0, 1, NULL);
+(6, 4, 105, 0, 1, NULL),
+(13, 4, 93, 0, 2, NULL),
+(14, 4, 94, 0, 2, NULL),
+(15, 4, 77, 0, 2, NULL),
+(16, 4, 78, 0, 2, NULL),
+(17, 4, 104, 0, 2, NULL),
+(18, 4, 105, 0, 2, NULL),
+(25, 4, 77, 0, 3, NULL),
+(26, 4, 78, 0, 3, NULL),
+(27, 4, 93, 0, 3, NULL),
+(28, 4, 94, 0, 3, NULL),
+(29, 4, 104, 0, 3, NULL),
+(30, 4, 105, 0, 3, NULL),
+(31, 4, 77, 0, 4, NULL),
+(32, 4, 78, 0, 4, NULL),
+(33, 4, 93, 0, 4, NULL),
+(34, 4, 94, 0, 4, NULL),
+(35, 4, 104, 0, 4, NULL),
+(36, 4, 105, 0, 4, NULL),
+(43, 4, 77, 0, 5, NULL),
+(44, 4, 78, 0, 5, NULL),
+(45, 4, 93, 0, 5, NULL),
+(46, 4, 94, 0, 5, NULL),
+(47, 4, 104, 0, 5, NULL),
+(48, 4, 105, 0, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -1853,7 +2051,7 @@ CREATE TABLE `catalog_product_entity_decimal` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DECIMAL_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DECIMAL_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DECIMAL_ATTRIBUTE_ID` (`attribute_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table' AUTO_INCREMENT=30 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_decimal`
@@ -1863,7 +2061,23 @@ INSERT INTO `catalog_product_entity_decimal` (`value_id`, `entity_type_id`, `att
 (1, 4, 80, 0, 1, 1.0000),
 (2, 4, 75, 0, 1, 100.0000),
 (3, 4, 76, 0, 1, NULL),
-(4, 4, 120, 0, 1, NULL);
+(4, 4, 120, 0, 1, NULL),
+(8, 4, 80, 0, 2, 1.0000),
+(9, 4, 75, 0, 2, 100.0000),
+(10, 4, 76, 0, 2, NULL),
+(11, 4, 120, 0, 2, NULL),
+(15, 4, 80, 0, 3, 1.0000),
+(16, 4, 75, 0, 3, 100.0000),
+(17, 4, 76, 0, 3, NULL),
+(18, 4, 120, 0, 3, NULL),
+(19, 4, 75, 0, 4, 100.0000),
+(20, 4, 76, 0, 4, NULL),
+(21, 4, 80, 0, 4, 1.0000),
+(22, 4, 120, 0, 4, NULL),
+(26, 4, 75, 0, 5, 100.0000),
+(27, 4, 76, 0, 5, NULL),
+(28, 4, 80, 0, 5, 1.0000),
+(29, 4, 120, 0, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -1924,7 +2138,7 @@ CREATE TABLE `catalog_product_entity_int` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_INT_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_INT_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_INT_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table' AUTO_INCREMENT=38 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_int`
@@ -1935,7 +2149,30 @@ INSERT INTO `catalog_product_entity_int` (`value_id`, `entity_type_id`, `attribu
 (2, 4, 102, 0, 1, 4),
 (3, 4, 121, 0, 1, 1),
 (4, 4, 122, 0, 1, 2),
-(5, 4, 100, 0, 1, 0);
+(5, 4, 100, 0, 1, 0),
+(7, 4, 96, 0, 2, 1),
+(8, 4, 102, 0, 2, 4),
+(9, 4, 121, 0, 2, 1),
+(10, 4, 122, 0, 2, 2),
+(11, 4, 100, 0, 2, 0),
+(14, 4, 96, 0, 3, 1),
+(15, 4, 100, 0, 3, 0),
+(16, 4, 102, 0, 3, 4),
+(17, 4, 121, 0, 3, 1),
+(18, 4, 122, 0, 3, 2),
+(20, 4, 96, 0, 4, 1),
+(21, 4, 100, 0, 4, 0),
+(22, 4, 102, 0, 4, 4),
+(23, 4, 121, 0, 4, 1),
+(24, 4, 122, 0, 4, 2),
+(27, 4, 96, 0, 5, 1),
+(28, 4, 100, 0, 5, 0),
+(29, 4, 102, 0, 5, 4),
+(30, 4, 121, 0, 5, 1),
+(31, 4, 122, 0, 5, 2),
+(35, 4, 143, 0, 3, 1),
+(36, 4, 143, 0, 5, 1),
+(37, 4, 143, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1951,7 +2188,16 @@ CREATE TABLE `catalog_product_entity_media_gallery` (
   PRIMARY KEY (`value_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_MEDIA_GALLERY_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_MEDIA_GALLERY_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Backend Table' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Backend Table' AUTO_INCREMENT=4 ;
+
+--
+-- Dump dei dati per la tabella `catalog_product_entity_media_gallery`
+--
+
+INSERT INTO `catalog_product_entity_media_gallery` (`value_id`, `attribute_id`, `entity_id`, `value`) VALUES
+(1, 88, 1, '/g/u/guarnieri.png'),
+(2, 88, 3, '/c/a/carbon_gel.png'),
+(3, 88, 5, '/p/i/piaffe.png');
 
 -- --------------------------------------------------------
 
@@ -1968,6 +2214,15 @@ CREATE TABLE `catalog_product_entity_media_gallery_value` (
   PRIMARY KEY (`value_id`,`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_MEDIA_GALLERY_VALUE_STORE_ID` (`store_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Value Table';
+
+--
+-- Dump dei dati per la tabella `catalog_product_entity_media_gallery_value`
+--
+
+INSERT INTO `catalog_product_entity_media_gallery_value` (`value_id`, `store_id`, `label`, `position`, `disabled`) VALUES
+(1, 0, NULL, 1, 0),
+(2, 0, NULL, 1, 0),
+(3, 0, NULL, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1987,7 +2242,7 @@ CREATE TABLE `catalog_product_entity_text` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_TEXT_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_TEXT_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_TEXT_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table' AUTO_INCREMENT=31 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_text`
@@ -1997,7 +2252,23 @@ INSERT INTO `catalog_product_entity_text` (`value_id`, `entity_type_id`, `attrib
 (1, 4, 72, 0, 1, 'Product One Description'),
 (2, 4, 73, 0, 1, 'Product One Short Description'),
 (3, 4, 83, 0, 1, NULL),
-(4, 4, 106, 0, 1, NULL);
+(4, 4, 106, 0, 1, NULL),
+(7, 4, 72, 0, 2, 'Product Tow Description'),
+(8, 4, 73, 0, 2, 'Product Tow Short Description'),
+(9, 4, 83, 0, 2, NULL),
+(10, 4, 106, 0, 2, NULL),
+(15, 4, 72, 0, 3, 'Product Tow Description'),
+(16, 4, 73, 0, 3, 'Product Tow Short Description'),
+(17, 4, 83, 0, 3, NULL),
+(18, 4, 106, 0, 3, NULL),
+(19, 4, 72, 0, 4, 'Product Three Description'),
+(20, 4, 73, 0, 4, 'Product Three Short Description'),
+(21, 4, 83, 0, 4, NULL),
+(22, 4, 106, 0, 4, NULL),
+(27, 4, 72, 0, 5, 'Product Four Description'),
+(28, 4, 73, 0, 5, 'Product Four Short Description'),
+(29, 4, 83, 0, 5, NULL),
+(30, 4, 106, 0, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -2038,7 +2309,7 @@ CREATE TABLE `catalog_product_entity_varchar` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_VARCHAR_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_VARCHAR_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_VARCHAR_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table' AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table' AUTO_INCREMENT=109 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_varchar`
@@ -2060,7 +2331,76 @@ INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `att
 (13, 4, 109, 0, 1, 'container2'),
 (14, 4, 123, 0, 1, NULL),
 (15, 4, 98, 1, 1, 'product-one.html'),
-(16, 4, 98, 0, 1, 'product-one.html');
+(16, 4, 98, 0, 1, 'product-one.html'),
+(17, 4, 142, 0, 1, '/g/u/guarnieri.png'),
+(24, 4, 71, 0, 2, 'Product Two'),
+(25, 4, 97, 0, 2, 'product-one'),
+(26, 4, 117, 0, 2, NULL),
+(27, 4, 118, 0, 2, '2'),
+(28, 4, 119, 0, 2, '4'),
+(29, 4, 82, 0, 2, NULL),
+(30, 4, 84, 0, 2, NULL),
+(31, 4, 85, 0, 2, 'no_selection'),
+(32, 4, 86, 0, 2, 'no_selection'),
+(33, 4, 87, 0, 2, 'no_selection'),
+(34, 4, 103, 0, 2, NULL),
+(35, 4, 107, 0, 2, NULL),
+(36, 4, 109, 0, 2, 'container2'),
+(37, 4, 123, 0, 2, NULL),
+(38, 4, 98, 0, 2, 'product-one-6.html'),
+(39, 4, 142, 0, 2, 'no_selection'),
+(40, 4, 98, 1, 2, 'product-one-6.html'),
+(49, 4, 71, 0, 3, 'Product Two bis'),
+(50, 4, 97, 0, 3, 'product-one'),
+(51, 4, 117, 0, 3, NULL),
+(52, 4, 118, 0, 3, '2'),
+(53, 4, 119, 0, 3, '4'),
+(54, 4, 82, 0, 3, NULL),
+(55, 4, 84, 0, 3, NULL),
+(56, 4, 85, 0, 3, 'no_selection'),
+(57, 4, 86, 0, 3, 'no_selection'),
+(58, 4, 87, 0, 3, 'no_selection'),
+(59, 4, 103, 0, 3, NULL),
+(60, 4, 107, 0, 3, NULL),
+(61, 4, 109, 0, 3, 'container2'),
+(62, 4, 123, 0, 3, NULL),
+(63, 4, 98, 0, 3, 'product-one-7.html'),
+(64, 4, 142, 0, 3, '/c/a/carbon_gel.png'),
+(65, 4, 98, 1, 3, 'product-one-7.html'),
+(67, 4, 71, 0, 4, 'Product Three'),
+(68, 4, 97, 0, 4, 'product-one'),
+(69, 4, 117, 0, 4, NULL),
+(70, 4, 118, 0, 4, '2'),
+(71, 4, 119, 0, 4, '4'),
+(72, 4, 82, 0, 4, NULL),
+(73, 4, 84, 0, 4, NULL),
+(74, 4, 85, 0, 4, 'no_selection'),
+(75, 4, 86, 0, 4, 'no_selection'),
+(76, 4, 87, 0, 4, 'no_selection'),
+(77, 4, 103, 0, 4, NULL),
+(78, 4, 107, 0, 4, NULL),
+(79, 4, 109, 0, 4, 'container2'),
+(80, 4, 123, 0, 4, NULL),
+(81, 4, 98, 0, 4, 'product-one-8.html'),
+(82, 4, 142, 0, 4, 'no_selection'),
+(83, 4, 98, 1, 4, 'product-one-8.html'),
+(92, 4, 71, 0, 5, 'Product Four'),
+(93, 4, 97, 0, 5, 'product-four'),
+(94, 4, 117, 0, 5, NULL),
+(95, 4, 118, 0, 5, '2'),
+(96, 4, 119, 0, 5, '4'),
+(97, 4, 82, 0, 5, NULL),
+(98, 4, 84, 0, 5, NULL),
+(99, 4, 85, 0, 5, 'no_selection'),
+(100, 4, 86, 0, 5, 'no_selection'),
+(101, 4, 87, 0, 5, 'no_selection'),
+(102, 4, 103, 0, 5, NULL),
+(103, 4, 107, 0, 5, NULL),
+(104, 4, 109, 0, 5, 'container2'),
+(105, 4, 123, 0, 5, NULL),
+(106, 4, 98, 0, 5, 'product-four.html'),
+(107, 4, 142, 0, 5, '/p/i/piaffe.png'),
+(108, 4, 98, 1, 5, 'product-four.html');
 
 -- --------------------------------------------------------
 
@@ -2069,48 +2409,49 @@ INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `att
 --
 
 CREATE TABLE `catalog_product_flat_1` (
-  `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
-  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'attribute_set_id',
-  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'type_id',
-  `cost` decimal(12,4) DEFAULT NULL COMMENT 'cost',
-  `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
-  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'enable_googlecheckout',
-  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'gift_message_available',
-  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'has_options',
-  `image_label` varchar(255) DEFAULT NULL COMMENT 'image_label',
-  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'is_recurring',
-  `links_exist` int(11) DEFAULT NULL COMMENT 'links_exist',
-  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'links_purchased_separately',
-  `links_title` varchar(255) DEFAULT NULL COMMENT 'links_title',
-  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'msrp',
-  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'msrp_display_actual_price_type',
-  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'msrp_enabled',
-  `name` varchar(255) DEFAULT NULL COMMENT 'name',
-  `news_from_date` datetime DEFAULT NULL COMMENT 'news_from_date',
-  `news_to_date` datetime DEFAULT NULL COMMENT 'news_to_date',
-  `price` decimal(12,4) DEFAULT NULL COMMENT 'price',
-  `price_type` int(11) DEFAULT NULL COMMENT 'price_type',
-  `price_view` int(11) DEFAULT NULL COMMENT 'price_view',
-  `recurring_profile` text COMMENT 'recurring_profile',
-  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'required_options',
-  `shipment_type` int(11) DEFAULT NULL COMMENT 'shipment_type',
-  `short_description` text COMMENT 'short_description',
-  `sku` varchar(64) DEFAULT NULL COMMENT 'sku',
-  `sku_type` int(11) DEFAULT NULL COMMENT 'sku_type',
-  `small_image` varchar(255) DEFAULT NULL COMMENT 'small_image',
-  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'small_image_label',
-  `special_from_date` datetime DEFAULT NULL COMMENT 'special_from_date',
-  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'special_price',
-  `special_to_date` datetime DEFAULT NULL COMMENT 'special_to_date',
-  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'tax_class_id',
-  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'thumbnail',
-  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'thumbnail_label',
-  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'updated_at',
-  `url_key` varchar(255) DEFAULT NULL COMMENT 'url_key',
-  `url_path` varchar(255) DEFAULT NULL COMMENT 'url_path',
-  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'visibility',
-  `weight` decimal(12,4) DEFAULT NULL COMMENT 'weight',
-  `weight_type` int(11) DEFAULT NULL COMMENT 'weight_type',
+  `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
+  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
+  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
+  `cost` decimal(12,4) DEFAULT NULL COMMENT 'Cost',
+  `created_at` timestamp NULL DEFAULT NULL COMMENT 'Created At',
+  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'Enable Googlecheckout',
+  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'Gift Message Available',
+  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Has Options',
+  `image_label` varchar(255) DEFAULT NULL COMMENT 'Image Label',
+  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'Is Recurring',
+  `links_exist` int(11) DEFAULT NULL COMMENT 'Links Exist',
+  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'Links Purchased Separately',
+  `links_title` varchar(255) DEFAULT NULL COMMENT 'Links Title',
+  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'Msrp',
+  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'Msrp Display Actual Price Type',
+  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'Msrp Enabled',
+  `name` varchar(255) DEFAULT NULL COMMENT 'Name',
+  `news_from_date` datetime DEFAULT NULL COMMENT 'News From Date',
+  `news_to_date` datetime DEFAULT NULL COMMENT 'News To Date',
+  `price` decimal(12,4) DEFAULT NULL COMMENT 'Price',
+  `price_type` int(11) DEFAULT NULL COMMENT 'Price Type',
+  `price_view` int(11) DEFAULT NULL COMMENT 'Price View',
+  `recurring_profile` text COMMENT 'Recurring Profile',
+  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Required Options',
+  `shipment_type` int(11) DEFAULT NULL COMMENT 'Shipment Type',
+  `short_description` text COMMENT 'Short Description',
+  `sku` varchar(64) DEFAULT NULL COMMENT 'Sku',
+  `sku_type` int(11) DEFAULT NULL COMMENT 'Sku Type',
+  `small_image` varchar(255) DEFAULT NULL COMMENT 'Small Image',
+  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'Small Image Label',
+  `special_from_date` datetime DEFAULT NULL COMMENT 'Special From Date',
+  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'Special Price',
+  `special_to_date` datetime DEFAULT NULL COMMENT 'Special To Date',
+  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'Tax Class Id',
+  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'Thumbnail',
+  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'Thumbnail Label',
+  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Updated At',
+  `url_key` varchar(255) DEFAULT NULL COMMENT 'Url Key',
+  `url_path` varchar(255) DEFAULT NULL COMMENT 'Url Path',
+  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
+  `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
+  `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
+  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_1_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_1_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2122,8 +2463,12 @@ CREATE TABLE `catalog_product_flat_1` (
 -- Dump dei dati per la tabella `catalog_product_flat_1`
 --
 
-INSERT INTO `catalog_product_flat_1` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-08 03:08:27', 'product-one', 'product-one.html', 4, 1.0000, NULL);
+INSERT INTO `catalog_product_flat_1` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2132,48 +2477,49 @@ INSERT INTO `catalog_product_flat_1` (`entity_id`, `attribute_set_id`, `type_id`
 --
 
 CREATE TABLE `catalog_product_flat_2` (
-  `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
-  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'attribute_set_id',
-  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'type_id',
-  `cost` decimal(12,4) DEFAULT NULL COMMENT 'cost',
-  `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
-  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'enable_googlecheckout',
-  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'gift_message_available',
-  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'has_options',
-  `image_label` varchar(255) DEFAULT NULL COMMENT 'image_label',
-  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'is_recurring',
-  `links_exist` int(11) DEFAULT NULL COMMENT 'links_exist',
-  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'links_purchased_separately',
-  `links_title` varchar(255) DEFAULT NULL COMMENT 'links_title',
-  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'msrp',
-  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'msrp_display_actual_price_type',
-  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'msrp_enabled',
-  `name` varchar(255) DEFAULT NULL COMMENT 'name',
-  `news_from_date` datetime DEFAULT NULL COMMENT 'news_from_date',
-  `news_to_date` datetime DEFAULT NULL COMMENT 'news_to_date',
-  `price` decimal(12,4) DEFAULT NULL COMMENT 'price',
-  `price_type` int(11) DEFAULT NULL COMMENT 'price_type',
-  `price_view` int(11) DEFAULT NULL COMMENT 'price_view',
-  `recurring_profile` text COMMENT 'recurring_profile',
-  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'required_options',
-  `shipment_type` int(11) DEFAULT NULL COMMENT 'shipment_type',
-  `short_description` text COMMENT 'short_description',
-  `sku` varchar(64) DEFAULT NULL COMMENT 'sku',
-  `sku_type` int(11) DEFAULT NULL COMMENT 'sku_type',
-  `small_image` varchar(255) DEFAULT NULL COMMENT 'small_image',
-  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'small_image_label',
-  `special_from_date` datetime DEFAULT NULL COMMENT 'special_from_date',
-  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'special_price',
-  `special_to_date` datetime DEFAULT NULL COMMENT 'special_to_date',
-  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'tax_class_id',
-  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'thumbnail',
-  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'thumbnail_label',
-  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'updated_at',
-  `url_key` varchar(255) DEFAULT NULL COMMENT 'url_key',
-  `url_path` varchar(255) DEFAULT NULL COMMENT 'url_path',
-  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'visibility',
-  `weight` decimal(12,4) DEFAULT NULL COMMENT 'weight',
-  `weight_type` int(11) DEFAULT NULL COMMENT 'weight_type',
+  `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
+  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
+  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
+  `cost` decimal(12,4) DEFAULT NULL COMMENT 'Cost',
+  `created_at` timestamp NULL DEFAULT NULL COMMENT 'Created At',
+  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'Enable Googlecheckout',
+  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'Gift Message Available',
+  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Has Options',
+  `image_label` varchar(255) DEFAULT NULL COMMENT 'Image Label',
+  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'Is Recurring',
+  `links_exist` int(11) DEFAULT NULL COMMENT 'Links Exist',
+  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'Links Purchased Separately',
+  `links_title` varchar(255) DEFAULT NULL COMMENT 'Links Title',
+  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'Msrp',
+  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'Msrp Display Actual Price Type',
+  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'Msrp Enabled',
+  `name` varchar(255) DEFAULT NULL COMMENT 'Name',
+  `news_from_date` datetime DEFAULT NULL COMMENT 'News From Date',
+  `news_to_date` datetime DEFAULT NULL COMMENT 'News To Date',
+  `price` decimal(12,4) DEFAULT NULL COMMENT 'Price',
+  `price_type` int(11) DEFAULT NULL COMMENT 'Price Type',
+  `price_view` int(11) DEFAULT NULL COMMENT 'Price View',
+  `recurring_profile` text COMMENT 'Recurring Profile',
+  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Required Options',
+  `shipment_type` int(11) DEFAULT NULL COMMENT 'Shipment Type',
+  `short_description` text COMMENT 'Short Description',
+  `sku` varchar(64) DEFAULT NULL COMMENT 'Sku',
+  `sku_type` int(11) DEFAULT NULL COMMENT 'Sku Type',
+  `small_image` varchar(255) DEFAULT NULL COMMENT 'Small Image',
+  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'Small Image Label',
+  `special_from_date` datetime DEFAULT NULL COMMENT 'Special From Date',
+  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'Special Price',
+  `special_to_date` datetime DEFAULT NULL COMMENT 'Special To Date',
+  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'Tax Class Id',
+  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'Thumbnail',
+  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'Thumbnail Label',
+  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Updated At',
+  `url_key` varchar(255) DEFAULT NULL COMMENT 'Url Key',
+  `url_path` varchar(255) DEFAULT NULL COMMENT 'Url Path',
+  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
+  `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
+  `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
+  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_2_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_2_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2185,8 +2531,12 @@ CREATE TABLE `catalog_product_flat_2` (
 -- Dump dei dati per la tabella `catalog_product_flat_2`
 --
 
-INSERT INTO `catalog_product_flat_2` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-08 03:08:27', 'product-one', 'product-one.html', 4, 1.0000, NULL);
+INSERT INTO `catalog_product_flat_2` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2195,48 +2545,49 @@ INSERT INTO `catalog_product_flat_2` (`entity_id`, `attribute_set_id`, `type_id`
 --
 
 CREATE TABLE `catalog_product_flat_3` (
-  `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
-  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'attribute_set_id',
-  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'type_id',
-  `cost` decimal(12,4) DEFAULT NULL COMMENT 'cost',
-  `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
-  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'enable_googlecheckout',
-  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'gift_message_available',
-  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'has_options',
-  `image_label` varchar(255) DEFAULT NULL COMMENT 'image_label',
-  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'is_recurring',
-  `links_exist` int(11) DEFAULT NULL COMMENT 'links_exist',
-  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'links_purchased_separately',
-  `links_title` varchar(255) DEFAULT NULL COMMENT 'links_title',
-  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'msrp',
-  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'msrp_display_actual_price_type',
-  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'msrp_enabled',
-  `name` varchar(255) DEFAULT NULL COMMENT 'name',
-  `news_from_date` datetime DEFAULT NULL COMMENT 'news_from_date',
-  `news_to_date` datetime DEFAULT NULL COMMENT 'news_to_date',
-  `price` decimal(12,4) DEFAULT NULL COMMENT 'price',
-  `price_type` int(11) DEFAULT NULL COMMENT 'price_type',
-  `price_view` int(11) DEFAULT NULL COMMENT 'price_view',
-  `recurring_profile` text COMMENT 'recurring_profile',
-  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'required_options',
-  `shipment_type` int(11) DEFAULT NULL COMMENT 'shipment_type',
-  `short_description` text COMMENT 'short_description',
-  `sku` varchar(64) DEFAULT NULL COMMENT 'sku',
-  `sku_type` int(11) DEFAULT NULL COMMENT 'sku_type',
-  `small_image` varchar(255) DEFAULT NULL COMMENT 'small_image',
-  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'small_image_label',
-  `special_from_date` datetime DEFAULT NULL COMMENT 'special_from_date',
-  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'special_price',
-  `special_to_date` datetime DEFAULT NULL COMMENT 'special_to_date',
-  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'tax_class_id',
-  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'thumbnail',
-  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'thumbnail_label',
-  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'updated_at',
-  `url_key` varchar(255) DEFAULT NULL COMMENT 'url_key',
-  `url_path` varchar(255) DEFAULT NULL COMMENT 'url_path',
-  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'visibility',
-  `weight` decimal(12,4) DEFAULT NULL COMMENT 'weight',
-  `weight_type` int(11) DEFAULT NULL COMMENT 'weight_type',
+  `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
+  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
+  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
+  `cost` decimal(12,4) DEFAULT NULL COMMENT 'Cost',
+  `created_at` timestamp NULL DEFAULT NULL COMMENT 'Created At',
+  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'Enable Googlecheckout',
+  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'Gift Message Available',
+  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Has Options',
+  `image_label` varchar(255) DEFAULT NULL COMMENT 'Image Label',
+  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'Is Recurring',
+  `links_exist` int(11) DEFAULT NULL COMMENT 'Links Exist',
+  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'Links Purchased Separately',
+  `links_title` varchar(255) DEFAULT NULL COMMENT 'Links Title',
+  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'Msrp',
+  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'Msrp Display Actual Price Type',
+  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'Msrp Enabled',
+  `name` varchar(255) DEFAULT NULL COMMENT 'Name',
+  `news_from_date` datetime DEFAULT NULL COMMENT 'News From Date',
+  `news_to_date` datetime DEFAULT NULL COMMENT 'News To Date',
+  `price` decimal(12,4) DEFAULT NULL COMMENT 'Price',
+  `price_type` int(11) DEFAULT NULL COMMENT 'Price Type',
+  `price_view` int(11) DEFAULT NULL COMMENT 'Price View',
+  `recurring_profile` text COMMENT 'Recurring Profile',
+  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Required Options',
+  `shipment_type` int(11) DEFAULT NULL COMMENT 'Shipment Type',
+  `short_description` text COMMENT 'Short Description',
+  `sku` varchar(64) DEFAULT NULL COMMENT 'Sku',
+  `sku_type` int(11) DEFAULT NULL COMMENT 'Sku Type',
+  `small_image` varchar(255) DEFAULT NULL COMMENT 'Small Image',
+  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'Small Image Label',
+  `special_from_date` datetime DEFAULT NULL COMMENT 'Special From Date',
+  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'Special Price',
+  `special_to_date` datetime DEFAULT NULL COMMENT 'Special To Date',
+  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'Tax Class Id',
+  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'Thumbnail',
+  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'Thumbnail Label',
+  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Updated At',
+  `url_key` varchar(255) DEFAULT NULL COMMENT 'Url Key',
+  `url_path` varchar(255) DEFAULT NULL COMMENT 'Url Path',
+  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
+  `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
+  `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
+  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_3_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_3_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2248,8 +2599,12 @@ CREATE TABLE `catalog_product_flat_3` (
 -- Dump dei dati per la tabella `catalog_product_flat_3`
 --
 
-INSERT INTO `catalog_product_flat_3` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-08 03:08:27', 'product-one', 'product-one.html', 4, 1.0000, NULL);
+INSERT INTO `catalog_product_flat_3` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2258,48 +2613,49 @@ INSERT INTO `catalog_product_flat_3` (`entity_id`, `attribute_set_id`, `type_id`
 --
 
 CREATE TABLE `catalog_product_flat_4` (
-  `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
-  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'attribute_set_id',
-  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'type_id',
-  `cost` decimal(12,4) DEFAULT NULL COMMENT 'cost',
-  `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
-  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'enable_googlecheckout',
-  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'gift_message_available',
-  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'has_options',
-  `image_label` varchar(255) DEFAULT NULL COMMENT 'image_label',
-  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'is_recurring',
-  `links_exist` int(11) DEFAULT NULL COMMENT 'links_exist',
-  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'links_purchased_separately',
-  `links_title` varchar(255) DEFAULT NULL COMMENT 'links_title',
-  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'msrp',
-  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'msrp_display_actual_price_type',
-  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'msrp_enabled',
-  `name` varchar(255) DEFAULT NULL COMMENT 'name',
-  `news_from_date` datetime DEFAULT NULL COMMENT 'news_from_date',
-  `news_to_date` datetime DEFAULT NULL COMMENT 'news_to_date',
-  `price` decimal(12,4) DEFAULT NULL COMMENT 'price',
-  `price_type` int(11) DEFAULT NULL COMMENT 'price_type',
-  `price_view` int(11) DEFAULT NULL COMMENT 'price_view',
-  `recurring_profile` text COMMENT 'recurring_profile',
-  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'required_options',
-  `shipment_type` int(11) DEFAULT NULL COMMENT 'shipment_type',
-  `short_description` text COMMENT 'short_description',
-  `sku` varchar(64) DEFAULT NULL COMMENT 'sku',
-  `sku_type` int(11) DEFAULT NULL COMMENT 'sku_type',
-  `small_image` varchar(255) DEFAULT NULL COMMENT 'small_image',
-  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'small_image_label',
-  `special_from_date` datetime DEFAULT NULL COMMENT 'special_from_date',
-  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'special_price',
-  `special_to_date` datetime DEFAULT NULL COMMENT 'special_to_date',
-  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'tax_class_id',
-  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'thumbnail',
-  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'thumbnail_label',
-  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'updated_at',
-  `url_key` varchar(255) DEFAULT NULL COMMENT 'url_key',
-  `url_path` varchar(255) DEFAULT NULL COMMENT 'url_path',
-  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'visibility',
-  `weight` decimal(12,4) DEFAULT NULL COMMENT 'weight',
-  `weight_type` int(11) DEFAULT NULL COMMENT 'weight_type',
+  `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
+  `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
+  `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
+  `cost` decimal(12,4) DEFAULT NULL COMMENT 'Cost',
+  `created_at` timestamp NULL DEFAULT NULL COMMENT 'Created At',
+  `enable_googlecheckout` smallint(6) DEFAULT NULL COMMENT 'Enable Googlecheckout',
+  `gift_message_available` smallint(6) DEFAULT NULL COMMENT 'Gift Message Available',
+  `has_options` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Has Options',
+  `image_label` varchar(255) DEFAULT NULL COMMENT 'Image Label',
+  `is_recurring` smallint(6) DEFAULT NULL COMMENT 'Is Recurring',
+  `links_exist` int(11) DEFAULT NULL COMMENT 'Links Exist',
+  `links_purchased_separately` int(11) DEFAULT NULL COMMENT 'Links Purchased Separately',
+  `links_title` varchar(255) DEFAULT NULL COMMENT 'Links Title',
+  `msrp` decimal(12,4) DEFAULT NULL COMMENT 'Msrp',
+  `msrp_display_actual_price_type` varchar(255) DEFAULT NULL COMMENT 'Msrp Display Actual Price Type',
+  `msrp_enabled` smallint(6) DEFAULT NULL COMMENT 'Msrp Enabled',
+  `name` varchar(255) DEFAULT NULL COMMENT 'Name',
+  `news_from_date` datetime DEFAULT NULL COMMENT 'News From Date',
+  `news_to_date` datetime DEFAULT NULL COMMENT 'News To Date',
+  `price` decimal(12,4) DEFAULT NULL COMMENT 'Price',
+  `price_type` int(11) DEFAULT NULL COMMENT 'Price Type',
+  `price_view` int(11) DEFAULT NULL COMMENT 'Price View',
+  `recurring_profile` text COMMENT 'Recurring Profile',
+  `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Required Options',
+  `shipment_type` int(11) DEFAULT NULL COMMENT 'Shipment Type',
+  `short_description` text COMMENT 'Short Description',
+  `sku` varchar(64) DEFAULT NULL COMMENT 'Sku',
+  `sku_type` int(11) DEFAULT NULL COMMENT 'Sku Type',
+  `small_image` varchar(255) DEFAULT NULL COMMENT 'Small Image',
+  `small_image_label` varchar(255) DEFAULT NULL COMMENT 'Small Image Label',
+  `special_from_date` datetime DEFAULT NULL COMMENT 'Special From Date',
+  `special_price` decimal(12,4) DEFAULT NULL COMMENT 'Special Price',
+  `special_to_date` datetime DEFAULT NULL COMMENT 'Special To Date',
+  `tax_class_id` int(10) unsigned DEFAULT NULL COMMENT 'Tax Class Id',
+  `thumbnail` varchar(255) DEFAULT NULL COMMENT 'Thumbnail',
+  `thumbnail_label` varchar(255) DEFAULT NULL COMMENT 'Thumbnail Label',
+  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Updated At',
+  `url_key` varchar(255) DEFAULT NULL COMMENT 'Url Key',
+  `url_path` varchar(255) DEFAULT NULL COMMENT 'Url Path',
+  `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
+  `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
+  `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
+  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_4_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_4_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2311,8 +2667,12 @@ CREATE TABLE `catalog_product_flat_4` (
 -- Dump dei dati per la tabella `catalog_product_flat_4`
 --
 
-INSERT INTO `catalog_product_flat_4` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-08 03:08:27', 'product-one', 'product-one.html', 4, 1.0000, NULL);
+INSERT INTO `catalog_product_flat_4` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2331,6 +2691,32 @@ CREATE TABLE `catalog_product_index_eav` (
   KEY `IDX_CATALOG_PRODUCT_INDEX_EAV_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_INDEX_EAV_VALUE` (`value`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Product EAV Index Table';
+
+--
+-- Dump dei dati per la tabella `catalog_product_index_eav`
+--
+
+INSERT INTO `catalog_product_index_eav` (`entity_id`, `attribute_id`, `store_id`, `value`) VALUES
+(1, 122, 1, 2),
+(1, 122, 2, 2),
+(1, 122, 3, 2),
+(1, 122, 4, 2),
+(2, 122, 1, 2),
+(2, 122, 2, 2),
+(2, 122, 3, 2),
+(2, 122, 4, 2),
+(3, 122, 1, 2),
+(3, 122, 2, 2),
+(3, 122, 3, 2),
+(3, 122, 4, 2),
+(4, 122, 1, 2),
+(4, 122, 2, 2),
+(4, 122, 3, 2),
+(4, 122, 4, 2),
+(5, 122, 1, 2),
+(5, 122, 2, 2),
+(5, 122, 3, 2),
+(5, 122, 4, 2);
 
 -- --------------------------------------------------------
 
@@ -2404,6 +2790,32 @@ CREATE TABLE `catalog_product_index_eav_idx` (
   KEY `IDX_CATALOG_PRODUCT_INDEX_EAV_IDX_VALUE` (`value`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Product EAV Indexer Index Table';
 
+--
+-- Dump dei dati per la tabella `catalog_product_index_eav_idx`
+--
+
+INSERT INTO `catalog_product_index_eav_idx` (`entity_id`, `attribute_id`, `store_id`, `value`) VALUES
+(1, 122, 1, 2),
+(1, 122, 2, 2),
+(1, 122, 3, 2),
+(1, 122, 4, 2),
+(2, 122, 1, 2),
+(2, 122, 2, 2),
+(2, 122, 3, 2),
+(2, 122, 4, 2),
+(3, 122, 1, 2),
+(3, 122, 2, 2),
+(3, 122, 3, 2),
+(3, 122, 4, 2),
+(4, 122, 1, 2),
+(4, 122, 2, 2),
+(4, 122, 3, 2),
+(4, 122, 4, 2),
+(5, 122, 1, 2),
+(5, 122, 2, 2),
+(5, 122, 3, 2),
+(5, 122, 4, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -2461,6 +2873,32 @@ CREATE TABLE `catalog_product_index_price` (
   KEY `IDX_CATALOG_PRODUCT_INDEX_PRICE_MIN_PRICE` (`min_price`),
   KEY `IDX_CAT_PRD_IDX_PRICE_WS_ID_CSTR_GROUP_ID_MIN_PRICE` (`website_id`,`customer_group_id`,`min_price`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Product Price Index Table';
+
+--
+-- Dump dei dati per la tabella `catalog_product_index_price`
+--
+
+INSERT INTO `catalog_product_index_price` (`entity_id`, `customer_group_id`, `website_id`, `tax_class_id`, `price`, `final_price`, `min_price`, `max_price`, `tier_price`, `group_price`) VALUES
+(1, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(1, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(1, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(1, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2761,6 +3199,32 @@ CREATE TABLE `catalog_product_index_price_idx` (
   KEY `IDX_CATALOG_PRODUCT_INDEX_PRICE_IDX_MIN_PRICE` (`min_price`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Product Price Indexer Index Table';
 
+--
+-- Dump dei dati per la tabella `catalog_product_index_price_idx`
+--
+
+INSERT INTO `catalog_product_index_price_idx` (`entity_id`, `customer_group_id`, `website_id`, `tax_class_id`, `price`, `final_price`, `min_price`, `max_price`, `tier_price`, `group_price`) VALUES
+(1, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(1, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(1, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(1, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(2, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(3, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(4, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
+(5, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -2889,7 +3353,7 @@ CREATE TABLE `catalog_product_index_website` (
 --
 
 INSERT INTO `catalog_product_index_website` (`website_id`, `website_date`, `rate`) VALUES
-(1, '2013-07-08', 1);
+(1, '2013-07-26', 1);
 
 -- --------------------------------------------------------
 
@@ -3214,7 +3678,11 @@ CREATE TABLE `catalog_product_website` (
 --
 
 INSERT INTO `catalog_product_website` (`product_id`, `website_id`) VALUES
-(1, 1);
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -3339,7 +3807,7 @@ CREATE TABLE `cms_page` (
 
 INSERT INTO `cms_page` (`page_id`, `title`, `root_template`, `meta_keywords`, `meta_description`, `identifier`, `content_heading`, `content`, `creation_time`, `update_time`, `is_active`, `sort_order`, `layout_update_xml`, `custom_theme`, `custom_root_template`, `custom_layout_update_xml`, `custom_theme_from`, `custom_theme_to`) VALUES
 (1, '404 Not Found 1', 'two_columns_right', 'Page keywords', 'Page description', 'no-route', NULL, '<div class="page-title"><h1>Whoops, our bad...</h1></div>\r\n<dl>\r\n<dt>The page you requested was not found, and we have a fine guess why.</dt>\r\n<dd>\r\n<ul class="disc">\r\n<li>If you typed the URL directly, please make sure the spelling is correct.</li>\r\n<li>If you clicked on a link to get here, the link is outdated.</li>\r\n</ul></dd>\r\n</dl>\r\n<dl>\r\n<dt>What can you do?</dt>\r\n<dd>Have no fear, help is near! There are many ways you can get back on track with Magento Store.</dd>\r\n<dd>\r\n<ul class="disc">\r\n<li><a href="#" onclick="history.go(-1); return false;">Go back</a> to the previous page.</li>\r\n<li>Use the search bar at the top of the page to search for your products.</li>\r\n<li>Follow these links to get you back on track!<br /><a href="{{store url=""}}">Store Home</a> <span class="separator">|</span> <a href="{{store url="customer/account"}}">My Account</a></li></ul></dd></dl>\r\n', '2013-07-07 12:53:29', '2013-07-07 12:53:29', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'Home page', 'one_column', NULL, NULL, 'home', NULL, '<p>{{block type=''bannerslider/bannerslider'' template=''bannerslider/homeslider.phtml''}}</p>\r\n<p>{{block type=''veredus/template_home'' template=''veredus/template/home.set.phtml''}}</p>', '2013-07-07 12:53:29', '2013-07-25 22:50:37', 1, 0, '<!--<reference name="content">\r\n        <block type="catalog/product_new" name="home.catalog.product.new" alias="product_new" template="catalog/product/new.phtml" after="cms_page">\r\n            <action method="addPriceBlockType">\r\n                <type>bundle</type>\r\n                <block>bundle/catalog_product_price</block>\r\n                <template>bundle/catalog/product/price.phtml</template>\r\n            </action>\r\n        </block>\r\n        <block type="reports/product_viewed" name="home.reports.product.viewed" alias="product_viewed" template="reports/home_product_viewed.phtml" after="product_new">\r\n            <action method="addPriceBlockType">\r\n                <type>bundle</type>\r\n                <block>bundle/catalog_product_price</block>\r\n                <template>bundle/catalog/product/price.phtml</template>\r\n            </action>\r\n        </block>\r\n        <block type="reports/product_compared" name="home.reports.product.compared" template="reports/home_product_compared.phtml" after="product_viewed">\r\n            <action method="addPriceBlockType">\r\n                <type>bundle</type>\r\n                <block>bundle/catalog_product_price</block>\r\n                <template>bundle/catalog/product/price.phtml</template>\r\n            </action>\r\n        </block>\r\n    </reference>\r\n    <reference name="right">\r\n        <action method="unsetChild"><alias>right.reports.product.viewed</alias></action>\r\n        <action method="unsetChild"><alias>right.reports.product.compared</alias></action>\r\n    </reference>-->', NULL, NULL, NULL, NULL, NULL),
+(2, 'Home page', 'one_column', NULL, NULL, 'home', NULL, '<p>{{block type=''bannerslider/bannerslider'' template=''bannerslider/homeslider.phtml''}}</p>\r\n<p>{{block type=''veredus/template_home'' template=''veredus/template/home.set.phtml''}}</p>\r\n<p>{{widget type="veredus/widget_product_list" row="5" column="3" attribute_home_product="view_in_home" attribute_home_image="image_view_home"}}</p>', '2013-07-07 12:53:29', '2013-07-26 08:02:08', 1, 0, '<!--<reference name="content">\r\n        <block type="catalog/product_new" name="home.catalog.product.new" alias="product_new" template="catalog/product/new.phtml" after="cms_page">\r\n            <action method="addPriceBlockType">\r\n                <type>bundle</type>\r\n                <block>bundle/catalog_product_price</block>\r\n                <template>bundle/catalog/product/price.phtml</template>\r\n            </action>\r\n        </block>\r\n        <block type="reports/product_viewed" name="home.reports.product.viewed" alias="product_viewed" template="reports/home_product_viewed.phtml" after="product_new">\r\n            <action method="addPriceBlockType">\r\n                <type>bundle</type>\r\n                <block>bundle/catalog_product_price</block>\r\n                <template>bundle/catalog/product/price.phtml</template>\r\n            </action>\r\n        </block>\r\n        <block type="reports/product_compared" name="home.reports.product.compared" template="reports/home_product_compared.phtml" after="product_viewed">\r\n            <action method="addPriceBlockType">\r\n                <type>bundle</type>\r\n                <block>bundle/catalog_product_price</block>\r\n                <template>bundle/catalog/product/price.phtml</template>\r\n            </action>\r\n        </block>\r\n    </reference>\r\n    <reference name="right">\r\n        <action method="unsetChild"><alias>right.reports.product.viewed</alias></action>\r\n        <action method="unsetChild"><alias>right.reports.product.compared</alias></action>\r\n    </reference>-->', NULL, NULL, NULL, NULL, NULL),
 (3, 'About Us', 'two_columns_right', NULL, NULL, 'about-magento-demo-store', NULL, '<div class="page-title">\r\n<h1>About Magento Store</h1>\r\n</div>\r\n<div class="col3-set">\r\n<div class="col-1"><p><a href="http://www.varien.com/"><img src="{{skin url=''images/media/about_us_img.jpg''}}" title="Varien" alt="Varien" /></a></p><p style="line-height:1.2em;"><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede.</small></p>\r\n<p style="color:#888; font:1.2em/1.4em georgia, serif;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta.</p></div>\r\n<div class="col-2">\r\n<p><strong style="color:#de036f;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit.</strong></p>\r\n<p>Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo. </p>\r\n<p>Maecenas ullamcorper, odio vel tempus egestas, dui orci faucibus orci, sit amet aliquet lectus dolor et quam. Pellentesque consequat luctus purus. Nunc et risus. Etiam a nibh. Phasellus dignissim metus eget nisi. Vestibulum sapien dolor, aliquet nec, porta ac, malesuada a, libero. Praesent feugiat purus eget est. Nulla facilisi. Vestibulum tincidunt sapien eu velit. Mauris purus. Maecenas eget mauris eu orci accumsan feugiat. Pellentesque eget velit. Nunc tincidunt.</p></div>\r\n<div class="col-3">\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper </p>\r\n<p><strong style="color:#de036f;">Maecenas ullamcorper, odio vel tempus egestas, dui orci faucibus orci, sit amet aliquet lectus dolor et quam. Pellentesque consequat luctus purus.</strong></p>\r\n<p>Nunc et risus. Etiam a nibh. Phasellus dignissim metus eget nisi.</p>\r\n<div class="divider"></div>\r\n<p>To all of you, from all of us at Magento Store - Thank you and Happy eCommerce!</p>\r\n<p style="line-height:1.2em;"><strong style="font:italic 2em Georgia, serif;">John Doe</strong><br /><small>Some important guy</small></p></div>\r\n</div>', '2013-07-07 12:53:30', '2013-07-07 12:53:30', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 'Customer Service', 'three_columns', NULL, NULL, 'customer-service', NULL, '<div class="page-title">\r\n<h1>Customer Service</h1>\r\n</div>\r\n<ul class="disc">\r\n<li><a href="#answer1">Shipping &amp; Delivery</a></li>\r\n<li><a href="#answer2">Privacy &amp; Security</a></li>\r\n<li><a href="#answer3">Returns &amp; Replacements</a></li>\r\n<li><a href="#answer4">Ordering</a></li>\r\n<li><a href="#answer5">Payment, Pricing &amp; Promotions</a></li>\r\n<li><a href="#answer6">Viewing Orders</a></li>\r\n<li><a href="#answer7">Updating Account Information</a></li>\r\n</ul>\r\n<dl>\r\n<dt id="answer1">Shipping &amp; Delivery</dt>\r\n<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer2">Privacy &amp; Security</dt>\r\n<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer3">Returns &amp; Replacements</dt>\r\n<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer4">Ordering</dt>\r\n<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer5">Payment, Pricing &amp; Promotions</dt>\r\n<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer6">Viewing Orders</dt>\r\n<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer7">Updating Account Information</dt>\r\n<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n</dl>', '2013-07-07 12:53:30', '2013-07-07 12:53:30', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL),
 (5, 'Enable Cookies', 'one_column', NULL, NULL, 'enable-cookies', NULL, '<div class="std">\r\n    <ul class="messages">\r\n        <li class="notice-msg">\r\n            <ul>\r\n                <li>Please enable cookies in your web browser to continue.</li>\r\n            </ul>\r\n        </li>\r\n    </ul>\r\n    <div class="page-title">\r\n        <h1><a name="top"></a>What are Cookies?</h1>\r\n    </div>\r\n    <p>Cookies are short pieces of data that are sent to your computer when you visit a website. On later visits, this data is then returned to that website. Cookies allow us to recognize you automatically whenever you visit our site so that we can personalize your experience and provide you with better service. We also use cookies (and similar browser data, such as Flash cookies) for fraud prevention and other purposes. If your web browser is set to refuse cookies from our website, you will not be able to complete a purchase or take advantage of certain features of our website, such as storing items in your Shopping Cart or receiving personalized recommendations. As a result, we strongly encourage you to configure your web browser to accept cookies from our website.</p>\r\n    <h2 class="subtitle">Enabling Cookies</h2>\r\n    <ul class="disc">\r\n        <li><a href="#ie7">Internet Explorer 7.x</a></li>\r\n        <li><a href="#ie6">Internet Explorer 6.x</a></li>\r\n        <li><a href="#firefox">Mozilla/Firefox</a></li>\r\n        <li><a href="#opera">Opera 7.x</a></li>\r\n    </ul>\r\n    <h3><a name="ie7"></a>Internet Explorer 7.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Start Internet Explorer</p>\r\n        </li>\r\n        <li>\r\n            <p>Under the <strong>Tools</strong> menu, click <strong>Internet Options</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-1.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Privacy</strong> tab</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-2.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Advanced</strong> button</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-3.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Put a check mark in the box for <strong>Override Automatic Cookie Handling</strong>, put another check mark in the <strong>Always accept session cookies </strong>box</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-4.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-5.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-6.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Restart Internet Explore</p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="ie6"></a>Internet Explorer 6.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Select <strong>Internet Options</strong> from the Tools menu</p>\r\n            <p><img src="{{skin url="images/cookies/ie6-1.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> tab</p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Default</strong> button (or manually slide the bar down to <strong>Medium</strong>) under <strong>Settings</strong>. Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie6-2.gif"}}" alt="" /></p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="firefox"></a>Mozilla/Firefox</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Click on the <strong>Tools</strong>-menu in Mozilla</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Options...</strong> item in the menu - a new window open</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> selection in the left part of the window. (See image below)</p>\r\n            <p><img src="{{skin url="images/cookies/firefox.png"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Expand the <strong>Cookies</strong> section</p>\r\n        </li>\r\n        <li>\r\n            <p>Check the <strong>Enable cookies</strong> and <strong>Accept cookies normally</strong> checkboxes</p>\r\n        </li>\r\n        <li>\r\n            <p>Save changes by clicking <strong>Ok</strong>.</p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="opera"></a>Opera 7.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Click on the <strong>Tools</strong> menu in Opera</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Preferences...</strong> item in the menu - a new window open</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> selection near the bottom left of the window. (See image below)</p>\r\n            <p><img src="{{skin url="images/cookies/opera.png"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>The <strong>Enable cookies</strong> checkbox must be checked, and <strong>Accept all cookies</strong> should be selected in the &quot;<strong>Normal cookies</strong>&quot; drop-down</p>\r\n        </li>\r\n        <li>\r\n            <p>Save changes by clicking <strong>Ok</strong></p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n</div>\r\n', '2013-07-07 12:53:30', '2013-07-07 12:53:30', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -3439,7 +3907,7 @@ CREATE TABLE `core_config_data` (
   `value` text COMMENT 'Config Value',
   PRIMARY KEY (`config_id`),
   UNIQUE KEY `UNQ_CORE_CONFIG_DATA_SCOPE_SCOPE_ID_PATH` (`scope`,`scope_id`,`path`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Config Data' AUTO_INCREMENT=189 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Config Data' AUTO_INCREMENT=190 ;
 
 --
 -- Dump dei dati per la tabella `core_config_data`
@@ -3595,7 +4063,7 @@ INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value
 (147, 'default', 0, 'bannerslider/settings/image_height', '500'),
 (148, 'default', 0, 'web/url/use_store', '0'),
 (149, 'default', 0, 'web/url/redirect_to_base', '1'),
-(150, 'default', 0, 'web/seo/use_rewrites', '1'),
+(150, 'default', 0, 'web/seo/use_rewrites', '0'),
 (151, 'default', 0, 'web/unsecure/base_link_url', '{{unsecure_base_url}}'),
 (152, 'default', 0, 'web/unsecure/base_skin_url', '{{unsecure_base_url}}skin/'),
 (153, 'default', 0, 'web/unsecure/base_media_url', '{{unsecure_base_url}}media/'),
@@ -3629,11 +4097,12 @@ INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value
 (181, 'default', 0, 'veredus/home/cms-block-3', '8'),
 (182, 'default', 0, 'veredus/home/cms-block-2', '7'),
 (183, 'default', 0, 'veredus/home/cms-block-1', '6'),
-(184, 'default', 0, 'veredus/home/attribute_home_product', NULL),
+(184, 'default', 0, 'veredus/home/attribute_home_product', 'view_in_home'),
 (185, 'default', 0, 'veredus/settings/attribute_type_layout', 'a:0:{}'),
 (186, 'default', 0, 'veredus/settings/attribute_image_color', NULL),
 (187, 'default', 0, 'veredus/settings/cms-block-sizeguide', 'no-route'),
-(188, 'default', 0, 'veredus/settings/cms-block-privacy-register', 'no-route');
+(188, 'default', 0, 'veredus/settings/cms-block-privacy-register', 'no-route'),
+(189, 'default', 0, 'veredus/home/attribute_home_image', NULL);
 
 -- --------------------------------------------------------
 
@@ -3682,7 +4151,7 @@ CREATE TABLE `core_flag` (
 
 INSERT INTO `core_flag` (`flag_id`, `flag_code`, `state`, `flag_data`, `last_update`) VALUES
 (1, 'admin_notification_survey', 0, 'a:1:{s:13:"survey_viewed";b:1;}', '2013-07-07 12:54:45'),
-(2, 'catalog_product_flat', 0, 'a:1:{s:8:"is_built";b:1;}', '2013-07-08 03:09:03');
+(2, 'catalog_product_flat', 0, 'a:1:{s:8:"is_built";b:1;}', '2013-07-26 08:45:18');
 
 -- --------------------------------------------------------
 
@@ -3905,7 +4374,7 @@ CREATE TABLE `core_url_rewrite` (
   KEY `IDX_CORE_URL_REWRITE_STORE_ID` (`store_id`),
   KEY `FK_CORE_URL_REWRITE_CTGR_ID_CAT_CTGR_ENTT_ENTT_ID` (`category_id`),
   KEY `FK_CORE_URL_REWRITE_PRODUCT_ID_CATALOG_CATEGORY_ENTITY_ENTITY_ID` (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Url Rewrites' AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Url Rewrites' AUTO_INCREMENT=451 ;
 
 --
 -- Dump dei dati per la tabella `core_url_rewrite`
@@ -3955,7 +4424,199 @@ INSERT INTO `core_url_rewrite` (`url_rewrite_id`, `store_id`, `id_path`, `reques
 (51, 3, 'category/7', 'nero-line/livello-3.html', 'catalog/category/view/id/7', 1, NULL, NULL, 7, NULL),
 (53, 3, 'product/1/7', 'nero-line/livello-3/product-one.html', 'catalog/product/view/id/1/category/7', 1, NULL, NULL, 7, 1),
 (54, 4, 'category/7', 'nero-line/livello-3.html', 'catalog/category/view/id/7', 1, NULL, NULL, 7, NULL),
-(56, 4, 'product/1/7', 'nero-line/livello-3/product-one.html', 'catalog/product/view/id/1/category/7', 1, NULL, NULL, 7, 1);
+(56, 4, 'product/1/7', 'nero-line/livello-3/product-one.html', 'catalog/product/view/id/1/category/7', 1, NULL, NULL, 7, 1),
+(101, 1, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(102, 1, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(103, 1, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(104, 1, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(105, 1, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(106, 1, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(107, 2, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(108, 2, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(109, 2, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(110, 2, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(111, 2, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(112, 2, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(113, 3, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(114, 3, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(115, 3, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(116, 3, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(117, 3, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(118, 3, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(119, 4, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(120, 4, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(121, 4, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(122, 4, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(123, 4, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(124, 4, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(125, 1, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(126, 1, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(127, 1, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(128, 1, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(129, 1, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(130, 1, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(131, 2, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(132, 2, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(133, 2, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(134, 2, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(135, 2, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(136, 2, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(137, 3, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(138, 3, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(139, 3, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(140, 3, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(141, 3, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(142, 3, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(143, 4, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(144, 4, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(145, 4, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(146, 4, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(147, 4, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(148, 4, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(149, 1, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(150, 1, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(151, 1, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(152, 1, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(153, 1, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(154, 1, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(155, 2, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(156, 2, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(157, 2, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(158, 2, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(159, 2, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(160, 2, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(161, 3, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(162, 3, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(163, 3, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(164, 3, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(165, 3, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(166, 3, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(167, 4, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(168, 4, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(169, 4, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(170, 4, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(171, 4, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(172, 4, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(173, 1, 'product/5/3', 'new/product-four.html', 'catalog/product/view/id/5/category/3', 1, NULL, NULL, 3, 5),
+(174, 1, 'product/5/4', 'nero-line/product-four.html', 'catalog/product/view/id/5/category/4', 1, NULL, NULL, 4, 5),
+(175, 1, 'product/5/5', 'nero-line/livello-1/product-four.html', 'catalog/product/view/id/5/category/5', 1, NULL, NULL, 5, 5),
+(176, 1, 'product/5/6', 'nero-line/livello-2/product-four.html', 'catalog/product/view/id/5/category/6', 1, NULL, NULL, 6, 5),
+(177, 1, 'product/5/7', 'nero-line/livello-3/product-four.html', 'catalog/product/view/id/5/category/7', 1, NULL, NULL, 7, 5),
+(178, 1, 'product/5', 'product-four.html', 'catalog/product/view/id/5', 1, NULL, NULL, NULL, 5),
+(179, 2, 'product/5/3', 'new/product-four.html', 'catalog/product/view/id/5/category/3', 1, NULL, NULL, 3, 5),
+(180, 2, 'product/5/4', 'nero-line/product-four.html', 'catalog/product/view/id/5/category/4', 1, NULL, NULL, 4, 5),
+(181, 2, 'product/5/5', 'nero-line/livello-1/product-four.html', 'catalog/product/view/id/5/category/5', 1, NULL, NULL, 5, 5),
+(182, 2, 'product/5/6', 'nero-line/livello-2/product-four.html', 'catalog/product/view/id/5/category/6', 1, NULL, NULL, 6, 5),
+(183, 2, 'product/5/7', 'nero-line/livello-3/product-four.html', 'catalog/product/view/id/5/category/7', 1, NULL, NULL, 7, 5),
+(184, 2, 'product/5', 'product-four.html', 'catalog/product/view/id/5', 1, NULL, NULL, NULL, 5),
+(185, 3, 'product/5/3', 'new/product-four.html', 'catalog/product/view/id/5/category/3', 1, NULL, NULL, 3, 5),
+(186, 3, 'product/5/4', 'nero-line/product-four.html', 'catalog/product/view/id/5/category/4', 1, NULL, NULL, 4, 5),
+(187, 3, 'product/5/5', 'nero-line/livello-1/product-four.html', 'catalog/product/view/id/5/category/5', 1, NULL, NULL, 5, 5),
+(188, 3, 'product/5/6', 'nero-line/livello-2/product-four.html', 'catalog/product/view/id/5/category/6', 1, NULL, NULL, 6, 5),
+(189, 3, 'product/5/7', 'nero-line/livello-3/product-four.html', 'catalog/product/view/id/5/category/7', 1, NULL, NULL, 7, 5),
+(190, 3, 'product/5', 'product-four.html', 'catalog/product/view/id/5', 1, NULL, NULL, NULL, 5),
+(191, 4, 'product/5/3', 'new/product-four.html', 'catalog/product/view/id/5/category/3', 1, NULL, NULL, 3, 5),
+(192, 4, 'product/5/4', 'nero-line/product-four.html', 'catalog/product/view/id/5/category/4', 1, NULL, NULL, 4, 5),
+(193, 4, 'product/5/5', 'nero-line/livello-1/product-four.html', 'catalog/product/view/id/5/category/5', 1, NULL, NULL, 5, 5),
+(194, 4, 'product/5/6', 'nero-line/livello-2/product-four.html', 'catalog/product/view/id/5/category/6', 1, NULL, NULL, 6, 5),
+(195, 4, 'product/5/7', 'nero-line/livello-3/product-four.html', 'catalog/product/view/id/5/category/7', 1, NULL, NULL, 7, 5),
+(196, 4, 'product/5', 'product-four.html', 'catalog/product/view/id/5', 1, NULL, NULL, NULL, 5),
+(198, 1, '62470800_1374835340', 'new/product-one-5.html', 'new/product-four.html', 0, 'RP', NULL, 3, 5),
+(200, 1, '63065400_1374835340', 'nero-line/product-one-5.html', 'nero-line/product-four.html', 0, 'RP', NULL, 4, 5),
+(202, 1, '64046500_1374835340', 'nero-line/livello-1/product-one-5.html', 'nero-line/livello-1/product-four.html', 0, 'RP', NULL, 5, 5),
+(204, 1, '65081000_1374835340', 'nero-line/livello-2/product-one-5.html', 'nero-line/livello-2/product-four.html', 0, 'RP', NULL, 6, 5),
+(206, 1, '65896300_1374835340', 'nero-line/livello-3/product-one-5.html', 'nero-line/livello-3/product-four.html', 0, 'RP', NULL, 7, 5),
+(208, 1, '66845700_1374835340', 'product-one-5.html', 'product-four.html', 0, 'RP', NULL, NULL, 5),
+(210, 2, '69889300_1374835340', 'new/product-one-5.html', 'new/product-four.html', 0, 'RP', NULL, 3, 5),
+(212, 2, '70501400_1374835340', 'nero-line/product-one-5.html', 'nero-line/product-four.html', 0, 'RP', NULL, 4, 5),
+(214, 2, '71164400_1374835340', 'nero-line/livello-1/product-one-5.html', 'nero-line/livello-1/product-four.html', 0, 'RP', NULL, 5, 5),
+(216, 2, '71798900_1374835340', 'nero-line/livello-2/product-one-5.html', 'nero-line/livello-2/product-four.html', 0, 'RP', NULL, 6, 5),
+(218, 2, '72394300_1374835340', 'nero-line/livello-3/product-one-5.html', 'nero-line/livello-3/product-four.html', 0, 'RP', NULL, 7, 5),
+(220, 2, '72917700_1374835340', 'product-one-5.html', 'product-four.html', 0, 'RP', NULL, NULL, 5),
+(222, 3, '74968000_1374835340', 'new/product-one-5.html', 'new/product-four.html', 0, 'RP', NULL, 3, 5),
+(224, 3, '75596600_1374835340', 'nero-line/product-one-5.html', 'nero-line/product-four.html', 0, 'RP', NULL, 4, 5),
+(226, 3, '76115800_1374835340', 'nero-line/livello-1/product-one-5.html', 'nero-line/livello-1/product-four.html', 0, 'RP', NULL, 5, 5),
+(228, 3, '76688000_1374835340', 'nero-line/livello-2/product-one-5.html', 'nero-line/livello-2/product-four.html', 0, 'RP', NULL, 6, 5),
+(230, 3, '77580400_1374835340', 'nero-line/livello-3/product-one-5.html', 'nero-line/livello-3/product-four.html', 0, 'RP', NULL, 7, 5),
+(232, 3, '78097200_1374835340', 'product-one-5.html', 'product-four.html', 0, 'RP', NULL, NULL, 5),
+(234, 4, '80283700_1374835340', 'new/product-one-5.html', 'new/product-four.html', 0, 'RP', NULL, 3, 5),
+(236, 4, '80867700_1374835340', 'nero-line/product-one-5.html', 'nero-line/product-four.html', 0, 'RP', NULL, 4, 5),
+(238, 4, '81464300_1374835340', 'nero-line/livello-1/product-one-5.html', 'nero-line/livello-1/product-four.html', 0, 'RP', NULL, 5, 5),
+(240, 4, '82120400_1374835340', 'nero-line/livello-2/product-one-5.html', 'nero-line/livello-2/product-four.html', 0, 'RP', NULL, 6, 5),
+(242, 4, '82639100_1374835340', 'nero-line/livello-3/product-one-5.html', 'nero-line/livello-3/product-four.html', 0, 'RP', NULL, 7, 5),
+(244, 4, '83164900_1374835340', 'product-one-5.html', 'product-four.html', 0, 'RP', NULL, NULL, 5),
+(257, 1, '67034700_1374835489', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
+(259, 1, '68428400_1374835489', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
+(261, 1, '69962400_1374835489', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
+(263, 1, '71833600_1374835489', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
+(265, 1, '72860000_1374835489', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
+(267, 1, '73800200_1374835489', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
+(269, 1, '74589700_1374835489', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
+(271, 1, '75649200_1374835489', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
+(273, 1, '76481500_1374835489', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
+(275, 1, '77578400_1374835489', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
+(277, 1, '78434900_1374835489', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
+(279, 1, '79247600_1374835489', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
+(281, 1, '79995300_1374835489', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
+(283, 1, '80997000_1374835489', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
+(285, 1, '81909800_1374835489', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
+(287, 1, '82996000_1374835489', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
+(289, 1, '84450500_1374835489', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
+(291, 1, '85832100_1374835489', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4),
+(310, 2, '95239800_1374835489', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
+(312, 2, '95999500_1374835489', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
+(314, 2, '96845100_1374835489', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
+(316, 2, '97667100_1374835489', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
+(318, 2, '98964700_1374835489', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
+(320, 2, '99773900_1374835489', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
+(322, 2, '00658900_1374835490', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
+(324, 2, '01470100_1374835490', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
+(326, 2, '02464800_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
+(328, 2, '03348200_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
+(330, 2, '04334000_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
+(332, 2, '05277300_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
+(334, 2, '06021300_1374835490', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
+(336, 2, '06854100_1374835490', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
+(338, 2, '07697800_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
+(340, 2, '08494300_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
+(342, 2, '09289000_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
+(344, 2, '10204600_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4),
+(363, 3, '22080000_1374835490', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
+(365, 3, '23992300_1374835490', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
+(367, 3, '25185200_1374835490', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
+(369, 3, '26389700_1374835490', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
+(371, 3, '28198900_1374835490', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
+(373, 3, '29134100_1374835490', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
+(375, 3, '30022200_1374835490', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
+(377, 3, '30809300_1374835490', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
+(379, 3, '31702000_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
+(381, 3, '32481300_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
+(383, 3, '33390000_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
+(385, 3, '34260500_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
+(387, 3, '35434700_1374835490', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
+(389, 3, '36383600_1374835490', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
+(391, 3, '37188800_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
+(393, 3, '37969500_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
+(395, 3, '38893000_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
+(397, 3, '39802400_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4),
+(416, 4, '49719100_1374835490', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
+(418, 4, '51715300_1374835490', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
+(420, 4, '53141400_1374835490', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
+(422, 4, '54458500_1374835490', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
+(424, 4, '55712100_1374835490', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
+(426, 4, '57938200_1374835490', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
+(428, 4, '59253000_1374835490', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
+(430, 4, '61278400_1374835490', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
+(432, 4, '66469100_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
+(434, 4, '68715400_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
+(436, 4, '72455500_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
+(438, 4, '74587400_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
+(440, 4, '76711200_1374835490', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
+(442, 4, '79948100_1374835490', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
+(444, 4, '81193700_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
+(446, 4, '82877500_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
+(448, 4, '84773500_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
+(450, 4, '86255900_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4);
 
 -- --------------------------------------------------------
 
@@ -6211,7 +6872,7 @@ CREATE TABLE `eav_attribute` (
   PRIMARY KEY (`attribute_id`),
   UNIQUE KEY `UNQ_EAV_ATTRIBUTE_ENTITY_TYPE_ID_ATTRIBUTE_CODE` (`entity_type_id`,`attribute_code`),
   KEY `IDX_EAV_ATTRIBUTE_ENTITY_TYPE_ID` (`entity_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute' AUTO_INCREMENT=141 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute' AUTO_INCREMENT=144 ;
 
 --
 -- Dump dei dati per la tabella `eav_attribute`
@@ -6357,7 +7018,9 @@ INSERT INTO `eav_attribute` (`attribute_id`, `entity_type_id`, `attribute_code`,
 (137, 9, 'display', NULL, NULL, 'varchar', NULL, NULL, 'select', 'Display As', NULL, 'mana_filters/source_display', 1, 0, NULL, 0, NULL),
 (138, 9, 'code', NULL, NULL, 'static', NULL, NULL, 'hidden', NULL, NULL, NULL, 1, 0, NULL, 0, NULL),
 (139, 9, 'default_mask0', NULL, NULL, 'static', NULL, NULL, 'hidden', NULL, NULL, NULL, 1, 0, NULL, 0, NULL),
-(140, 9, 'name', NULL, NULL, 'varchar', NULL, NULL, 'text', 'Name', NULL, NULL, 1, 0, NULL, 0, NULL);
+(140, 9, 'name', NULL, NULL, 'varchar', NULL, NULL, 'text', 'Name', NULL, NULL, 1, 0, NULL, 0, NULL),
+(142, 4, 'image_view_home', NULL, NULL, 'varchar', NULL, NULL, 'media_image', 'Imagine da visualizzare nella griglia in home', NULL, NULL, 0, 1, NULL, 0, NULL),
+(143, 4, 'view_in_home', NULL, NULL, 'int', NULL, NULL, 'boolean', 'Visualizzo in Home Page', NULL, 'eav/entity_attribute_source_boolean', 0, 1, '0', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -6533,7 +7196,7 @@ CREATE TABLE `eav_entity_attribute` (
   UNIQUE KEY `UNQ_EAV_ENTITY_ATTRIBUTE_ATTRIBUTE_GROUP_ID_ATTRIBUTE_ID` (`attribute_group_id`,`attribute_id`),
   KEY `IDX_EAV_ENTITY_ATTRIBUTE_ATTRIBUTE_SET_ID_SORT_ORDER` (`attribute_set_id`,`sort_order`),
   KEY `IDX_EAV_ENTITY_ATTRIBUTE_ATTRIBUTE_ID` (`attribute_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Entity Attributes' AUTO_INCREMENT=139 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Entity Attributes' AUTO_INCREMENT=397 ;
 
 --
 -- Dump dei dati per la tabella `eav_entity_attribute`
@@ -6610,43 +7273,10 @@ INSERT INTO `eav_entity_attribute` (`entity_attribute_id`, `entity_type_id`, `at
 (68, 3, 3, 6, 68, 5),
 (69, 3, 3, 6, 69, 6),
 (70, 3, 3, 5, 70, 51),
-(71, 4, 4, 7, 71, 1),
-(72, 4, 4, 7, 72, 2),
-(73, 4, 4, 7, 73, 3),
-(74, 4, 4, 7, 74, 4),
-(75, 4, 4, 8, 75, 1),
-(76, 4, 4, 8, 76, 3),
-(77, 4, 4, 8, 77, 4),
-(78, 4, 4, 8, 78, 5),
-(79, 4, 4, 8, 79, 6),
-(80, 4, 4, 7, 80, 5),
-(81, 4, 4, 9, 82, 1),
-(82, 4, 4, 9, 83, 2),
-(83, 4, 4, 9, 84, 3),
-(84, 4, 4, 10, 85, 1),
-(85, 4, 4, 10, 86, 2),
-(86, 4, 4, 10, 87, 3),
-(87, 4, 4, 10, 88, 4),
 (88, 4, 4, 7, 89, 6),
-(89, 4, 4, 8, 90, 2),
-(90, 4, 4, 8, 91, 7),
-(91, 4, 4, 7, 93, 7),
-(92, 4, 4, 7, 94, 8),
-(93, 4, 4, 10, 95, 5),
-(94, 4, 4, 7, 96, 9),
-(95, 4, 4, 7, 97, 10),
 (96, 4, 4, 7, 98, 11),
 (97, 4, 4, 8, 99, 8),
-(98, 4, 4, 11, 100, 1),
-(99, 4, 4, 11, 101, 2),
-(100, 4, 4, 7, 102, 12),
-(101, 4, 4, 12, 103, 1),
-(102, 4, 4, 12, 104, 2),
-(103, 4, 4, 12, 105, 3),
-(104, 4, 4, 12, 106, 4),
-(105, 4, 4, 12, 107, 5),
 (106, 4, 4, 7, 108, 13),
-(107, 4, 4, 12, 109, 6),
 (108, 4, 4, 7, 110, 14),
 (109, 4, 4, 7, 111, 15),
 (110, 4, 4, 7, 112, 16),
@@ -6654,17 +7284,9 @@ INSERT INTO `eav_entity_attribute` (`entity_attribute_id`, `entity_type_id`, `at
 (112, 4, 4, 7, 114, 18),
 (113, 4, 4, 7, 115, 19),
 (114, 4, 4, 7, 116, 20),
-(115, 4, 4, 7, 117, 21),
-(116, 4, 4, 8, 118, 9),
-(117, 4, 4, 8, 119, 10),
-(118, 4, 4, 8, 120, 11),
-(119, 4, 4, 8, 121, 12),
-(120, 4, 4, 8, 122, 13),
-(121, 4, 4, 17, 123, 1),
 (122, 4, 4, 7, 124, 22),
 (123, 4, 4, 7, 125, 23),
 (124, 4, 4, 7, 126, 24),
-(125, 4, 4, 8, 127, 14),
 (126, 4, 4, 7, 128, 25),
 (127, 4, 4, 7, 129, 26),
 (128, 4, 4, 7, 130, 27),
@@ -6677,7 +7299,50 @@ INSERT INTO `eav_entity_attribute` (`entity_attribute_id`, `entity_type_id`, `at
 (135, 9, 9, 18, 137, 4),
 (136, 9, 9, 18, 138, 5),
 (137, 9, 9, 18, 139, 6),
-(138, 9, 9, 18, 140, 7);
+(138, 9, 9, 18, 140, 7),
+(312, 4, 4, 7, 71, 1),
+(314, 4, 4, 7, 72, 2),
+(316, 4, 4, 7, 73, 3),
+(318, 4, 4, 7, 74, 4),
+(320, 4, 4, 7, 80, 5),
+(322, 4, 4, 7, 93, 6),
+(324, 4, 4, 7, 94, 7),
+(326, 4, 4, 7, 96, 8),
+(328, 4, 4, 7, 97, 9),
+(330, 4, 4, 7, 102, 10),
+(332, 4, 4, 7, 117, 11),
+(334, 4, 4, 8, 75, 1),
+(336, 4, 4, 8, 76, 3),
+(338, 4, 4, 8, 77, 4),
+(340, 4, 4, 8, 78, 5),
+(342, 4, 4, 8, 79, 6),
+(344, 4, 4, 8, 90, 2),
+(346, 4, 4, 8, 91, 7),
+(348, 4, 4, 8, 118, 8),
+(350, 4, 4, 8, 119, 9),
+(352, 4, 4, 8, 120, 10),
+(354, 4, 4, 8, 121, 11),
+(356, 4, 4, 8, 122, 12),
+(358, 4, 4, 8, 127, 13),
+(360, 4, 4, 9, 82, 1),
+(362, 4, 4, 9, 83, 2),
+(364, 4, 4, 9, 84, 3),
+(366, 4, 4, 10, 85, 1),
+(368, 4, 4, 10, 86, 2),
+(370, 4, 4, 10, 87, 3),
+(372, 4, 4, 10, 88, 5),
+(374, 4, 4, 10, 95, 6),
+(376, 4, 4, 10, 142, 4),
+(378, 4, 4, 11, 100, 1),
+(380, 4, 4, 11, 101, 2),
+(382, 4, 4, 12, 103, 2),
+(384, 4, 4, 12, 104, 3),
+(386, 4, 4, 12, 105, 4),
+(388, 4, 4, 12, 106, 5),
+(390, 4, 4, 12, 107, 6),
+(392, 4, 4, 12, 109, 7),
+(394, 4, 4, 12, 143, 1),
+(396, 4, 4, 17, 123, 1);
 
 -- --------------------------------------------------------
 
@@ -7089,7 +7754,7 @@ CREATE TABLE `index_event` (
   `new_data` mediumtext COMMENT 'New Data',
   PRIMARY KEY (`event_id`),
   UNIQUE KEY `UNQ_INDEX_EVENT_TYPE_ENTITY_ENTITY_PK` (`type`,`entity`,`entity_pk`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Index Event' AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Index Event' AUTO_INCREMENT=30 ;
 
 --
 -- Dump dei dati per la tabella `index_event`
@@ -7103,12 +7768,28 @@ INSERT INTO `index_event` (`event_id`, `type`, `entity`, `entity_pk`, `created_a
 (5, 'save', 'core_store', 4, '2013-07-08 03:03:26', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
 (6, 'save', 'catalog_category', 3, '2013-07-08 03:06:30', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
 (7, 'save', 'catalog_category', 4, '2013-07-08 03:07:02', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
-(8, 'save', 'cataloginventory_stock_item', 1, '2013-07-08 03:08:28', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
-(9, 'save', 'catalog_product', 1, '2013-07-08 03:08:30', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
-(10, 'catalog_reindex_price', 'catalog_product', 1, '2013-07-08 03:08:30', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(8, 'save', 'cataloginventory_stock_item', 1, '2013-07-08 03:08:28', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(9, 'save', 'catalog_product', 1, '2013-07-08 03:08:30', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(10, 'catalog_reindex_price', 'catalog_product', 1, '2013-07-08 03:08:30', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
 (11, 'save', 'catalog_category', 5, '2013-07-10 13:29:11', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
 (12, 'save', 'catalog_category', 6, '2013-07-10 13:29:50', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
-(13, 'save', 'catalog_category', 7, '2013-07-10 13:30:28', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
+(13, 'save', 'catalog_category', 7, '2013-07-10 13:30:28', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(14, 'save', 'catalog_eav_attribute', 141, '2013-07-26 06:27:19', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(15, 'save', 'catalog_eav_attribute', 142, '2013-07-26 06:27:56', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(16, 'save', 'cataloginventory_stock_item', 2, '2013-07-26 08:39:05', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(17, 'save', 'catalog_product', 2, '2013-07-26 08:39:06', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(18, 'catalog_reindex_price', 'catalog_product', 2, '2013-07-26 08:40:16', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(19, 'save', 'cataloginventory_stock_item', 3, '2013-07-26 08:40:21', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(20, 'save', 'catalog_product', 3, '2013-07-26 08:40:22', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(21, 'save', 'cataloginventory_stock_item', 4, '2013-07-26 08:40:31', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(22, 'save', 'catalog_product', 4, '2013-07-26 08:40:32', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(23, 'catalog_reindex_price', 'catalog_product', 4, '2013-07-26 08:41:21', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(24, 'save', 'cataloginventory_stock_item', 5, '2013-07-26 08:41:27', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(25, 'save', 'catalog_product', 5, '2013-07-26 08:41:27', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(26, 'catalog_reindex_price', 'catalog_product', 5, '2013-07-26 08:42:21', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(27, 'catalog_reindex_price', 'catalog_product', 3, '2013-07-26 08:43:40', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(28, 'delete', 'catalog_eav_attribute', 141, '2013-07-26 08:53:04', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";s:1:"0";}'),
+(29, 'save', 'catalog_eav_attribute', 143, '2013-07-26 08:53:40', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:1;}');
 
 -- --------------------------------------------------------
 
@@ -7132,16 +7813,16 @@ CREATE TABLE `index_process` (
 --
 
 INSERT INTO `index_process` (`process_id`, `indexer_code`, `status`, `started_at`, `ended_at`, `mode`) VALUES
-(1, 'catalog_product_attribute', 'pending', '2013-07-08 03:08:59', '2013-07-08 03:08:59', 'real_time'),
-(2, 'catalog_product_price', 'pending', '2013-07-08 03:08:59', '2013-07-08 03:09:00', 'real_time'),
-(3, 'catalog_url', 'pending', '2013-07-10 13:30:46', '2013-07-10 13:30:46', 'real_time'),
-(4, 'catalog_product_flat', 'pending', '2013-07-08 03:09:01', '2013-07-08 03:09:03', 'real_time'),
-(5, 'catalog_category_flat', 'pending', '2013-07-08 03:09:03', '2013-07-08 03:09:04', 'real_time'),
-(6, 'catalog_category_product', 'pending', '2013-07-10 13:30:46', '2013-07-10 13:30:46', 'real_time'),
-(7, 'catalogsearch_fulltext', 'pending', '2013-07-10 13:30:46', '2013-07-10 13:30:46', 'real_time'),
-(8, 'cataloginventory_stock', 'pending', '2013-07-08 03:08:58', '2013-07-08 03:08:59', 'real_time'),
-(9, 'tag_summary', 'pending', '2013-07-08 03:09:04', '2013-07-08 03:09:04', 'real_time'),
-(10, 'mana_db_replicator', 'pending', '2013-07-16 09:07:27', '2013-07-16 09:07:28', 'real_time');
+(1, 'catalog_product_attribute', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(2, 'catalog_product_price', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(3, 'catalog_url', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(4, 'catalog_product_flat', 'require_reindex', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(5, 'catalog_category_flat', 'pending', '2013-07-26 08:45:18', '2013-07-26 08:45:19', 'real_time'),
+(6, 'catalog_category_product', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(7, 'catalogsearch_fulltext', 'require_reindex', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(8, 'cataloginventory_stock', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(9, 'tag_summary', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
+(10, 'mana_db_replicator', 'pending', '2013-07-26 08:45:20', '2013-07-26 08:45:20', 'real_time');
 
 -- --------------------------------------------------------
 
@@ -7850,7 +8531,75 @@ INSERT INTO `log_url` (`url_id`, `visitor_id`, `visit_time`) VALUES
 (603, 28, '2013-07-26 06:13:19'),
 (604, 28, '2013-07-26 06:14:37'),
 (605, 28, '2013-07-26 06:15:45'),
-(606, 28, '2013-07-26 06:17:00');
+(606, 28, '2013-07-26 06:17:00'),
+(607, 31, '2013-07-26 08:11:29'),
+(608, 31, '2013-07-26 08:12:01'),
+(609, 31, '2013-07-26 08:12:52'),
+(610, 31, '2013-07-26 08:13:13'),
+(611, 31, '2013-07-26 08:13:55'),
+(612, 31, '2013-07-26 08:14:40'),
+(613, 31, '2013-07-26 08:15:53'),
+(614, 31, '2013-07-26 08:17:21'),
+(615, 31, '2013-07-26 08:18:01'),
+(616, 31, '2013-07-26 08:18:49'),
+(617, 31, '2013-07-26 08:19:30'),
+(618, 31, '2013-07-26 08:20:13'),
+(619, 31, '2013-07-26 08:37:06'),
+(620, 31, '2013-07-26 08:37:13'),
+(621, 31, '2013-07-26 08:37:34'),
+(622, 31, '2013-07-26 08:37:51'),
+(623, 31, '2013-07-26 08:37:55'),
+(624, 31, '2013-07-26 08:38:52'),
+(625, 31, '2013-07-26 08:42:37'),
+(626, 32, '2013-07-26 09:59:38'),
+(627, 32, '2013-07-26 10:00:09'),
+(628, 32, '2013-07-26 10:02:21'),
+(629, 32, '2013-07-26 10:02:23'),
+(630, 33, '2013-07-26 11:20:19'),
+(631, 33, '2013-07-26 11:20:21'),
+(632, 33, '2013-07-26 11:22:41'),
+(633, 33, '2013-07-26 11:22:43'),
+(634, 33, '2013-07-26 11:24:00'),
+(635, 33, '2013-07-26 11:24:02'),
+(636, 33, '2013-07-26 11:25:20'),
+(637, 33, '2013-07-26 11:25:23'),
+(638, 33, '2013-07-26 11:25:57'),
+(639, 33, '2013-07-26 11:25:58'),
+(640, 33, '2013-07-26 11:26:01'),
+(641, 33, '2013-07-26 11:28:08'),
+(642, 33, '2013-07-26 11:28:11'),
+(643, 33, '2013-07-26 11:32:22'),
+(644, 33, '2013-07-26 11:32:24'),
+(645, 33, '2013-07-26 11:33:51'),
+(646, 33, '2013-07-26 11:33:53'),
+(647, 33, '2013-07-26 11:34:07'),
+(648, 33, '2013-07-26 11:34:10'),
+(649, 33, '2013-07-26 11:34:10'),
+(650, 33, '2013-07-26 11:34:11'),
+(651, 33, '2013-07-26 11:34:14'),
+(652, 33, '2013-07-26 11:34:16'),
+(653, 33, '2013-07-26 11:34:55'),
+(654, 33, '2013-07-26 11:34:57'),
+(655, 33, '2013-07-26 11:35:23'),
+(656, 33, '2013-07-26 11:35:26'),
+(657, 33, '2013-07-26 11:38:33'),
+(658, 33, '2013-07-26 11:38:36'),
+(659, 33, '2013-07-26 11:49:29'),
+(660, 33, '2013-07-26 11:49:31'),
+(661, 33, '2013-07-26 11:56:34'),
+(662, 33, '2013-07-26 11:56:37'),
+(663, 33, '2013-07-26 12:03:49'),
+(664, 33, '2013-07-26 12:03:53'),
+(665, 33, '2013-07-26 12:04:49'),
+(666, 33, '2013-07-26 12:04:52'),
+(667, 33, '2013-07-26 12:09:33'),
+(668, 33, '2013-07-26 12:09:36'),
+(669, 33, '2013-07-26 12:17:07'),
+(670, 33, '2013-07-26 12:17:10'),
+(671, 33, '2013-07-26 12:18:24'),
+(672, 33, '2013-07-26 12:18:27'),
+(673, 33, '2013-07-26 12:23:32'),
+(674, 33, '2013-07-26 12:23:35');
 
 -- --------------------------------------------------------
 
@@ -7863,7 +8612,7 @@ CREATE TABLE `log_url_info` (
   `url` varchar(255) DEFAULT NULL COMMENT 'URL',
   `referer` varchar(255) DEFAULT NULL COMMENT 'Referrer',
   PRIMARY KEY (`url_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table' AUTO_INCREMENT=607 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table' AUTO_INCREMENT=675 ;
 
 --
 -- Dump dei dati per la tabella `log_url_info`
@@ -8475,7 +9224,75 @@ INSERT INTO `log_url_info` (`url_id`, `url`, `referer`) VALUES
 (603, 'http://veredus.dev/', NULL),
 (604, 'http://veredus.dev/', NULL),
 (605, 'http://veredus.dev/', NULL),
-(606, 'http://veredus.dev/', NULL);
+(606, 'http://veredus.dev/', NULL),
+(607, 'http://veredus.dev/', NULL),
+(608, 'http://veredus.dev/', NULL),
+(609, 'http://veredus.dev/', NULL),
+(610, 'http://veredus.dev/', NULL),
+(611, 'http://veredus.dev/', NULL),
+(612, 'http://veredus.dev/', NULL),
+(613, 'http://veredus.dev/', NULL),
+(614, 'http://veredus.dev/', NULL),
+(615, 'http://veredus.dev/', NULL),
+(616, 'http://veredus.dev/', NULL),
+(617, 'http://veredus.dev/', NULL),
+(618, 'http://veredus.dev/', NULL),
+(619, 'http://veredus.dev/', NULL),
+(620, 'http://veredus.dev/', NULL),
+(621, 'http://veredus.dev/', NULL),
+(622, 'http://veredus.dev/', NULL),
+(623, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(624, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(625, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(626, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(627, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(628, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(629, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(630, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(631, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(632, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(633, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(634, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(635, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(636, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(637, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(638, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(639, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(640, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(641, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(642, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(643, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(644, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(645, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(646, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(647, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(648, 'http://veredus.dev/', NULL),
+(649, 'http://veredus.dev/', NULL),
+(650, 'http://veredus.dev/', NULL),
+(651, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(652, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(653, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(654, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(655, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(656, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(657, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(658, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(659, 'http://veredus.dev/index.php/', 'http://veredus.dev/index.php/nero-line.html'),
+(660, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/index.php/'),
+(661, 'http://veredus.dev/', NULL),
+(662, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(663, 'http://veredus.dev/', NULL),
+(664, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(665, 'http://veredus.dev/', NULL),
+(666, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(667, 'http://veredus.dev/', NULL),
+(668, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(669, 'http://veredus.dev/', NULL),
+(670, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(671, 'http://veredus.dev/', NULL),
+(672, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(673, 'http://veredus.dev/', NULL),
+(674, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/');
 
 -- --------------------------------------------------------
 
@@ -8491,7 +9308,7 @@ CREATE TABLE `log_visitor` (
   `last_url_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Last URL ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   PRIMARY KEY (`visitor_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table' AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table' AUTO_INCREMENT=34 ;
 
 --
 -- Dump dei dati per la tabella `log_visitor`
@@ -8525,7 +9342,12 @@ INSERT INTO `log_visitor` (`visitor_id`, `session_id`, `first_visit_at`, `last_v
 (25, '12e02843f7ae22471bffe82ee2c69beb', '2013-07-25 22:15:35', '2013-07-26 00:12:14', 593, 1),
 (26, '8ae655d86d55102801aaff5b5bfd37ba', '2013-07-26 00:13:59', '2013-07-26 00:13:59', 594, 1),
 (27, '23b2d03e5537d26a8c21d78bbce05771', '2013-07-26 00:14:03', '2013-07-26 00:14:04', 595, 1),
-(28, '9b606bdde9335269e34ee6f8c93464b8', '2013-07-26 07:43:54', '2013-07-26 06:17:00', 606, 1);
+(28, '9b606bdde9335269e34ee6f8c93464b8', '2013-07-26 07:43:54', '2013-07-26 06:17:00', 606, 1),
+(29, 'ab2b154abb36ffd4b47a71de130dbd09', '2013-07-26 08:08:49', '2013-07-26 08:08:49', 0, 1),
+(30, 'ab2b154abb36ffd4b47a71de130dbd09', '2013-07-26 08:09:11', '2013-07-26 08:09:11', 0, 1),
+(31, 'ab2b154abb36ffd4b47a71de130dbd09', '2013-07-26 08:11:28', '2013-07-26 08:42:37', 625, 1),
+(32, 'd28bc4f8f997f042164f46cc73e2b717', '2013-07-26 09:59:37', '2013-07-26 10:02:23', 629, 1),
+(33, '6577c6e745edf79ec6261d01617d49f8', '2013-07-26 11:20:16', '2013-07-26 12:23:35', 674, 1);
 
 -- --------------------------------------------------------
 
@@ -8576,7 +9398,12 @@ INSERT INTO `log_visitor_info` (`visitor_id`, `http_referer`, `http_user_agent`,
 (25, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (26, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433),
 (27, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433),
-(28, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433);
+(28, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(29, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(30, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(31, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(32, 'http://veredus.dev/', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(33, 'http://veredus.dev/index.php/nero-line.html', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433);
 
 -- --------------------------------------------------------
 
