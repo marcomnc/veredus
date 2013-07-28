@@ -15,21 +15,21 @@
 /* @var $this Mana_Filters_Block_Filter_Attribute */
 ?>
 <ol class="m-filter-item-list <?php echo $this->getFilterOptions()->getIsReverse() ? 'm-reverse' : '' ?>">
-<?php foreach ($this->getItems() as $_item): ?>
+<?php foreach ($this->getItems() as $_item): ?> 
     <li <?php if ($_item->getMShowSelected()): ?>class="m-selected-ln-item"<?php endif; ?>>
         <?php // MANA BEGIN ?>
         <?php if ($_item->getMSelected()): ?>
-        	<span class="m-selected-filter-item"><?php echo $_item->getLabel() ?></span>
+                <div class="mana-check unchecked" onclick="jQuery.fn.AsyncRedirect('<?php echo $this->urlEscape($_item->getRemoveUrl()) ?>');">&nbsp;</div>
+        	<a href="<?php echo $this->urlEscape($_item->getRemoveUrl()) ?>" mps-type="async-link" title="<?php echo $_item->getLabel() ?>"><?php echo $_item->getLabel() ?></a>
         <?php else : ?>
+                <div class="mana-check" onclick="jQuery.fn.AsyncRedirect('<?php echo $this->urlEscape($_item->getUrl()) ?>');">&nbsp;</div>
 	        <?php if ($_item->getCount() > 0): ?>
-	        <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>" title="<?php echo $_item->getLabel() ?>"><?php echo $_item->getLabel() ?></a>
+	        <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>" mps-type="async-link" title="<?php echo $_item->getLabel() ?>"><?php echo $_item->getLabel() ?></a>
 	        <?php else: echo $_item->getLabel() ?>
 	        <?php endif; ?>
         <?php endif; ?>
         <?php // MANA END ?>
-        <?php if (Mage::getStoreConfigFlag('mana_filters/display/count')) : ?>
-            (<?php echo $_item->getCount() ?>)
-        <?php endif; ?>
+        
     </li>
 <?php endforeach ?>
 </ol>

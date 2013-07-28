@@ -123,6 +123,8 @@ jQuery(document).ready(function(){
 (function ($, window, undefined){
     // Inizializzazione grafica
     $.fn.MpsUi =  function() {
+        
+        //Check Box
         $('[type="checkbox"]').each(function(idx, elem) {
             var $this = $(elem);
             $this.wrapAll('<span class="mps-ui-checkbox"/>');
@@ -147,6 +149,16 @@ jQuery(document).ready(function(){
                     break;
             }
         });
+        
+        //Link asyncroni
+        $('a[mps-type="async-link"]').on('click', function(evt) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            if ($(this).attr('href') != '') {
+                $.fn.AsyncRedirect($(this).attr('href'));
+            }
+        });
+        
     };
     $.fn.layerShow = function(show, type,loading, zIndex, callback) {
         if (!type) type="medium";
@@ -180,4 +192,11 @@ jQuery(document).ready(function(){
             $('.popup-loading-layer').off('click');
         }
     };
+    
+    $.fn.AsyncRedirect = function(url) {
+        if (typeof(url) != 'undefined' && url != '') {
+            $.fn.layerShow(true,'medium',true, null, null);
+            window.location = url;
+        }
+    }
 })(jQuery, this);

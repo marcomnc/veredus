@@ -34,7 +34,7 @@
  
 <div class="block block-cart header-selector">
     <div class="cart-text">
-        <?php if (($_cartQty = $this->getSummaryCount()) > 0 || true    ): ?>
+        <?php if (($_cartQty = $this->getSummaryCount()) > 0): ?>
             <a id="header-cart-link" href="<?php echo $this->getUrl('checkout/cart/'); ?>">
                 <?php echo $this->__("Shopping Cart"); ?><br>
                 <?php echo "450,00 Eur";// Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
@@ -44,7 +44,7 @@
         <?php endif; ?>
     </div>
     <div class="cart-status">
-        <?php if ($_cartQty > 0 || true): ?>
+        <?php if ($_cartQty > 0): ?>
             <div class="cart-items">
                 <a id="header-cart-link" href="<?php echo $this->getUrl('checkout/cart/'); ?>">
                         <?php echo 1;//$_cartQty; ?>
