@@ -115,7 +115,7 @@ ul,ol         { list-style:none; }
 .col-right { float:right; width:254px; padding:0 0 1px; }
 
 /* 1 Column Layout */
-.col1-layout .col-main { float:none; width:auto; }
+.col1-layout .col-main { float:none; width:auto; padding-left: 0px }
 
 /* 2 Columns Layout */
 .col2-left-layout .col-main { float:right; }
@@ -754,10 +754,10 @@ tr.summary-details-excluded { font-style:italic; }
 .block-layered-nav .block-title { border:0; padding:0; height:24px; background:url(../images/bkg_block-layered-title.gif) 0 0 no-repeat; overflow:hidden; }
 .block-layered-nav .block-subtitle { line-height:1.35; background:#d5e8ff url(../images/bkg_block-layered1.gif) 0 50% repeat; padding:3px 9px; border:1px solid #b9ccdd; border-width:1px 0; text-transform:uppercase; color:#1f5070; }
 .block-layered-nav .block-content { }
-.block-layered-nav dt { background:url(../images/veredus_v_1_0.png) 0px -305px no-repeat; padding:7px 10px 8px 15px; font-weight:bold; text-transform:uppercase; }
+.block-layered-nav dt { background:url(../images/veredus_v_1_0.png) 0px -305px no-repeat; padding:7px 10px 8px 15px; font-weight:bold; text-transform:uppercase; margin: 12px 0px}
 .block-layered-nav dt div {width: 7px; height: 7px; margin:5px; float: left; background:url(../images/veredus_v_1_0.png) -16px -4px no-repeat; }
 .block-layered-nav dt.closed div { background:url(../images/veredus_v_1_0.png) -5px -4px no-repeat; }
-.block-layered-nav dd { padding:0 12px 12px; background:url(../images/bkg_block-layered-dd.gif) 0 100% repeat-x; }
+.block-layered-nav dd { padding:0 12px; background:url(../images/bkg_block-layered-dd.gif) 0 100% repeat-x; }
 .block-layered-nav dd.last { background:none; }
 .block-layered-nav ol li { margin: 5px 0px }
 .block-layered-nav .currently li { background:#fff url(../images/bkg_block-layered-li.gif) 0 100% repeat-x; padding:6px 24px 6px 10px; position:relative; z-index:1; line-height:1.5; }

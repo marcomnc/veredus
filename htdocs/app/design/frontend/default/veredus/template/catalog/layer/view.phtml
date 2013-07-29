@@ -46,11 +46,27 @@
                     <dd><?php echo $_filter->getHtml() ?></dd>
                 <?php endif; ?>
                 <?php endforeach; ?>
+                <?php   $catId = Mage::getStoreConfig('veredus/settings/shop_by_plus') + 0;
+
+                        if ($catId > 0):
+                            $myCat = Mage::getModel('catalog/category')->load($catId);
+                            foreach ($myCat->getResource()->getChildren($myCat, false) as $cat):
+                                $category = Mage::getModel('catalog/category')->Load($cat);
+                                if ($category->getIsActive()):
+                                    ?>
+                    <dt>
+                        <a href="<?php echo $category->getUrl() ?>">
+                            <?php echo $category->getName() ?>
+                        </a>
+                    </dt>
+                    <dd></dd>
+                 <?php          endif;
+                            endforeach;
+                        endif; ?>
+                        
             </dl>
             <script type="text/javascript">decorateDataList('narrow-by-list')</script>
         <?php endif; ?>
     </div>
 </div>
-<?php else: ?>
-NO! <?php echo count($this->getLayer()->getState()->getFilters()); ?>
 <?php endif; ?>
