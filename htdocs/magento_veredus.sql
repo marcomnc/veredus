@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.7
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: Lug 26, 2013 alle 16:26
--- Versione del server: 5.5.29-log
--- Versione PHP: 5.4.10
+-- Generato il: Lug 29, 2013 alle 23:43
+-- Versione del server: 5.5.24-log
+-- Versione PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `adminnotification_inbox`
 --
 
-CREATE TABLE `adminnotification_inbox` (
+CREATE TABLE IF NOT EXISTS `adminnotification_inbox` (
   `notification_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Notification id',
   `severity` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Problem type',
   `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Create date',
@@ -39,7 +39,7 @@ CREATE TABLE `adminnotification_inbox` (
   KEY `IDX_ADMINNOTIFICATION_INBOX_SEVERITY` (`severity`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_READ` (`is_read`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_REMOVE` (`is_remove`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox' AUTO_INCREMENT=140 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox' AUTO_INCREMENT=152 ;
 
 --
 -- Dump dei dati per la tabella `adminnotification_inbox`
@@ -184,7 +184,19 @@ INSERT INTO `adminnotification_inbox` (`notification_id`, `severity`, `date_adde
 (136, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
 (137, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
 (138, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
-(139, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
+(139, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(140, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(141, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(142, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(143, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(144, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(145, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(146, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(147, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(148, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(149, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(150, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0),
+(151, 4, '2008-11-08 03:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -192,7 +204,7 @@ INSERT INTO `adminnotification_inbox` (`notification_id`, `severity`, `date_adde
 -- Struttura della tabella `admin_assert`
 --
 
-CREATE TABLE `admin_assert` (
+CREATE TABLE IF NOT EXISTS `admin_assert` (
   `assert_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Assert ID',
   `assert_type` varchar(20) DEFAULT NULL COMMENT 'Assert Type',
   `assert_data` text COMMENT 'Assert Data',
@@ -205,7 +217,7 @@ CREATE TABLE `admin_assert` (
 -- Struttura della tabella `admin_role`
 --
 
-CREATE TABLE `admin_role` (
+CREATE TABLE IF NOT EXISTS `admin_role` (
   `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Role ID',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Parent Role ID',
   `tree_level` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Role Tree Level',
@@ -232,7 +244,7 @@ INSERT INTO `admin_role` (`role_id`, `parent_id`, `tree_level`, `sort_order`, `r
 -- Struttura della tabella `admin_rule`
 --
 
-CREATE TABLE `admin_rule` (
+CREATE TABLE IF NOT EXISTS `admin_rule` (
   `rule_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rule ID',
   `role_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Role ID',
   `resource_id` varchar(255) DEFAULT NULL COMMENT 'Resource ID',
@@ -258,7 +270,7 @@ INSERT INTO `admin_rule` (`rule_id`, `role_id`, `resource_id`, `privileges`, `as
 -- Struttura della tabella `admin_user`
 --
 
-CREATE TABLE `admin_user` (
+CREATE TABLE IF NOT EXISTS `admin_user` (
   `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'User ID',
   `firstname` varchar(32) DEFAULT NULL COMMENT 'User First Name',
   `lastname` varchar(32) DEFAULT NULL COMMENT 'User Last Name',
@@ -283,7 +295,7 @@ CREATE TABLE `admin_user` (
 --
 
 INSERT INTO `admin_user` (`user_id`, `firstname`, `lastname`, `email`, `username`, `password`, `created`, `modified`, `logdate`, `lognum`, `reload_acl_flag`, `is_active`, `extra`, `rp_token`, `rp_token_created_at`) VALUES
-(1, 'Marco', 'Mancinelli', 'marco@mancinellimarco.it', 'marcoma', '3988e15cd7c881d90f387edbe77bf0e0:LK', '2013-07-26 13:13:33', '2013-07-07 12:54:44', '2013-07-26 11:13:33', 18, 0, 1, 'a:1:{s:11:"configState";a:47:{s:14:"design_package";s:1:"0";s:12:"design_theme";s:1:"1";s:11:"design_head";s:1:"0";s:13:"design_header";s:1:"0";s:13:"design_footer";s:1:"0";s:16:"design_watermark";s:1:"1";s:17:"design_pagination";s:1:"0";s:12:"design_email";s:1:"0";s:15:"general_country";s:1:"0";s:14:"general_locale";s:1:"0";s:25:"general_store_information";s:1:"1";s:14:"general_region";s:1:"0";s:16:"currency_options";s:1:"1";s:20:"currency_webservicex";s:1:"0";s:15:"currency_import";s:1:"0";s:16:"vsocial_settings";s:1:"1";s:17:"vsocial_pinterest";s:1:"1";s:15:"vsocial_twitter";s:1:"1";s:12:"dev_restrict";s:1:"0";s:9:"dev_debug";s:1:"0";s:12:"dev_template";s:1:"0";s:20:"dev_translate_inline";s:1:"0";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:22:"customer_account_share";s:1:"1";s:25:"customer_online_customers";s:1:"1";s:23:"customer_create_account";s:1:"1";s:17:"customer_password";s:1:"0";s:16:"customer_address";s:1:"0";s:16:"customer_startup";s:1:"1";s:26:"customer_address_templates";s:1:"0";s:16:"customer_captcha";s:1:"0";s:18:"persistent_options";s:1:"1";s:12:"design_admin";s:1:"1";s:21:"bannerslider_settings";s:1:"1";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"1";s:12:"web_unsecure";s:1:"1";s:10:"web_secure";s:1:"1";s:11:"web_default";s:1:"0";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";s:12:"veredus_home";s:1:"1";s:16:"veredus_settings";s:1:"0";}}', NULL, NULL);
+(1, 'Marco', 'Mancinelli', 'marco@mancinellimarco.it', 'marcoma', '3988e15cd7c881d90f387edbe77bf0e0:LK', '2013-07-29 21:42:48', '2013-07-07 12:54:44', '2013-07-29 19:42:48', 24, 0, 1, 'a:1:{s:11:"configState";a:47:{s:14:"design_package";s:1:"0";s:12:"design_theme";s:1:"1";s:11:"design_head";s:1:"0";s:13:"design_header";s:1:"0";s:13:"design_footer";s:1:"0";s:16:"design_watermark";s:1:"1";s:17:"design_pagination";s:1:"0";s:12:"design_email";s:1:"0";s:15:"general_country";s:1:"1";s:14:"general_locale";s:1:"1";s:25:"general_store_information";s:1:"1";s:14:"general_region";s:1:"1";s:16:"currency_options";s:1:"1";s:20:"currency_webservicex";s:1:"0";s:15:"currency_import";s:1:"0";s:16:"vsocial_settings";s:1:"1";s:17:"vsocial_pinterest";s:1:"1";s:15:"vsocial_twitter";s:1:"1";s:12:"dev_restrict";s:1:"0";s:9:"dev_debug";s:1:"1";s:12:"dev_template";s:1:"1";s:20:"dev_translate_inline";s:1:"1";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:22:"customer_account_share";s:1:"1";s:25:"customer_online_customers";s:1:"1";s:23:"customer_create_account";s:1:"1";s:17:"customer_password";s:1:"0";s:16:"customer_address";s:1:"0";s:16:"customer_startup";s:1:"1";s:26:"customer_address_templates";s:1:"0";s:16:"customer_captcha";s:1:"0";s:18:"persistent_options";s:1:"1";s:12:"design_admin";s:1:"1";s:21:"bannerslider_settings";s:1:"1";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"1";s:12:"web_unsecure";s:1:"1";s:10:"web_secure";s:1:"1";s:11:"web_default";s:1:"0";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";s:12:"veredus_home";s:1:"1";s:16:"veredus_settings";s:1:"1";}}', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -291,7 +303,7 @@ INSERT INTO `admin_user` (`user_id`, `firstname`, `lastname`, `email`, `username
 -- Struttura della tabella `api2_acl_attribute`
 --
 
-CREATE TABLE `api2_acl_attribute` (
+CREATE TABLE IF NOT EXISTS `api2_acl_attribute` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
   `user_type` varchar(20) NOT NULL COMMENT 'Type of user',
   `resource_id` varchar(255) NOT NULL COMMENT 'Resource ID',
@@ -308,7 +320,7 @@ CREATE TABLE `api2_acl_attribute` (
 -- Struttura della tabella `api2_acl_role`
 --
 
-CREATE TABLE `api2_acl_role` (
+CREATE TABLE IF NOT EXISTS `api2_acl_role` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Created At',
   `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Updated At',
@@ -332,7 +344,7 @@ INSERT INTO `api2_acl_role` (`entity_id`, `created_at`, `updated_at`, `role_name
 -- Struttura della tabella `api2_acl_rule`
 --
 
-CREATE TABLE `api2_acl_rule` (
+CREATE TABLE IF NOT EXISTS `api2_acl_rule` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
   `role_id` int(10) unsigned NOT NULL COMMENT 'Role ID',
   `resource_id` varchar(255) NOT NULL COMMENT 'Resource ID',
@@ -347,7 +359,7 @@ CREATE TABLE `api2_acl_rule` (
 -- Struttura della tabella `api2_acl_user`
 --
 
-CREATE TABLE `api2_acl_user` (
+CREATE TABLE IF NOT EXISTS `api2_acl_user` (
   `admin_id` int(10) unsigned NOT NULL COMMENT 'Admin ID',
   `role_id` int(10) unsigned NOT NULL COMMENT 'Role ID',
   UNIQUE KEY `UNQ_API2_ACL_USER_ADMIN_ID` (`admin_id`),
@@ -360,7 +372,7 @@ CREATE TABLE `api2_acl_user` (
 -- Struttura della tabella `api_assert`
 --
 
-CREATE TABLE `api_assert` (
+CREATE TABLE IF NOT EXISTS `api_assert` (
   `assert_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Assert id',
   `assert_type` varchar(20) DEFAULT NULL COMMENT 'Assert type',
   `assert_data` text COMMENT 'Assert additional data',
@@ -373,7 +385,7 @@ CREATE TABLE `api_assert` (
 -- Struttura della tabella `api_role`
 --
 
-CREATE TABLE `api_role` (
+CREATE TABLE IF NOT EXISTS `api_role` (
   `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Role id',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Parent role id',
   `tree_level` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Role level in tree',
@@ -392,7 +404,7 @@ CREATE TABLE `api_role` (
 -- Struttura della tabella `api_rule`
 --
 
-CREATE TABLE `api_rule` (
+CREATE TABLE IF NOT EXISTS `api_rule` (
   `rule_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Api rule Id',
   `role_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Api role Id',
   `resource_id` varchar(255) DEFAULT NULL COMMENT 'Module code',
@@ -411,7 +423,7 @@ CREATE TABLE `api_rule` (
 -- Struttura della tabella `api_session`
 --
 
-CREATE TABLE `api_session` (
+CREATE TABLE IF NOT EXISTS `api_session` (
   `user_id` int(10) unsigned NOT NULL COMMENT 'User id',
   `logdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Login date',
   `sessid` varchar(40) DEFAULT NULL COMMENT 'Sessioin id',
@@ -425,7 +437,7 @@ CREATE TABLE `api_session` (
 -- Struttura della tabella `api_user`
 --
 
-CREATE TABLE `api_user` (
+CREATE TABLE IF NOT EXISTS `api_user` (
   `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'User id',
   `firstname` varchar(32) DEFAULT NULL COMMENT 'First name',
   `lastname` varchar(32) DEFAULT NULL COMMENT 'Last name',
@@ -446,7 +458,7 @@ CREATE TABLE `api_user` (
 -- Struttura della tabella `bannerslider`
 --
 
-CREATE TABLE `bannerslider` (
+CREATE TABLE IF NOT EXISTS `bannerslider` (
   `bannerslider_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
   `filename` varchar(255) NOT NULL DEFAULT '',
@@ -479,7 +491,7 @@ INSERT INTO `bannerslider` (`bannerslider_id`, `title`, `filename`, `content`, `
 -- Struttura della tabella `captcha_log`
 --
 
-CREATE TABLE `captcha_log` (
+CREATE TABLE IF NOT EXISTS `captcha_log` (
   `type` varchar(32) NOT NULL COMMENT 'Type',
   `value` varchar(32) NOT NULL COMMENT 'Value',
   `count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Count',
@@ -493,7 +505,7 @@ CREATE TABLE `captcha_log` (
 -- Struttura della tabella `cataloginventory_stock`
 --
 
-CREATE TABLE `cataloginventory_stock` (
+CREATE TABLE IF NOT EXISTS `cataloginventory_stock` (
   `stock_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Stock Id',
   `stock_name` varchar(255) DEFAULT NULL COMMENT 'Stock Name',
   PRIMARY KEY (`stock_id`)
@@ -512,7 +524,7 @@ INSERT INTO `cataloginventory_stock` (`stock_id`, `stock_name`) VALUES
 -- Struttura della tabella `cataloginventory_stock_item`
 --
 
-CREATE TABLE `cataloginventory_stock_item` (
+CREATE TABLE IF NOT EXISTS `cataloginventory_stock_item` (
   `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item Id',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product Id',
   `stock_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Stock Id',
@@ -549,11 +561,11 @@ CREATE TABLE `cataloginventory_stock_item` (
 --
 
 INSERT INTO `cataloginventory_stock_item` (`item_id`, `product_id`, `stock_id`, `qty`, `min_qty`, `use_config_min_qty`, `is_qty_decimal`, `backorders`, `use_config_backorders`, `min_sale_qty`, `use_config_min_sale_qty`, `max_sale_qty`, `use_config_max_sale_qty`, `is_in_stock`, `low_stock_date`, `notify_stock_qty`, `use_config_notify_stock_qty`, `manage_stock`, `use_config_manage_stock`, `stock_status_changed_auto`, `use_config_qty_increments`, `qty_increments`, `use_config_enable_qty_inc`, `enable_qty_increments`, `is_decimal_divided`) VALUES
-(1, 1, 1, 10000.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
-(2, 2, 1, 100.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
-(3, 3, 1, 8888.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
-(4, 4, 1, 1000.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0),
-(5, 5, 1, 1000.0000, 0.0000, 1, 0, 0, 1, 1.0000, 1, 0.0000, 1, 1, NULL, NULL, 1, 0, 1, 0, 1, 0.0000, 1, 0, 0);
+(1, 1, 1, '10000.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
+(2, 2, 1, '100.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
+(3, 3, 1, '8888.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
+(4, 4, 1, '1000.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
+(5, 5, 1, '1000.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -561,7 +573,7 @@ INSERT INTO `cataloginventory_stock_item` (`item_id`, `product_id`, `stock_id`, 
 -- Struttura della tabella `cataloginventory_stock_status`
 --
 
-CREATE TABLE `cataloginventory_stock_status` (
+CREATE TABLE IF NOT EXISTS `cataloginventory_stock_status` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `stock_id` smallint(5) unsigned NOT NULL COMMENT 'Stock Id',
@@ -577,11 +589,11 @@ CREATE TABLE `cataloginventory_stock_status` (
 --
 
 INSERT INTO `cataloginventory_stock_status` (`product_id`, `website_id`, `stock_id`, `qty`, `stock_status`) VALUES
-(1, 1, 1, 10000.0000, 1),
-(2, 1, 1, 100.0000, 1),
-(3, 1, 1, 8888.0000, 1),
-(4, 1, 1, 1000.0000, 1),
-(5, 1, 1, 1000.0000, 1);
+(1, 1, 1, '10000.0000', 1),
+(2, 1, 1, '100.0000', 1),
+(3, 1, 1, '8888.0000', 1),
+(4, 1, 1, '1000.0000', 1),
+(5, 1, 1, '1000.0000', 1);
 
 -- --------------------------------------------------------
 
@@ -589,7 +601,7 @@ INSERT INTO `cataloginventory_stock_status` (`product_id`, `website_id`, `stock_
 -- Struttura della tabella `cataloginventory_stock_status_idx`
 --
 
-CREATE TABLE `cataloginventory_stock_status_idx` (
+CREATE TABLE IF NOT EXISTS `cataloginventory_stock_status_idx` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `stock_id` smallint(5) unsigned NOT NULL COMMENT 'Stock Id',
@@ -605,11 +617,11 @@ CREATE TABLE `cataloginventory_stock_status_idx` (
 --
 
 INSERT INTO `cataloginventory_stock_status_idx` (`product_id`, `website_id`, `stock_id`, `qty`, `stock_status`) VALUES
-(1, 1, 1, 10000.0000, 1),
-(2, 1, 1, 100.0000, 1),
-(3, 1, 1, 8888.0000, 1),
-(4, 1, 1, 1000.0000, 1),
-(5, 1, 1, 1000.0000, 1);
+(1, 1, 1, '10000.0000', 1),
+(2, 1, 1, '100.0000', 1),
+(3, 1, 1, '8888.0000', 1),
+(4, 1, 1, '1000.0000', 1),
+(5, 1, 1, '1000.0000', 1);
 
 -- --------------------------------------------------------
 
@@ -617,7 +629,7 @@ INSERT INTO `cataloginventory_stock_status_idx` (`product_id`, `website_id`, `st
 -- Struttura della tabella `cataloginventory_stock_status_tmp`
 --
 
-CREATE TABLE `cataloginventory_stock_status_tmp` (
+CREATE TABLE IF NOT EXISTS `cataloginventory_stock_status_tmp` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `stock_id` smallint(5) unsigned NOT NULL COMMENT 'Stock Id',
@@ -634,7 +646,7 @@ CREATE TABLE `cataloginventory_stock_status_tmp` (
 -- Struttura della tabella `catalogrule`
 --
 
-CREATE TABLE `catalogrule` (
+CREATE TABLE IF NOT EXISTS `catalogrule` (
   `rule_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rule Id',
   `name` varchar(255) DEFAULT NULL COMMENT 'Name',
   `description` text COMMENT 'Description',
@@ -660,7 +672,7 @@ CREATE TABLE `catalogrule` (
 -- Struttura della tabella `catalogrule_affected_product`
 --
 
-CREATE TABLE `catalogrule_affected_product` (
+CREATE TABLE IF NOT EXISTS `catalogrule_affected_product` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product Id',
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CatalogRule Affected Product';
@@ -671,7 +683,7 @@ CREATE TABLE `catalogrule_affected_product` (
 -- Struttura della tabella `catalogrule_customer_group`
 --
 
-CREATE TABLE `catalogrule_customer_group` (
+CREATE TABLE IF NOT EXISTS `catalogrule_customer_group` (
   `rule_id` int(10) unsigned NOT NULL COMMENT 'Rule Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   PRIMARY KEY (`rule_id`,`customer_group_id`),
@@ -685,7 +697,7 @@ CREATE TABLE `catalogrule_customer_group` (
 -- Struttura della tabella `catalogrule_group_website`
 --
 
-CREATE TABLE `catalogrule_group_website` (
+CREATE TABLE IF NOT EXISTS `catalogrule_group_website` (
   `rule_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Rule Id',
   `customer_group_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer Group Id',
   `website_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Website Id',
@@ -701,7 +713,7 @@ CREATE TABLE `catalogrule_group_website` (
 -- Struttura della tabella `catalogrule_product`
 --
 
-CREATE TABLE `catalogrule_product` (
+CREATE TABLE IF NOT EXISTS `catalogrule_product` (
   `rule_product_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rule Product Id',
   `rule_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Rule Id',
   `from_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'From Time',
@@ -731,7 +743,7 @@ CREATE TABLE `catalogrule_product` (
 -- Struttura della tabella `catalogrule_product_price`
 --
 
-CREATE TABLE `catalogrule_product_price` (
+CREATE TABLE IF NOT EXISTS `catalogrule_product_price` (
   `rule_product_price_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rule Product PriceId',
   `rule_date` date NOT NULL COMMENT 'Rule Date',
   `customer_group_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer Group Id',
@@ -753,7 +765,7 @@ CREATE TABLE `catalogrule_product_price` (
 -- Struttura della tabella `catalogrule_website`
 --
 
-CREATE TABLE `catalogrule_website` (
+CREATE TABLE IF NOT EXISTS `catalogrule_website` (
   `rule_id` int(10) unsigned NOT NULL COMMENT 'Rule Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   PRIMARY KEY (`rule_id`,`website_id`),
@@ -767,7 +779,7 @@ CREATE TABLE `catalogrule_website` (
 -- Struttura della tabella `catalogsearch_fulltext`
 --
 
-CREATE TABLE `catalogsearch_fulltext` (
+CREATE TABLE IF NOT EXISTS `catalogsearch_fulltext` (
   `fulltext_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
@@ -775,33 +787,33 @@ CREATE TABLE `catalogsearch_fulltext` (
   PRIMARY KEY (`fulltext_id`),
   UNIQUE KEY `UNQ_CATALOGSEARCH_FULLTEXT_PRODUCT_ID_STORE_ID` (`product_id`,`store_id`),
   FULLTEXT KEY `FTI_CATALOGSEARCH_FULLTEXT_DATA_INDEX` (`data_index`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Catalog search result table' AUTO_INCREMENT=77 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Catalog search result table' AUTO_INCREMENT=121 ;
 
 --
 -- Dump dei dati per la tabella `catalogsearch_fulltext`
 --
 
 INSERT INTO `catalogsearch_fulltext` (`fulltext_id`, `product_id`, `store_id`, `data_index`) VALUES
-(73, 5, 1, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
-(74, 5, 2, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
-(75, 5, 3, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
-(76, 5, 4, 'P4|Enabled|Taxable Goods|Product Four|Product Four Description|Product Four Short Description|100|1'),
-(36, 4, 1, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
-(41, 4, 2, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
-(46, 4, 3, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
-(51, 4, 4, 'P3|Enabled|Taxable Goods|Product Three|Product Three Description|Product Three Short Description|100|1'),
-(69, 3, 1, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
-(70, 3, 2, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
-(71, 3, 3, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
-(72, 3, 4, 'P2B|Enabled|Taxable Goods|Product Two bis|Product Tow Description|Product Tow Short Description|100|1'),
-(34, 2, 1, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
-(39, 2, 2, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
-(44, 2, 3, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
-(49, 2, 4, 'P2|Enabled|Taxable Goods|Product Two|Product Tow Description|Product Tow Short Description|100|1'),
-(65, 1, 1, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1'),
-(66, 1, 2, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1'),
-(67, 1, 3, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1'),
-(68, 1, 4, 'PO|Enabled|Taxable Goods|Product One|Product One Description|Product One Short Description|100|1');
+(105, 5, 1, 'P4|Abilitato|Taxable Goods|Arancio|produttore ello|Product Four|Afghanistan|Product Four Description|Product Four Short Description|100|1'),
+(110, 5, 2, 'P4|Abilitato|Taxable Goods|Arancio|produttore ello|Product Four|Afghanistan|Product Four Description|Product Four Short Description|100|1'),
+(115, 5, 3, 'P4|Abilitato|Taxable Goods|Arancio|produttore ello|Product Four|Afghanistan|Product Four Description|Product Four Short Description|100|1'),
+(120, 5, 4, 'P4|Abilitato|Taxable Goods|Arancio|produttore ello|Product Four|Afghanistan|Product Four Description|Product Four Short Description|100|1'),
+(104, 4, 1, 'P3|Abilitato|Taxable Goods|Bianco|produttore illo|Product Three|Algeria|Product Three Description|Product Three Short Description|100|1'),
+(109, 4, 2, 'P3|Abilitato|Taxable Goods|Bianco|produttore illo|Product Three|Algeria|Product Three Description|Product Three Short Description|100|1'),
+(114, 4, 3, 'P3|Abilitato|Taxable Goods|Bianco|produttore illo|Product Three|Algeria|Product Three Description|Product Three Short Description|100|1'),
+(119, 4, 4, 'P3|Abilitato|Taxable Goods|Bianco|produttore illo|Product Three|Algeria|Product Three Description|Product Three Short Description|100|1'),
+(101, 1, 1, 'PO|Abilitato|Taxable Goods|Verde|produttore me|Product One|Martinica|Product One Description|Product One Short Description|100|1'),
+(106, 1, 2, 'PO|Abilitato|Taxable Goods|Verde|produttore me|Product One|Martinica|Product One Description|Product One Short Description|100|1'),
+(111, 1, 3, 'PO|Abilitato|Taxable Goods|Verde|produttore me|Product One|Martinica|Product One Description|Product One Short Description|100|1'),
+(116, 1, 4, 'PO|Abilitato|Taxable Goods|Verde|produttore me|Product One|Martinica|Product One Description|Product One Short Description|100|1'),
+(103, 3, 1, 'P2B|Abilitato|Taxable Goods|Blu|produttore io|Product Two bis|Anguilla|Product Tow Description|Product Tow Short Description|100|1'),
+(108, 3, 2, 'P2B|Abilitato|Taxable Goods|Blu|produttore io|Product Two bis|Anguilla|Product Tow Description|Product Tow Short Description|100|1'),
+(113, 3, 3, 'P2B|Abilitato|Taxable Goods|Blu|produttore io|Product Two bis|Anguilla|Product Tow Description|Product Tow Short Description|100|1'),
+(118, 3, 4, 'P2B|Abilitato|Taxable Goods|Blu|produttore io|Product Two bis|Anguilla|Product Tow Description|Product Tow Short Description|100|1'),
+(102, 2, 1, 'P2|Abilitato|Taxable Goods|Rosa|produttore me|Product Two|Antigua e Barbuda|Product Tow Description|Product Tow Short Description|100|1'),
+(107, 2, 2, 'P2|Abilitato|Taxable Goods|Rosa|produttore me|Product Two|Antigua e Barbuda|Product Tow Description|Product Tow Short Description|100|1'),
+(112, 2, 3, 'P2|Abilitato|Taxable Goods|Rosa|produttore me|Product Two|Antigua e Barbuda|Product Tow Description|Product Tow Short Description|100|1'),
+(117, 2, 4, 'P2|Abilitato|Taxable Goods|Rosa|produttore me|Product Two|Antigua e Barbuda|Product Tow Description|Product Tow Short Description|100|1');
 
 -- --------------------------------------------------------
 
@@ -809,7 +821,7 @@ INSERT INTO `catalogsearch_fulltext` (`fulltext_id`, `product_id`, `store_id`, `
 -- Struttura della tabella `catalogsearch_query`
 --
 
-CREATE TABLE `catalogsearch_query` (
+CREATE TABLE IF NOT EXISTS `catalogsearch_query` (
   `query_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Query ID',
   `query_text` varchar(255) DEFAULT NULL COMMENT 'Query text',
   `num_results` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Num results',
@@ -832,7 +844,7 @@ CREATE TABLE `catalogsearch_query` (
 -- Struttura della tabella `catalogsearch_result`
 --
 
-CREATE TABLE `catalogsearch_result` (
+CREATE TABLE IF NOT EXISTS `catalogsearch_result` (
   `query_id` int(10) unsigned NOT NULL COMMENT 'Query ID',
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product ID',
   `relevance` decimal(20,4) NOT NULL DEFAULT '0.0000' COMMENT 'Relevance',
@@ -847,7 +859,7 @@ CREATE TABLE `catalogsearch_result` (
 -- Struttura della tabella `catalog_category_anc_categs_index_idx`
 --
 
-CREATE TABLE `catalog_category_anc_categs_index_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_category_anc_categs_index_idx` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `path` varchar(255) DEFAULT NULL COMMENT 'Path',
   KEY `IDX_CATALOG_CATEGORY_ANC_CATEGS_INDEX_IDX_CATEGORY_ID` (`category_id`),
@@ -860,7 +872,7 @@ CREATE TABLE `catalog_category_anc_categs_index_idx` (
 -- Struttura della tabella `catalog_category_anc_categs_index_tmp`
 --
 
-CREATE TABLE `catalog_category_anc_categs_index_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_category_anc_categs_index_tmp` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `path` varchar(255) DEFAULT NULL COMMENT 'Path',
   KEY `IDX_CATALOG_CATEGORY_ANC_CATEGS_INDEX_TMP_CATEGORY_ID` (`category_id`),
@@ -873,7 +885,7 @@ CREATE TABLE `catalog_category_anc_categs_index_tmp` (
 -- Struttura della tabella `catalog_category_anc_products_index_idx`
 --
 
-CREATE TABLE `catalog_category_anc_products_index_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_category_anc_products_index_idx` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `position` int(10) unsigned DEFAULT NULL COMMENT 'Position',
@@ -886,7 +898,7 @@ CREATE TABLE `catalog_category_anc_products_index_idx` (
 -- Struttura della tabella `catalog_category_anc_products_index_tmp`
 --
 
-CREATE TABLE `catalog_category_anc_products_index_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_category_anc_products_index_tmp` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `position` int(10) unsigned DEFAULT NULL COMMENT 'Position',
@@ -899,7 +911,7 @@ CREATE TABLE `catalog_category_anc_products_index_tmp` (
 -- Struttura della tabella `catalog_category_entity`
 --
 
-CREATE TABLE `catalog_category_entity` (
+CREATE TABLE IF NOT EXISTS `catalog_category_entity` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attriute Set ID',
@@ -913,20 +925,23 @@ CREATE TABLE `catalog_category_entity` (
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_LEVEL` (`level`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_PATH_ENTITY_ID` (`path`,`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Table' AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Table' AUTO_INCREMENT=11 ;
 
 --
 -- Dump dei dati per la tabella `catalog_category_entity`
 --
 
 INSERT INTO `catalog_category_entity` (`entity_id`, `entity_type_id`, `attribute_set_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`) VALUES
-(1, 3, 0, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6),
-(2, 3, 3, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5),
+(1, 3, 0, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 9),
+(2, 3, 3, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 8),
 (3, 3, 3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0),
-(4, 3, 3, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3),
+(4, 3, 3, 2, '2013-07-08 03:07:01', '2013-07-28 08:40:18', '1/2/4', 2, 2, 3),
 (5, 3, 3, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0),
 (6, 3, 3, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0),
-(7, 3, 3, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0);
+(7, 3, 3, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0),
+(8, 3, 3, 2, '2013-07-29 20:34:14', '2013-07-29 20:34:14', '1/2/8', 3, 2, 2),
+(9, 3, 3, 8, '2013-07-29 20:40:58', '2013-07-29 20:40:58', '1/2/8/9', 1, 3, 0),
+(10, 3, 3, 8, '2013-07-29 20:41:38', '2013-07-29 20:41:38', '1/2/8/10', 2, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -934,7 +949,7 @@ INSERT INTO `catalog_category_entity` (`entity_id`, `entity_type_id`, `attribute
 -- Struttura della tabella `catalog_category_entity_datetime`
 --
 
-CREATE TABLE `catalog_category_entity_datetime` (
+CREATE TABLE IF NOT EXISTS `catalog_category_entity_datetime` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -946,7 +961,7 @@ CREATE TABLE `catalog_category_entity_datetime` (
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DATETIME_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DATETIME_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DATETIME_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Datetime Attribute Backend Table' AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Datetime Attribute Backend Table' AUTO_INCREMENT=19 ;
 
 --
 -- Dump dei dati per la tabella `catalog_category_entity_datetime`
@@ -962,7 +977,13 @@ INSERT INTO `catalog_category_entity_datetime` (`value_id`, `entity_type_id`, `a
 (7, 3, 59, 0, 6, NULL),
 (8, 3, 60, 0, 6, NULL),
 (9, 3, 59, 0, 7, NULL),
-(10, 3, 60, 0, 7, NULL);
+(10, 3, 60, 0, 7, NULL),
+(13, 3, 59, 0, 8, NULL),
+(14, 3, 60, 0, 8, NULL),
+(15, 3, 59, 0, 9, NULL),
+(16, 3, 60, 0, 9, NULL),
+(17, 3, 59, 0, 10, NULL),
+(18, 3, 60, 0, 10, NULL);
 
 -- --------------------------------------------------------
 
@@ -970,7 +991,7 @@ INSERT INTO `catalog_category_entity_datetime` (`value_id`, `entity_type_id`, `a
 -- Struttura della tabella `catalog_category_entity_decimal`
 --
 
-CREATE TABLE `catalog_category_entity_decimal` (
+CREATE TABLE IF NOT EXISTS `catalog_category_entity_decimal` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -982,7 +1003,7 @@ CREATE TABLE `catalog_category_entity_decimal` (
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DECIMAL_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DECIMAL_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DECIMAL_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Decimal Attribute Backend Table' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Decimal Attribute Backend Table' AUTO_INCREMENT=9 ;
 
 --
 -- Dump dei dati per la tabella `catalog_category_entity_decimal`
@@ -993,7 +1014,10 @@ INSERT INTO `catalog_category_entity_decimal` (`value_id`, `entity_type_id`, `at
 (2, 3, 70, 0, 4, NULL),
 (3, 3, 70, 0, 5, NULL),
 (4, 3, 70, 0, 6, NULL),
-(5, 3, 70, 0, 7, NULL);
+(5, 3, 70, 0, 7, NULL),
+(6, 3, 70, 0, 8, NULL),
+(7, 3, 70, 0, 9, NULL),
+(8, 3, 70, 0, 10, NULL);
 
 -- --------------------------------------------------------
 
@@ -1001,7 +1025,7 @@ INSERT INTO `catalog_category_entity_decimal` (`value_id`, `entity_type_id`, `at
 -- Struttura della tabella `catalog_category_entity_int`
 --
 
-CREATE TABLE `catalog_category_entity_int` (
+CREATE TABLE IF NOT EXISTS `catalog_category_entity_int` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -1013,7 +1037,7 @@ CREATE TABLE `catalog_category_entity_int` (
   KEY `IDX_CATALOG_CATEGORY_ENTITY_INT_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_INT_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_INT_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Integer Attribute Backend Table' AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Integer Attribute Backend Table' AUTO_INCREMENT=56 ;
 
 --
 -- Dump dei dati per la tabella `catalog_category_entity_int`
@@ -1034,7 +1058,7 @@ INSERT INTO `catalog_category_entity_int` (`value_id`, `entity_type_id`, `attrib
 (12, 3, 69, 0, 3, 0),
 (13, 3, 42, 0, 4, 1),
 (14, 3, 67, 0, 4, 1),
-(15, 3, 50, 0, 4, NULL),
+(15, 3, 50, 0, 4, 9),
 (16, 3, 51, 0, 4, 0),
 (17, 3, 68, 0, 4, 0),
 (18, 3, 69, 0, 4, 0),
@@ -1055,7 +1079,25 @@ INSERT INTO `catalog_category_entity_int` (`value_id`, `entity_type_id`, `attrib
 (33, 3, 50, 0, 7, NULL),
 (34, 3, 51, 0, 7, 0),
 (35, 3, 68, 0, 7, 0),
-(36, 3, 69, 0, 7, 0);
+(36, 3, 69, 0, 7, 0),
+(38, 3, 42, 0, 8, 1),
+(39, 3, 67, 0, 8, 0),
+(40, 3, 50, 0, 8, NULL),
+(41, 3, 51, 0, 8, 0),
+(42, 3, 68, 0, 8, 0),
+(43, 3, 69, 0, 8, 0),
+(44, 3, 42, 0, 9, 1),
+(45, 3, 67, 0, 9, 0),
+(46, 3, 50, 0, 9, NULL),
+(47, 3, 51, 0, 9, 0),
+(48, 3, 68, 0, 9, 0),
+(49, 3, 69, 0, 9, 0),
+(50, 3, 42, 0, 10, 1),
+(51, 3, 67, 0, 10, 0),
+(52, 3, 50, 0, 10, NULL),
+(53, 3, 51, 0, 10, 0),
+(54, 3, 68, 0, 10, 0),
+(55, 3, 69, 0, 10, 0);
 
 -- --------------------------------------------------------
 
@@ -1063,7 +1105,7 @@ INSERT INTO `catalog_category_entity_int` (`value_id`, `entity_type_id`, `attrib
 -- Struttura della tabella `catalog_category_entity_text`
 --
 
-CREATE TABLE `catalog_category_entity_text` (
+CREATE TABLE IF NOT EXISTS `catalog_category_entity_text` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -1075,7 +1117,7 @@ CREATE TABLE `catalog_category_entity_text` (
   KEY `IDX_CATALOG_CATEGORY_ENTITY_TEXT_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_TEXT_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_TEXT_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Text Attribute Backend Table' AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Text Attribute Backend Table' AUTO_INCREMENT=50 ;
 
 --
 -- Dump dei dati per la tabella `catalog_category_entity_text`
@@ -1110,7 +1152,22 @@ INSERT INTO `catalog_category_entity_text` (`value_id`, `entity_type_id`, `attri
 (26, 3, 47, 0, 7, NULL),
 (27, 3, 48, 0, 7, NULL),
 (28, 3, 62, 0, 7, NULL),
-(29, 3, 65, 0, 7, NULL);
+(29, 3, 65, 0, 7, NULL),
+(35, 3, 44, 0, 8, NULL),
+(36, 3, 47, 0, 8, NULL),
+(37, 3, 48, 0, 8, NULL),
+(38, 3, 62, 0, 8, NULL),
+(39, 3, 65, 0, 8, NULL),
+(40, 3, 44, 0, 9, NULL),
+(41, 3, 47, 0, 9, NULL),
+(42, 3, 48, 0, 9, NULL),
+(43, 3, 62, 0, 9, NULL),
+(44, 3, 65, 0, 9, NULL),
+(45, 3, 44, 0, 10, NULL),
+(46, 3, 47, 0, 10, NULL),
+(47, 3, 48, 0, 10, NULL),
+(48, 3, 62, 0, 10, NULL),
+(49, 3, 65, 0, 10, NULL);
 
 -- --------------------------------------------------------
 
@@ -1118,7 +1175,7 @@ INSERT INTO `catalog_category_entity_text` (`value_id`, `entity_type_id`, `attri
 -- Struttura della tabella `catalog_category_entity_varchar`
 --
 
-CREATE TABLE `catalog_category_entity_varchar` (
+CREATE TABLE IF NOT EXISTS `catalog_category_entity_varchar` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -1130,7 +1187,7 @@ CREATE TABLE `catalog_category_entity_varchar` (
   KEY `IDX_CATALOG_CATEGORY_ENTITY_VARCHAR_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_VARCHAR_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_VARCHAR_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Varchar Attribute Backend Table' AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Varchar Attribute Backend Table' AUTO_INCREMENT=76 ;
 
 --
 -- Dump dei dati per la tabella `catalog_category_entity_varchar`
@@ -1155,7 +1212,7 @@ INSERT INTO `catalog_category_entity_varchar` (`value_id`, `entity_type_id`, `at
 (16, 3, 41, 0, 4, 'nero Line'),
 (17, 3, 43, 0, 4, 'nero-line'),
 (18, 3, 46, 0, 4, NULL),
-(19, 3, 49, 0, 4, 'PRODUCTS'),
+(19, 3, 49, 0, 4, 'PRODUCTS_AND_PAGE'),
 (20, 3, 58, 0, 4, NULL),
 (21, 3, 61, 0, 4, NULL),
 (22, 3, 57, 1, 4, 'nero-line.html'),
@@ -1183,7 +1240,31 @@ INSERT INTO `catalog_category_entity_varchar` (`value_id`, `entity_type_id`, `at
 (44, 3, 58, 0, 7, NULL),
 (45, 3, 61, 0, 7, NULL),
 (46, 3, 57, 1, 7, 'nero-line/livello-3.html'),
-(47, 3, 57, 0, 7, 'nero-line/livello-3.html');
+(47, 3, 57, 0, 7, 'nero-line/livello-3.html'),
+(52, 3, 41, 0, 8, 'Layered Category'),
+(53, 3, 43, 0, 8, 'layered-category'),
+(54, 3, 46, 0, 8, NULL),
+(55, 3, 49, 0, 8, 'PRODUCTS'),
+(56, 3, 58, 0, 8, NULL),
+(57, 3, 61, 0, 8, NULL),
+(58, 3, 57, 1, 8, 'layered-category.html'),
+(59, 3, 57, 0, 8, 'layered-category.html'),
+(60, 3, 41, 0, 9, 'Più Venduti'),
+(61, 3, 43, 0, 9, 'piu-venduti'),
+(62, 3, 46, 0, 9, NULL),
+(63, 3, 49, 0, 9, 'PRODUCTS'),
+(64, 3, 58, 0, 9, NULL),
+(65, 3, 61, 0, 9, NULL),
+(66, 3, 57, 1, 9, 'layered-category/piu-venduti.html'),
+(67, 3, 57, 0, 9, 'layered-category/piu-venduti.html'),
+(68, 3, 41, 0, 10, 'Più Cliccati'),
+(69, 3, 43, 0, 10, 'piu-cliccati'),
+(70, 3, 46, 0, 10, NULL),
+(71, 3, 49, 0, 10, 'PRODUCTS'),
+(72, 3, 58, 0, 10, NULL),
+(73, 3, 61, 0, 10, NULL),
+(74, 3, 57, 1, 10, 'layered-category/piu-cliccati.html'),
+(75, 3, 57, 0, 10, 'layered-category/piu-cliccati.html');
 
 -- --------------------------------------------------------
 
@@ -1191,7 +1272,7 @@ INSERT INTO `catalog_category_entity_varchar` (`value_id`, `entity_type_id`, `at
 -- Struttura della tabella `catalog_category_flat_store_1`
 --
 
-CREATE TABLE `catalog_category_flat_store_1` (
+CREATE TABLE IF NOT EXISTS `catalog_category_flat_store_1` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'parent_id',
   `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
@@ -1214,6 +1295,7 @@ CREATE TABLE `catalog_category_flat_store_1` (
   `description` text COMMENT 'Description',
   `display_mode` varchar(255) DEFAULT NULL COMMENT 'Display Mode',
   `filter_price_range` decimal(12,4) DEFAULT NULL COMMENT 'Layered Navigation Price Step',
+  `idx_type` int(11) DEFAULT NULL COMMENT 'Index Type',
   `image` varchar(255) DEFAULT NULL COMMENT 'Image',
   `include_in_menu` int(11) DEFAULT NULL COMMENT 'Include in Navigation Menu',
   `is_active` int(11) DEFAULT NULL COMMENT 'Is Active',
@@ -1238,14 +1320,17 @@ CREATE TABLE `catalog_category_flat_store_1` (
 -- Dump dei dati per la tabella `catalog_category_flat_store_1`
 --
 
-INSERT INTO `catalog_category_flat_store_1` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
-(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
-(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
-(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
-(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
+INSERT INTO `catalog_category_flat_store_1` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `idx_type`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 9, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 8, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
+(4, 2, '2013-07-08 03:07:01', '2013-07-28 08:40:18', '1/2/4', 2, 2, 3, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS_AND_PAGE', NULL, NULL, NULL, 1, 1, 0, 9, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html'),
+(8, 2, '2013-07-29 20:34:14', '2013-07-29 20:34:14', '1/2/8', 3, 2, 2, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Layered Category', NULL, NULL, NULL, 'layered-category', 'layered-category.html'),
+(9, 8, '2013-07-29 20:40:58', '2013-07-29 20:40:58', '1/2/8/9', 1, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Venduti', NULL, NULL, NULL, 'piu-venduti', 'layered-category/piu-venduti.html'),
+(10, 8, '2013-07-29 20:41:38', '2013-07-29 20:41:38', '1/2/8/10', 2, 3, 0, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Cliccati', NULL, NULL, NULL, 'piu-cliccati', 'layered-category/piu-cliccati.html');
 
 -- --------------------------------------------------------
 
@@ -1253,7 +1338,7 @@ INSERT INTO `catalog_category_flat_store_1` (`entity_id`, `parent_id`, `created_
 -- Struttura della tabella `catalog_category_flat_store_2`
 --
 
-CREATE TABLE `catalog_category_flat_store_2` (
+CREATE TABLE IF NOT EXISTS `catalog_category_flat_store_2` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'parent_id',
   `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
@@ -1276,6 +1361,7 @@ CREATE TABLE `catalog_category_flat_store_2` (
   `description` text COMMENT 'Description',
   `display_mode` varchar(255) DEFAULT NULL COMMENT 'Display Mode',
   `filter_price_range` decimal(12,4) DEFAULT NULL COMMENT 'Layered Navigation Price Step',
+  `idx_type` int(11) DEFAULT NULL COMMENT 'Index Type',
   `image` varchar(255) DEFAULT NULL COMMENT 'Image',
   `include_in_menu` int(11) DEFAULT NULL COMMENT 'Include in Navigation Menu',
   `is_active` int(11) DEFAULT NULL COMMENT 'Is Active',
@@ -1300,14 +1386,17 @@ CREATE TABLE `catalog_category_flat_store_2` (
 -- Dump dei dati per la tabella `catalog_category_flat_store_2`
 --
 
-INSERT INTO `catalog_category_flat_store_2` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
-(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
-(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
-(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
-(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
+INSERT INTO `catalog_category_flat_store_2` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `idx_type`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 9, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 8, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
+(4, 2, '2013-07-08 03:07:01', '2013-07-28 08:40:18', '1/2/4', 2, 2, 3, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS_AND_PAGE', NULL, NULL, NULL, 1, 1, 0, 9, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html'),
+(8, 2, '2013-07-29 20:34:14', '2013-07-29 20:34:14', '1/2/8', 3, 2, 2, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Layered Category', NULL, NULL, NULL, 'layered-category', 'layered-category.html'),
+(9, 8, '2013-07-29 20:40:58', '2013-07-29 20:40:58', '1/2/8/9', 1, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Venduti', NULL, NULL, NULL, 'piu-venduti', 'layered-category/piu-venduti.html'),
+(10, 8, '2013-07-29 20:41:38', '2013-07-29 20:41:38', '1/2/8/10', 2, 3, 0, 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Cliccati', NULL, NULL, NULL, 'piu-cliccati', 'layered-category/piu-cliccati.html');
 
 -- --------------------------------------------------------
 
@@ -1315,7 +1404,7 @@ INSERT INTO `catalog_category_flat_store_2` (`entity_id`, `parent_id`, `created_
 -- Struttura della tabella `catalog_category_flat_store_3`
 --
 
-CREATE TABLE `catalog_category_flat_store_3` (
+CREATE TABLE IF NOT EXISTS `catalog_category_flat_store_3` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'parent_id',
   `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
@@ -1338,6 +1427,7 @@ CREATE TABLE `catalog_category_flat_store_3` (
   `description` text COMMENT 'Description',
   `display_mode` varchar(255) DEFAULT NULL COMMENT 'Display Mode',
   `filter_price_range` decimal(12,4) DEFAULT NULL COMMENT 'Layered Navigation Price Step',
+  `idx_type` int(11) DEFAULT NULL COMMENT 'Index Type',
   `image` varchar(255) DEFAULT NULL COMMENT 'Image',
   `include_in_menu` int(11) DEFAULT NULL COMMENT 'Include in Navigation Menu',
   `is_active` int(11) DEFAULT NULL COMMENT 'Is Active',
@@ -1362,14 +1452,17 @@ CREATE TABLE `catalog_category_flat_store_3` (
 -- Dump dei dati per la tabella `catalog_category_flat_store_3`
 --
 
-INSERT INTO `catalog_category_flat_store_3` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
-(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
-(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
-(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
-(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
+INSERT INTO `catalog_category_flat_store_3` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `idx_type`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 9, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 8, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
+(4, 2, '2013-07-08 03:07:01', '2013-07-28 08:40:18', '1/2/4', 2, 2, 3, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS_AND_PAGE', NULL, NULL, NULL, 1, 1, 0, 9, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html'),
+(8, 2, '2013-07-29 20:34:14', '2013-07-29 20:34:14', '1/2/8', 3, 2, 2, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Layered Category', NULL, NULL, NULL, 'layered-category', 'layered-category.html'),
+(9, 8, '2013-07-29 20:40:58', '2013-07-29 20:40:58', '1/2/8/9', 1, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Venduti', NULL, NULL, NULL, 'piu-venduti', 'layered-category/piu-venduti.html'),
+(10, 8, '2013-07-29 20:41:38', '2013-07-29 20:41:38', '1/2/8/10', 2, 3, 0, 3, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Cliccati', NULL, NULL, NULL, 'piu-cliccati', 'layered-category/piu-cliccati.html');
 
 -- --------------------------------------------------------
 
@@ -1377,7 +1470,7 @@ INSERT INTO `catalog_category_flat_store_3` (`entity_id`, `parent_id`, `created_
 -- Struttura della tabella `catalog_category_flat_store_4`
 --
 
-CREATE TABLE `catalog_category_flat_store_4` (
+CREATE TABLE IF NOT EXISTS `catalog_category_flat_store_4` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'entity_id',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'parent_id',
   `created_at` timestamp NULL DEFAULT NULL COMMENT 'created_at',
@@ -1400,6 +1493,7 @@ CREATE TABLE `catalog_category_flat_store_4` (
   `description` text COMMENT 'Description',
   `display_mode` varchar(255) DEFAULT NULL COMMENT 'Display Mode',
   `filter_price_range` decimal(12,4) DEFAULT NULL COMMENT 'Layered Navigation Price Step',
+  `idx_type` int(11) DEFAULT NULL COMMENT 'Index Type',
   `image` varchar(255) DEFAULT NULL COMMENT 'Image',
   `include_in_menu` int(11) DEFAULT NULL COMMENT 'Include in Navigation Menu',
   `is_active` int(11) DEFAULT NULL COMMENT 'Is Active',
@@ -1424,14 +1518,17 @@ CREATE TABLE `catalog_category_flat_store_4` (
 -- Dump dei dati per la tabella `catalog_category_flat_store_4`
 --
 
-INSERT INTO `catalog_category_flat_store_4` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
-(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 6, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
-(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 5, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
-(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
-(4, 2, '2013-07-08 03:07:01', '2013-07-08 03:07:01', '1/2/4', 2, 2, 3, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
-(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
-(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
-(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html');
+INSERT INTO `catalog_category_flat_store_4` (`entity_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`, `store_id`, `all_children`, `available_sort_by`, `children`, `custom_apply_to_products`, `custom_design`, `custom_design_from`, `custom_design_to`, `custom_layout_update`, `custom_use_parent_settings`, `default_sort_by`, `description`, `display_mode`, `filter_price_range`, `idx_type`, `image`, `include_in_menu`, `is_active`, `is_anchor`, `landing_page`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `page_layout`, `path_in_store`, `thumbnail`, `url_key`, `url_path`) VALUES
+(1, 0, '2013-07-07 12:53:47', '2013-07-07 12:53:47', '1', 0, 0, 9, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 'Root Catalog', NULL, NULL, NULL, NULL, NULL),
+(2, 1, '2013-07-07 12:53:48', '2013-07-07 12:53:48', '1/2', 1, 1, 8, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 'Default Category', NULL, NULL, NULL, NULL, NULL),
+(3, 2, '2013-07-08 03:06:29', '2013-07-08 03:06:29', '1/2/3', 1, 2, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'New', NULL, NULL, NULL, 'new', 'new.html'),
+(4, 2, '2013-07-08 03:07:01', '2013-07-28 08:40:18', '1/2/4', 2, 2, 3, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS_AND_PAGE', NULL, NULL, NULL, 1, 1, 0, 9, NULL, NULL, NULL, 'nero Line', NULL, NULL, NULL, 'nero-line', 'nero-line.html'),
+(5, 4, '2013-07-10 13:29:09', '2013-07-10 13:30:45', '1/2/4/5', 1, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 1', NULL, NULL, NULL, 'livello-1', 'nero-line/livello-1.html'),
+(6, 4, '2013-07-10 13:29:49', '2013-07-10 13:29:49', '1/2/4/6', 2, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 2', NULL, NULL, NULL, 'livello-2', 'nero-line/livello-2.html'),
+(7, 4, '2013-07-10 13:30:27', '2013-07-10 13:30:27', '1/2/4/7', 3, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 'Livello 3', NULL, NULL, NULL, 'livello-3', 'nero-line/livello-3.html'),
+(8, 2, '2013-07-29 20:34:14', '2013-07-29 20:34:14', '1/2/8', 3, 2, 2, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Layered Category', NULL, NULL, NULL, 'layered-category', 'layered-category.html'),
+(9, 8, '2013-07-29 20:40:58', '2013-07-29 20:40:58', '1/2/8/9', 1, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Venduti', NULL, NULL, NULL, 'piu-venduti', 'layered-category/piu-venduti.html'),
+(10, 8, '2013-07-29 20:41:38', '2013-07-29 20:41:38', '1/2/8/10', 2, 3, 0, 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'PRODUCTS', NULL, NULL, NULL, 0, 1, 0, NULL, NULL, NULL, NULL, 'Più Cliccati', NULL, NULL, NULL, 'piu-cliccati', 'layered-category/piu-cliccati.html');
 
 -- --------------------------------------------------------
 
@@ -1439,7 +1536,7 @@ INSERT INTO `catalog_category_flat_store_4` (`entity_id`, `parent_id`, `created_
 -- Struttura della tabella `catalog_category_product`
 --
 
-CREATE TABLE `catalog_category_product` (
+CREATE TABLE IF NOT EXISTS `catalog_category_product` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `position` int(11) NOT NULL DEFAULT '0' COMMENT 'Position',
@@ -1476,7 +1573,13 @@ INSERT INTO `catalog_category_product` (`category_id`, `product_id`, `position`)
 (7, 2, 1),
 (7, 3, 1),
 (7, 4, 1),
-(7, 5, 1);
+(7, 5, 1),
+(9, 2, 0),
+(9, 3, 0),
+(9, 4, 0),
+(10, 3, 0),
+(10, 4, 0),
+(10, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -1484,7 +1587,7 @@ INSERT INTO `catalog_category_product` (`category_id`, `product_id`, `position`)
 -- Struttura della tabella `catalog_category_product_index`
 --
 
-CREATE TABLE `catalog_category_product_index` (
+CREATE TABLE IF NOT EXISTS `catalog_category_product_index` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `position` int(11) DEFAULT NULL COMMENT 'Position',
@@ -1531,6 +1634,12 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 (7, 3, 1, 1, 1, 4),
 (7, 4, 1, 1, 1, 4),
 (7, 5, 1, 1, 1, 4),
+(9, 2, 0, 1, 1, 4),
+(9, 3, 0, 1, 1, 4),
+(9, 4, 0, 1, 1, 4),
+(10, 3, 0, 1, 1, 4),
+(10, 4, 0, 1, 1, 4),
+(10, 5, 0, 1, 1, 4),
 (2, 1, 20005, 0, 2, 4),
 (2, 2, 20005, 0, 2, 4),
 (2, 3, 20005, 0, 2, 4),
@@ -1561,6 +1670,12 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 (7, 3, 1, 1, 2, 4),
 (7, 4, 1, 1, 2, 4),
 (7, 5, 1, 1, 2, 4),
+(9, 2, 0, 1, 2, 4),
+(9, 3, 0, 1, 2, 4),
+(9, 4, 0, 1, 2, 4),
+(10, 3, 0, 1, 2, 4),
+(10, 4, 0, 1, 2, 4),
+(10, 5, 0, 1, 2, 4),
 (2, 1, 20005, 0, 3, 4),
 (2, 2, 20005, 0, 3, 4),
 (2, 3, 20005, 0, 3, 4),
@@ -1591,6 +1706,12 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 (7, 3, 1, 1, 3, 4),
 (7, 4, 1, 1, 3, 4),
 (7, 5, 1, 1, 3, 4),
+(9, 2, 0, 1, 3, 4),
+(9, 3, 0, 1, 3, 4),
+(9, 4, 0, 1, 3, 4),
+(10, 3, 0, 1, 3, 4),
+(10, 4, 0, 1, 3, 4),
+(10, 5, 0, 1, 3, 4),
 (2, 1, 20005, 0, 4, 4),
 (2, 2, 20005, 0, 4, 4),
 (2, 3, 20005, 0, 4, 4),
@@ -1620,7 +1741,13 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 (7, 2, 1, 1, 4, 4),
 (7, 3, 1, 1, 4, 4),
 (7, 4, 1, 1, 4, 4),
-(7, 5, 1, 1, 4, 4);
+(7, 5, 1, 1, 4, 4),
+(9, 2, 0, 1, 4, 4),
+(9, 3, 0, 1, 4, 4),
+(9, 4, 0, 1, 4, 4),
+(10, 3, 0, 1, 4, 4),
+(10, 4, 0, 1, 4, 4),
+(10, 5, 0, 1, 4, 4);
 
 -- --------------------------------------------------------
 
@@ -1628,7 +1755,7 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 -- Struttura della tabella `catalog_category_product_index_enbl_idx`
 --
 
-CREATE TABLE `catalog_category_product_index_enbl_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_category_product_index_enbl_idx` (
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `visibility` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Visibility',
   KEY `IDX_CAT_CTGR_PRD_IDX_ENBL_IDX_PRD_ID_VISIBILITY` (`product_id`,`visibility`)
@@ -1640,7 +1767,7 @@ CREATE TABLE `catalog_category_product_index_enbl_idx` (
 -- Struttura della tabella `catalog_category_product_index_enbl_tmp`
 --
 
-CREATE TABLE `catalog_category_product_index_enbl_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_category_product_index_enbl_tmp` (
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `visibility` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Visibility',
   KEY `IDX_CAT_CTGR_PRD_IDX_ENBL_TMP_PRD_ID_VISIBILITY` (`product_id`,`visibility`)
@@ -1652,7 +1779,7 @@ CREATE TABLE `catalog_category_product_index_enbl_tmp` (
 -- Struttura della tabella `catalog_category_product_index_idx`
 --
 
-CREATE TABLE `catalog_category_product_index_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_category_product_index_idx` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `position` int(11) NOT NULL DEFAULT '0' COMMENT 'Position',
@@ -1668,7 +1795,7 @@ CREATE TABLE `catalog_category_product_index_idx` (
 -- Struttura della tabella `catalog_category_product_index_tmp`
 --
 
-CREATE TABLE `catalog_category_product_index_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_category_product_index_tmp` (
   `category_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `position` int(11) NOT NULL DEFAULT '0' COMMENT 'Position',
@@ -1684,7 +1811,7 @@ CREATE TABLE `catalog_category_product_index_tmp` (
 -- Struttura della tabella `catalog_compare_item`
 --
 
-CREATE TABLE `catalog_compare_item` (
+CREATE TABLE IF NOT EXISTS `catalog_compare_item` (
   `catalog_compare_item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Compare Item ID',
   `visitor_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Visitor ID',
   `customer_id` int(10) unsigned DEFAULT NULL COMMENT 'Customer ID',
@@ -1704,7 +1831,7 @@ CREATE TABLE `catalog_compare_item` (
 -- Struttura della tabella `catalog_eav_attribute`
 --
 
-CREATE TABLE `catalog_eav_attribute` (
+CREATE TABLE IF NOT EXISTS `catalog_eav_attribute` (
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute ID',
   `frontend_input_renderer` varchar(255) DEFAULT NULL COMMENT 'Frontend Input Renderer',
   `is_global` smallint(5) unsigned NOT NULL DEFAULT '1' COMMENT 'Is Global',
@@ -1810,7 +1937,7 @@ INSERT INTO `catalog_eav_attribute` (`attribute_id`, `frontend_input_renderer`, 
 (114, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, NULL, 0, 0, 0, 0),
 (115, NULL, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 0, 0, 0),
 (116, NULL, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 0, 0, 0),
-(117, NULL, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'simple,configurable,bundle,grouped', 0, 0, 0, 0),
+(117, NULL, 2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'simple,grouped,configurable,bundle', 1, 0, 0, 0),
 (118, 'adminhtml/catalog_product_helper_form_msrp_enabled', 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 'simple,bundle,configurable,virtual,downloadable', 0, 0, 0, 0),
 (119, 'adminhtml/catalog_product_helper_form_msrp_price', 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 'simple,bundle,configurable,virtual,downloadable', 0, 0, 0, 0),
 (120, NULL, 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 'simple,bundle,configurable,virtual,downloadable', 0, 0, 0, 0),
@@ -1828,7 +1955,8 @@ INSERT INTO `catalog_eav_attribute` (`attribute_id`, `frontend_input_renderer`, 
 (132, NULL, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 'downloadable', 0, 0, 0, 0),
 (133, NULL, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 0, 0, 0),
 (142, NULL, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0),
-(143, NULL, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0);
+(143, NULL, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0),
+(144, NULL, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1836,7 +1964,7 @@ INSERT INTO `catalog_eav_attribute` (`attribute_id`, `frontend_input_renderer`, 
 -- Struttura della tabella `catalog_product_bundle_option`
 --
 
-CREATE TABLE `catalog_product_bundle_option` (
+CREATE TABLE IF NOT EXISTS `catalog_product_bundle_option` (
   `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `required` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Required',
@@ -1852,7 +1980,7 @@ CREATE TABLE `catalog_product_bundle_option` (
 -- Struttura della tabella `catalog_product_bundle_option_value`
 --
 
-CREATE TABLE `catalog_product_bundle_option_value` (
+CREATE TABLE IF NOT EXISTS `catalog_product_bundle_option_value` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `option_id` int(10) unsigned NOT NULL COMMENT 'Option Id',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id',
@@ -1867,7 +1995,7 @@ CREATE TABLE `catalog_product_bundle_option_value` (
 -- Struttura della tabella `catalog_product_bundle_price_index`
 --
 
-CREATE TABLE `catalog_product_bundle_price_index` (
+CREATE TABLE IF NOT EXISTS `catalog_product_bundle_price_index` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
@@ -1884,7 +2012,7 @@ CREATE TABLE `catalog_product_bundle_price_index` (
 -- Struttura della tabella `catalog_product_bundle_selection`
 --
 
-CREATE TABLE `catalog_product_bundle_selection` (
+CREATE TABLE IF NOT EXISTS `catalog_product_bundle_selection` (
   `selection_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Selection Id',
   `option_id` int(10) unsigned NOT NULL COMMENT 'Option Id',
   `parent_product_id` int(10) unsigned NOT NULL COMMENT 'Parent Product Id',
@@ -1906,7 +2034,7 @@ CREATE TABLE `catalog_product_bundle_selection` (
 -- Struttura della tabella `catalog_product_bundle_selection_price`
 --
 
-CREATE TABLE `catalog_product_bundle_selection_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_bundle_selection_price` (
   `selection_id` int(10) unsigned NOT NULL COMMENT 'Selection Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `selection_price_type` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Selection Price Type',
@@ -1921,7 +2049,7 @@ CREATE TABLE `catalog_product_bundle_selection_price` (
 -- Struttura della tabella `catalog_product_bundle_stock_index`
 --
 
-CREATE TABLE `catalog_product_bundle_stock_index` (
+CREATE TABLE IF NOT EXISTS `catalog_product_bundle_stock_index` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `stock_id` smallint(5) unsigned NOT NULL COMMENT 'Stock Id',
@@ -1936,7 +2064,7 @@ CREATE TABLE `catalog_product_bundle_stock_index` (
 -- Struttura della tabella `catalog_product_enabled_index`
 --
 
-CREATE TABLE `catalog_product_enabled_index` (
+CREATE TABLE IF NOT EXISTS `catalog_product_enabled_index` (
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `visibility` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Visibility',
@@ -1950,7 +2078,7 @@ CREATE TABLE `catalog_product_enabled_index` (
 -- Struttura della tabella `catalog_product_entity`
 --
 
-CREATE TABLE `catalog_product_entity` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set ID',
@@ -1971,11 +2099,11 @@ CREATE TABLE `catalog_product_entity` (
 --
 
 INSERT INTO `catalog_product_entity` (`entity_id`, `entity_type_id`, `attribute_set_id`, `type_id`, `sku`, `has_options`, `required_options`, `created_at`, `updated_at`) VALUES
-(1, 4, 4, 'simple', 'PO', 0, 0, '2013-07-08 03:08:27', '2013-07-26 11:14:13'),
-(2, 4, 4, 'simple', 'P2', 0, 0, '2013-07-26 08:39:05', '2013-07-26 08:40:15'),
-(3, 4, 4, 'simple', 'P2B', 0, 0, '2013-07-26 08:40:21', '2013-07-26 11:18:04'),
-(4, 4, 4, 'simple', 'P3', 0, 0, '2013-07-26 08:40:31', '2013-07-26 08:41:20'),
-(5, 4, 4, 'simple', 'P4', 0, 0, '2013-07-26 08:41:26', '2013-07-26 11:19:26');
+(1, 4, 4, 'simple', 'PO', 0, 0, '2013-07-08 03:08:27', '2013-07-29 03:15:36'),
+(2, 4, 4, 'simple', 'P2', 0, 0, '2013-07-26 08:39:05', '2013-07-28 06:21:01'),
+(3, 4, 4, 'simple', 'P2B', 0, 0, '2013-07-26 08:40:21', '2013-07-28 06:20:25'),
+(4, 4, 4, 'simple', 'P3', 0, 0, '2013-07-26 08:40:31', '2013-07-28 06:19:54'),
+(5, 4, 4, 'simple', 'P4', 0, 0, '2013-07-26 08:41:26', '2013-07-28 06:19:27');
 
 -- --------------------------------------------------------
 
@@ -1983,7 +2111,7 @@ INSERT INTO `catalog_product_entity` (`entity_id`, `entity_type_id`, `attribute_
 -- Struttura della tabella `catalog_product_entity_datetime`
 --
 
-CREATE TABLE `catalog_product_entity_datetime` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_datetime` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -1995,15 +2123,15 @@ CREATE TABLE `catalog_product_entity_datetime` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DATETIME_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DATETIME_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DATETIME_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Datetime Attribute Backend Table' AUTO_INCREMENT=49 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Datetime Attribute Backend Table' AUTO_INCREMENT=85 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_datetime`
 --
 
 INSERT INTO `catalog_product_entity_datetime` (`value_id`, `entity_type_id`, `attribute_id`, `store_id`, `entity_id`, `value`) VALUES
-(1, 4, 93, 0, 1, NULL),
-(2, 4, 94, 0, 1, NULL),
+(1, 4, 93, 0, 1, '2013-07-01 00:00:00'),
+(2, 4, 94, 0, 1, '2013-07-29 00:00:00'),
 (3, 4, 77, 0, 1, NULL),
 (4, 4, 78, 0, 1, NULL),
 (5, 4, 104, 0, 1, NULL),
@@ -2039,7 +2167,7 @@ INSERT INTO `catalog_product_entity_datetime` (`value_id`, `entity_type_id`, `at
 -- Struttura della tabella `catalog_product_entity_decimal`
 --
 
-CREATE TABLE `catalog_product_entity_decimal` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_decimal` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -2051,32 +2179,32 @@ CREATE TABLE `catalog_product_entity_decimal` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DECIMAL_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DECIMAL_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_DECIMAL_ATTRIBUTE_ID` (`attribute_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table' AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table' AUTO_INCREMENT=48 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_decimal`
 --
 
 INSERT INTO `catalog_product_entity_decimal` (`value_id`, `entity_type_id`, `attribute_id`, `store_id`, `entity_id`, `value`) VALUES
-(1, 4, 80, 0, 1, 1.0000),
-(2, 4, 75, 0, 1, 100.0000),
+(1, 4, 80, 0, 1, '1.0000'),
+(2, 4, 75, 0, 1, '100.0000'),
 (3, 4, 76, 0, 1, NULL),
 (4, 4, 120, 0, 1, NULL),
-(8, 4, 80, 0, 2, 1.0000),
-(9, 4, 75, 0, 2, 100.0000),
+(8, 4, 80, 0, 2, '1.0000'),
+(9, 4, 75, 0, 2, '100.0000'),
 (10, 4, 76, 0, 2, NULL),
 (11, 4, 120, 0, 2, NULL),
-(15, 4, 80, 0, 3, 1.0000),
-(16, 4, 75, 0, 3, 100.0000),
+(15, 4, 80, 0, 3, '1.0000'),
+(16, 4, 75, 0, 3, '100.0000'),
 (17, 4, 76, 0, 3, NULL),
 (18, 4, 120, 0, 3, NULL),
-(19, 4, 75, 0, 4, 100.0000),
+(19, 4, 75, 0, 4, '100.0000'),
 (20, 4, 76, 0, 4, NULL),
-(21, 4, 80, 0, 4, 1.0000),
+(21, 4, 80, 0, 4, '1.0000'),
 (22, 4, 120, 0, 4, NULL),
-(26, 4, 75, 0, 5, 100.0000),
+(26, 4, 75, 0, 5, '100.0000'),
 (27, 4, 76, 0, 5, NULL),
-(28, 4, 80, 0, 5, 1.0000),
+(28, 4, 80, 0, 5, '1.0000'),
 (29, 4, 120, 0, 5, NULL);
 
 -- --------------------------------------------------------
@@ -2085,7 +2213,7 @@ INSERT INTO `catalog_product_entity_decimal` (`value_id`, `entity_type_id`, `att
 -- Struttura della tabella `catalog_product_entity_gallery`
 --
 
-CREATE TABLE `catalog_product_entity_gallery` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_gallery` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -2106,7 +2234,7 @@ CREATE TABLE `catalog_product_entity_gallery` (
 -- Struttura della tabella `catalog_product_entity_group_price`
 --
 
-CREATE TABLE `catalog_product_entity_group_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_group_price` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `all_groups` smallint(5) unsigned NOT NULL DEFAULT '1' COMMENT 'Is Applicable To All Customer Groups',
@@ -2126,7 +2254,7 @@ CREATE TABLE `catalog_product_entity_group_price` (
 -- Struttura della tabella `catalog_product_entity_int`
 --
 
-CREATE TABLE `catalog_product_entity_int` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_int` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -2138,7 +2266,7 @@ CREATE TABLE `catalog_product_entity_int` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_INT_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_INT_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_INT_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table' AUTO_INCREMENT=38 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table' AUTO_INCREMENT=50 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_int`
@@ -2172,7 +2300,19 @@ INSERT INTO `catalog_product_entity_int` (`value_id`, `entity_type_id`, `attribu
 (31, 4, 122, 0, 5, 2),
 (35, 4, 143, 0, 3, 1),
 (36, 4, 143, 0, 5, 1),
-(37, 4, 143, 0, 1, 1);
+(37, 4, 143, 0, 1, 1),
+(38, 4, 92, 0, 5, 3),
+(39, 4, 81, 0, 5, 9),
+(40, 4, 92, 0, 4, 8),
+(41, 4, 81, 0, 4, 10),
+(42, 4, 143, 0, 4, 0),
+(43, 4, 92, 0, 3, 6),
+(44, 4, 81, 0, 3, 12),
+(45, 4, 92, 0, 2, 4),
+(46, 4, 81, 0, 2, 11),
+(47, 4, 143, 0, 2, 0),
+(48, 4, 92, 0, 1, 5),
+(49, 4, 81, 0, 1, 11);
 
 -- --------------------------------------------------------
 
@@ -2180,7 +2320,7 @@ INSERT INTO `catalog_product_entity_int` (`value_id`, `entity_type_id`, `attribu
 -- Struttura della tabella `catalog_product_entity_media_gallery`
 --
 
-CREATE TABLE `catalog_product_entity_media_gallery` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_media_gallery` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
@@ -2205,7 +2345,7 @@ INSERT INTO `catalog_product_entity_media_gallery` (`value_id`, `attribute_id`, 
 -- Struttura della tabella `catalog_product_entity_media_gallery_value`
 --
 
-CREATE TABLE `catalog_product_entity_media_gallery_value` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_media_gallery_value` (
   `value_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Value ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `label` varchar(255) DEFAULT NULL COMMENT 'Label',
@@ -2230,7 +2370,7 @@ INSERT INTO `catalog_product_entity_media_gallery_value` (`value_id`, `store_id`
 -- Struttura della tabella `catalog_product_entity_text`
 --
 
-CREATE TABLE `catalog_product_entity_text` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_text` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -2242,7 +2382,7 @@ CREATE TABLE `catalog_product_entity_text` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_TEXT_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_TEXT_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_TEXT_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table' AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table' AUTO_INCREMENT=43 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_text`
@@ -2276,7 +2416,7 @@ INSERT INTO `catalog_product_entity_text` (`value_id`, `entity_type_id`, `attrib
 -- Struttura della tabella `catalog_product_entity_tier_price`
 --
 
-CREATE TABLE `catalog_product_entity_tier_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_tier_price` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `all_groups` smallint(5) unsigned NOT NULL DEFAULT '1' COMMENT 'Is Applicable To All Customer Groups',
@@ -2297,7 +2437,7 @@ CREATE TABLE `catalog_product_entity_tier_price` (
 -- Struttura della tabella `catalog_product_entity_varchar`
 --
 
-CREATE TABLE `catalog_product_entity_varchar` (
+CREATE TABLE IF NOT EXISTS `catalog_product_entity_varchar` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `entity_type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -2309,7 +2449,7 @@ CREATE TABLE `catalog_product_entity_varchar` (
   KEY `IDX_CATALOG_PRODUCT_ENTITY_VARCHAR_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_VARCHAR_STORE_ID` (`store_id`),
   KEY `IDX_CATALOG_PRODUCT_ENTITY_VARCHAR_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table' AUTO_INCREMENT=109 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table' AUTO_INCREMENT=144 ;
 
 --
 -- Dump dei dati per la tabella `catalog_product_entity_varchar`
@@ -2318,7 +2458,7 @@ CREATE TABLE `catalog_product_entity_varchar` (
 INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `attribute_id`, `store_id`, `entity_id`, `value`) VALUES
 (1, 4, 71, 0, 1, 'Product One'),
 (2, 4, 97, 0, 1, 'product-one'),
-(3, 4, 117, 0, 1, NULL),
+(3, 4, 117, 0, 1, 'MQ'),
 (4, 4, 118, 0, 1, '2'),
 (5, 4, 119, 0, 1, '4'),
 (6, 4, 82, 0, 1, NULL),
@@ -2335,7 +2475,7 @@ INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `att
 (17, 4, 142, 0, 1, '/g/u/guarnieri.png'),
 (24, 4, 71, 0, 2, 'Product Two'),
 (25, 4, 97, 0, 2, 'product-one'),
-(26, 4, 117, 0, 2, NULL),
+(26, 4, 117, 0, 2, 'AG'),
 (27, 4, 118, 0, 2, '2'),
 (28, 4, 119, 0, 2, '4'),
 (29, 4, 82, 0, 2, NULL),
@@ -2347,12 +2487,12 @@ INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `att
 (35, 4, 107, 0, 2, NULL),
 (36, 4, 109, 0, 2, 'container2'),
 (37, 4, 123, 0, 2, NULL),
-(38, 4, 98, 0, 2, 'product-one-6.html'),
+(38, 4, 98, 0, 2, 'product-one-14.html'),
 (39, 4, 142, 0, 2, 'no_selection'),
-(40, 4, 98, 1, 2, 'product-one-6.html'),
+(40, 4, 98, 1, 2, 'product-one-14.html'),
 (49, 4, 71, 0, 3, 'Product Two bis'),
 (50, 4, 97, 0, 3, 'product-one'),
-(51, 4, 117, 0, 3, NULL),
+(51, 4, 117, 0, 3, 'AI'),
 (52, 4, 118, 0, 3, '2'),
 (53, 4, 119, 0, 3, '4'),
 (54, 4, 82, 0, 3, NULL),
@@ -2364,12 +2504,12 @@ INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `att
 (60, 4, 107, 0, 3, NULL),
 (61, 4, 109, 0, 3, 'container2'),
 (62, 4, 123, 0, 3, NULL),
-(63, 4, 98, 0, 3, 'product-one-7.html'),
+(63, 4, 98, 0, 3, 'product-one-15.html'),
 (64, 4, 142, 0, 3, '/c/a/carbon_gel.png'),
-(65, 4, 98, 1, 3, 'product-one-7.html'),
+(65, 4, 98, 1, 3, 'product-one-15.html'),
 (67, 4, 71, 0, 4, 'Product Three'),
 (68, 4, 97, 0, 4, 'product-one'),
-(69, 4, 117, 0, 4, NULL),
+(69, 4, 117, 0, 4, 'DZ'),
 (70, 4, 118, 0, 4, '2'),
 (71, 4, 119, 0, 4, '4'),
 (72, 4, 82, 0, 4, NULL),
@@ -2381,12 +2521,12 @@ INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `att
 (78, 4, 107, 0, 4, NULL),
 (79, 4, 109, 0, 4, 'container2'),
 (80, 4, 123, 0, 4, NULL),
-(81, 4, 98, 0, 4, 'product-one-8.html'),
+(81, 4, 98, 0, 4, 'product-one-16.html'),
 (82, 4, 142, 0, 4, 'no_selection'),
-(83, 4, 98, 1, 4, 'product-one-8.html'),
+(83, 4, 98, 1, 4, 'product-one-16.html'),
 (92, 4, 71, 0, 5, 'Product Four'),
 (93, 4, 97, 0, 5, 'product-four'),
-(94, 4, 117, 0, 5, NULL),
+(94, 4, 117, 0, 5, 'AF'),
 (95, 4, 118, 0, 5, '2'),
 (96, 4, 119, 0, 5, '4'),
 (97, 4, 82, 0, 5, NULL),
@@ -2408,7 +2548,7 @@ INSERT INTO `catalog_product_entity_varchar` (`value_id`, `entity_type_id`, `att
 -- Struttura della tabella `catalog_product_flat_1`
 --
 
-CREATE TABLE `catalog_product_flat_1` (
+CREATE TABLE IF NOT EXISTS `catalog_product_flat_1` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
   `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
@@ -2451,7 +2591,6 @@ CREATE TABLE `catalog_product_flat_1` (
   `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
   `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
   `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
-  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_1_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_1_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2463,12 +2602,12 @@ CREATE TABLE `catalog_product_flat_1` (
 -- Dump dei dati per la tabella `catalog_product_flat_1`
 --
 
-INSERT INTO `catalog_product_flat_1` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
-(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
-(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
-(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
-(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
+INSERT INTO `catalog_product_flat_1` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', '2013-07-01 00:00:00', '2013-07-29 00:00:00', '100.0000', NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-29 03:15:36', 'product-one', 'product-one.html', 4, '1.0000', NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:21:01', 'product-one', 'product-one-14.html', 4, '1.0000', NULL),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:20:25', 'product-one', 'product-one-15.html', 4, '1.0000', NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:54', 'product-one', 'product-one-16.html', 4, '1.0000', NULL),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:27', 'product-four', 'product-four.html', 4, '1.0000', NULL);
 
 -- --------------------------------------------------------
 
@@ -2476,7 +2615,7 @@ INSERT INTO `catalog_product_flat_1` (`entity_id`, `attribute_set_id`, `type_id`
 -- Struttura della tabella `catalog_product_flat_2`
 --
 
-CREATE TABLE `catalog_product_flat_2` (
+CREATE TABLE IF NOT EXISTS `catalog_product_flat_2` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
   `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
@@ -2519,7 +2658,6 @@ CREATE TABLE `catalog_product_flat_2` (
   `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
   `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
   `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
-  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_2_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_2_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2531,12 +2669,12 @@ CREATE TABLE `catalog_product_flat_2` (
 -- Dump dei dati per la tabella `catalog_product_flat_2`
 --
 
-INSERT INTO `catalog_product_flat_2` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
-(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
-(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
-(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
-(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
+INSERT INTO `catalog_product_flat_2` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', '2013-07-01 00:00:00', '2013-07-29 00:00:00', '100.0000', NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-29 03:15:36', 'product-one', 'product-one.html', 4, '1.0000', NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:21:01', 'product-one', 'product-one-14.html', 4, '1.0000', NULL),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:20:25', 'product-one', 'product-one-15.html', 4, '1.0000', NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:54', 'product-one', 'product-one-16.html', 4, '1.0000', NULL),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:27', 'product-four', 'product-four.html', 4, '1.0000', NULL);
 
 -- --------------------------------------------------------
 
@@ -2544,7 +2682,7 @@ INSERT INTO `catalog_product_flat_2` (`entity_id`, `attribute_set_id`, `type_id`
 -- Struttura della tabella `catalog_product_flat_3`
 --
 
-CREATE TABLE `catalog_product_flat_3` (
+CREATE TABLE IF NOT EXISTS `catalog_product_flat_3` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
   `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
@@ -2587,7 +2725,6 @@ CREATE TABLE `catalog_product_flat_3` (
   `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
   `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
   `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
-  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_3_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_3_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2599,12 +2736,12 @@ CREATE TABLE `catalog_product_flat_3` (
 -- Dump dei dati per la tabella `catalog_product_flat_3`
 --
 
-INSERT INTO `catalog_product_flat_3` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
-(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
-(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
-(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
-(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
+INSERT INTO `catalog_product_flat_3` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', '2013-07-01 00:00:00', '2013-07-29 00:00:00', '100.0000', NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-29 03:15:36', 'product-one', 'product-one.html', 4, '1.0000', NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:21:01', 'product-one', 'product-one-14.html', 4, '1.0000', NULL),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:20:25', 'product-one', 'product-one-15.html', 4, '1.0000', NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:54', 'product-one', 'product-one-16.html', 4, '1.0000', NULL),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:27', 'product-four', 'product-four.html', 4, '1.0000', NULL);
 
 -- --------------------------------------------------------
 
@@ -2612,7 +2749,7 @@ INSERT INTO `catalog_product_flat_3` (`entity_id`, `attribute_set_id`, `type_id`
 -- Struttura della tabella `catalog_product_flat_4`
 --
 
-CREATE TABLE `catalog_product_flat_4` (
+CREATE TABLE IF NOT EXISTS `catalog_product_flat_4` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
   `type_id` varchar(32) NOT NULL DEFAULT 'simple' COMMENT 'Type Id',
@@ -2655,7 +2792,6 @@ CREATE TABLE `catalog_product_flat_4` (
   `visibility` smallint(5) unsigned DEFAULT NULL COMMENT 'Visibility',
   `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
   `weight_type` int(11) DEFAULT NULL COMMENT 'Weight Type',
-  `view_in_home` smallint(6) DEFAULT NULL COMMENT 'View In Home',
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_4_TYPE_ID` (`type_id`),
   KEY `IDX_CATALOG_PRODUCT_FLAT_4_ATTRIBUTE_SET_ID` (`attribute_set_id`),
@@ -2667,12 +2803,12 @@ CREATE TABLE `catalog_product_flat_4` (
 -- Dump dei dati per la tabella `catalog_product_flat_4`
 --
 
-INSERT INTO `catalog_product_flat_4` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`, `view_in_home`) VALUES
-(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:14:13', 'product-one', 'product-one.html', 4, 1.0000, NULL, NULL),
-(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:40:15', 'product-one', 'product-one-6.html', 4, 1.0000, NULL, 0),
-(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:18:04', 'product-one', 'product-one-7.html', 4, 1.0000, NULL, NULL),
-(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 08:41:20', 'product-one', 'product-one-8.html', 4, 1.0000, NULL, 0),
-(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, 100.0000, NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-26 11:19:26', 'product-four', 'product-four.html', 4, 1.0000, NULL, NULL);
+INSERT INTO `catalog_product_flat_4` (`entity_id`, `attribute_set_id`, `type_id`, `cost`, `created_at`, `enable_googlecheckout`, `gift_message_available`, `has_options`, `image_label`, `is_recurring`, `links_exist`, `links_purchased_separately`, `links_title`, `msrp`, `msrp_display_actual_price_type`, `msrp_enabled`, `name`, `news_from_date`, `news_to_date`, `price`, `price_type`, `price_view`, `recurring_profile`, `required_options`, `shipment_type`, `short_description`, `sku`, `sku_type`, `small_image`, `small_image_label`, `special_from_date`, `special_price`, `special_to_date`, `tax_class_id`, `thumbnail`, `thumbnail_label`, `updated_at`, `url_key`, `url_path`, `visibility`, `weight`, `weight_type`) VALUES
+(1, 4, 'simple', NULL, '2013-07-08 03:08:27', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product One', '2013-07-01 00:00:00', '2013-07-29 00:00:00', '100.0000', NULL, NULL, NULL, 0, NULL, 'Product One Short Description', 'PO', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-29 03:15:36', 'product-one', 'product-one.html', 4, '1.0000', NULL),
+(2, 4, 'simple', NULL, '2013-07-26 08:39:05', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:21:01', 'product-one', 'product-one-14.html', 4, '1.0000', NULL),
+(3, 4, 'simple', NULL, '2013-07-26 08:40:21', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Two bis', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Tow Short Description', 'P2B', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:20:25', 'product-one', 'product-one-15.html', 4, '1.0000', NULL),
+(4, 4, 'simple', NULL, '2013-07-26 08:40:31', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Three', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Three Short Description', 'P3', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:54', 'product-one', 'product-one-16.html', 4, '1.0000', NULL),
+(5, 4, 'simple', NULL, '2013-07-26 08:41:26', 1, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, '4', 2, 'Product Four', NULL, NULL, '100.0000', NULL, NULL, NULL, 0, NULL, 'Product Four Short Description', 'P4', NULL, 'no_selection', NULL, NULL, NULL, NULL, 2, 'no_selection', NULL, '2013-07-28 06:19:27', 'product-four', 'product-four.html', 4, '1.0000', NULL);
 
 -- --------------------------------------------------------
 
@@ -2680,7 +2816,7 @@ INSERT INTO `catalog_product_flat_4` (`entity_id`, `attribute_set_id`, `type_id`
 -- Struttura della tabella `catalog_product_index_eav`
 --
 
-CREATE TABLE `catalog_product_index_eav` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_eav` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
@@ -2697,6 +2833,46 @@ CREATE TABLE `catalog_product_index_eav` (
 --
 
 INSERT INTO `catalog_product_index_eav` (`entity_id`, `attribute_id`, `store_id`, `value`) VALUES
+(1, 81, 1, 11),
+(1, 81, 2, 11),
+(1, 81, 3, 11),
+(1, 81, 4, 11),
+(2, 81, 1, 11),
+(2, 81, 2, 11),
+(2, 81, 3, 11),
+(2, 81, 4, 11),
+(3, 81, 1, 12),
+(3, 81, 2, 12),
+(3, 81, 3, 12),
+(3, 81, 4, 12),
+(4, 81, 1, 10),
+(4, 81, 2, 10),
+(4, 81, 3, 10),
+(4, 81, 4, 10),
+(5, 81, 1, 9),
+(5, 81, 2, 9),
+(5, 81, 3, 9),
+(5, 81, 4, 9),
+(1, 92, 1, 5),
+(1, 92, 2, 5),
+(1, 92, 3, 5),
+(1, 92, 4, 5),
+(2, 92, 1, 4),
+(2, 92, 2, 4),
+(2, 92, 3, 4),
+(2, 92, 4, 4),
+(3, 92, 1, 6),
+(3, 92, 2, 6),
+(3, 92, 3, 6),
+(3, 92, 4, 6),
+(4, 92, 1, 8),
+(4, 92, 2, 8),
+(4, 92, 3, 8),
+(4, 92, 4, 8),
+(5, 92, 1, 3),
+(5, 92, 2, 3),
+(5, 92, 3, 3),
+(5, 92, 4, 3),
 (1, 122, 1, 2),
 (1, 122, 2, 2),
 (1, 122, 3, 2),
@@ -2724,7 +2900,7 @@ INSERT INTO `catalog_product_index_eav` (`entity_id`, `attribute_id`, `store_id`
 -- Struttura della tabella `catalog_product_index_eav_decimal`
 --
 
-CREATE TABLE `catalog_product_index_eav_decimal` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_eav_decimal` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
@@ -2742,7 +2918,7 @@ CREATE TABLE `catalog_product_index_eav_decimal` (
 -- Struttura della tabella `catalog_product_index_eav_decimal_idx`
 --
 
-CREATE TABLE `catalog_product_index_eav_decimal_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_eav_decimal_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
@@ -2760,7 +2936,7 @@ CREATE TABLE `catalog_product_index_eav_decimal_idx` (
 -- Struttura della tabella `catalog_product_index_eav_decimal_tmp`
 --
 
-CREATE TABLE `catalog_product_index_eav_decimal_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_eav_decimal_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
@@ -2778,7 +2954,7 @@ CREATE TABLE `catalog_product_index_eav_decimal_tmp` (
 -- Struttura della tabella `catalog_product_index_eav_idx`
 --
 
-CREATE TABLE `catalog_product_index_eav_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_eav_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
@@ -2795,6 +2971,46 @@ CREATE TABLE `catalog_product_index_eav_idx` (
 --
 
 INSERT INTO `catalog_product_index_eav_idx` (`entity_id`, `attribute_id`, `store_id`, `value`) VALUES
+(1, 81, 1, 11),
+(1, 81, 2, 11),
+(1, 81, 3, 11),
+(1, 81, 4, 11),
+(2, 81, 1, 11),
+(2, 81, 2, 11),
+(2, 81, 3, 11),
+(2, 81, 4, 11),
+(3, 81, 1, 12),
+(3, 81, 2, 12),
+(3, 81, 3, 12),
+(3, 81, 4, 12),
+(4, 81, 1, 10),
+(4, 81, 2, 10),
+(4, 81, 3, 10),
+(4, 81, 4, 10),
+(5, 81, 1, 9),
+(5, 81, 2, 9),
+(5, 81, 3, 9),
+(5, 81, 4, 9),
+(1, 92, 1, 5),
+(1, 92, 2, 5),
+(1, 92, 3, 5),
+(1, 92, 4, 5),
+(2, 92, 1, 4),
+(2, 92, 2, 4),
+(2, 92, 3, 4),
+(2, 92, 4, 4),
+(3, 92, 1, 6),
+(3, 92, 2, 6),
+(3, 92, 3, 6),
+(3, 92, 4, 6),
+(4, 92, 1, 8),
+(4, 92, 2, 8),
+(4, 92, 3, 8),
+(4, 92, 4, 8),
+(5, 92, 1, 3),
+(5, 92, 2, 3),
+(5, 92, 3, 3),
+(5, 92, 4, 3),
 (1, 122, 1, 2),
 (1, 122, 2, 2),
 (1, 122, 3, 2),
@@ -2822,7 +3038,7 @@ INSERT INTO `catalog_product_index_eav_idx` (`entity_id`, `attribute_id`, `store
 -- Struttura della tabella `catalog_product_index_eav_tmp`
 --
 
-CREATE TABLE `catalog_product_index_eav_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_eav_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
@@ -2834,13 +3050,31 @@ CREATE TABLE `catalog_product_index_eav_tmp` (
   KEY `IDX_CATALOG_PRODUCT_INDEX_EAV_TMP_VALUE` (`value`)
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8 COMMENT='Catalog Product EAV Indexer Temp Table';
 
+--
+-- Dump dei dati per la tabella `catalog_product_index_eav_tmp`
+--
+
+INSERT INTO `catalog_product_index_eav_tmp` (`entity_id`, `attribute_id`, `store_id`, `value`) VALUES
+(1, 122, 1, 2),
+(1, 92, 1, 5),
+(1, 81, 1, 11),
+(1, 122, 2, 2),
+(1, 92, 2, 5),
+(1, 81, 2, 11),
+(1, 122, 3, 2),
+(1, 92, 3, 5),
+(1, 81, 3, 11),
+(1, 122, 4, 2),
+(1, 92, 4, 5),
+(1, 81, 4, 11);
+
 -- --------------------------------------------------------
 
 --
 -- Struttura della tabella `catalog_product_index_group_price`
 --
 
-CREATE TABLE `catalog_product_index_group_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_group_price` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -2856,7 +3090,7 @@ CREATE TABLE `catalog_product_index_group_price` (
 -- Struttura della tabella `catalog_product_index_price`
 --
 
-CREATE TABLE `catalog_product_index_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -2879,26 +3113,26 @@ CREATE TABLE `catalog_product_index_price` (
 --
 
 INSERT INTO `catalog_product_index_price` (`entity_id`, `customer_group_id`, `website_id`, `tax_class_id`, `price`, `final_price`, `min_price`, `max_price`, `tier_price`, `group_price`) VALUES
-(1, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(1, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(1, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(1, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL);
+(1, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2906,7 +3140,7 @@ INSERT INTO `catalog_product_index_price` (`entity_id`, `customer_group_id`, `we
 -- Struttura della tabella `catalog_product_index_price_bundle_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_bundle_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_bundle_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
@@ -2932,7 +3166,7 @@ CREATE TABLE `catalog_product_index_price_bundle_idx` (
 -- Struttura della tabella `catalog_product_index_price_bundle_opt_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_bundle_opt_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_bundle_opt_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
@@ -2953,7 +3187,7 @@ CREATE TABLE `catalog_product_index_price_bundle_opt_idx` (
 -- Struttura della tabella `catalog_product_index_price_bundle_opt_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_bundle_opt_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_bundle_opt_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
@@ -2974,7 +3208,7 @@ CREATE TABLE `catalog_product_index_price_bundle_opt_tmp` (
 -- Struttura della tabella `catalog_product_index_price_bundle_sel_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_bundle_sel_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_bundle_sel_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
@@ -2994,7 +3228,7 @@ CREATE TABLE `catalog_product_index_price_bundle_sel_idx` (
 -- Struttura della tabella `catalog_product_index_price_bundle_sel_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_bundle_sel_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_bundle_sel_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
@@ -3014,7 +3248,7 @@ CREATE TABLE `catalog_product_index_price_bundle_sel_tmp` (
 -- Struttura della tabella `catalog_product_index_price_bundle_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_bundle_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_bundle_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
@@ -3040,7 +3274,7 @@ CREATE TABLE `catalog_product_index_price_bundle_tmp` (
 -- Struttura della tabella `catalog_product_index_price_cfg_opt_agr_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_cfg_opt_agr_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_cfg_opt_agr_idx` (
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent ID',
   `child_id` int(10) unsigned NOT NULL COMMENT 'Child ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
@@ -3057,7 +3291,7 @@ CREATE TABLE `catalog_product_index_price_cfg_opt_agr_idx` (
 -- Struttura della tabella `catalog_product_index_price_cfg_opt_agr_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_cfg_opt_agr_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_cfg_opt_agr_tmp` (
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent ID',
   `child_id` int(10) unsigned NOT NULL COMMENT 'Child ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
@@ -3074,7 +3308,7 @@ CREATE TABLE `catalog_product_index_price_cfg_opt_agr_tmp` (
 -- Struttura della tabella `catalog_product_index_price_cfg_opt_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_cfg_opt_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_cfg_opt_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3091,7 +3325,7 @@ CREATE TABLE `catalog_product_index_price_cfg_opt_idx` (
 -- Struttura della tabella `catalog_product_index_price_cfg_opt_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_cfg_opt_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_cfg_opt_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3108,7 +3342,7 @@ CREATE TABLE `catalog_product_index_price_cfg_opt_tmp` (
 -- Struttura della tabella `catalog_product_index_price_downlod_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_downlod_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_downlod_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3123,7 +3357,7 @@ CREATE TABLE `catalog_product_index_price_downlod_idx` (
 -- Struttura della tabella `catalog_product_index_price_downlod_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_downlod_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_downlod_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3138,7 +3372,7 @@ CREATE TABLE `catalog_product_index_price_downlod_tmp` (
 -- Struttura della tabella `catalog_product_index_price_final_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_final_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_final_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3160,7 +3394,7 @@ CREATE TABLE `catalog_product_index_price_final_idx` (
 -- Struttura della tabella `catalog_product_index_price_final_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_final_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_final_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3182,7 +3416,7 @@ CREATE TABLE `catalog_product_index_price_final_tmp` (
 -- Struttura della tabella `catalog_product_index_price_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3204,26 +3438,26 @@ CREATE TABLE `catalog_product_index_price_idx` (
 --
 
 INSERT INTO `catalog_product_index_price_idx` (`entity_id`, `customer_group_id`, `website_id`, `tax_class_id`, `price`, `final_price`, `min_price`, `max_price`, `tier_price`, `group_price`) VALUES
-(1, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(1, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(1, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(1, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(2, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(3, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(4, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 0, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 1, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 2, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL),
-(5, 3, 1, 2, 100.0000, 100.0000, 100.0000, 100.0000, NULL, NULL);
+(1, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(2, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(3, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(4, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(5, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -3231,7 +3465,7 @@ INSERT INTO `catalog_product_index_price_idx` (`entity_id`, `customer_group_id`,
 -- Struttura della tabella `catalog_product_index_price_opt_agr_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_opt_agr_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_opt_agr_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3249,7 +3483,7 @@ CREATE TABLE `catalog_product_index_price_opt_agr_idx` (
 -- Struttura della tabella `catalog_product_index_price_opt_agr_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_opt_agr_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_opt_agr_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3267,7 +3501,7 @@ CREATE TABLE `catalog_product_index_price_opt_agr_tmp` (
 -- Struttura della tabella `catalog_product_index_price_opt_idx`
 --
 
-CREATE TABLE `catalog_product_index_price_opt_idx` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_opt_idx` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3284,7 +3518,7 @@ CREATE TABLE `catalog_product_index_price_opt_idx` (
 -- Struttura della tabella `catalog_product_index_price_opt_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_opt_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_opt_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3301,7 +3535,7 @@ CREATE TABLE `catalog_product_index_price_opt_tmp` (
 -- Struttura della tabella `catalog_product_index_price_tmp`
 --
 
-CREATE TABLE `catalog_product_index_price_tmp` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_price_tmp` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3318,13 +3552,23 @@ CREATE TABLE `catalog_product_index_price_tmp` (
   KEY `IDX_CATALOG_PRODUCT_INDEX_PRICE_TMP_MIN_PRICE` (`min_price`)
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8 COMMENT='Catalog Product Price Indexer Temp Table';
 
+--
+-- Dump dei dati per la tabella `catalog_product_index_price_tmp`
+--
+
+INSERT INTO `catalog_product_index_price_tmp` (`entity_id`, `customer_group_id`, `website_id`, `tax_class_id`, `price`, `final_price`, `min_price`, `max_price`, `tier_price`, `group_price`) VALUES
+(1, 0, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 1, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 2, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL),
+(1, 3, 1, 2, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
 -- Struttura della tabella `catalog_product_index_tier_price`
 --
 
-CREATE TABLE `catalog_product_index_tier_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_tier_price` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
@@ -3340,7 +3584,7 @@ CREATE TABLE `catalog_product_index_tier_price` (
 -- Struttura della tabella `catalog_product_index_website`
 --
 
-CREATE TABLE `catalog_product_index_website` (
+CREATE TABLE IF NOT EXISTS `catalog_product_index_website` (
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
   `website_date` date DEFAULT NULL COMMENT 'Website Date',
   `rate` float DEFAULT '1' COMMENT 'Rate',
@@ -3353,7 +3597,7 @@ CREATE TABLE `catalog_product_index_website` (
 --
 
 INSERT INTO `catalog_product_index_website` (`website_id`, `website_date`, `rate`) VALUES
-(1, '2013-07-26', 1);
+(1, '2013-07-30', 1);
 
 -- --------------------------------------------------------
 
@@ -3361,7 +3605,7 @@ INSERT INTO `catalog_product_index_website` (`website_id`, `website_date`, `rate
 -- Struttura della tabella `catalog_product_link`
 --
 
-CREATE TABLE `catalog_product_link` (
+CREATE TABLE IF NOT EXISTS `catalog_product_link` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Link ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `linked_product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Linked Product ID',
@@ -3379,7 +3623,7 @@ CREATE TABLE `catalog_product_link` (
 -- Struttura della tabella `catalog_product_link_attribute`
 --
 
-CREATE TABLE `catalog_product_link_attribute` (
+CREATE TABLE IF NOT EXISTS `catalog_product_link_attribute` (
   `product_link_attribute_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Product Link Attribute ID',
   `link_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Link Type ID',
   `product_link_attribute_code` varchar(32) DEFAULT NULL COMMENT 'Product Link Attribute Code',
@@ -3405,7 +3649,7 @@ INSERT INTO `catalog_product_link_attribute` (`product_link_attribute_id`, `link
 -- Struttura della tabella `catalog_product_link_attribute_decimal`
 --
 
-CREATE TABLE `catalog_product_link_attribute_decimal` (
+CREATE TABLE IF NOT EXISTS `catalog_product_link_attribute_decimal` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `product_link_attribute_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Product Link Attribute ID',
   `link_id` int(10) unsigned NOT NULL COMMENT 'Link ID',
@@ -3422,7 +3666,7 @@ CREATE TABLE `catalog_product_link_attribute_decimal` (
 -- Struttura della tabella `catalog_product_link_attribute_int`
 --
 
-CREATE TABLE `catalog_product_link_attribute_int` (
+CREATE TABLE IF NOT EXISTS `catalog_product_link_attribute_int` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `product_link_attribute_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Product Link Attribute ID',
   `link_id` int(10) unsigned NOT NULL COMMENT 'Link ID',
@@ -3439,7 +3683,7 @@ CREATE TABLE `catalog_product_link_attribute_int` (
 -- Struttura della tabella `catalog_product_link_attribute_varchar`
 --
 
-CREATE TABLE `catalog_product_link_attribute_varchar` (
+CREATE TABLE IF NOT EXISTS `catalog_product_link_attribute_varchar` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `product_link_attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Product Link Attribute ID',
   `link_id` int(10) unsigned NOT NULL COMMENT 'Link ID',
@@ -3456,7 +3700,7 @@ CREATE TABLE `catalog_product_link_attribute_varchar` (
 -- Struttura della tabella `catalog_product_link_type`
 --
 
-CREATE TABLE `catalog_product_link_type` (
+CREATE TABLE IF NOT EXISTS `catalog_product_link_type` (
   `link_type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Link Type ID',
   `code` varchar(32) DEFAULT NULL COMMENT 'Code',
   PRIMARY KEY (`link_type_id`)
@@ -3478,7 +3722,7 @@ INSERT INTO `catalog_product_link_type` (`link_type_id`, `code`) VALUES
 -- Struttura della tabella `catalog_product_option`
 --
 
-CREATE TABLE `catalog_product_option` (
+CREATE TABLE IF NOT EXISTS `catalog_product_option` (
   `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `type` varchar(50) DEFAULT NULL COMMENT 'Type',
@@ -3499,7 +3743,7 @@ CREATE TABLE `catalog_product_option` (
 -- Struttura della tabella `catalog_product_option_price`
 --
 
-CREATE TABLE `catalog_product_option_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_option_price` (
   `option_price_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Price ID',
   `option_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Option ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
@@ -3517,7 +3761,7 @@ CREATE TABLE `catalog_product_option_price` (
 -- Struttura della tabella `catalog_product_option_title`
 --
 
-CREATE TABLE `catalog_product_option_title` (
+CREATE TABLE IF NOT EXISTS `catalog_product_option_title` (
   `option_title_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Title ID',
   `option_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Option ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
@@ -3534,7 +3778,7 @@ CREATE TABLE `catalog_product_option_title` (
 -- Struttura della tabella `catalog_product_option_type_price`
 --
 
-CREATE TABLE `catalog_product_option_type_price` (
+CREATE TABLE IF NOT EXISTS `catalog_product_option_type_price` (
   `option_type_price_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Type Price ID',
   `option_type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Option Type ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
@@ -3552,7 +3796,7 @@ CREATE TABLE `catalog_product_option_type_price` (
 -- Struttura della tabella `catalog_product_option_type_title`
 --
 
-CREATE TABLE `catalog_product_option_type_title` (
+CREATE TABLE IF NOT EXISTS `catalog_product_option_type_title` (
   `option_type_title_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Type Title ID',
   `option_type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Option Type ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
@@ -3569,7 +3813,7 @@ CREATE TABLE `catalog_product_option_type_title` (
 -- Struttura della tabella `catalog_product_option_type_value`
 --
 
-CREATE TABLE `catalog_product_option_type_value` (
+CREATE TABLE IF NOT EXISTS `catalog_product_option_type_value` (
   `option_type_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Type ID',
   `option_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Option ID',
   `sku` varchar(64) DEFAULT NULL COMMENT 'SKU',
@@ -3584,7 +3828,7 @@ CREATE TABLE `catalog_product_option_type_value` (
 -- Struttura della tabella `catalog_product_relation`
 --
 
-CREATE TABLE `catalog_product_relation` (
+CREATE TABLE IF NOT EXISTS `catalog_product_relation` (
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent ID',
   `child_id` int(10) unsigned NOT NULL COMMENT 'Child ID',
   PRIMARY KEY (`parent_id`,`child_id`),
@@ -3597,7 +3841,7 @@ CREATE TABLE `catalog_product_relation` (
 -- Struttura della tabella `catalog_product_super_attribute`
 --
 
-CREATE TABLE `catalog_product_super_attribute` (
+CREATE TABLE IF NOT EXISTS `catalog_product_super_attribute` (
   `product_super_attribute_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Product Super Attribute ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
@@ -3613,7 +3857,7 @@ CREATE TABLE `catalog_product_super_attribute` (
 -- Struttura della tabella `catalog_product_super_attribute_label`
 --
 
-CREATE TABLE `catalog_product_super_attribute_label` (
+CREATE TABLE IF NOT EXISTS `catalog_product_super_attribute_label` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `product_super_attribute_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product Super Attribute ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
@@ -3631,7 +3875,7 @@ CREATE TABLE `catalog_product_super_attribute_label` (
 -- Struttura della tabella `catalog_product_super_attribute_pricing`
 --
 
-CREATE TABLE `catalog_product_super_attribute_pricing` (
+CREATE TABLE IF NOT EXISTS `catalog_product_super_attribute_pricing` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',
   `product_super_attribute_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product Super Attribute ID',
   `value_index` varchar(255) DEFAULT NULL COMMENT 'Value Index',
@@ -3650,7 +3894,7 @@ CREATE TABLE `catalog_product_super_attribute_pricing` (
 -- Struttura della tabella `catalog_product_super_link`
 --
 
-CREATE TABLE `catalog_product_super_link` (
+CREATE TABLE IF NOT EXISTS `catalog_product_super_link` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Link ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Parent ID',
@@ -3666,7 +3910,7 @@ CREATE TABLE `catalog_product_super_link` (
 -- Struttura della tabella `catalog_product_website`
 --
 
-CREATE TABLE `catalog_product_website` (
+CREATE TABLE IF NOT EXISTS `catalog_product_website` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product ID',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website ID',
   PRIMARY KEY (`product_id`,`website_id`),
@@ -3690,7 +3934,7 @@ INSERT INTO `catalog_product_website` (`product_id`, `website_id`) VALUES
 -- Struttura della tabella `checkout_agreement`
 --
 
-CREATE TABLE `checkout_agreement` (
+CREATE TABLE IF NOT EXISTS `checkout_agreement` (
   `agreement_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Agreement Id',
   `name` varchar(255) DEFAULT NULL COMMENT 'Name',
   `content` text COMMENT 'Content',
@@ -3707,7 +3951,7 @@ CREATE TABLE `checkout_agreement` (
 -- Struttura della tabella `checkout_agreement_store`
 --
 
-CREATE TABLE `checkout_agreement_store` (
+CREATE TABLE IF NOT EXISTS `checkout_agreement_store` (
   `agreement_id` int(10) unsigned NOT NULL COMMENT 'Agreement Id',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id',
   PRIMARY KEY (`agreement_id`,`store_id`),
@@ -3720,7 +3964,7 @@ CREATE TABLE `checkout_agreement_store` (
 -- Struttura della tabella `cms_block`
 --
 
-CREATE TABLE `cms_block` (
+CREATE TABLE IF NOT EXISTS `cms_block` (
   `block_id` smallint(6) NOT NULL AUTO_INCREMENT COMMENT 'Block ID',
   `title` varchar(255) NOT NULL COMMENT 'Block Title',
   `identifier` varchar(255) NOT NULL COMMENT 'Block String Identifier',
@@ -3729,7 +3973,7 @@ CREATE TABLE `cms_block` (
   `update_time` timestamp NULL DEFAULT NULL COMMENT 'Block Modification Time',
   `is_active` smallint(6) NOT NULL DEFAULT '1' COMMENT 'Is Block Active',
   PRIMARY KEY (`block_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='CMS Block Table' AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='CMS Block Table' AUTO_INCREMENT=10 ;
 
 --
 -- Dump dei dati per la tabella `cms_block`
@@ -3743,7 +3987,8 @@ INSERT INTO `cms_block` (`block_id`, `title`, `identifier`, `content`, `creation
 (5, 'footer column block 4', 'footer-column-block-4', '<ul>\r\n<li>&nbsp;</li>\r\n<li><a title="BioCare Line" href="{{store url=''''}}">BioCare Line</a></li>\r\n<li><a title="Veredus Pleasure" href="{{store url=''''}}">Veredus Pleasure</a></li>\r\n</ul>', '2013-07-10 16:16:05', '2013-07-10 16:31:29', 1),
 (6, 'Block 1 Video', 'block-1-video', '<p style="width: 100%; text-align: center; background-color: #000;">\r\n<iframe width="299" height="168" src="//www.youtube.com/embed/rlj9vX352aM?list=UUW4ltf1AtJbGHID4zRrJvYw" frameborder="0" allowfullscreen></iframe>\r\n</p>\r\n<p><a href="http://www.youtube.com/user/VeredusChannel" target="_blank">OUR VIDEO &gt;</a></p>', '2013-07-25 23:07:19', '2013-07-26 00:11:05', 1),
 (7, 'Block 2 Guarnieri', 'block-2-guarnieri', '<p><img src="{{media url="wysiwyg/guarnieri-home.png"}}" alt="" /></p>\r\n<p>GUARNIERI LINE &gt;</p>', '2013-07-26 00:05:43', '2013-07-26 00:05:43', 1),
-(8, 'Block 3 Right', 'block-3-right', '<table style="float: left;" border="0">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<div><img src="{{media url="wysiwyg/block-3-lt.png"}}" alt="" /></div>\r\n<div><span style="font-size: medium;"><strong>SPORT EQUIPMENT &gt;</strong></span></div>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<div><img src="{{media url="wysiwyg/block-3-lb.png"}}" alt="" /></div>\r\n<div style="background-color: #89a39f;"><span style="font-size: small;"><strong>VEREDUS PLEASUR &gt;</strong></span></div>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table style="float: left;" border="0">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><img src="{{media url="wysiwyg/block-3-rt.png"}}" alt="" />&nbsp;</p>\r\n<p><strong><span style="font-size: medium;">BIO CARE LINE &gt;</span></strong> </p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>&nbsp;<img src="{{media url="wysiwyg/block-3-rb.png"}}" alt="" /></td>\r\n</tr>\r\n</tbody>\r\n</table>', '2013-07-26 07:42:12', '2013-07-26 05:57:00', 1);
+(8, 'Block 3 Right', 'block-3-right', '<table style="float: left;" border="0">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<div><img src="{{media url="wysiwyg/block-3-lt.png"}}" alt="" /></div>\r\n<div><span style="font-size: medium;"><strong>SPORT EQUIPMENT &gt;</strong></span></div>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<div><img src="{{media url="wysiwyg/block-3-lb.png"}}" alt="" /></div>\r\n<div style="background-color: #89a39f;"><span style="font-size: small;"><strong>VEREDUS PLEASUR &gt;</strong></span></div>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table style="float: left;" border="0">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><img src="{{media url="wysiwyg/block-3-rt.png"}}" alt="" />&nbsp;</p>\r\n<p><strong><span style="font-size: medium;">BIO CARE LINE &gt;</span></strong> </p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>&nbsp;<img src="{{media url="wysiwyg/block-3-rb.png"}}" alt="" /></td>\r\n</tr>\r\n</tbody>\r\n</table>', '2013-07-26 07:42:12', '2013-07-26 05:57:00', 1),
+(9, 'Blocco Over Griglia', 'blocco-over-nero', '<p><img src="{{media url="wysiwyg/VRD-Griglia-01-OK_r2_c2.png"}}" alt="" /></p>', '2013-07-28 08:39:04', '2013-07-28 08:39:04', 1);
 
 -- --------------------------------------------------------
 
@@ -3751,7 +3996,7 @@ INSERT INTO `cms_block` (`block_id`, `title`, `identifier`, `content`, `creation
 -- Struttura della tabella `cms_block_store`
 --
 
-CREATE TABLE `cms_block_store` (
+CREATE TABLE IF NOT EXISTS `cms_block_store` (
   `block_id` smallint(6) NOT NULL COMMENT 'Block ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   PRIMARY KEY (`block_id`,`store_id`),
@@ -3770,7 +4015,8 @@ INSERT INTO `cms_block_store` (`block_id`, `store_id`) VALUES
 (5, 0),
 (6, 0),
 (7, 0),
-(8, 0);
+(8, 0),
+(9, 0);
 
 -- --------------------------------------------------------
 
@@ -3778,7 +4024,7 @@ INSERT INTO `cms_block_store` (`block_id`, `store_id`) VALUES
 -- Struttura della tabella `cms_page`
 --
 
-CREATE TABLE `cms_page` (
+CREATE TABLE IF NOT EXISTS `cms_page` (
   `page_id` smallint(6) NOT NULL AUTO_INCREMENT COMMENT 'Page ID',
   `title` varchar(255) DEFAULT NULL COMMENT 'Page Title',
   `root_template` varchar(255) DEFAULT NULL COMMENT 'Page Template',
@@ -3799,7 +4045,7 @@ CREATE TABLE `cms_page` (
   `custom_theme_to` date DEFAULT NULL COMMENT 'Page Custom Theme Active To Date',
   PRIMARY KEY (`page_id`),
   KEY `IDX_CMS_PAGE_IDENTIFIER` (`identifier`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='CMS Page Table' AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='CMS Page Table' AUTO_INCREMENT=8 ;
 
 --
 -- Dump dei dati per la tabella `cms_page`
@@ -3819,7 +4065,7 @@ INSERT INTO `cms_page` (`page_id`, `title`, `root_template`, `meta_keywords`, `m
 -- Struttura della tabella `cms_page_store`
 --
 
-CREATE TABLE `cms_page_store` (
+CREATE TABLE IF NOT EXISTS `cms_page_store` (
   `page_id` smallint(6) NOT NULL COMMENT 'Page ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   PRIMARY KEY (`page_id`,`store_id`),
@@ -3844,7 +4090,7 @@ INSERT INTO `cms_page_store` (`page_id`, `store_id`) VALUES
 -- Struttura della tabella `core_cache`
 --
 
-CREATE TABLE `core_cache` (
+CREATE TABLE IF NOT EXISTS `core_cache` (
   `id` varchar(200) NOT NULL COMMENT 'Cache Id',
   `data` mediumblob COMMENT 'Cache Data',
   `create_time` int(11) DEFAULT NULL COMMENT 'Cache Creation Time',
@@ -3860,7 +4106,7 @@ CREATE TABLE `core_cache` (
 -- Struttura della tabella `core_cache_option`
 --
 
-CREATE TABLE `core_cache_option` (
+CREATE TABLE IF NOT EXISTS `core_cache_option` (
   `code` varchar(32) NOT NULL COMMENT 'Code',
   `value` smallint(6) DEFAULT NULL COMMENT 'Value',
   PRIMARY KEY (`code`)
@@ -3871,14 +4117,14 @@ CREATE TABLE `core_cache_option` (
 --
 
 INSERT INTO `core_cache_option` (`code`, `value`) VALUES
-('block_html', 0),
+('block_html', 1),
 ('collections', 1),
-('config', 0),
+('config', 1),
 ('config_api', 1),
 ('config_api2', 1),
 ('eav', 1),
-('layout', 0),
-('translate', 1);
+('layout', 1),
+('translate', 0);
 
 -- --------------------------------------------------------
 
@@ -3886,7 +4132,7 @@ INSERT INTO `core_cache_option` (`code`, `value`) VALUES
 -- Struttura della tabella `core_cache_tag`
 --
 
-CREATE TABLE `core_cache_tag` (
+CREATE TABLE IF NOT EXISTS `core_cache_tag` (
   `tag` varchar(100) NOT NULL COMMENT 'Tag',
   `cache_id` varchar(200) NOT NULL COMMENT 'Cache Id',
   PRIMARY KEY (`tag`,`cache_id`),
@@ -3899,7 +4145,7 @@ CREATE TABLE `core_cache_tag` (
 -- Struttura della tabella `core_config_data`
 --
 
-CREATE TABLE `core_config_data` (
+CREATE TABLE IF NOT EXISTS `core_config_data` (
   `config_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Config Id',
   `scope` varchar(8) NOT NULL DEFAULT 'default' COMMENT 'Config Scope',
   `scope_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Config Scope Id',
@@ -3907,7 +4153,7 @@ CREATE TABLE `core_config_data` (
   `value` text COMMENT 'Config Value',
   PRIMARY KEY (`config_id`),
   UNIQUE KEY `UNQ_CORE_CONFIG_DATA_SCOPE_SCOPE_ID_PATH` (`scope`,`scope_id`,`path`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Config Data' AUTO_INCREMENT=190 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Config Data' AUTO_INCREMENT=193 ;
 
 --
 -- Dump dei dati per la tabella `core_config_data`
@@ -3966,7 +4212,7 @@ INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value
 (50, 'stores', 2, 'general/locale/code', 'en_US'),
 (51, 'stores', 3, 'general/locale/code', 'de_DE'),
 (52, 'stores', 4, 'general/locale/code', 'fr_FR'),
-(53, 'default', 0, 'general/country/default', 'US'),
+(53, 'default', 0, 'general/country/default', 'IT'),
 (54, 'default', 0, 'general/country/allow', 'AF,AL,DZ,AD,AO,AI,AQ,AG,AN,SA,AR,AM,AW,AU,AT,AZ,BS,BH,BD,BB,BE,BZ,BJ,BM,BT,BY,BO,BA,BW,BR,BN,BG,BF,BI,KH,CM,CA,CV,TD,CL,CN,CY,CO,KM,CG,KP,KR,CR,CI,HR,CU,DK,DM,EC,EG,SV,AE,ER,EE,ET,RU,FJ,PH,FI,FR,GA,GM,GE,GS,DE,GH,JM,JP,GI,DJ,JO,GR,GD,GL,GP,GU,GT,GG,GF,GN,GQ,GW,GY,HT,HN,IN,ID,IR,IQ,IE,IS,BV,NF,CX,IM,AX,KY,CC,CK,FK,FO,HM,MP,MH,UM,SB,TC,VI,VG,IL,IT,JE,KZ,KE,KG,KI,KW,LA,LS,LV,LB,LR,LY,LI,LT,LU,MG,MW,MV,MY,ML,MT,MA,MQ,MR,MU,YT,MX,FM,MD,MC,MN,ME,MS,MZ,MM,NA,NR,NP,NI,NE,NG,NU,NO,NC,NZ,OM,NL,PK,PW,PS,PA,PG,PY,PE,PN,PF,PL,PT,PR,QA,HK,MO,GB,CZ,CF,CD,DO,MK,RO,RW,RE,EH,KN,LC,PM,VC,WS,AS,BL,SM,SH,ST,SN,RS,SC,SL,SG,SY,SK,SI,SO,ES,LK,US,ZA,SD,SR,SJ,SE,CH,SZ,TJ,TH,TW,TZ,TF,IO,TL,TG,TK,TO,TT,TN,TR,TM,TV,UA,UG,HU,UY,UZ,VU,VA,VE,VN,WF,YE,ZM,ZW'),
 (55, 'default', 0, 'general/country/optional_zip_countries', 'IE,PA,HK,MO'),
 (56, 'default', 0, 'general/country/eu_countries', 'AT,BE,BG,CY,DK,EE,FI,FR,DE,GR,IE,IT,LV,LT,LU,MT,NL,PL,PT,GB,CZ,RO,SK,SI,ES,SE,HU'),
@@ -4102,7 +4348,10 @@ INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value
 (186, 'default', 0, 'veredus/settings/attribute_image_color', NULL),
 (187, 'default', 0, 'veredus/settings/cms-block-sizeguide', 'no-route'),
 (188, 'default', 0, 'veredus/settings/cms-block-privacy-register', 'no-route'),
-(189, 'default', 0, 'veredus/home/attribute_home_image', NULL);
+(189, 'default', 0, 'veredus/home/attribute_home_image', NULL),
+(190, 'websites', 1, 'dev/debug/template_hints', '0'),
+(191, 'websites', 1, 'dev/debug/template_hints_blocks', '0'),
+(192, 'default', 0, 'veredus/settings/shop_by_plus', '8');
 
 -- --------------------------------------------------------
 
@@ -4110,7 +4359,7 @@ INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value
 -- Struttura della tabella `core_email_template`
 --
 
-CREATE TABLE `core_email_template` (
+CREATE TABLE IF NOT EXISTS `core_email_template` (
   `template_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Template Id',
   `template_code` varchar(150) NOT NULL COMMENT 'Template Name',
   `template_text` text NOT NULL COMMENT 'Template Content',
@@ -4135,7 +4384,7 @@ CREATE TABLE `core_email_template` (
 -- Struttura della tabella `core_flag`
 --
 
-CREATE TABLE `core_flag` (
+CREATE TABLE IF NOT EXISTS `core_flag` (
   `flag_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Flag Id',
   `flag_code` varchar(255) NOT NULL COMMENT 'Flag Code',
   `state` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Flag State',
@@ -4151,7 +4400,7 @@ CREATE TABLE `core_flag` (
 
 INSERT INTO `core_flag` (`flag_id`, `flag_code`, `state`, `flag_data`, `last_update`) VALUES
 (1, 'admin_notification_survey', 0, 'a:1:{s:13:"survey_viewed";b:1;}', '2013-07-07 12:54:45'),
-(2, 'catalog_product_flat', 0, 'a:1:{s:8:"is_built";b:1;}', '2013-07-26 08:45:18');
+(2, 'catalog_product_flat', 0, 'a:1:{s:8:"is_built";b:1;}', '2013-07-29 21:08:25');
 
 -- --------------------------------------------------------
 
@@ -4159,7 +4408,7 @@ INSERT INTO `core_flag` (`flag_id`, `flag_code`, `state`, `flag_data`, `last_upd
 -- Struttura della tabella `core_layout_link`
 --
 
-CREATE TABLE `core_layout_link` (
+CREATE TABLE IF NOT EXISTS `core_layout_link` (
   `layout_link_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Link Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `area` varchar(64) DEFAULT NULL COMMENT 'Area',
@@ -4177,7 +4426,7 @@ CREATE TABLE `core_layout_link` (
 -- Struttura della tabella `core_layout_update`
 --
 
-CREATE TABLE `core_layout_update` (
+CREATE TABLE IF NOT EXISTS `core_layout_update` (
   `layout_update_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Layout Update Id',
   `handle` varchar(255) DEFAULT NULL COMMENT 'Handle',
   `xml` text COMMENT 'Xml',
@@ -4192,7 +4441,7 @@ CREATE TABLE `core_layout_update` (
 -- Struttura della tabella `core_resource`
 --
 
-CREATE TABLE `core_resource` (
+CREATE TABLE IF NOT EXISTS `core_resource` (
   `code` varchar(50) NOT NULL COMMENT 'Resource Code',
   `version` varchar(50) DEFAULT NULL COMMENT 'Resource Version',
   `data_version` varchar(50) DEFAULT NULL COMMENT 'Data Version',
@@ -4257,6 +4506,7 @@ INSERT INTO `core_resource` (`code`, `version`, `data_version`) VALUES
 ('tag_setup', '1.6.0.0', '1.6.0.0'),
 ('tax_setup', '1.6.0.3', '1.6.0.3'),
 ('usa_setup', '1.6.0.1', '1.6.0.1'),
+('veredus_setup', '0.1.1', '0.1.1'),
 ('weee_setup', '1.6.0.0', '1.6.0.0'),
 ('widget_setup', '1.6.0.0', '1.6.0.0'),
 ('wishlist_setup', '1.6.0.0', '1.6.0.0'),
@@ -4268,7 +4518,7 @@ INSERT INTO `core_resource` (`code`, `version`, `data_version`) VALUES
 -- Struttura della tabella `core_session`
 --
 
-CREATE TABLE `core_session` (
+CREATE TABLE IF NOT EXISTS `core_session` (
   `session_id` varchar(255) NOT NULL COMMENT 'Session Id',
   `session_expires` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Date of Session Expiration',
   `session_data` mediumblob NOT NULL COMMENT 'Session Data',
@@ -4281,7 +4531,7 @@ CREATE TABLE `core_session` (
 -- Struttura della tabella `core_store`
 --
 
-CREATE TABLE `core_store` (
+CREATE TABLE IF NOT EXISTS `core_store` (
   `store_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Store Id',
   `code` varchar(32) DEFAULT NULL COMMENT 'Code',
   `website_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Website Id',
@@ -4313,7 +4563,7 @@ INSERT INTO `core_store` (`store_id`, `code`, `website_id`, `group_id`, `name`, 
 -- Struttura della tabella `core_store_group`
 --
 
-CREATE TABLE `core_store_group` (
+CREATE TABLE IF NOT EXISTS `core_store_group` (
   `group_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Group Id',
   `website_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Website Id',
   `name` varchar(255) NOT NULL COMMENT 'Store Group Name',
@@ -4338,7 +4588,7 @@ INSERT INTO `core_store_group` (`group_id`, `website_id`, `name`, `root_category
 -- Struttura della tabella `core_translate`
 --
 
-CREATE TABLE `core_translate` (
+CREATE TABLE IF NOT EXISTS `core_translate` (
   `key_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Key Id of Translation',
   `string` varchar(255) NOT NULL DEFAULT 'Translate String' COMMENT 'Translation String',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
@@ -4355,7 +4605,7 @@ CREATE TABLE `core_translate` (
 -- Struttura della tabella `core_url_rewrite`
 --
 
-CREATE TABLE `core_url_rewrite` (
+CREATE TABLE IF NOT EXISTS `core_url_rewrite` (
   `url_rewrite_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rewrite Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `id_path` varchar(255) DEFAULT NULL COMMENT 'Id Path',
@@ -4374,7 +4624,7 @@ CREATE TABLE `core_url_rewrite` (
   KEY `IDX_CORE_URL_REWRITE_STORE_ID` (`store_id`),
   KEY `FK_CORE_URL_REWRITE_CTGR_ID_CAT_CTGR_ENTT_ENTT_ID` (`category_id`),
   KEY `FK_CORE_URL_REWRITE_PRODUCT_ID_CATALOG_CATEGORY_ENTITY_ENTITY_ID` (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Url Rewrites' AUTO_INCREMENT=451 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Url Rewrites' AUTO_INCREMENT=791 ;
 
 --
 -- Dump dei dati per la tabella `core_url_rewrite`
@@ -4425,78 +4675,78 @@ INSERT INTO `core_url_rewrite` (`url_rewrite_id`, `store_id`, `id_path`, `reques
 (53, 3, 'product/1/7', 'nero-line/livello-3/product-one.html', 'catalog/product/view/id/1/category/7', 1, NULL, NULL, 7, 1),
 (54, 4, 'category/7', 'nero-line/livello-3.html', 'catalog/category/view/id/7', 1, NULL, NULL, 7, NULL),
 (56, 4, 'product/1/7', 'nero-line/livello-3/product-one.html', 'catalog/product/view/id/1/category/7', 1, NULL, NULL, 7, 1),
-(101, 1, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
-(102, 1, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
-(103, 1, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
-(104, 1, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
-(105, 1, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
-(106, 1, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
-(107, 2, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
-(108, 2, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
-(109, 2, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
-(110, 2, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
-(111, 2, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
-(112, 2, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
-(113, 3, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
-(114, 3, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
-(115, 3, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
-(116, 3, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
-(117, 3, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
-(118, 3, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
-(119, 4, 'product/2/3', 'new/product-one-6.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
-(120, 4, 'product/2/4', 'nero-line/product-one-6.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
-(121, 4, 'product/2/5', 'nero-line/livello-1/product-one-6.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
-(122, 4, 'product/2/6', 'nero-line/livello-2/product-one-6.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
-(123, 4, 'product/2/7', 'nero-line/livello-3/product-one-6.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
-(124, 4, 'product/2', 'product-one-6.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
-(125, 1, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
-(126, 1, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
-(127, 1, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
-(128, 1, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
-(129, 1, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
-(130, 1, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
-(131, 2, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
-(132, 2, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
-(133, 2, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
-(134, 2, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
-(135, 2, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
-(136, 2, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
-(137, 3, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
-(138, 3, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
-(139, 3, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
-(140, 3, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
-(141, 3, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
-(142, 3, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
-(143, 4, 'product/3/3', 'new/product-one-7.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
-(144, 4, 'product/3/4', 'nero-line/product-one-7.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
-(145, 4, 'product/3/5', 'nero-line/livello-1/product-one-7.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
-(146, 4, 'product/3/6', 'nero-line/livello-2/product-one-7.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
-(147, 4, 'product/3/7', 'nero-line/livello-3/product-one-7.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
-(148, 4, 'product/3', 'product-one-7.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
-(149, 1, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
-(150, 1, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
-(151, 1, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
-(152, 1, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
-(153, 1, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
-(154, 1, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
-(155, 2, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
-(156, 2, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
-(157, 2, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
-(158, 2, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
-(159, 2, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
-(160, 2, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
-(161, 3, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
-(162, 3, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
-(163, 3, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
-(164, 3, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
-(165, 3, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
-(166, 3, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
-(167, 4, 'product/4/3', 'new/product-one-8.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
-(168, 4, 'product/4/4', 'nero-line/product-one-8.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
-(169, 4, 'product/4/5', 'nero-line/livello-1/product-one-8.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
-(170, 4, 'product/4/6', 'nero-line/livello-2/product-one-8.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
-(171, 4, 'product/4/7', 'nero-line/livello-3/product-one-8.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
-(172, 4, 'product/4', 'product-one-8.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(101, 1, 'product/2/3', 'new/product-one-9.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(102, 1, 'product/2/4', 'nero-line/product-one-9.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(103, 1, 'product/2/5', 'nero-line/livello-1/product-one-9.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(104, 1, 'product/2/6', 'nero-line/livello-2/product-one-9.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(105, 1, 'product/2/7', 'nero-line/livello-3/product-one-9.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(106, 1, 'product/2', 'product-one-14.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(107, 2, 'product/2/3', 'new/product-one-9.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(108, 2, 'product/2/4', 'nero-line/product-one-9.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(109, 2, 'product/2/5', 'nero-line/livello-1/product-one-9.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(110, 2, 'product/2/6', 'nero-line/livello-2/product-one-9.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(111, 2, 'product/2/7', 'nero-line/livello-3/product-one-9.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(112, 2, 'product/2', 'product-one-14.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(113, 3, 'product/2/3', 'new/product-one-9.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(114, 3, 'product/2/4', 'nero-line/product-one-9.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(115, 3, 'product/2/5', 'nero-line/livello-1/product-one-9.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(116, 3, 'product/2/6', 'nero-line/livello-2/product-one-9.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(117, 3, 'product/2/7', 'nero-line/livello-3/product-one-9.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(118, 3, 'product/2', 'product-one-14.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(119, 4, 'product/2/3', 'new/product-one-9.html', 'catalog/product/view/id/2/category/3', 1, NULL, NULL, 3, 2),
+(120, 4, 'product/2/4', 'nero-line/product-one-9.html', 'catalog/product/view/id/2/category/4', 1, NULL, NULL, 4, 2),
+(121, 4, 'product/2/5', 'nero-line/livello-1/product-one-9.html', 'catalog/product/view/id/2/category/5', 1, NULL, NULL, 5, 2),
+(122, 4, 'product/2/6', 'nero-line/livello-2/product-one-9.html', 'catalog/product/view/id/2/category/6', 1, NULL, NULL, 6, 2),
+(123, 4, 'product/2/7', 'nero-line/livello-3/product-one-9.html', 'catalog/product/view/id/2/category/7', 1, NULL, NULL, 7, 2),
+(124, 4, 'product/2', 'product-one-14.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2),
+(125, 1, 'product/3/3', 'new/product-one-10.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(126, 1, 'product/3/4', 'nero-line/product-one-10.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(127, 1, 'product/3/5', 'nero-line/livello-1/product-one-10.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(128, 1, 'product/3/6', 'nero-line/livello-2/product-one-10.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(129, 1, 'product/3/7', 'nero-line/livello-3/product-one-10.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(130, 1, 'product/3', 'product-one-15.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(131, 2, 'product/3/3', 'new/product-one-10.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(132, 2, 'product/3/4', 'nero-line/product-one-10.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(133, 2, 'product/3/5', 'nero-line/livello-1/product-one-10.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(134, 2, 'product/3/6', 'nero-line/livello-2/product-one-10.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(135, 2, 'product/3/7', 'nero-line/livello-3/product-one-10.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(136, 2, 'product/3', 'product-one-15.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(137, 3, 'product/3/3', 'new/product-one-10.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(138, 3, 'product/3/4', 'nero-line/product-one-10.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(139, 3, 'product/3/5', 'nero-line/livello-1/product-one-10.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(140, 3, 'product/3/6', 'nero-line/livello-2/product-one-10.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(141, 3, 'product/3/7', 'nero-line/livello-3/product-one-10.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(142, 3, 'product/3', 'product-one-15.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(143, 4, 'product/3/3', 'new/product-one-10.html', 'catalog/product/view/id/3/category/3', 1, NULL, NULL, 3, 3),
+(144, 4, 'product/3/4', 'nero-line/product-one-10.html', 'catalog/product/view/id/3/category/4', 1, NULL, NULL, 4, 3),
+(145, 4, 'product/3/5', 'nero-line/livello-1/product-one-10.html', 'catalog/product/view/id/3/category/5', 1, NULL, NULL, 5, 3),
+(146, 4, 'product/3/6', 'nero-line/livello-2/product-one-10.html', 'catalog/product/view/id/3/category/6', 1, NULL, NULL, 6, 3),
+(147, 4, 'product/3/7', 'nero-line/livello-3/product-one-10.html', 'catalog/product/view/id/3/category/7', 1, NULL, NULL, 7, 3),
+(148, 4, 'product/3', 'product-one-15.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3),
+(149, 1, 'product/4/3', 'new/product-one-11.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(150, 1, 'product/4/4', 'nero-line/product-one-11.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(151, 1, 'product/4/5', 'nero-line/livello-1/product-one-11.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(152, 1, 'product/4/6', 'nero-line/livello-2/product-one-11.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(153, 1, 'product/4/7', 'nero-line/livello-3/product-one-11.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(154, 1, 'product/4', 'product-one-16.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(155, 2, 'product/4/3', 'new/product-one-11.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(156, 2, 'product/4/4', 'nero-line/product-one-11.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(157, 2, 'product/4/5', 'nero-line/livello-1/product-one-11.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(158, 2, 'product/4/6', 'nero-line/livello-2/product-one-11.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(159, 2, 'product/4/7', 'nero-line/livello-3/product-one-11.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(160, 2, 'product/4', 'product-one-16.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(161, 3, 'product/4/3', 'new/product-one-11.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(162, 3, 'product/4/4', 'nero-line/product-one-11.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(163, 3, 'product/4/5', 'nero-line/livello-1/product-one-11.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(164, 3, 'product/4/6', 'nero-line/livello-2/product-one-11.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(165, 3, 'product/4/7', 'nero-line/livello-3/product-one-11.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(166, 3, 'product/4', 'product-one-16.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
+(167, 4, 'product/4/3', 'new/product-one-11.html', 'catalog/product/view/id/4/category/3', 1, NULL, NULL, 3, 4),
+(168, 4, 'product/4/4', 'nero-line/product-one-11.html', 'catalog/product/view/id/4/category/4', 1, NULL, NULL, 4, 4),
+(169, 4, 'product/4/5', 'nero-line/livello-1/product-one-11.html', 'catalog/product/view/id/4/category/5', 1, NULL, NULL, 5, 4),
+(170, 4, 'product/4/6', 'nero-line/livello-2/product-one-11.html', 'catalog/product/view/id/4/category/6', 1, NULL, NULL, 6, 4),
+(171, 4, 'product/4/7', 'nero-line/livello-3/product-one-11.html', 'catalog/product/view/id/4/category/7', 1, NULL, NULL, 7, 4),
+(172, 4, 'product/4', 'product-one-16.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4),
 (173, 1, 'product/5/3', 'new/product-four.html', 'catalog/product/view/id/5/category/3', 1, NULL, NULL, 3, 5),
 (174, 1, 'product/5/4', 'nero-line/product-four.html', 'catalog/product/view/id/5/category/4', 1, NULL, NULL, 4, 5),
 (175, 1, 'product/5/5', 'nero-line/livello-1/product-four.html', 'catalog/product/view/id/5/category/5', 1, NULL, NULL, 5, 5),
@@ -4545,78 +4795,218 @@ INSERT INTO `core_url_rewrite` (`url_rewrite_id`, `store_id`, `id_path`, `reques
 (240, 4, '82120400_1374835340', 'nero-line/livello-2/product-one-5.html', 'nero-line/livello-2/product-four.html', 0, 'RP', NULL, 6, 5),
 (242, 4, '82639100_1374835340', 'nero-line/livello-3/product-one-5.html', 'nero-line/livello-3/product-four.html', 0, 'RP', NULL, 7, 5),
 (244, 4, '83164900_1374835340', 'product-one-5.html', 'product-four.html', 0, 'RP', NULL, NULL, 5),
-(257, 1, '67034700_1374835489', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
-(259, 1, '68428400_1374835489', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
-(261, 1, '69962400_1374835489', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
-(263, 1, '71833600_1374835489', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
-(265, 1, '72860000_1374835489', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
-(267, 1, '73800200_1374835489', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
-(269, 1, '74589700_1374835489', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
-(271, 1, '75649200_1374835489', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
-(273, 1, '76481500_1374835489', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
-(275, 1, '77578400_1374835489', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
-(277, 1, '78434900_1374835489', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
-(279, 1, '79247600_1374835489', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
-(281, 1, '79995300_1374835489', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
-(283, 1, '80997000_1374835489', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
-(285, 1, '81909800_1374835489', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
-(287, 1, '82996000_1374835489', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
-(289, 1, '84450500_1374835489', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
-(291, 1, '85832100_1374835489', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4),
-(310, 2, '95239800_1374835489', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
-(312, 2, '95999500_1374835489', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
-(314, 2, '96845100_1374835489', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
-(316, 2, '97667100_1374835489', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
-(318, 2, '98964700_1374835489', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
-(320, 2, '99773900_1374835489', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
-(322, 2, '00658900_1374835490', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
-(324, 2, '01470100_1374835490', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
-(326, 2, '02464800_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
-(328, 2, '03348200_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
-(330, 2, '04334000_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
-(332, 2, '05277300_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
-(334, 2, '06021300_1374835490', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
-(336, 2, '06854100_1374835490', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
-(338, 2, '07697800_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
-(340, 2, '08494300_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
-(342, 2, '09289000_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
-(344, 2, '10204600_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4),
-(363, 3, '22080000_1374835490', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
-(365, 3, '23992300_1374835490', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
-(367, 3, '25185200_1374835490', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
-(369, 3, '26389700_1374835490', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
-(371, 3, '28198900_1374835490', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
-(373, 3, '29134100_1374835490', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
-(375, 3, '30022200_1374835490', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
-(377, 3, '30809300_1374835490', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
-(379, 3, '31702000_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
-(381, 3, '32481300_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
-(383, 3, '33390000_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
-(385, 3, '34260500_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
-(387, 3, '35434700_1374835490', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
-(389, 3, '36383600_1374835490', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
-(391, 3, '37188800_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
-(393, 3, '37969500_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
-(395, 3, '38893000_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
-(397, 3, '39802400_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4),
-(416, 4, '49719100_1374835490', 'product-one-2.html', 'product-one-6.html', 0, 'RP', NULL, NULL, 2),
-(418, 4, '51715300_1374835490', 'new/product-one-2.html', 'new/product-one-6.html', 0, 'RP', NULL, 3, 2),
-(420, 4, '53141400_1374835490', 'nero-line/product-one-2.html', 'nero-line/product-one-6.html', 0, 'RP', NULL, 4, 2),
-(422, 4, '54458500_1374835490', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-6.html', 0, 'RP', NULL, 5, 2),
-(424, 4, '55712100_1374835490', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-6.html', 0, 'RP', NULL, 6, 2),
-(426, 4, '57938200_1374835490', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-6.html', 0, 'RP', NULL, 7, 2),
-(428, 4, '59253000_1374835490', 'product-one-3.html', 'product-one-7.html', 0, 'RP', NULL, NULL, 3),
-(430, 4, '61278400_1374835490', 'new/product-one-3.html', 'new/product-one-7.html', 0, 'RP', NULL, 3, 3),
-(432, 4, '66469100_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-7.html', 0, 'RP', NULL, 4, 3),
-(434, 4, '68715400_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-7.html', 0, 'RP', NULL, 5, 3),
-(436, 4, '72455500_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-7.html', 0, 'RP', NULL, 6, 3),
-(438, 4, '74587400_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-7.html', 0, 'RP', NULL, 7, 3),
-(440, 4, '76711200_1374835490', 'product-one-4.html', 'product-one-8.html', 0, 'RP', NULL, NULL, 4),
-(442, 4, '79948100_1374835490', 'new/product-one-4.html', 'new/product-one-8.html', 0, 'RP', NULL, 3, 4),
-(444, 4, '81193700_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-8.html', 0, 'RP', NULL, 4, 4),
-(446, 4, '82877500_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-8.html', 0, 'RP', NULL, 5, 4),
-(448, 4, '84773500_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-8.html', 0, 'RP', NULL, 6, 4),
-(450, 4, '86255900_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-8.html', 0, 'RP', NULL, 7, 4);
+(257, 1, '67034700_1374835489', 'product-one-2.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(259, 1, '68428400_1374835489', 'new/product-one-2.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(261, 1, '69962400_1374835489', 'nero-line/product-one-2.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(263, 1, '71833600_1374835489', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(265, 1, '72860000_1374835489', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(267, 1, '73800200_1374835489', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(269, 1, '74589700_1374835489', 'product-one-3.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(271, 1, '75649200_1374835489', 'new/product-one-3.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(273, 1, '76481500_1374835489', 'nero-line/product-one-3.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(275, 1, '77578400_1374835489', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(277, 1, '78434900_1374835489', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(279, 1, '79247600_1374835489', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(281, 1, '79995300_1374835489', 'product-one-4.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(283, 1, '80997000_1374835489', 'new/product-one-4.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(285, 1, '81909800_1374835489', 'nero-line/product-one-4.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(287, 1, '82996000_1374835489', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(289, 1, '84450500_1374835489', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(291, 1, '85832100_1374835489', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(310, 2, '95239800_1374835489', 'product-one-2.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(312, 2, '95999500_1374835489', 'new/product-one-2.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(314, 2, '96845100_1374835489', 'nero-line/product-one-2.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(316, 2, '97667100_1374835489', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(318, 2, '98964700_1374835489', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(320, 2, '99773900_1374835489', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(322, 2, '00658900_1374835490', 'product-one-3.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(324, 2, '01470100_1374835490', 'new/product-one-3.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(326, 2, '02464800_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(328, 2, '03348200_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(330, 2, '04334000_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(332, 2, '05277300_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(334, 2, '06021300_1374835490', 'product-one-4.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(336, 2, '06854100_1374835490', 'new/product-one-4.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(338, 2, '07697800_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(340, 2, '08494300_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(342, 2, '09289000_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(344, 2, '10204600_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(363, 3, '22080000_1374835490', 'product-one-2.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(365, 3, '23992300_1374835490', 'new/product-one-2.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(367, 3, '25185200_1374835490', 'nero-line/product-one-2.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(369, 3, '26389700_1374835490', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(371, 3, '28198900_1374835490', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(373, 3, '29134100_1374835490', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(375, 3, '30022200_1374835490', 'product-one-3.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(377, 3, '30809300_1374835490', 'new/product-one-3.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(379, 3, '31702000_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(381, 3, '32481300_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(383, 3, '33390000_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(385, 3, '34260500_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(387, 3, '35434700_1374835490', 'product-one-4.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(389, 3, '36383600_1374835490', 'new/product-one-4.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(391, 3, '37188800_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(393, 3, '37969500_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(395, 3, '38893000_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(397, 3, '39802400_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(416, 4, '49719100_1374835490', 'product-one-2.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(418, 4, '51715300_1374835490', 'new/product-one-2.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(420, 4, '53141400_1374835490', 'nero-line/product-one-2.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(422, 4, '54458500_1374835490', 'nero-line/livello-1/product-one-2.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(424, 4, '55712100_1374835490', 'nero-line/livello-2/product-one-2.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(426, 4, '57938200_1374835490', 'nero-line/livello-3/product-one-2.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(428, 4, '59253000_1374835490', 'product-one-3.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(430, 4, '61278400_1374835490', 'new/product-one-3.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(432, 4, '66469100_1374835490', 'nero-line/product-one-3.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(434, 4, '68715400_1374835490', 'nero-line/livello-1/product-one-3.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(436, 4, '72455500_1374835490', 'nero-line/livello-2/product-one-3.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(438, 4, '74587400_1374835490', 'nero-line/livello-3/product-one-3.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(440, 4, '76711200_1374835490', 'product-one-4.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(442, 4, '79948100_1374835490', 'new/product-one-4.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(444, 4, '81193700_1374835490', 'nero-line/product-one-4.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(446, 4, '82877500_1374835490', 'nero-line/livello-1/product-one-4.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(448, 4, '84773500_1374835490', 'nero-line/livello-2/product-one-4.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(450, 4, '86255900_1374835490', 'nero-line/livello-3/product-one-4.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(451, 1, 'category/8', 'layered-category.html', 'catalog/category/view/id/8', 1, NULL, NULL, 8, NULL),
+(452, 2, 'category/8', 'layered-category.html', 'catalog/category/view/id/8', 1, NULL, NULL, 8, NULL),
+(453, 3, 'category/8', 'layered-category.html', 'catalog/category/view/id/8', 1, NULL, NULL, 8, NULL),
+(454, 4, 'category/8', 'layered-category.html', 'catalog/category/view/id/8', 1, NULL, NULL, 8, NULL),
+(455, 1, 'category/9', 'layered-category/piu-venduti.html', 'catalog/category/view/id/9', 1, NULL, NULL, 9, NULL),
+(457, 1, '82526200_1375137659', 'product-one-6.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(458, 1, 'product/2/9', 'layered-category/piu-venduti/product-one.html', 'catalog/product/view/id/2/category/9', 1, NULL, NULL, 9, 2),
+(460, 1, '91196000_1375137659', 'product-one-7.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(461, 1, 'product/3/9', 'layered-category/piu-venduti/product-one-5.html', 'catalog/product/view/id/3/category/9', 1, NULL, NULL, 9, 3),
+(463, 1, '95627600_1375137659', 'product-one-8.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(464, 1, 'product/4/9', 'layered-category/piu-venduti/product-one-6.html', 'catalog/product/view/id/4/category/9', 1, NULL, NULL, 9, 4),
+(465, 2, 'category/9', 'layered-category/piu-venduti.html', 'catalog/category/view/id/9', 1, NULL, NULL, 9, NULL),
+(467, 2, '09002000_1375137660', 'product-one-6.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(468, 2, 'product/2/9', 'layered-category/piu-venduti/product-one.html', 'catalog/product/view/id/2/category/9', 1, NULL, NULL, 9, 2),
+(470, 2, '12563100_1375137660', 'product-one-7.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(471, 2, 'product/3/9', 'layered-category/piu-venduti/product-one-5.html', 'catalog/product/view/id/3/category/9', 1, NULL, NULL, 9, 3),
+(473, 2, '16239300_1375137660', 'product-one-8.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(474, 2, 'product/4/9', 'layered-category/piu-venduti/product-one-6.html', 'catalog/product/view/id/4/category/9', 1, NULL, NULL, 9, 4),
+(475, 3, 'category/9', 'layered-category/piu-venduti.html', 'catalog/category/view/id/9', 1, NULL, NULL, 9, NULL),
+(477, 3, '28168600_1375137660', 'product-one-6.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(478, 3, 'product/2/9', 'layered-category/piu-venduti/product-one.html', 'catalog/product/view/id/2/category/9', 1, NULL, NULL, 9, 2),
+(480, 3, '32782900_1375137660', 'product-one-7.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(481, 3, 'product/3/9', 'layered-category/piu-venduti/product-one-5.html', 'catalog/product/view/id/3/category/9', 1, NULL, NULL, 9, 3),
+(483, 3, '36577100_1375137660', 'product-one-8.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(484, 3, 'product/4/9', 'layered-category/piu-venduti/product-one-6.html', 'catalog/product/view/id/4/category/9', 1, NULL, NULL, 9, 4),
+(485, 4, 'category/9', 'layered-category/piu-venduti.html', 'catalog/category/view/id/9', 1, NULL, NULL, 9, NULL),
+(487, 4, '48627600_1375137660', 'product-one-6.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(488, 4, 'product/2/9', 'layered-category/piu-venduti/product-one.html', 'catalog/product/view/id/2/category/9', 1, NULL, NULL, 9, 2),
+(490, 4, '52267700_1375137660', 'product-one-7.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(491, 4, 'product/3/9', 'layered-category/piu-venduti/product-one-5.html', 'catalog/product/view/id/3/category/9', 1, NULL, NULL, 9, 3),
+(493, 4, '56379100_1375137660', 'product-one-8.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(494, 4, 'product/4/9', 'layered-category/piu-venduti/product-one-6.html', 'catalog/product/view/id/4/category/9', 1, NULL, NULL, 9, 4),
+(495, 1, 'category/10', 'layered-category/piu-cliccati.html', 'catalog/category/view/id/10', 1, NULL, NULL, 10, NULL),
+(497, 1, '59488200_1375137699', 'product-one-10.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(498, 1, 'product/3/10', 'layered-category/piu-cliccati/product-one.html', 'catalog/product/view/id/3/category/10', 1, NULL, NULL, 10, 3),
+(500, 1, '68742400_1375137699', 'product-one-11.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(501, 1, 'product/4/10', 'layered-category/piu-cliccati/product-one-5.html', 'catalog/product/view/id/4/category/10', 1, NULL, NULL, 10, 4),
+(503, 1, 'product/5/10', 'layered-category/piu-cliccati/product-four.html', 'catalog/product/view/id/5/category/10', 1, NULL, NULL, 10, 5),
+(504, 2, 'category/10', 'layered-category/piu-cliccati.html', 'catalog/category/view/id/10', 1, NULL, NULL, 10, NULL),
+(506, 2, '86619300_1375137699', 'product-one-10.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(507, 2, 'product/3/10', 'layered-category/piu-cliccati/product-one.html', 'catalog/product/view/id/3/category/10', 1, NULL, NULL, 10, 3),
+(509, 2, '90891600_1375137699', 'product-one-11.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(510, 2, 'product/4/10', 'layered-category/piu-cliccati/product-one-5.html', 'catalog/product/view/id/4/category/10', 1, NULL, NULL, 10, 4),
+(512, 2, 'product/5/10', 'layered-category/piu-cliccati/product-four.html', 'catalog/product/view/id/5/category/10', 1, NULL, NULL, 10, 5),
+(513, 3, 'category/10', 'layered-category/piu-cliccati.html', 'catalog/category/view/id/10', 1, NULL, NULL, 10, NULL),
+(515, 3, '07194100_1375137700', 'product-one-10.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(516, 3, 'product/3/10', 'layered-category/piu-cliccati/product-one.html', 'catalog/product/view/id/3/category/10', 1, NULL, NULL, 10, 3),
+(518, 3, '12245000_1375137700', 'product-one-11.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(519, 3, 'product/4/10', 'layered-category/piu-cliccati/product-one-5.html', 'catalog/product/view/id/4/category/10', 1, NULL, NULL, 10, 4),
+(521, 3, 'product/5/10', 'layered-category/piu-cliccati/product-four.html', 'catalog/product/view/id/5/category/10', 1, NULL, NULL, 10, 5),
+(522, 4, 'category/10', 'layered-category/piu-cliccati.html', 'catalog/category/view/id/10', 1, NULL, NULL, 10, NULL),
+(524, 4, '27056700_1375137700', 'product-one-10.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(525, 4, 'product/3/10', 'layered-category/piu-cliccati/product-one.html', 'catalog/product/view/id/3/category/10', 1, NULL, NULL, 10, 3),
+(527, 4, '32016300_1375137700', 'product-one-11.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(528, 4, 'product/4/10', 'layered-category/piu-cliccati/product-one-5.html', 'catalog/product/view/id/4/category/10', 1, NULL, NULL, 10, 4),
+(530, 4, 'product/5/10', 'layered-category/piu-cliccati/product-four.html', 'catalog/product/view/id/5/category/10', 1, NULL, NULL, 10, 5),
+(546, 1, '10378000_1375139282', 'product-one-9.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(548, 1, '13942500_1375139282', 'new/product-one-6.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(550, 1, '16483500_1375139282', 'nero-line/product-one-6.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(552, 1, '19174400_1375139282', 'nero-line/livello-1/product-one-6.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(554, 1, '21660100_1375139282', 'nero-line/livello-2/product-one-6.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(556, 1, '24631200_1375139282', 'nero-line/livello-3/product-one-6.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(559, 1, '28395400_1375139282', 'product-one-12.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(561, 1, '32212400_1375139282', 'new/product-one-7.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(563, 1, '34682000_1375139282', 'nero-line/product-one-7.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(565, 1, '37571000_1375139282', 'nero-line/livello-1/product-one-7.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(567, 1, '40132300_1375139282', 'nero-line/livello-2/product-one-7.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(569, 1, '43083500_1375139282', 'nero-line/livello-3/product-one-7.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(571, 1, '45536900_1375139282', 'layered-category/piu-venduti/product-one-3.html', 'layered-category/piu-venduti/product-one-5.html', 0, 'RP', NULL, 9, 3),
+(574, 1, '49399500_1375139282', 'product-one-13.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(576, 1, '52857400_1375139282', 'new/product-one-8.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(578, 1, '55371600_1375139282', 'nero-line/product-one-8.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(580, 1, '58189100_1375139282', 'nero-line/livello-1/product-one-8.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(582, 1, '60911900_1375139282', 'nero-line/livello-2/product-one-8.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(584, 1, '64812500_1375139282', 'nero-line/livello-3/product-one-8.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(586, 1, '68762200_1375139282', 'layered-category/piu-venduti/product-one-4.html', 'layered-category/piu-venduti/product-one-6.html', 0, 'RP', NULL, 9, 4),
+(588, 1, '71384900_1375139282', 'layered-category/piu-cliccati/product-one-4.html', 'layered-category/piu-cliccati/product-one-5.html', 0, 'RP', NULL, 10, 4),
+(611, 2, '11130900_1375139283', 'product-one-9.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(613, 2, '13713300_1375139283', 'new/product-one-6.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(615, 2, '16305600_1375139283', 'nero-line/product-one-6.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(617, 2, '19011800_1375139283', 'nero-line/livello-1/product-one-6.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(619, 2, '21562500_1375139283', 'nero-line/livello-2/product-one-6.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(621, 2, '24261300_1375139283', 'nero-line/livello-3/product-one-6.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(624, 2, '27994000_1375139283', 'product-one-12.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(626, 2, '30725400_1375139283', 'new/product-one-7.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(628, 2, '33267100_1375139283', 'nero-line/product-one-7.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(630, 2, '36023800_1375139283', 'nero-line/livello-1/product-one-7.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(632, 2, '38887500_1375139283', 'nero-line/livello-2/product-one-7.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(634, 2, '41582200_1375139283', 'nero-line/livello-3/product-one-7.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(636, 2, '44000500_1375139283', 'layered-category/piu-venduti/product-one-3.html', 'layered-category/piu-venduti/product-one-5.html', 0, 'RP', NULL, 9, 3),
+(639, 2, '47885200_1375139283', 'product-one-13.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(641, 2, '50770200_1375139283', 'new/product-one-8.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(643, 2, '54179400_1375139283', 'nero-line/product-one-8.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(645, 2, '65106200_1375139283', 'nero-line/livello-1/product-one-8.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(647, 2, '73238200_1375139283', 'nero-line/livello-2/product-one-8.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(649, 2, '81374100_1375139283', 'nero-line/livello-3/product-one-8.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(651, 2, '89033800_1375139283', 'layered-category/piu-venduti/product-one-4.html', 'layered-category/piu-venduti/product-one-6.html', 0, 'RP', NULL, 9, 4),
+(653, 2, '92679600_1375139283', 'layered-category/piu-cliccati/product-one-4.html', 'layered-category/piu-cliccati/product-one-5.html', 0, 'RP', NULL, 10, 4),
+(676, 3, '51270500_1375139284', 'product-one-9.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(678, 3, '55588000_1375139284', 'new/product-one-6.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(680, 3, '60111700_1375139284', 'nero-line/product-one-6.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(682, 3, '63817300_1375139284', 'nero-line/livello-1/product-one-6.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(684, 3, '67682100_1375139284', 'nero-line/livello-2/product-one-6.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(686, 3, '71366500_1375139284', 'nero-line/livello-3/product-one-6.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(689, 3, '77088000_1375139284', 'product-one-12.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(691, 3, '80927200_1375139284', 'new/product-one-7.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(693, 3, '85066100_1375139284', 'nero-line/product-one-7.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(695, 3, '88923500_1375139284', 'nero-line/livello-1/product-one-7.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(697, 3, '93228200_1375139284', 'nero-line/livello-2/product-one-7.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(699, 3, '97113800_1375139284', 'nero-line/livello-3/product-one-7.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(701, 3, '01600400_1375139285', 'layered-category/piu-venduti/product-one-3.html', 'layered-category/piu-venduti/product-one-5.html', 0, 'RP', NULL, 9, 3),
+(704, 3, '07276700_1375139285', 'product-one-13.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(706, 3, '11533000_1375139285', 'new/product-one-8.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(708, 3, '15572600_1375139285', 'nero-line/product-one-8.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(710, 3, '19448200_1375139285', 'nero-line/livello-1/product-one-8.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(712, 3, '23728800_1375139285', 'nero-line/livello-2/product-one-8.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(714, 3, '27781600_1375139285', 'nero-line/livello-3/product-one-8.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(716, 3, '31813900_1375139285', 'layered-category/piu-venduti/product-one-4.html', 'layered-category/piu-venduti/product-one-6.html', 0, 'RP', NULL, 9, 4),
+(718, 3, '35686100_1375139285', 'layered-category/piu-cliccati/product-one-4.html', 'layered-category/piu-cliccati/product-one-5.html', 0, 'RP', NULL, 10, 4),
+(741, 4, '85840100_1375139285', 'product-one-9.html', 'product-one-14.html', 0, 'RP', NULL, NULL, 2),
+(743, 4, '88830900_1375139285', 'new/product-one-6.html', 'new/product-one-9.html', 0, 'RP', NULL, 3, 2),
+(745, 4, '91650100_1375139285', 'nero-line/product-one-6.html', 'nero-line/product-one-9.html', 0, 'RP', NULL, 4, 2),
+(747, 4, '94295700_1375139285', 'nero-line/livello-1/product-one-6.html', 'nero-line/livello-1/product-one-9.html', 0, 'RP', NULL, 5, 2),
+(749, 4, '97497900_1375139285', 'nero-line/livello-2/product-one-6.html', 'nero-line/livello-2/product-one-9.html', 0, 'RP', NULL, 6, 2),
+(751, 4, '00452800_1375139286', 'nero-line/livello-3/product-one-6.html', 'nero-line/livello-3/product-one-9.html', 0, 'RP', NULL, 7, 2),
+(754, 4, '04671100_1375139286', 'product-one-12.html', 'product-one-15.html', 0, 'RP', NULL, NULL, 3),
+(756, 4, '07665400_1375139286', 'new/product-one-7.html', 'new/product-one-10.html', 0, 'RP', NULL, 3, 3),
+(758, 4, '10464700_1375139286', 'nero-line/product-one-7.html', 'nero-line/product-one-10.html', 0, 'RP', NULL, 4, 3),
+(760, 4, '13599400_1375139286', 'nero-line/livello-1/product-one-7.html', 'nero-line/livello-1/product-one-10.html', 0, 'RP', NULL, 5, 3),
+(762, 4, '16428800_1375139286', 'nero-line/livello-2/product-one-7.html', 'nero-line/livello-2/product-one-10.html', 0, 'RP', NULL, 6, 3),
+(764, 4, '19250200_1375139286', 'nero-line/livello-3/product-one-7.html', 'nero-line/livello-3/product-one-10.html', 0, 'RP', NULL, 7, 3),
+(766, 4, '22180300_1375139286', 'layered-category/piu-venduti/product-one-3.html', 'layered-category/piu-venduti/product-one-5.html', 0, 'RP', NULL, 9, 3),
+(769, 4, '26402900_1375139286', 'product-one-13.html', 'product-one-16.html', 0, 'RP', NULL, NULL, 4),
+(771, 4, '29174700_1375139286', 'new/product-one-8.html', 'new/product-one-11.html', 0, 'RP', NULL, 3, 4),
+(773, 4, '32104000_1375139286', 'nero-line/product-one-8.html', 'nero-line/product-one-11.html', 0, 'RP', NULL, 4, 4),
+(775, 4, '35074000_1375139286', 'nero-line/livello-1/product-one-8.html', 'nero-line/livello-1/product-one-11.html', 0, 'RP', NULL, 5, 4),
+(777, 4, '38038100_1375139286', 'nero-line/livello-2/product-one-8.html', 'nero-line/livello-2/product-one-11.html', 0, 'RP', NULL, 6, 4),
+(779, 4, '41075000_1375139286', 'nero-line/livello-3/product-one-8.html', 'nero-line/livello-3/product-one-11.html', 0, 'RP', NULL, 7, 4),
+(781, 4, '43895600_1375139286', 'layered-category/piu-venduti/product-one-4.html', 'layered-category/piu-venduti/product-one-6.html', 0, 'RP', NULL, 9, 4),
+(783, 4, '46549900_1375139286', 'layered-category/piu-cliccati/product-one-4.html', 'layered-category/piu-cliccati/product-one-5.html', 0, 'RP', NULL, 10, 4);
 
 -- --------------------------------------------------------
 
@@ -4624,7 +5014,7 @@ INSERT INTO `core_url_rewrite` (`url_rewrite_id`, `store_id`, `id_path`, `reques
 -- Struttura della tabella `core_variable`
 --
 
-CREATE TABLE `core_variable` (
+CREATE TABLE IF NOT EXISTS `core_variable` (
   `variable_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Variable Id',
   `code` varchar(255) DEFAULT NULL COMMENT 'Variable Code',
   `name` varchar(255) DEFAULT NULL COMMENT 'Variable Name',
@@ -4638,7 +5028,7 @@ CREATE TABLE `core_variable` (
 -- Struttura della tabella `core_variable_value`
 --
 
-CREATE TABLE `core_variable_value` (
+CREATE TABLE IF NOT EXISTS `core_variable_value` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Variable Value Id',
   `variable_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Variable Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
@@ -4656,7 +5046,7 @@ CREATE TABLE `core_variable_value` (
 -- Struttura della tabella `core_website`
 --
 
-CREATE TABLE `core_website` (
+CREATE TABLE IF NOT EXISTS `core_website` (
   `website_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Website Id',
   `code` varchar(32) DEFAULT NULL COMMENT 'Code',
   `name` varchar(64) DEFAULT NULL COMMENT 'Website Name',
@@ -4683,7 +5073,7 @@ INSERT INTO `core_website` (`website_id`, `code`, `name`, `sort_order`, `default
 -- Struttura della tabella `coupon_aggregated`
 --
 
-CREATE TABLE `coupon_aggregated` (
+CREATE TABLE IF NOT EXISTS `coupon_aggregated` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date NOT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -4709,7 +5099,7 @@ CREATE TABLE `coupon_aggregated` (
 -- Struttura della tabella `coupon_aggregated_order`
 --
 
-CREATE TABLE `coupon_aggregated_order` (
+CREATE TABLE IF NOT EXISTS `coupon_aggregated_order` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date NOT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -4732,7 +5122,7 @@ CREATE TABLE `coupon_aggregated_order` (
 -- Struttura della tabella `coupon_aggregated_updated`
 --
 
-CREATE TABLE `coupon_aggregated_updated` (
+CREATE TABLE IF NOT EXISTS `coupon_aggregated_updated` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date NOT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -4758,7 +5148,7 @@ CREATE TABLE `coupon_aggregated_updated` (
 -- Struttura della tabella `cron_schedule`
 --
 
-CREATE TABLE `cron_schedule` (
+CREATE TABLE IF NOT EXISTS `cron_schedule` (
   `schedule_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Schedule Id',
   `job_code` varchar(255) NOT NULL DEFAULT '0' COMMENT 'Job Code',
   `status` varchar(7) NOT NULL DEFAULT 'pending' COMMENT 'Status',
@@ -4778,7 +5168,7 @@ CREATE TABLE `cron_schedule` (
 -- Struttura della tabella `customer_address_entity`
 --
 
-CREATE TABLE `customer_address_entity` (
+CREATE TABLE IF NOT EXISTS `customer_address_entity` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
@@ -4797,7 +5187,7 @@ CREATE TABLE `customer_address_entity` (
 -- Struttura della tabella `customer_address_entity_datetime`
 --
 
-CREATE TABLE `customer_address_entity_datetime` (
+CREATE TABLE IF NOT EXISTS `customer_address_entity_datetime` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -4817,7 +5207,7 @@ CREATE TABLE `customer_address_entity_datetime` (
 -- Struttura della tabella `customer_address_entity_decimal`
 --
 
-CREATE TABLE `customer_address_entity_decimal` (
+CREATE TABLE IF NOT EXISTS `customer_address_entity_decimal` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -4837,7 +5227,7 @@ CREATE TABLE `customer_address_entity_decimal` (
 -- Struttura della tabella `customer_address_entity_int`
 --
 
-CREATE TABLE `customer_address_entity_int` (
+CREATE TABLE IF NOT EXISTS `customer_address_entity_int` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -4857,7 +5247,7 @@ CREATE TABLE `customer_address_entity_int` (
 -- Struttura della tabella `customer_address_entity_text`
 --
 
-CREATE TABLE `customer_address_entity_text` (
+CREATE TABLE IF NOT EXISTS `customer_address_entity_text` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -4876,7 +5266,7 @@ CREATE TABLE `customer_address_entity_text` (
 -- Struttura della tabella `customer_address_entity_varchar`
 --
 
-CREATE TABLE `customer_address_entity_varchar` (
+CREATE TABLE IF NOT EXISTS `customer_address_entity_varchar` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -4896,7 +5286,7 @@ CREATE TABLE `customer_address_entity_varchar` (
 -- Struttura della tabella `customer_eav_attribute`
 --
 
-CREATE TABLE `customer_eav_attribute` (
+CREATE TABLE IF NOT EXISTS `customer_eav_attribute` (
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute Id',
   `is_visible` smallint(5) unsigned NOT NULL DEFAULT '1' COMMENT 'Is Visible',
   `input_filter` varchar(255) DEFAULT NULL COMMENT 'Input Filter',
@@ -4960,7 +5350,7 @@ INSERT INTO `customer_eav_attribute` (`attribute_id`, `is_visible`, `input_filte
 -- Struttura della tabella `customer_eav_attribute_website`
 --
 
-CREATE TABLE `customer_eav_attribute_website` (
+CREATE TABLE IF NOT EXISTS `customer_eav_attribute_website` (
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `is_visible` smallint(5) unsigned DEFAULT NULL COMMENT 'Is Visible',
@@ -4977,7 +5367,7 @@ CREATE TABLE `customer_eav_attribute_website` (
 -- Struttura della tabella `customer_entity`
 --
 
-CREATE TABLE `customer_entity` (
+CREATE TABLE IF NOT EXISTS `customer_entity` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
@@ -5003,7 +5393,7 @@ CREATE TABLE `customer_entity` (
 -- Struttura della tabella `customer_entity_datetime`
 --
 
-CREATE TABLE `customer_entity_datetime` (
+CREATE TABLE IF NOT EXISTS `customer_entity_datetime` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -5023,7 +5413,7 @@ CREATE TABLE `customer_entity_datetime` (
 -- Struttura della tabella `customer_entity_decimal`
 --
 
-CREATE TABLE `customer_entity_decimal` (
+CREATE TABLE IF NOT EXISTS `customer_entity_decimal` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -5043,7 +5433,7 @@ CREATE TABLE `customer_entity_decimal` (
 -- Struttura della tabella `customer_entity_int`
 --
 
-CREATE TABLE `customer_entity_int` (
+CREATE TABLE IF NOT EXISTS `customer_entity_int` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -5063,7 +5453,7 @@ CREATE TABLE `customer_entity_int` (
 -- Struttura della tabella `customer_entity_text`
 --
 
-CREATE TABLE `customer_entity_text` (
+CREATE TABLE IF NOT EXISTS `customer_entity_text` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -5082,7 +5472,7 @@ CREATE TABLE `customer_entity_text` (
 -- Struttura della tabella `customer_entity_varchar`
 --
 
-CREATE TABLE `customer_entity_varchar` (
+CREATE TABLE IF NOT EXISTS `customer_entity_varchar` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -5102,7 +5492,7 @@ CREATE TABLE `customer_entity_varchar` (
 -- Struttura della tabella `customer_form_attribute`
 --
 
-CREATE TABLE `customer_form_attribute` (
+CREATE TABLE IF NOT EXISTS `customer_form_attribute` (
   `form_code` varchar(32) NOT NULL COMMENT 'Form Code',
   `attribute_id` smallint(5) unsigned NOT NULL COMMENT 'Attribute Id',
   PRIMARY KEY (`form_code`,`attribute_id`),
@@ -5215,7 +5605,7 @@ INSERT INTO `customer_form_attribute` (`form_code`, `attribute_id`) VALUES
 -- Struttura della tabella `customer_group`
 --
 
-CREATE TABLE `customer_group` (
+CREATE TABLE IF NOT EXISTS `customer_group` (
   `customer_group_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Customer Group Id',
   `customer_group_code` varchar(32) NOT NULL COMMENT 'Customer Group Code',
   `tax_class_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Tax Class Id',
@@ -5238,7 +5628,7 @@ INSERT INTO `customer_group` (`customer_group_id`, `customer_group_code`, `tax_c
 -- Struttura della tabella `dataflow_batch`
 --
 
-CREATE TABLE `dataflow_batch` (
+CREATE TABLE IF NOT EXISTS `dataflow_batch` (
   `batch_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Batch Id',
   `profile_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Profile ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
@@ -5257,7 +5647,7 @@ CREATE TABLE `dataflow_batch` (
 -- Struttura della tabella `dataflow_batch_export`
 --
 
-CREATE TABLE `dataflow_batch_export` (
+CREATE TABLE IF NOT EXISTS `dataflow_batch_export` (
   `batch_export_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Batch Export Id',
   `batch_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Batch Id',
   `batch_data` longtext COMMENT 'Batch Data',
@@ -5272,7 +5662,7 @@ CREATE TABLE `dataflow_batch_export` (
 -- Struttura della tabella `dataflow_batch_import`
 --
 
-CREATE TABLE `dataflow_batch_import` (
+CREATE TABLE IF NOT EXISTS `dataflow_batch_import` (
   `batch_import_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Batch Import Id',
   `batch_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Batch Id',
   `batch_data` longtext COMMENT 'Batch Data',
@@ -5287,7 +5677,7 @@ CREATE TABLE `dataflow_batch_import` (
 -- Struttura della tabella `dataflow_import_data`
 --
 
-CREATE TABLE `dataflow_import_data` (
+CREATE TABLE IF NOT EXISTS `dataflow_import_data` (
   `import_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Import Id',
   `session_id` int(11) DEFAULT NULL COMMENT 'Session Id',
   `serial_number` int(11) NOT NULL DEFAULT '0' COMMENT 'Serial Number',
@@ -5303,7 +5693,7 @@ CREATE TABLE `dataflow_import_data` (
 -- Struttura della tabella `dataflow_profile`
 --
 
-CREATE TABLE `dataflow_profile` (
+CREATE TABLE IF NOT EXISTS `dataflow_profile` (
   `profile_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Profile Id',
   `name` varchar(255) DEFAULT NULL COMMENT 'Name',
   `created_at` timestamp NULL DEFAULT NULL COMMENT 'Created At',
@@ -5335,7 +5725,7 @@ INSERT INTO `dataflow_profile` (`profile_id`, `name`, `created_at`, `updated_at`
 -- Struttura della tabella `dataflow_profile_history`
 --
 
-CREATE TABLE `dataflow_profile_history` (
+CREATE TABLE IF NOT EXISTS `dataflow_profile_history` (
   `history_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'History Id',
   `profile_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Profile Id',
   `action_code` varchar(64) DEFAULT NULL COMMENT 'Action Code',
@@ -5363,7 +5753,7 @@ INSERT INTO `dataflow_profile_history` (`history_id`, `profile_id`, `action_code
 -- Struttura della tabella `dataflow_session`
 --
 
-CREATE TABLE `dataflow_session` (
+CREATE TABLE IF NOT EXISTS `dataflow_session` (
   `session_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Session Id',
   `user_id` int(11) NOT NULL COMMENT 'User Id',
   `created_date` timestamp NULL DEFAULT NULL COMMENT 'Created Date',
@@ -5380,7 +5770,7 @@ CREATE TABLE `dataflow_session` (
 -- Struttura della tabella `design_change`
 --
 
-CREATE TABLE `design_change` (
+CREATE TABLE IF NOT EXISTS `design_change` (
   `design_change_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Design Change Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `design` varchar(255) DEFAULT NULL COMMENT 'Design',
@@ -5396,7 +5786,7 @@ CREATE TABLE `design_change` (
 -- Struttura della tabella `directory_country`
 --
 
-CREATE TABLE `directory_country` (
+CREATE TABLE IF NOT EXISTS `directory_country` (
   `country_id` varchar(2) NOT NULL DEFAULT '' COMMENT 'Country Id in ISO-2',
   `iso2_code` varchar(2) DEFAULT NULL COMMENT 'Country ISO-2 format',
   `iso3_code` varchar(3) DEFAULT NULL COMMENT 'Country ISO-3',
@@ -5661,7 +6051,7 @@ INSERT INTO `directory_country` (`country_id`, `iso2_code`, `iso3_code`) VALUES
 -- Struttura della tabella `directory_country_format`
 --
 
-CREATE TABLE `directory_country_format` (
+CREATE TABLE IF NOT EXISTS `directory_country_format` (
   `country_format_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Country Format Id',
   `country_id` varchar(2) DEFAULT NULL COMMENT 'Country Id in ISO-2',
   `type` varchar(30) DEFAULT NULL COMMENT 'Country Format Type',
@@ -5676,7 +6066,7 @@ CREATE TABLE `directory_country_format` (
 -- Struttura della tabella `directory_country_region`
 --
 
-CREATE TABLE `directory_country_region` (
+CREATE TABLE IF NOT EXISTS `directory_country_region` (
   `region_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Region Id',
   `country_id` varchar(4) NOT NULL DEFAULT '0' COMMENT 'Country Id in ISO-2',
   `code` varchar(32) DEFAULT NULL COMMENT 'Region code',
@@ -6181,7 +6571,7 @@ INSERT INTO `directory_country_region` (`region_id`, `country_id`, `code`, `defa
 -- Struttura della tabella `directory_country_region_name`
 --
 
-CREATE TABLE `directory_country_region_name` (
+CREATE TABLE IF NOT EXISTS `directory_country_region_name` (
   `locale` varchar(8) NOT NULL DEFAULT '' COMMENT 'Locale',
   `region_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Region Id',
   `name` varchar(255) DEFAULT NULL COMMENT 'Region Name',
@@ -6685,7 +7075,7 @@ INSERT INTO `directory_country_region_name` (`locale`, `region_id`, `name`) VALU
 -- Struttura della tabella `directory_currency_rate`
 --
 
-CREATE TABLE `directory_currency_rate` (
+CREATE TABLE IF NOT EXISTS `directory_currency_rate` (
   `currency_from` varchar(3) NOT NULL DEFAULT '' COMMENT 'Currency Code Convert From',
   `currency_to` varchar(3) NOT NULL DEFAULT '' COMMENT 'Currency Code Convert To',
   `rate` decimal(24,12) NOT NULL DEFAULT '0.000000000000' COMMENT 'Currency Conversion Rate',
@@ -6698,10 +7088,10 @@ CREATE TABLE `directory_currency_rate` (
 --
 
 INSERT INTO `directory_currency_rate` (`currency_from`, `currency_to`, `rate`) VALUES
-('EUR', 'EUR', 1.000000000000),
-('EUR', 'USD', 1.415000000000),
-('USD', 'EUR', 0.706700000000),
-('USD', 'USD', 1.000000000000);
+('EUR', 'EUR', '1.000000000000'),
+('EUR', 'USD', '1.415000000000'),
+('USD', 'EUR', '0.706700000000'),
+('USD', 'USD', '1.000000000000');
 
 -- --------------------------------------------------------
 
@@ -6709,7 +7099,7 @@ INSERT INTO `directory_currency_rate` (`currency_from`, `currency_to`, `rate`) V
 -- Struttura della tabella `downloadable_link`
 --
 
-CREATE TABLE `downloadable_link` (
+CREATE TABLE IF NOT EXISTS `downloadable_link` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Link ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `sort_order` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Sort order',
@@ -6732,7 +7122,7 @@ CREATE TABLE `downloadable_link` (
 -- Struttura della tabella `downloadable_link_price`
 --
 
-CREATE TABLE `downloadable_link_price` (
+CREATE TABLE IF NOT EXISTS `downloadable_link_price` (
   `price_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Price ID',
   `link_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Link ID',
   `website_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Website ID',
@@ -6748,7 +7138,7 @@ CREATE TABLE `downloadable_link_price` (
 -- Struttura della tabella `downloadable_link_purchased`
 --
 
-CREATE TABLE `downloadable_link_purchased` (
+CREATE TABLE IF NOT EXISTS `downloadable_link_purchased` (
   `purchased_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Purchased ID',
   `order_id` int(10) unsigned DEFAULT '0' COMMENT 'Order ID',
   `order_increment_id` varchar(50) DEFAULT NULL COMMENT 'Order Increment ID',
@@ -6771,7 +7161,7 @@ CREATE TABLE `downloadable_link_purchased` (
 -- Struttura della tabella `downloadable_link_purchased_item`
 --
 
-CREATE TABLE `downloadable_link_purchased_item` (
+CREATE TABLE IF NOT EXISTS `downloadable_link_purchased_item` (
   `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item ID',
   `purchased_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Purchased ID',
   `order_item_id` int(10) unsigned DEFAULT '0' COMMENT 'Order Item ID',
@@ -6800,7 +7190,7 @@ CREATE TABLE `downloadable_link_purchased_item` (
 -- Struttura della tabella `downloadable_link_title`
 --
 
-CREATE TABLE `downloadable_link_title` (
+CREATE TABLE IF NOT EXISTS `downloadable_link_title` (
   `title_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Title ID',
   `link_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Link ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
@@ -6817,7 +7207,7 @@ CREATE TABLE `downloadable_link_title` (
 -- Struttura della tabella `downloadable_sample`
 --
 
-CREATE TABLE `downloadable_sample` (
+CREATE TABLE IF NOT EXISTS `downloadable_sample` (
   `sample_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Sample ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
   `sample_url` varchar(255) DEFAULT NULL COMMENT 'Sample URL',
@@ -6834,7 +7224,7 @@ CREATE TABLE `downloadable_sample` (
 -- Struttura della tabella `downloadable_sample_title`
 --
 
-CREATE TABLE `downloadable_sample_title` (
+CREATE TABLE IF NOT EXISTS `downloadable_sample_title` (
   `title_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Title ID',
   `sample_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Sample ID',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
@@ -6851,7 +7241,7 @@ CREATE TABLE `downloadable_sample_title` (
 -- Struttura della tabella `eav_attribute`
 --
 
-CREATE TABLE `eav_attribute` (
+CREATE TABLE IF NOT EXISTS `eav_attribute` (
   `attribute_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_code` varchar(255) DEFAULT NULL COMMENT 'Attribute Code',
@@ -6872,7 +7262,7 @@ CREATE TABLE `eav_attribute` (
   PRIMARY KEY (`attribute_id`),
   UNIQUE KEY `UNQ_EAV_ATTRIBUTE_ENTITY_TYPE_ID_ATTRIBUTE_CODE` (`entity_type_id`,`attribute_code`),
   KEY `IDX_EAV_ATTRIBUTE_ENTITY_TYPE_ID` (`entity_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute' AUTO_INCREMENT=144 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute' AUTO_INCREMENT=145 ;
 
 --
 -- Dump dei dati per la tabella `eav_attribute`
@@ -6959,7 +7349,7 @@ INSERT INTO `eav_attribute` (`attribute_id`, `entity_type_id`, `attribute_code`,
 (78, 4, 'special_to_date', NULL, 'eav/entity_attribute_backend_datetime', 'datetime', NULL, NULL, 'date', 'Special Price To Date', NULL, NULL, 0, 0, NULL, 0, NULL),
 (79, 4, 'cost', NULL, 'catalog/product_attribute_backend_price', 'decimal', NULL, NULL, 'price', 'Cost', NULL, NULL, 0, 1, NULL, 0, NULL),
 (80, 4, 'weight', NULL, NULL, 'decimal', NULL, NULL, 'weight', 'Weight', NULL, NULL, 1, 0, NULL, 0, NULL),
-(81, 4, 'manufacturer', NULL, NULL, 'int', NULL, NULL, 'select', 'Manufacturer', NULL, NULL, 0, 1, NULL, 0, NULL),
+(81, 4, 'manufacturer', NULL, NULL, 'int', NULL, NULL, 'select', 'Manufacturer', NULL, NULL, 0, 1, '', 0, NULL),
 (82, 4, 'meta_title', NULL, NULL, 'varchar', NULL, NULL, 'text', 'Meta Title', NULL, NULL, 0, 0, NULL, 0, NULL),
 (83, 4, 'meta_keyword', NULL, NULL, 'text', NULL, NULL, 'textarea', 'Meta Keywords', NULL, NULL, 0, 0, NULL, 0, NULL),
 (84, 4, 'meta_description', NULL, NULL, 'varchar', NULL, NULL, 'textarea', 'Meta Description', NULL, NULL, 0, 0, NULL, 0, 'Maximum 255 chars'),
@@ -6970,7 +7360,7 @@ INSERT INTO `eav_attribute` (`attribute_id`, `entity_type_id`, `attribute_code`,
 (89, 4, 'old_id', NULL, NULL, 'int', NULL, NULL, 'text', NULL, NULL, NULL, 0, 0, NULL, 0, NULL),
 (90, 4, 'group_price', NULL, 'catalog/product_attribute_backend_groupprice', 'decimal', NULL, NULL, 'text', 'Group Price', NULL, NULL, 0, 0, NULL, 0, NULL),
 (91, 4, 'tier_price', NULL, 'catalog/product_attribute_backend_tierprice', 'decimal', NULL, NULL, 'text', 'Tier Price', NULL, NULL, 0, 0, NULL, 0, NULL),
-(92, 4, 'color', NULL, NULL, 'int', NULL, NULL, 'select', 'Color', NULL, NULL, 0, 1, NULL, 0, NULL),
+(92, 4, 'color', NULL, NULL, 'int', NULL, NULL, 'select', 'Color', NULL, NULL, 0, 1, '', 0, NULL),
 (93, 4, 'news_from_date', NULL, 'eav/entity_attribute_backend_datetime', 'datetime', NULL, NULL, 'date', 'Set Product as New from Date', NULL, NULL, 0, 0, NULL, 0, NULL),
 (94, 4, 'news_to_date', NULL, 'eav/entity_attribute_backend_datetime', 'datetime', NULL, NULL, 'date', 'Set Product as New to Date', NULL, NULL, 0, 0, NULL, 0, NULL),
 (95, 4, 'gallery', NULL, NULL, 'varchar', NULL, NULL, 'gallery', 'Image Gallery', NULL, NULL, 0, 0, NULL, 0, NULL),
@@ -7020,7 +7410,8 @@ INSERT INTO `eav_attribute` (`attribute_id`, `entity_type_id`, `attribute_code`,
 (139, 9, 'default_mask0', NULL, NULL, 'static', NULL, NULL, 'hidden', NULL, NULL, NULL, 1, 0, NULL, 0, NULL),
 (140, 9, 'name', NULL, NULL, 'varchar', NULL, NULL, 'text', 'Name', NULL, NULL, 1, 0, NULL, 0, NULL),
 (142, 4, 'image_view_home', NULL, NULL, 'varchar', NULL, NULL, 'media_image', 'Imagine da visualizzare nella griglia in home', NULL, NULL, 0, 1, NULL, 0, NULL),
-(143, 4, 'view_in_home', NULL, NULL, 'int', NULL, NULL, 'boolean', 'Visualizzo in Home Page', NULL, 'eav/entity_attribute_source_boolean', 0, 1, '0', 0, NULL);
+(143, 4, 'view_in_home', NULL, NULL, 'int', NULL, NULL, 'boolean', 'Visualizzo in Home Page', NULL, 'eav/entity_attribute_source_boolean', 0, 1, '0', 0, NULL),
+(144, 3, 'idx_type', NULL, NULL, 'int', NULL, NULL, 'select', 'Index Type', NULL, NULL, 0, 0, '0', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -7028,7 +7419,7 @@ INSERT INTO `eav_attribute` (`attribute_id`, `entity_type_id`, `attribute_code`,
 -- Struttura della tabella `eav_attribute_group`
 --
 
-CREATE TABLE `eav_attribute_group` (
+CREATE TABLE IF NOT EXISTS `eav_attribute_group` (
   `attribute_group_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Group Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
   `attribute_group_name` varchar(255) DEFAULT NULL COMMENT 'Attribute Group Name',
@@ -7069,7 +7460,7 @@ INSERT INTO `eav_attribute_group` (`attribute_group_id`, `attribute_set_id`, `at
 -- Struttura della tabella `eav_attribute_label`
 --
 
-CREATE TABLE `eav_attribute_label` (
+CREATE TABLE IF NOT EXISTS `eav_attribute_label` (
   `attribute_label_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Label Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
@@ -7086,13 +7477,13 @@ CREATE TABLE `eav_attribute_label` (
 -- Struttura della tabella `eav_attribute_option`
 --
 
-CREATE TABLE `eav_attribute_option` (
+CREATE TABLE IF NOT EXISTS `eav_attribute_option` (
   `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
   `sort_order` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Sort Order',
   PRIMARY KEY (`option_id`),
   KEY `IDX_EAV_ATTRIBUTE_OPTION_ATTRIBUTE_ID` (`attribute_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Option' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Option' AUTO_INCREMENT=19 ;
 
 --
 -- Dump dei dati per la tabella `eav_attribute_option`
@@ -7100,7 +7491,23 @@ CREATE TABLE `eav_attribute_option` (
 
 INSERT INTO `eav_attribute_option` (`option_id`, `attribute_id`, `sort_order`) VALUES
 (1, 18, 0),
-(2, 18, 1);
+(2, 18, 1),
+(3, 92, 0),
+(4, 92, 0),
+(5, 92, 0),
+(6, 92, 0),
+(7, 92, 0),
+(8, 92, 0),
+(9, 81, 0),
+(10, 81, 0),
+(11, 81, 0),
+(12, 81, 0),
+(13, 144, 0),
+(14, 144, 0),
+(15, 144, 0),
+(16, 144, 0),
+(17, 144, 0),
+(18, 144, 0);
 
 -- --------------------------------------------------------
 
@@ -7108,7 +7515,7 @@ INSERT INTO `eav_attribute_option` (`option_id`, `attribute_id`, `sort_order`) V
 -- Struttura della tabella `eav_attribute_option_value`
 --
 
-CREATE TABLE `eav_attribute_option_value` (
+CREATE TABLE IF NOT EXISTS `eav_attribute_option_value` (
   `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `option_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Option Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
@@ -7116,7 +7523,7 @@ CREATE TABLE `eav_attribute_option_value` (
   PRIMARY KEY (`value_id`),
   KEY `IDX_EAV_ATTRIBUTE_OPTION_VALUE_OPTION_ID` (`option_id`),
   KEY `IDX_EAV_ATTRIBUTE_OPTION_VALUE_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Option Value' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Option Value' AUTO_INCREMENT=19 ;
 
 --
 -- Dump dei dati per la tabella `eav_attribute_option_value`
@@ -7124,7 +7531,23 @@ CREATE TABLE `eav_attribute_option_value` (
 
 INSERT INTO `eav_attribute_option_value` (`value_id`, `option_id`, `store_id`, `value`) VALUES
 (1, 1, 0, 'Male'),
-(2, 2, 0, 'Female');
+(2, 2, 0, 'Female'),
+(3, 3, 0, 'Arancio'),
+(4, 4, 0, 'Rosa'),
+(5, 5, 0, 'Verde'),
+(6, 6, 0, 'Blu'),
+(7, 7, 0, 'Rosso'),
+(8, 8, 0, 'Bianco'),
+(9, 9, 0, 'produttore ello'),
+(10, 10, 0, 'produttore illo'),
+(11, 11, 0, 'produttore me'),
+(12, 12, 0, 'produttore io'),
+(13, 13, 0, 'Prodotti più visti'),
+(14, 14, 0, 'Prodotti inviati ad amici'),
+(15, 15, 0, 'Prodotti aggiunti al confronto'),
+(16, 16, 0, 'Prodotti aggiunti al carrello'),
+(17, 17, 0, 'Prodtti aggiunti alla wish list'),
+(18, 18, 0, 'Wishlist condivise');
 
 -- --------------------------------------------------------
 
@@ -7132,7 +7555,7 @@ INSERT INTO `eav_attribute_option_value` (`value_id`, `option_id`, `store_id`, `
 -- Struttura della tabella `eav_attribute_set`
 --
 
-CREATE TABLE `eav_attribute_set` (
+CREATE TABLE IF NOT EXISTS `eav_attribute_set` (
   `attribute_set_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Set Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_set_name` varchar(255) DEFAULT NULL COMMENT 'Attribute Set Name',
@@ -7163,7 +7586,7 @@ INSERT INTO `eav_attribute_set` (`attribute_set_id`, `entity_type_id`, `attribut
 -- Struttura della tabella `eav_entity`
 --
 
-CREATE TABLE `eav_entity` (
+CREATE TABLE IF NOT EXISTS `eav_entity` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
@@ -7184,7 +7607,7 @@ CREATE TABLE `eav_entity` (
 -- Struttura della tabella `eav_entity_attribute`
 --
 
-CREATE TABLE `eav_entity_attribute` (
+CREATE TABLE IF NOT EXISTS `eav_entity_attribute` (
   `entity_attribute_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Attribute Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Set Id',
@@ -7196,7 +7619,7 @@ CREATE TABLE `eav_entity_attribute` (
   UNIQUE KEY `UNQ_EAV_ENTITY_ATTRIBUTE_ATTRIBUTE_GROUP_ID_ATTRIBUTE_ID` (`attribute_group_id`,`attribute_id`),
   KEY `IDX_EAV_ENTITY_ATTRIBUTE_ATTRIBUTE_SET_ID_SORT_ORDER` (`attribute_set_id`,`sort_order`),
   KEY `IDX_EAV_ENTITY_ATTRIBUTE_ATTRIBUTE_ID` (`attribute_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Entity Attributes' AUTO_INCREMENT=397 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Eav Entity Attributes' AUTO_INCREMENT=489 ;
 
 --
 -- Dump dei dati per la tabella `eav_entity_attribute`
@@ -7300,49 +7723,53 @@ INSERT INTO `eav_entity_attribute` (`entity_attribute_id`, `entity_type_id`, `at
 (136, 9, 9, 18, 138, 5),
 (137, 9, 9, 18, 139, 6),
 (138, 9, 9, 18, 140, 7),
-(312, 4, 4, 7, 71, 1),
-(314, 4, 4, 7, 72, 2),
-(316, 4, 4, 7, 73, 3),
-(318, 4, 4, 7, 74, 4),
-(320, 4, 4, 7, 80, 5),
-(322, 4, 4, 7, 93, 6),
-(324, 4, 4, 7, 94, 7),
-(326, 4, 4, 7, 96, 8),
-(328, 4, 4, 7, 97, 9),
-(330, 4, 4, 7, 102, 10),
-(332, 4, 4, 7, 117, 11),
-(334, 4, 4, 8, 75, 1),
-(336, 4, 4, 8, 76, 3),
-(338, 4, 4, 8, 77, 4),
-(340, 4, 4, 8, 78, 5),
-(342, 4, 4, 8, 79, 6),
-(344, 4, 4, 8, 90, 2),
-(346, 4, 4, 8, 91, 7),
-(348, 4, 4, 8, 118, 8),
-(350, 4, 4, 8, 119, 9),
-(352, 4, 4, 8, 120, 10),
-(354, 4, 4, 8, 121, 11),
-(356, 4, 4, 8, 122, 12),
-(358, 4, 4, 8, 127, 13),
-(360, 4, 4, 9, 82, 1),
-(362, 4, 4, 9, 83, 2),
-(364, 4, 4, 9, 84, 3),
-(366, 4, 4, 10, 85, 1),
-(368, 4, 4, 10, 86, 2),
-(370, 4, 4, 10, 87, 3),
-(372, 4, 4, 10, 88, 5),
-(374, 4, 4, 10, 95, 6),
-(376, 4, 4, 10, 142, 4),
-(378, 4, 4, 11, 100, 1),
-(380, 4, 4, 11, 101, 2),
-(382, 4, 4, 12, 103, 2),
-(384, 4, 4, 12, 104, 3),
-(386, 4, 4, 12, 105, 4),
-(388, 4, 4, 12, 106, 5),
-(390, 4, 4, 12, 107, 6),
-(392, 4, 4, 12, 109, 7),
-(394, 4, 4, 12, 143, 1),
-(396, 4, 4, 17, 123, 1);
+(398, 4, 4, 7, 71, 1),
+(400, 4, 4, 7, 72, 2),
+(402, 4, 4, 7, 73, 3),
+(404, 4, 4, 7, 74, 4),
+(406, 4, 4, 7, 80, 5),
+(408, 4, 4, 7, 81, 13),
+(410, 4, 4, 7, 92, 12),
+(412, 4, 4, 7, 93, 6),
+(414, 4, 4, 7, 94, 7),
+(416, 4, 4, 7, 96, 8),
+(418, 4, 4, 7, 97, 9),
+(420, 4, 4, 7, 102, 10),
+(422, 4, 4, 7, 117, 11),
+(424, 4, 4, 8, 75, 1),
+(426, 4, 4, 8, 76, 3),
+(428, 4, 4, 8, 77, 4),
+(430, 4, 4, 8, 78, 5),
+(432, 4, 4, 8, 79, 6),
+(434, 4, 4, 8, 90, 2),
+(436, 4, 4, 8, 91, 7),
+(438, 4, 4, 8, 118, 8),
+(440, 4, 4, 8, 119, 9),
+(442, 4, 4, 8, 120, 10),
+(444, 4, 4, 8, 121, 11),
+(446, 4, 4, 8, 122, 12),
+(448, 4, 4, 8, 127, 13),
+(450, 4, 4, 9, 82, 1),
+(452, 4, 4, 9, 83, 2),
+(454, 4, 4, 9, 84, 3),
+(456, 4, 4, 10, 85, 1),
+(458, 4, 4, 10, 86, 2),
+(460, 4, 4, 10, 87, 3),
+(462, 4, 4, 10, 88, 5),
+(464, 4, 4, 10, 95, 6),
+(466, 4, 4, 10, 142, 4),
+(468, 4, 4, 11, 100, 1),
+(470, 4, 4, 11, 101, 2),
+(472, 4, 4, 12, 103, 2),
+(474, 4, 4, 12, 104, 3),
+(476, 4, 4, 12, 105, 4),
+(478, 4, 4, 12, 106, 5),
+(480, 4, 4, 12, 107, 6),
+(482, 4, 4, 12, 109, 7),
+(484, 4, 4, 12, 143, 1),
+(486, 4, 4, 17, 123, 1),
+(487, 3, 3, 3, 144, 1),
+(488, 3, 3, 3, 0, 11);
 
 -- --------------------------------------------------------
 
@@ -7350,7 +7777,7 @@ INSERT INTO `eav_entity_attribute` (`entity_attribute_id`, `entity_type_id`, `at
 -- Struttura della tabella `eav_entity_datetime`
 --
 
-CREATE TABLE `eav_entity_datetime` (
+CREATE TABLE IF NOT EXISTS `eav_entity_datetime` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -7373,7 +7800,7 @@ CREATE TABLE `eav_entity_datetime` (
 -- Struttura della tabella `eav_entity_decimal`
 --
 
-CREATE TABLE `eav_entity_decimal` (
+CREATE TABLE IF NOT EXISTS `eav_entity_decimal` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -7396,7 +7823,7 @@ CREATE TABLE `eav_entity_decimal` (
 -- Struttura della tabella `eav_entity_int`
 --
 
-CREATE TABLE `eav_entity_int` (
+CREATE TABLE IF NOT EXISTS `eav_entity_int` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -7419,7 +7846,7 @@ CREATE TABLE `eav_entity_int` (
 -- Struttura della tabella `eav_entity_store`
 --
 
-CREATE TABLE `eav_entity_store` (
+CREATE TABLE IF NOT EXISTS `eav_entity_store` (
   `entity_store_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Store Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
@@ -7436,7 +7863,7 @@ CREATE TABLE `eav_entity_store` (
 -- Struttura della tabella `eav_entity_text`
 --
 
-CREATE TABLE `eav_entity_text` (
+CREATE TABLE IF NOT EXISTS `eav_entity_text` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -7457,7 +7884,7 @@ CREATE TABLE `eav_entity_text` (
 -- Struttura della tabella `eav_entity_type`
 --
 
-CREATE TABLE `eav_entity_type` (
+CREATE TABLE IF NOT EXISTS `eav_entity_type` (
   `entity_type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Type Id',
   `entity_type_code` varchar(50) NOT NULL COMMENT 'Entity Type Code',
   `entity_model` varchar(255) NOT NULL COMMENT 'Entity Model',
@@ -7499,7 +7926,7 @@ INSERT INTO `eav_entity_type` (`entity_type_id`, `entity_type_code`, `entity_mod
 -- Struttura della tabella `eav_entity_varchar`
 --
 
-CREATE TABLE `eav_entity_varchar` (
+CREATE TABLE IF NOT EXISTS `eav_entity_varchar` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
@@ -7522,7 +7949,7 @@ CREATE TABLE `eav_entity_varchar` (
 -- Struttura della tabella `eav_form_element`
 --
 
-CREATE TABLE `eav_form_element` (
+CREATE TABLE IF NOT EXISTS `eav_form_element` (
   `element_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Element Id',
   `type_id` smallint(5) unsigned NOT NULL COMMENT 'Type Id',
   `fieldset_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Fieldset Id',
@@ -7599,7 +8026,7 @@ INSERT INTO `eav_form_element` (`element_id`, `type_id`, `fieldset_id`, `attribu
 -- Struttura della tabella `eav_form_fieldset`
 --
 
-CREATE TABLE `eav_form_fieldset` (
+CREATE TABLE IF NOT EXISTS `eav_form_fieldset` (
   `fieldset_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Fieldset Id',
   `type_id` smallint(5) unsigned NOT NULL COMMENT 'Type Id',
   `code` varchar(64) NOT NULL COMMENT 'Code',
@@ -7623,7 +8050,7 @@ INSERT INTO `eav_form_fieldset` (`fieldset_id`, `type_id`, `code`, `sort_order`)
 -- Struttura della tabella `eav_form_fieldset_label`
 --
 
-CREATE TABLE `eav_form_fieldset_label` (
+CREATE TABLE IF NOT EXISTS `eav_form_fieldset_label` (
   `fieldset_id` smallint(5) unsigned NOT NULL COMMENT 'Fieldset Id',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id',
   `label` varchar(255) NOT NULL COMMENT 'Label',
@@ -7646,7 +8073,7 @@ INSERT INTO `eav_form_fieldset_label` (`fieldset_id`, `store_id`, `label`) VALUE
 -- Struttura della tabella `eav_form_type`
 --
 
-CREATE TABLE `eav_form_type` (
+CREATE TABLE IF NOT EXISTS `eav_form_type` (
   `type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Type Id',
   `code` varchar(64) NOT NULL COMMENT 'Code',
   `label` varchar(255) NOT NULL COMMENT 'Label',
@@ -7675,7 +8102,7 @@ INSERT INTO `eav_form_type` (`type_id`, `code`, `label`, `is_system`, `theme`, `
 -- Struttura della tabella `eav_form_type_entity`
 --
 
-CREATE TABLE `eav_form_type_entity` (
+CREATE TABLE IF NOT EXISTS `eav_form_type_entity` (
   `type_id` smallint(5) unsigned NOT NULL COMMENT 'Type Id',
   `entity_type_id` smallint(5) unsigned NOT NULL COMMENT 'Entity Type Id',
   PRIMARY KEY (`type_id`,`entity_type_id`),
@@ -7702,7 +8129,7 @@ INSERT INTO `eav_form_type_entity` (`type_id`, `entity_type_id`) VALUES
 -- Struttura della tabella `gift_message`
 --
 
-CREATE TABLE `gift_message` (
+CREATE TABLE IF NOT EXISTS `gift_message` (
   `gift_message_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'GiftMessage Id',
   `customer_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer id',
   `sender` varchar(255) DEFAULT NULL COMMENT 'Sender',
@@ -7717,7 +8144,7 @@ CREATE TABLE `gift_message` (
 -- Struttura della tabella `googlecheckout_notification`
 --
 
-CREATE TABLE `googlecheckout_notification` (
+CREATE TABLE IF NOT EXISTS `googlecheckout_notification` (
   `serial_number` varchar(64) NOT NULL COMMENT 'Serial Number',
   `started_at` timestamp NULL DEFAULT NULL COMMENT 'Started At',
   `status` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Status',
@@ -7730,7 +8157,7 @@ CREATE TABLE `googlecheckout_notification` (
 -- Struttura della tabella `importexport_importdata`
 --
 
-CREATE TABLE `importexport_importdata` (
+CREATE TABLE IF NOT EXISTS `importexport_importdata` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `entity` varchar(50) NOT NULL COMMENT 'Entity',
   `behavior` varchar(10) NOT NULL DEFAULT 'append' COMMENT 'Behavior',
@@ -7744,7 +8171,7 @@ CREATE TABLE `importexport_importdata` (
 -- Struttura della tabella `index_event`
 --
 
-CREATE TABLE `index_event` (
+CREATE TABLE IF NOT EXISTS `index_event` (
   `event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Event Id',
   `type` varchar(64) NOT NULL COMMENT 'Type',
   `entity` varchar(64) NOT NULL COMMENT 'Entity',
@@ -7754,7 +8181,7 @@ CREATE TABLE `index_event` (
   `new_data` mediumtext COMMENT 'New Data',
   PRIMARY KEY (`event_id`),
   UNIQUE KEY `UNQ_INDEX_EVENT_TYPE_ENTITY_ENTITY_PK` (`type`,`entity`,`entity_pk`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Index Event' AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Index Event' AUTO_INCREMENT=36 ;
 
 --
 -- Dump dei dati per la tabella `index_event`
@@ -7767,7 +8194,7 @@ INSERT INTO `index_event` (`event_id`, `type`, `entity`, `entity_pk`, `created_a
 (4, 'save', 'core_store', 3, '2013-07-08 03:03:01', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
 (5, 'save', 'core_store', 4, '2013-07-08 03:03:26', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
 (6, 'save', 'catalog_category', 3, '2013-07-08 03:06:30', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
-(7, 'save', 'catalog_category', 4, '2013-07-08 03:07:02', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(7, 'save', 'catalog_category', 4, '2013-07-08 03:07:02', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
 (8, 'save', 'cataloginventory_stock_item', 1, '2013-07-08 03:08:28', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
 (9, 'save', 'catalog_product', 1, '2013-07-08 03:08:30', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
 (10, 'catalog_reindex_price', 'catalog_product', 1, '2013-07-08 03:08:30', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
@@ -7789,7 +8216,13 @@ INSERT INTO `index_event` (`event_id`, `type`, `entity`, `entity_pk`, `created_a
 (26, 'catalog_reindex_price', 'catalog_product', 5, '2013-07-26 08:42:21', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
 (27, 'catalog_reindex_price', 'catalog_product', 3, '2013-07-26 08:43:40', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
 (28, 'delete', 'catalog_eav_attribute', 141, '2013-07-26 08:53:04', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:1;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";s:1:"0";}'),
-(29, 'save', 'catalog_eav_attribute', 143, '2013-07-26 08:53:40', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:1;}');
+(29, 'save', 'catalog_eav_attribute', 143, '2013-07-26 08:53:40', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(30, 'save', 'catalog_eav_attribute', 117, '2013-07-28 06:13:58', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(31, 'save', 'catalog_eav_attribute', 92, '2013-07-28 06:18:00', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(32, 'save', 'catalog_eav_attribute', 81, '2013-07-28 06:18:55', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}'),
+(33, 'save', 'catalog_category', 8, '2013-07-29 20:34:16', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(34, 'save', 'catalog_category', 9, '2013-07-29 20:41:00', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}'),
+(35, 'save', 'catalog_category', 10, '2013-07-29 20:41:40', NULL, 'a:6:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
 
 -- --------------------------------------------------------
 
@@ -7797,7 +8230,7 @@ INSERT INTO `index_event` (`event_id`, `type`, `entity`, `entity_pk`, `created_a
 -- Struttura della tabella `index_process`
 --
 
-CREATE TABLE `index_process` (
+CREATE TABLE IF NOT EXISTS `index_process` (
   `process_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Process Id',
   `indexer_code` varchar(32) NOT NULL COMMENT 'Indexer Code',
   `status` varchar(15) NOT NULL DEFAULT 'pending' COMMENT 'Status',
@@ -7813,16 +8246,16 @@ CREATE TABLE `index_process` (
 --
 
 INSERT INTO `index_process` (`process_id`, `indexer_code`, `status`, `started_at`, `ended_at`, `mode`) VALUES
-(1, 'catalog_product_attribute', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(2, 'catalog_product_price', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(3, 'catalog_url', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(4, 'catalog_product_flat', 'require_reindex', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(5, 'catalog_category_flat', 'pending', '2013-07-26 08:45:18', '2013-07-26 08:45:19', 'real_time'),
-(6, 'catalog_category_product', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(7, 'catalogsearch_fulltext', 'require_reindex', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(8, 'cataloginventory_stock', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(9, 'tag_summary', 'pending', '2013-07-26 11:19:27', '2013-07-26 11:19:27', 'real_time'),
-(10, 'mana_db_replicator', 'pending', '2013-07-26 08:45:20', '2013-07-26 08:45:20', 'real_time');
+(1, 'catalog_product_attribute', 'pending', '2013-07-29 21:07:59', '2013-07-29 21:08:00', 'real_time'),
+(2, 'catalog_product_price', 'pending', '2013-07-29 21:08:00', '2013-07-29 21:08:01', 'real_time'),
+(3, 'catalog_url', 'pending', '2013-07-29 21:08:01', '2013-07-29 21:08:06', 'real_time'),
+(4, 'catalog_product_flat', 'pending', '2013-07-29 21:08:06', '2013-07-29 21:08:25', 'real_time'),
+(5, 'catalog_category_flat', 'pending', '2013-07-29 21:08:25', '2013-07-29 21:08:26', 'real_time'),
+(6, 'catalog_category_product', 'pending', '2013-07-29 21:08:26', '2013-07-29 21:08:26', 'real_time'),
+(7, 'catalogsearch_fulltext', 'pending', '2013-07-29 21:08:27', '2013-07-29 21:08:29', 'real_time'),
+(8, 'cataloginventory_stock', 'pending', '2013-07-29 21:07:58', '2013-07-29 21:07:59', 'real_time'),
+(9, 'tag_summary', 'pending', '2013-07-29 21:08:29', '2013-07-29 21:08:29', 'real_time'),
+(10, 'mana_db_replicator', 'pending', '2013-07-29 21:08:29', '2013-07-29 21:08:30', 'real_time');
 
 -- --------------------------------------------------------
 
@@ -7830,7 +8263,7 @@ INSERT INTO `index_process` (`process_id`, `indexer_code`, `status`, `started_at
 -- Struttura della tabella `index_process_event`
 --
 
-CREATE TABLE `index_process_event` (
+CREATE TABLE IF NOT EXISTS `index_process_event` (
   `process_id` int(10) unsigned NOT NULL COMMENT 'Process Id',
   `event_id` bigint(20) unsigned NOT NULL COMMENT 'Event Id',
   `status` varchar(7) NOT NULL DEFAULT 'new' COMMENT 'Status',
@@ -7844,7 +8277,7 @@ CREATE TABLE `index_process_event` (
 -- Struttura della tabella `log_customer`
 --
 
-CREATE TABLE `log_customer` (
+CREATE TABLE IF NOT EXISTS `log_customer` (
   `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Log ID',
   `visitor_id` bigint(20) unsigned DEFAULT NULL COMMENT 'Visitor ID',
   `customer_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Customer ID',
@@ -7861,7 +8294,7 @@ CREATE TABLE `log_customer` (
 -- Struttura della tabella `log_quote`
 --
 
-CREATE TABLE `log_quote` (
+CREATE TABLE IF NOT EXISTS `log_quote` (
   `quote_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Quote ID',
   `visitor_id` bigint(20) unsigned DEFAULT NULL COMMENT 'Visitor ID',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Creation Time',
@@ -7875,7 +8308,7 @@ CREATE TABLE `log_quote` (
 -- Struttura della tabella `log_summary`
 --
 
-CREATE TABLE `log_summary` (
+CREATE TABLE IF NOT EXISTS `log_summary` (
   `summary_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Summary ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   `type_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Type ID',
@@ -7891,7 +8324,7 @@ CREATE TABLE `log_summary` (
 -- Struttura della tabella `log_summary_type`
 --
 
-CREATE TABLE `log_summary_type` (
+CREATE TABLE IF NOT EXISTS `log_summary_type` (
   `type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Type ID',
   `type_code` varchar(64) DEFAULT NULL COMMENT 'Type Code',
   `period` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Period',
@@ -7913,7 +8346,7 @@ INSERT INTO `log_summary_type` (`type_id`, `type_code`, `period`, `period_type`)
 -- Struttura della tabella `log_url`
 --
 
-CREATE TABLE `log_url` (
+CREATE TABLE IF NOT EXISTS `log_url` (
   `url_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'URL ID',
   `visitor_id` bigint(20) unsigned DEFAULT NULL COMMENT 'Visitor ID',
   `visit_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Visit Time',
@@ -8599,7 +9032,247 @@ INSERT INTO `log_url` (`url_id`, `visitor_id`, `visit_time`) VALUES
 (671, 33, '2013-07-26 12:18:24'),
 (672, 33, '2013-07-26 12:18:27'),
 (673, 33, '2013-07-26 12:23:32'),
-(674, 33, '2013-07-26 12:23:35');
+(674, 33, '2013-07-26 12:23:35'),
+(675, 34, '2013-07-27 08:19:26'),
+(676, 34, '2013-07-27 08:21:18'),
+(677, 34, '2013-07-27 08:21:22'),
+(678, 34, '2013-07-27 08:21:44'),
+(679, 34, '2013-07-27 08:21:53'),
+(680, 34, '2013-07-27 08:22:05'),
+(681, 34, '2013-07-27 08:32:37'),
+(682, 35, '2013-07-28 06:11:04'),
+(683, 35, '2013-07-28 06:11:09'),
+(684, 35, '2013-07-28 06:11:51'),
+(685, 35, '2013-07-28 06:12:27'),
+(686, 35, '2013-07-28 06:21:39'),
+(687, 35, '2013-07-28 06:21:46'),
+(688, 35, '2013-07-28 06:21:52'),
+(689, 35, '2013-07-28 06:26:59'),
+(690, 35, '2013-07-28 06:27:41'),
+(691, 35, '2013-07-28 06:35:55'),
+(692, 35, '2013-07-28 06:41:52'),
+(693, 35, '2013-07-28 06:45:55'),
+(694, 35, '2013-07-28 06:48:13'),
+(695, 35, '2013-07-28 06:49:32'),
+(696, 35, '2013-07-28 06:50:04'),
+(697, 35, '2013-07-28 06:50:16'),
+(698, 35, '2013-07-28 06:50:50'),
+(699, 35, '2013-07-28 06:51:19'),
+(700, 35, '2013-07-28 06:52:25'),
+(701, 35, '2013-07-28 06:52:40'),
+(702, 35, '2013-07-28 06:54:44'),
+(703, 35, '2013-07-28 06:54:57'),
+(704, 35, '2013-07-28 06:55:04'),
+(705, 35, '2013-07-28 06:56:56'),
+(706, 35, '2013-07-28 06:57:29'),
+(707, 35, '2013-07-28 06:58:20'),
+(708, 35, '2013-07-28 06:58:35'),
+(709, 35, '2013-07-28 06:58:43'),
+(710, 35, '2013-07-28 06:59:55'),
+(711, 35, '2013-07-28 07:12:09'),
+(712, 35, '2013-07-28 07:12:56'),
+(713, 35, '2013-07-28 07:14:27'),
+(714, 35, '2013-07-28 07:20:13'),
+(715, 35, '2013-07-28 07:22:44'),
+(716, 35, '2013-07-28 07:23:39'),
+(717, 35, '2013-07-28 07:24:27'),
+(718, 35, '2013-07-28 07:31:27'),
+(719, 35, '2013-07-28 07:31:45'),
+(720, 35, '2013-07-28 07:40:48'),
+(721, 35, '2013-07-28 07:42:42'),
+(722, 35, '2013-07-28 07:44:22'),
+(723, 35, '2013-07-28 07:45:27'),
+(724, 35, '2013-07-28 07:45:42'),
+(725, 35, '2013-07-28 07:46:34'),
+(726, 35, '2013-07-28 07:48:11'),
+(727, 35, '2013-07-28 07:51:21'),
+(728, 35, '2013-07-28 07:52:03'),
+(729, 35, '2013-07-28 07:52:20'),
+(730, 35, '2013-07-28 07:52:56'),
+(731, 35, '2013-07-28 07:54:16'),
+(732, 35, '2013-07-28 07:54:22'),
+(733, 35, '2013-07-28 07:54:36'),
+(734, 35, '2013-07-28 08:03:11'),
+(735, 35, '2013-07-28 08:03:15'),
+(736, 35, '2013-07-28 08:03:20'),
+(737, 35, '2013-07-28 08:03:24'),
+(738, 35, '2013-07-28 08:03:27'),
+(739, 35, '2013-07-28 08:03:47'),
+(740, 35, '2013-07-28 08:03:54'),
+(741, 35, '2013-07-28 08:04:01'),
+(742, 35, '2013-07-28 08:05:07'),
+(743, 35, '2013-07-28 08:05:42'),
+(744, 35, '2013-07-28 08:05:48'),
+(745, 35, '2013-07-28 08:05:52'),
+(746, 35, '2013-07-28 08:05:59'),
+(747, 35, '2013-07-28 08:06:00'),
+(748, 35, '2013-07-28 08:06:04'),
+(749, 35, '2013-07-28 08:06:05'),
+(750, 35, '2013-07-28 08:06:45'),
+(751, 35, '2013-07-28 08:06:53'),
+(752, 35, '2013-07-28 08:07:00'),
+(753, 35, '2013-07-28 08:07:09'),
+(754, 35, '2013-07-28 08:07:15'),
+(755, 36, '2013-07-28 08:08:13'),
+(756, 35, '2013-07-28 08:10:16'),
+(757, 35, '2013-07-28 08:10:26'),
+(758, 35, '2013-07-28 08:10:30'),
+(759, 35, '2013-07-28 08:10:48'),
+(760, 35, '2013-07-28 08:10:51'),
+(761, 35, '2013-07-28 08:13:51'),
+(762, 35, '2013-07-28 08:14:00'),
+(763, 35, '2013-07-28 08:14:20'),
+(764, 35, '2013-07-28 08:14:27'),
+(765, 35, '2013-07-28 08:14:32'),
+(766, 35, '2013-07-28 08:17:51'),
+(767, 35, '2013-07-28 08:20:30'),
+(768, 35, '2013-07-28 08:23:18'),
+(769, 35, '2013-07-28 08:23:50'),
+(770, 35, '2013-07-28 08:24:05'),
+(771, 35, '2013-07-28 08:24:46'),
+(772, 35, '2013-07-28 08:25:11'),
+(773, 35, '2013-07-28 08:25:26'),
+(774, 35, '2013-07-28 08:26:20'),
+(775, 35, '2013-07-28 08:26:42'),
+(776, 35, '2013-07-28 08:29:47'),
+(777, 35, '2013-07-28 08:29:54'),
+(778, 35, '2013-07-28 08:40:26'),
+(779, 35, '2013-07-28 08:43:05'),
+(780, 35, '2013-07-28 08:43:56'),
+(781, 35, '2013-07-28 08:44:11'),
+(782, 35, '2013-07-28 08:44:34'),
+(783, 35, '2013-07-28 08:46:52'),
+(784, 37, '2013-07-28 10:57:26'),
+(785, 37, '2013-07-28 11:06:05'),
+(786, 37, '2013-07-28 11:06:30'),
+(787, 37, '2013-07-28 11:10:13'),
+(788, 37, '2013-07-28 11:11:40'),
+(789, 37, '2013-07-28 11:12:00'),
+(790, 37, '2013-07-28 11:12:58'),
+(791, 37, '2013-07-28 11:14:32'),
+(792, 37, '2013-07-28 11:18:29'),
+(793, 37, '2013-07-28 11:18:53'),
+(794, 37, '2013-07-28 11:19:01'),
+(795, 37, '2013-07-28 11:19:54'),
+(796, 37, '2013-07-28 11:23:27'),
+(797, 37, '2013-07-28 11:51:58'),
+(798, 37, '2013-07-28 11:55:56'),
+(799, 37, '2013-07-28 11:56:24'),
+(800, 37, '2013-07-28 11:57:37'),
+(801, 37, '2013-07-28 11:57:52'),
+(802, 37, '2013-07-28 11:58:10'),
+(803, 37, '2013-07-28 11:58:18'),
+(804, 37, '2013-07-28 11:59:47'),
+(805, 37, '2013-07-28 12:02:15'),
+(806, 37, '2013-07-28 12:02:23'),
+(807, 37, '2013-07-28 12:02:41'),
+(808, 37, '2013-07-28 12:05:29'),
+(809, 37, '2013-07-28 12:06:20'),
+(810, 37, '2013-07-28 12:06:44'),
+(811, 37, '2013-07-28 12:07:02'),
+(812, 37, '2013-07-28 12:07:10'),
+(813, 37, '2013-07-28 12:07:38'),
+(814, 37, '2013-07-28 12:07:49'),
+(815, 37, '2013-07-28 12:08:17'),
+(816, 37, '2013-07-28 12:08:35'),
+(817, 37, '2013-07-28 12:08:41'),
+(818, 37, '2013-07-28 12:08:47'),
+(819, 37, '2013-07-28 12:13:23'),
+(820, 37, '2013-07-28 12:14:28'),
+(821, 37, '2013-07-28 12:15:27'),
+(822, 37, '2013-07-28 12:19:22'),
+(823, 37, '2013-07-28 12:19:51'),
+(824, 37, '2013-07-28 12:22:18'),
+(825, 38, '2013-07-29 00:21:58'),
+(826, 38, '2013-07-29 00:39:41'),
+(827, 38, '2013-07-29 00:42:41'),
+(828, 38, '2013-07-29 00:43:42'),
+(829, 38, '2013-07-29 00:46:58'),
+(830, 38, '2013-07-29 00:48:28'),
+(831, 38, '2013-07-29 00:50:42'),
+(832, 38, '2013-07-29 00:52:28'),
+(833, 38, '2013-07-29 00:53:36'),
+(834, 38, '2013-07-29 00:53:56'),
+(835, 38, '2013-07-29 00:56:19'),
+(836, 38, '2013-07-29 00:58:00'),
+(837, 38, '2013-07-29 01:04:25'),
+(838, 38, '2013-07-29 01:05:05'),
+(839, 38, '2013-07-29 01:05:33'),
+(840, 38, '2013-07-29 01:06:06'),
+(841, 38, '2013-07-29 01:08:02'),
+(842, 38, '2013-07-29 01:10:59'),
+(843, 38, '2013-07-29 01:12:20'),
+(844, 38, '2013-07-29 01:14:12'),
+(845, 38, '2013-07-29 01:18:29'),
+(846, 38, '2013-07-29 01:24:35'),
+(847, 38, '2013-07-29 01:24:48'),
+(848, 38, '2013-07-29 01:45:45'),
+(849, 38, '2013-07-29 01:49:42'),
+(850, 38, '2013-07-29 01:49:57'),
+(851, 38, '2013-07-29 01:52:49'),
+(852, 38, '2013-07-29 01:55:15'),
+(853, 38, '2013-07-29 02:00:18'),
+(854, 38, '2013-07-29 02:02:02'),
+(855, 38, '2013-07-29 02:03:30'),
+(856, 38, '2013-07-29 02:04:29'),
+(857, 38, '2013-07-29 02:09:32'),
+(858, 38, '2013-07-29 02:23:57'),
+(859, 38, '2013-07-29 02:27:32'),
+(860, 38, '2013-07-29 02:32:21'),
+(861, 38, '2013-07-29 02:32:42'),
+(862, 38, '2013-07-29 02:33:08'),
+(863, 38, '2013-07-29 02:33:12'),
+(864, 38, '2013-07-29 02:33:16'),
+(865, 38, '2013-07-29 02:50:22'),
+(866, 38, '2013-07-29 02:54:46'),
+(867, 38, '2013-07-29 03:13:35'),
+(868, 38, '2013-07-29 03:13:57'),
+(869, 38, '2013-07-29 03:14:05'),
+(870, 38, '2013-07-29 03:14:31'),
+(871, 38, '2013-07-29 03:14:53'),
+(872, 38, '2013-07-29 03:15:49'),
+(873, 38, '2013-07-29 03:24:49'),
+(874, 38, '2013-07-29 03:25:47'),
+(875, 38, '2013-07-29 03:26:51'),
+(876, 38, '2013-07-29 03:32:02'),
+(877, 38, '2013-07-29 03:32:16'),
+(878, 38, '2013-07-29 03:33:11'),
+(879, 38, '2013-07-29 03:33:45'),
+(880, 39, '2013-07-29 19:34:37'),
+(881, 39, '2013-07-29 19:34:41'),
+(882, 39, '2013-07-29 19:34:57'),
+(883, 39, '2013-07-29 19:35:00'),
+(884, 39, '2013-07-29 19:40:43'),
+(885, 39, '2013-07-29 19:40:47'),
+(886, 39, '2013-07-29 19:41:29'),
+(887, 39, '2013-07-29 19:41:43'),
+(888, 39, '2013-07-29 19:41:51'),
+(889, 39, '2013-07-29 19:58:23'),
+(890, 39, '2013-07-29 19:59:44'),
+(891, 39, '2013-07-29 20:04:23'),
+(892, 39, '2013-07-29 20:10:17'),
+(893, 39, '2013-07-29 20:11:55'),
+(894, 39, '2013-07-29 20:13:26'),
+(895, 39, '2013-07-29 20:17:01'),
+(896, 39, '2013-07-29 20:17:09'),
+(897, 39, '2013-07-29 20:19:42'),
+(898, 39, '2013-07-29 20:24:08'),
+(899, 39, '2013-07-29 20:24:32'),
+(900, 39, '2013-07-29 20:25:51'),
+(901, 39, '2013-07-29 20:27:00'),
+(902, 39, '2013-07-29 20:27:07'),
+(903, 40, '2013-07-29 21:29:54'),
+(904, 40, '2013-07-29 21:30:36'),
+(905, 40, '2013-07-29 21:31:08'),
+(906, 40, '2013-07-29 21:31:43'),
+(907, 40, '2013-07-29 21:33:16'),
+(908, 40, '2013-07-29 21:34:05'),
+(909, 40, '2013-07-29 21:34:59'),
+(910, 40, '2013-07-29 21:36:05'),
+(911, 40, '2013-07-29 21:36:14'),
+(912, 40, '2013-07-29 21:36:18'),
+(913, 40, '2013-07-29 21:36:21'),
+(914, 40, '2013-07-29 21:39:21');
 
 -- --------------------------------------------------------
 
@@ -8607,12 +9280,12 @@ INSERT INTO `log_url` (`url_id`, `visitor_id`, `visit_time`) VALUES
 -- Struttura della tabella `log_url_info`
 --
 
-CREATE TABLE `log_url_info` (
+CREATE TABLE IF NOT EXISTS `log_url_info` (
   `url_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'URL ID',
   `url` varchar(255) DEFAULT NULL COMMENT 'URL',
   `referer` varchar(255) DEFAULT NULL COMMENT 'Referrer',
   PRIMARY KEY (`url_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table' AUTO_INCREMENT=675 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table' AUTO_INCREMENT=915 ;
 
 --
 -- Dump dei dati per la tabella `log_url_info`
@@ -9292,7 +9965,248 @@ INSERT INTO `log_url_info` (`url_id`, `url`, `referer`) VALUES
 (671, 'http://veredus.dev/', NULL),
 (672, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
 (673, 'http://veredus.dev/', NULL),
-(674, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/');
+(674, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(675, 'http://veredus.dev/', NULL),
+(676, 'http://veredus.dev/', NULL),
+(677, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(678, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(679, 'http://veredus.dev/index.php/catalog/category/view/id/4?price=11%2C10', 'http://veredus.dev/index.php/nero-line.html'),
+(680, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?price=11%2C10'),
+(681, 'http://veredus.dev/index.php/checkout/cart/', 'http://veredus.dev/index.php/nero-line.html'),
+(682, 'http://veredus.dev/', NULL),
+(683, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(684, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(685, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(686, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(687, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10', 'http://veredus.dev/index.php/nero-line.html'),
+(688, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(689, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(690, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(691, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(692, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(693, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(694, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(695, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(696, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(697, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(698, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(699, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(700, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(701, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(702, 'http://veredus.dev/index.php/catalog/category/view/id/4?cat=7', 'http://veredus.dev/index.php/nero-line.html'),
+(703, 'http://veredus.dev/index.php/catalog/category/view/id/4', NULL),
+(704, 'http://veredus.dev/index.php/catalog/category/view/id/4', NULL),
+(705, 'http://veredus.dev/index.php/catalog/category/view/id/4', NULL),
+(706, 'http://veredus.dev/index.php/catalog/category/view/id/4', NULL),
+(707, 'http://veredus.dev/index.php/catalog/category/view/id/4', NULL),
+(708, 'http://veredus.dev/index.php/catalog/category/view/id/4', NULL),
+(709, 'http://veredus.dev/index.php/catalog/category/view/id/4', NULL),
+(710, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(711, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(712, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(713, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(714, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(715, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(716, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(717, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(718, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(719, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(720, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(721, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(722, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(723, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9', 'http://veredus.dev/index.php/nero-line.html'),
+(724, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=9_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=9'),
+(725, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=9_10'),
+(726, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10', 'http://veredus.dev/index.php/nero-line.html'),
+(727, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10', 'http://veredus.dev/index.php/nero-line.html'),
+(728, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10', 'http://veredus.dev/index.php/nero-line.html'),
+(729, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(730, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(731, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(732, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10_11'),
+(733, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(734, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(735, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10_11'),
+(736, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11'),
+(737, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10'),
+(738, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11'),
+(739, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11'),
+(740, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10&price=11%2C10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10'),
+(741, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10&price=11%2C10'),
+(742, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10&price=11%2C10'),
+(743, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10&price=11%2C10'),
+(744, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8&manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10'),
+(745, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=11_10'),
+(746, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8&manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10'),
+(747, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8&manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10'),
+(748, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8_4&manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=11_10'),
+(749, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8_4&manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=11_10'),
+(750, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8_4&manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=11_10'),
+(751, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8&manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?color=8_4&manufacturer=11_10'),
+(752, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=11_10'),
+(753, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10_9', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10'),
+(754, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10_9'),
+(755, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', NULL),
+(756, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=11_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10_9'),
+(757, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=11_10'),
+(758, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(759, 'http://veredus.dev/index.php/catalog/category/view/id/4?color=8&manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10_11'),
+(760, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=10_11'),
+(761, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=10_11'),
+(762, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_11', 'http://veredus.dev/index.php/nero-line.html?color=8&manufacturer=10_11'),
+(763, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10_11'),
+(764, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10', 'http://veredus.dev/index.php/nero-line.html'),
+(765, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(766, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(767, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(768, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10_12'),
+(769, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=10_12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10'),
+(770, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10_12'),
+(771, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=10_12'),
+(772, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(773, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12', 'http://veredus.dev/index.php/nero-line.html'),
+(774, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_10', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(775, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_10'),
+(776, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_10'),
+(777, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(778, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(779, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12');
+INSERT INTO `log_url_info` (`url_id`, `url`, `referer`) VALUES
+(780, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(781, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(782, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(783, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(784, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(785, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(786, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(787, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(788, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(789, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(790, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(791, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(792, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(793, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(794, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(795, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(796, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(797, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(798, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(799, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(800, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(801, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12'),
+(802, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11'),
+(803, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11'),
+(804, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11'),
+(805, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11'),
+(806, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=grid'),
+(807, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=list', NULL),
+(808, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=list', NULL),
+(809, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=list', NULL),
+(810, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=list', NULL),
+(811, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=list', NULL),
+(812, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(813, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=list', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=grid'),
+(814, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(815, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(816, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(817, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=list', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=grid'),
+(818, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(819, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(820, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(821, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(822, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(823, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(824, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(825, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(826, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(827, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(828, 'http://veredus.dev/index.php/catalogsearch/ajax/suggest/?q=Cerca%20nell''intero%20negozio...', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=grid'),
+(829, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(830, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(831, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(832, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(833, 'http://veredus.dev/index.php/catalog/category/view/id/4?manufacturer=12_11&mode=grid', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list'),
+(834, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=name', 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=grid'),
+(835, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(836, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(837, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(838, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(839, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(840, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(841, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(842, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(843, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(844, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(845, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(846, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(847, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(848, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=name'),
+(849, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=list&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=position'),
+(850, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(851, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(852, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(853, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(854, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(855, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(856, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(857, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(858, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(859, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(860, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(861, 'http://veredus.dev/index.php/catalog/product/view/id/3/category/4', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=position'),
+(862, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=12_11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=list&order=position'),
+(863, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&manufacturer=11&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=12_11&mode=grid&order=position'),
+(864, 'http://veredus.dev/index.php/catalog/category/view/id/4?dir=asc&mode=grid&order=position', 'http://veredus.dev/index.php/nero-line.html?dir=asc&manufacturer=11&mode=grid&order=position'),
+(865, 'http://veredus.dev/index.php/catalog/product/view/id/3/category/4', 'http://veredus.dev/index.php/nero-line.html?dir=asc&mode=grid&order=position'),
+(866, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/nero-line/product-one-7.html'),
+(867, 'http://veredus.dev/index.php/new-products.html', NULL),
+(868, 'http://veredus.dev/new-products.html', NULL),
+(869, 'http://veredus.dev/new-products/', NULL),
+(870, 'http://veredus.dev/new-products/', NULL),
+(871, 'http://veredus.dev/index.php/new-products/?___store=it', 'http://veredus.dev/index.php/admin/cms_page/index/key/254d50150916aa6a0c00652a32048ee4/'),
+(872, 'http://veredus.dev/new-products/', NULL),
+(873, 'http://veredus.dev/new-products/', NULL),
+(874, 'http://veredus.dev/new-products/', NULL),
+(875, 'http://veredus.dev/new-products/', NULL),
+(876, 'http://veredus.dev/new-products/', NULL),
+(877, 'http://veredus.dev/new-products/', NULL),
+(878, 'http://veredus.dev/new-products/', NULL),
+(879, 'http://veredus.dev/new-products/', NULL),
+(880, 'http://veredus.dev/', NULL),
+(881, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(882, 'http://veredus.dev/', NULL),
+(883, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(884, 'http://veredus.dev/', NULL),
+(885, 'http://veredus.dev/index.php/media/slider-bg-2.gif', 'http://veredus.dev/'),
+(886, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/'),
+(887, 'http://veredus.dev/index.php/new-products.html', NULL),
+(888, 'http://veredus.dev/index.php/new-products/', NULL),
+(889, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(890, 'http://veredus.dev/index.php/new-products/', NULL),
+(891, 'http://veredus.dev/index.php/new-products/', NULL),
+(892, 'http://veredus.dev/index.php/new-products/', NULL),
+(893, 'http://veredus.dev/index.php/new-products/', NULL),
+(894, 'http://veredus.dev/index.php/new-products/', NULL),
+(895, 'http://veredus.dev/index.php/new-products/', NULL),
+(896, 'http://veredus.dev/index.php/new-products/', NULL),
+(897, 'http://veredus.dev/index.php/new-products/', NULL),
+(898, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(899, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(900, 'http://veredus.dev/index.php/new-products/', NULL),
+(901, 'http://veredus.dev/index.php/new-products?manufacturer=9', 'http://veredus.dev/index.php/new-products/'),
+(902, 'http://veredus.dev/index.php/new-products', 'http://veredus.dev/index.php/new-products?manufacturer=9'),
+(903, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(904, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(905, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(906, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(907, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(908, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(909, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(910, 'http://veredus.dev/index.php/catalog/category/view/id/4', 'http://veredus.dev/index.php/new-products/'),
+(911, 'http://veredus.dev/index.php/catalog/category/view/id/10', 'http://veredus.dev/index.php/nero-line.html?___SID=U'),
+(912, 'http://veredus.dev/index.php/catalog/category/view/id/9', 'http://veredus.dev/index.php/layered-category/piu-cliccati.html'),
+(913, 'http://veredus.dev/index.php/catalog/category/view/id/10', 'http://veredus.dev/index.php/layered-category/piu-venduti.html'),
+(914, 'http://veredus.dev/index.php/catalog/category/view/id/10', 'http://veredus.dev/index.php/layered-category/piu-cliccati.html');
 
 -- --------------------------------------------------------
 
@@ -9300,7 +10214,7 @@ INSERT INTO `log_url_info` (`url_id`, `url`, `referer`) VALUES
 -- Struttura della tabella `log_visitor`
 --
 
-CREATE TABLE `log_visitor` (
+CREATE TABLE IF NOT EXISTS `log_visitor` (
   `visitor_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Visitor ID',
   `session_id` varchar(64) DEFAULT NULL COMMENT 'Session ID',
   `first_visit_at` timestamp NULL DEFAULT NULL COMMENT 'First Visit Time',
@@ -9308,7 +10222,7 @@ CREATE TABLE `log_visitor` (
   `last_url_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Last URL ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   PRIMARY KEY (`visitor_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table' AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table' AUTO_INCREMENT=41 ;
 
 --
 -- Dump dei dati per la tabella `log_visitor`
@@ -9347,7 +10261,14 @@ INSERT INTO `log_visitor` (`visitor_id`, `session_id`, `first_visit_at`, `last_v
 (30, 'ab2b154abb36ffd4b47a71de130dbd09', '2013-07-26 08:09:11', '2013-07-26 08:09:11', 0, 1),
 (31, 'ab2b154abb36ffd4b47a71de130dbd09', '2013-07-26 08:11:28', '2013-07-26 08:42:37', 625, 1),
 (32, 'd28bc4f8f997f042164f46cc73e2b717', '2013-07-26 09:59:37', '2013-07-26 10:02:23', 629, 1),
-(33, '6577c6e745edf79ec6261d01617d49f8', '2013-07-26 11:20:16', '2013-07-26 12:23:35', 674, 1);
+(33, '6577c6e745edf79ec6261d01617d49f8', '2013-07-26 11:20:16', '2013-07-26 12:23:35', 674, 1),
+(34, 'vjk2tam0pdegabvh2ac03tc3g3', '2013-07-27 08:19:24', '2013-07-27 08:32:37', 681, 1),
+(35, '1g7d5rhh3ffh6qcsvqt8k5nva1', '2013-07-28 06:10:54', '2013-07-28 08:46:52', 783, 1),
+(36, 'p1srqkmmgeit3n0sqlkhmi5b51', '2013-07-28 08:08:12', '2013-07-28 08:08:13', 755, 1),
+(37, 'oq8tr3r2g42iorb64jq8sd55g7', '2013-07-28 10:57:22', '2013-07-28 12:22:18', 824, 1),
+(38, '2a60mltorm92vhdq7fbchi7j61', '2013-07-29 00:21:52', '2013-07-29 03:33:45', 879, 1),
+(39, '1rb0ocn37ngej7k69ks9b4b3d2', '2013-07-29 19:34:35', '2013-07-29 20:27:07', 902, 1),
+(40, 'ljogftt876546qa9oqfgnnr3d2', '2013-07-29 21:29:49', '2013-07-29 21:39:21', 914, 1);
 
 -- --------------------------------------------------------
 
@@ -9355,7 +10276,7 @@ INSERT INTO `log_visitor` (`visitor_id`, `session_id`, `first_visit_at`, `last_v
 -- Struttura della tabella `log_visitor_info`
 --
 
-CREATE TABLE `log_visitor_info` (
+CREATE TABLE IF NOT EXISTS `log_visitor_info` (
   `visitor_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Visitor ID',
   `http_referer` varchar(255) DEFAULT NULL COMMENT 'HTTP Referrer',
   `http_user_agent` varchar(255) DEFAULT NULL COMMENT 'HTTP User-Agent',
@@ -9403,7 +10324,14 @@ INSERT INTO `log_visitor_info` (`visitor_id`, `http_referer`, `http_user_agent`,
 (30, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (31, NULL, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (32, 'http://veredus.dev/', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
-(33, 'http://veredus.dev/index.php/nero-line.html', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433);
+(33, 'http://veredus.dev/index.php/nero-line.html', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(34, NULL, 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433),
+(35, NULL, 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433),
+(36, NULL, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0', NULL, 'en-US,en;q=0.5', 2130706433, 2130706433),
+(37, 'http://veredus.dev/index.php/nero-line.html?manufacturer=12', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433),
+(38, 'http://veredus.dev/index.php/nero-line.html?manufacturer=12_11&mode=list', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433),
+(39, NULL, 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433),
+(40, 'http://veredus.dev/index.php/new-products/', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36', NULL, 'it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4', 2130706433, 2130706433);
 
 -- --------------------------------------------------------
 
@@ -9411,7 +10339,7 @@ INSERT INTO `log_visitor_info` (`visitor_id`, `http_referer`, `http_user_agent`,
 -- Struttura della tabella `log_visitor_online`
 --
 
-CREATE TABLE `log_visitor_online` (
+CREATE TABLE IF NOT EXISTS `log_visitor_online` (
   `visitor_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Visitor ID',
   `visitor_type` varchar(1) NOT NULL COMMENT 'Visitor Type',
   `remote_addr` bigint(20) NOT NULL COMMENT 'Remote Address',
@@ -9431,7 +10359,7 @@ CREATE TABLE `log_visitor_online` (
 -- Struttura della tabella `m_attribute`
 --
 
-CREATE TABLE `m_attribute` (
+CREATE TABLE IF NOT EXISTS `m_attribute` (
   `attribute_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `is_key` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `is_global` tinyint(1) unsigned NOT NULL DEFAULT '1',
@@ -9462,7 +10390,7 @@ INSERT INTO `m_attribute` (`attribute_id`, `is_key`, `is_global`, `has_default`,
 -- Struttura della tabella `m_db`
 --
 
-CREATE TABLE `m_db` (
+CREATE TABLE IF NOT EXISTS `m_db` (
   `config` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -9472,7 +10400,7 @@ CREATE TABLE `m_db` (
 -- Struttura della tabella `m_db_log`
 --
 
-CREATE TABLE `m_db_log` (
+CREATE TABLE IF NOT EXISTS `m_db_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `script_filename` varchar(128) NOT NULL DEFAULT '',
   `undo` text NOT NULL,
@@ -9486,7 +10414,7 @@ CREATE TABLE `m_db_log` (
 -- Struttura della tabella `m_edit_session`
 --
 
-CREATE TABLE `m_edit_session` (
+CREATE TABLE IF NOT EXISTS `m_edit_session` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -9506,7 +10434,7 @@ INSERT INTO `m_edit_session` (`id`, `created_at`) VALUES
 -- Struttura della tabella `m_filter`
 --
 
-CREATE TABLE `m_filter` (
+CREATE TABLE IF NOT EXISTS `m_filter` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `entity_type_id` smallint(8) unsigned NOT NULL DEFAULT '0',
   `attribute_set_id` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -9527,7 +10455,7 @@ CREATE TABLE `m_filter` (
 -- Struttura della tabella `m_filter2`
 --
 
-CREATE TABLE `m_filter2` (
+CREATE TABLE IF NOT EXISTS `m_filter2` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `default_mask0` int(10) unsigned NOT NULL DEFAULT '0',
   `code` varchar(255) NOT NULL,
@@ -9543,7 +10471,7 @@ CREATE TABLE `m_filter2` (
   `is_reverse` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `code` (`code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dump dei dati per la tabella `m_filter2`
@@ -9553,7 +10481,8 @@ INSERT INTO `m_filter2` (`id`, `default_mask0`, `code`, `type`, `is_enabled`, `d
 (1, 0, 'color', 'attribute', 1, 'list', 'Color', 0, 0, '', '', 0, 0),
 (2, 0, 'manufacturer', 'attribute', 1, 'list', 'Manufacturer', 0, 0, '', '', 0, 0),
 (3, 0, 'price', 'price', 1, 'list', 'Price', 0, 0, '', '', 0, 0),
-(4, 0, 'category', 'category', 1, 'standard', 'Category', 1, -1, '', '', 0, 0);
+(4, 0, 'category', 'category', 1, 'standard', 'Category', 1, -1, '', '', 0, 0),
+(5, 0, 'country_of_manufacture', 'attribute', 1, 'list', 'Country of Manufacture', 0, 0, '', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -9561,7 +10490,7 @@ INSERT INTO `m_filter2` (`id`, `default_mask0`, `code`, `type`, `is_enabled`, `d
 -- Struttura della tabella `m_filter2_store`
 --
 
-CREATE TABLE `m_filter2_store` (
+CREATE TABLE IF NOT EXISTS `m_filter2_store` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `default_mask0` int(10) unsigned NOT NULL DEFAULT '0',
   `global_id` bigint(20) NOT NULL,
@@ -9578,7 +10507,7 @@ CREATE TABLE `m_filter2_store` (
   PRIMARY KEY (`id`),
   KEY `global_id` (`global_id`),
   KEY `store_id` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Dump dei dati per la tabella `m_filter2_store`
@@ -9600,7 +10529,11 @@ INSERT INTO `m_filter2_store` (`id`, `default_mask0`, `global_id`, `store_id`, `
 (13, 0, 1, 4, 1, 'list', 'Color', 0, 0, '', '', 0, 0),
 (14, 0, 2, 4, 1, 'list', 'Manufacturer', 0, 0, '', '', 0, 0),
 (15, 0, 3, 4, 1, 'list', 'Price', 0, 0, '', '', 0, 0),
-(16, 0, 4, 4, 1, 'standard', 'Category', 1, -1, '', '', 0, 0);
+(16, 0, 4, 4, 1, 'standard', 'Category', 1, -1, '', '', 0, 0),
+(17, 0, 5, 1, 1, 'list', 'Country of Manufacture', 0, 0, '', '', 0, 0),
+(18, 0, 5, 2, 1, 'list', 'Country of Manufacture', 0, 0, '', '', 0, 0),
+(19, 0, 5, 3, 1, 'list', 'Country of Manufacture', 0, 0, '', '', 0, 0),
+(20, 0, 5, 4, 1, 'list', 'Country of Manufacture', 0, 0, '', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -9608,7 +10541,7 @@ INSERT INTO `m_filter2_store` (`id`, `default_mask0`, `global_id`, `store_id`, `
 -- Struttura della tabella `m_filter2_value`
 --
 
-CREATE TABLE `m_filter2_value` (
+CREATE TABLE IF NOT EXISTS `m_filter2_value` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `default_mask0` int(10) unsigned NOT NULL DEFAULT '0',
   `edit_session_id` bigint(20) NOT NULL DEFAULT '0',
@@ -9624,7 +10557,23 @@ CREATE TABLE `m_filter2_value` (
   KEY `value_id` (`value_id`),
   KEY `edit_session_id` (`edit_session_id`),
   KEY `edit_status` (`edit_status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+--
+-- Dump dei dati per la tabella `m_filter2_value`
+--
+
+INSERT INTO `m_filter2_value` (`id`, `default_mask0`, `edit_session_id`, `edit_status`, `filter_id`, `option_id`, `value_id`, `name`, `position`) VALUES
+(1, 0, 0, 0, 1, 3, 3, 'Arancio', 0),
+(2, 0, 0, 0, 1, 4, 4, 'Rosa', 0),
+(3, 0, 0, 0, 1, 5, 5, 'Verde', 0),
+(4, 0, 0, 0, 1, 6, 6, 'Blu', 0),
+(5, 0, 0, 0, 1, 7, 7, 'Rosso', 0),
+(6, 0, 0, 0, 1, 8, 8, 'Bianco', 0),
+(7, 0, 0, 0, 2, 9, 9, 'produttore ello', 0),
+(8, 0, 0, 0, 2, 10, 10, 'produttore illo', 0),
+(9, 0, 0, 0, 2, 11, 11, 'produttore me', 0),
+(10, 0, 0, 0, 2, 12, 12, 'produttore io', 0);
 
 -- --------------------------------------------------------
 
@@ -9632,7 +10581,7 @@ CREATE TABLE `m_filter2_value` (
 -- Struttura della tabella `m_filter2_value_store`
 --
 
-CREATE TABLE `m_filter2_value_store` (
+CREATE TABLE IF NOT EXISTS `m_filter2_value_store` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `global_id` bigint(20) NOT NULL,
   `store_id` smallint(5) unsigned NOT NULL,
@@ -9650,7 +10599,53 @@ CREATE TABLE `m_filter2_value_store` (
   KEY `value_id` (`value_id`),
   KEY `edit_session_id` (`edit_session_id`),
   KEY `edit_status` (`edit_status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
+
+--
+-- Dump dei dati per la tabella `m_filter2_value_store`
+--
+
+INSERT INTO `m_filter2_value_store` (`id`, `global_id`, `store_id`, `default_mask0`, `edit_session_id`, `edit_status`, `filter_id`, `option_id`, `value_id`, `name`, `position`) VALUES
+(1, 1, 1, 0, 0, 0, 1, 3, 3, 'Arancio', 0),
+(2, 1, 2, 0, 0, 0, 5, 3, 3, 'Arancio', 0),
+(3, 1, 3, 0, 0, 0, 9, 3, 3, 'Arancio', 0),
+(4, 1, 4, 0, 0, 0, 13, 3, 3, 'Arancio', 0),
+(5, 2, 1, 0, 0, 0, 1, 4, 4, 'Rosa', 0),
+(6, 2, 2, 0, 0, 0, 5, 4, 4, 'Rosa', 0),
+(7, 2, 3, 0, 0, 0, 9, 4, 4, 'Rosa', 0),
+(8, 2, 4, 0, 0, 0, 13, 4, 4, 'Rosa', 0),
+(9, 3, 1, 0, 0, 0, 1, 5, 5, 'Verde', 0),
+(10, 3, 2, 0, 0, 0, 5, 5, 5, 'Verde', 0),
+(11, 3, 3, 0, 0, 0, 9, 5, 5, 'Verde', 0),
+(12, 3, 4, 0, 0, 0, 13, 5, 5, 'Verde', 0),
+(13, 4, 1, 0, 0, 0, 1, 6, 6, 'Blu', 0),
+(14, 4, 2, 0, 0, 0, 5, 6, 6, 'Blu', 0),
+(15, 4, 3, 0, 0, 0, 9, 6, 6, 'Blu', 0),
+(16, 4, 4, 0, 0, 0, 13, 6, 6, 'Blu', 0),
+(17, 5, 1, 0, 0, 0, 1, 7, 7, 'Rosso', 0),
+(18, 5, 2, 0, 0, 0, 5, 7, 7, 'Rosso', 0),
+(19, 5, 3, 0, 0, 0, 9, 7, 7, 'Rosso', 0),
+(20, 5, 4, 0, 0, 0, 13, 7, 7, 'Rosso', 0),
+(21, 6, 1, 0, 0, 0, 1, 8, 8, 'Bianco', 0),
+(22, 6, 2, 0, 0, 0, 5, 8, 8, 'Bianco', 0),
+(23, 6, 3, 0, 0, 0, 9, 8, 8, 'Bianco', 0),
+(24, 6, 4, 0, 0, 0, 13, 8, 8, 'Bianco', 0),
+(25, 7, 1, 0, 0, 0, 2, 9, 9, 'produttore ello', 0),
+(26, 7, 2, 0, 0, 0, 6, 9, 9, 'produttore ello', 0),
+(27, 7, 3, 0, 0, 0, 10, 9, 9, 'produttore ello', 0),
+(28, 7, 4, 0, 0, 0, 14, 9, 9, 'produttore ello', 0),
+(29, 8, 1, 0, 0, 0, 2, 10, 10, 'produttore illo', 0),
+(30, 8, 2, 0, 0, 0, 6, 10, 10, 'produttore illo', 0),
+(31, 8, 3, 0, 0, 0, 10, 10, 10, 'produttore illo', 0),
+(32, 8, 4, 0, 0, 0, 14, 10, 10, 'produttore illo', 0),
+(33, 9, 1, 0, 0, 0, 2, 11, 11, 'produttore me', 0),
+(34, 9, 2, 0, 0, 0, 6, 11, 11, 'produttore me', 0),
+(35, 9, 3, 0, 0, 0, 10, 11, 11, 'produttore me', 0),
+(36, 9, 4, 0, 0, 0, 14, 11, 11, 'produttore me', 0),
+(37, 10, 1, 0, 0, 0, 2, 12, 12, 'produttore io', 0),
+(38, 10, 2, 0, 0, 0, 6, 12, 12, 'produttore io', 0),
+(39, 10, 3, 0, 0, 0, 10, 12, 12, 'produttore io', 0),
+(40, 10, 4, 0, 0, 0, 14, 12, 12, 'produttore io', 0);
 
 -- --------------------------------------------------------
 
@@ -9658,7 +10653,7 @@ CREATE TABLE `m_filter2_value_store` (
 -- Struttura della tabella `m_filter_datetime`
 --
 
-CREATE TABLE `m_filter_datetime` (
+CREATE TABLE IF NOT EXISTS `m_filter_datetime` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT,
   `entity_type_id` smallint(8) unsigned NOT NULL DEFAULT '0',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -9679,7 +10674,7 @@ CREATE TABLE `m_filter_datetime` (
 -- Struttura della tabella `m_filter_decimal`
 --
 
-CREATE TABLE `m_filter_decimal` (
+CREATE TABLE IF NOT EXISTS `m_filter_decimal` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT,
   `entity_type_id` smallint(8) unsigned NOT NULL DEFAULT '0',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -9700,7 +10695,7 @@ CREATE TABLE `m_filter_decimal` (
 -- Struttura della tabella `m_filter_int`
 --
 
-CREATE TABLE `m_filter_int` (
+CREATE TABLE IF NOT EXISTS `m_filter_int` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT,
   `entity_type_id` smallint(8) unsigned NOT NULL DEFAULT '0',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -9721,7 +10716,7 @@ CREATE TABLE `m_filter_int` (
 -- Struttura della tabella `m_filter_text`
 --
 
-CREATE TABLE `m_filter_text` (
+CREATE TABLE IF NOT EXISTS `m_filter_text` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT,
   `entity_type_id` smallint(8) unsigned NOT NULL DEFAULT '0',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -9741,7 +10736,7 @@ CREATE TABLE `m_filter_text` (
 -- Struttura della tabella `m_filter_varchar`
 --
 
-CREATE TABLE `m_filter_varchar` (
+CREATE TABLE IF NOT EXISTS `m_filter_varchar` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT,
   `entity_type_id` smallint(8) unsigned NOT NULL DEFAULT '0',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -9762,7 +10757,7 @@ CREATE TABLE `m_filter_varchar` (
 -- Struttura della tabella `newsletter_problem`
 --
 
-CREATE TABLE `newsletter_problem` (
+CREATE TABLE IF NOT EXISTS `newsletter_problem` (
   `problem_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Problem Id',
   `subscriber_id` int(10) unsigned DEFAULT NULL COMMENT 'Subscriber Id',
   `queue_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Queue Id',
@@ -9779,7 +10774,7 @@ CREATE TABLE `newsletter_problem` (
 -- Struttura della tabella `newsletter_queue`
 --
 
-CREATE TABLE `newsletter_queue` (
+CREATE TABLE IF NOT EXISTS `newsletter_queue` (
   `queue_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Queue Id',
   `template_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Template Id',
   `newsletter_type` int(11) DEFAULT NULL COMMENT 'Newsletter Type',
@@ -9801,7 +10796,7 @@ CREATE TABLE `newsletter_queue` (
 -- Struttura della tabella `newsletter_queue_link`
 --
 
-CREATE TABLE `newsletter_queue_link` (
+CREATE TABLE IF NOT EXISTS `newsletter_queue_link` (
   `queue_link_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Queue Link Id',
   `queue_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Queue Id',
   `subscriber_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Subscriber Id',
@@ -9818,7 +10813,7 @@ CREATE TABLE `newsletter_queue_link` (
 -- Struttura della tabella `newsletter_queue_store_link`
 --
 
-CREATE TABLE `newsletter_queue_store_link` (
+CREATE TABLE IF NOT EXISTS `newsletter_queue_store_link` (
   `queue_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Queue Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   PRIMARY KEY (`queue_id`,`store_id`),
@@ -9831,7 +10826,7 @@ CREATE TABLE `newsletter_queue_store_link` (
 -- Struttura della tabella `newsletter_subscriber`
 --
 
-CREATE TABLE `newsletter_subscriber` (
+CREATE TABLE IF NOT EXISTS `newsletter_subscriber` (
   `subscriber_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Subscriber Id',
   `store_id` smallint(5) unsigned DEFAULT '0' COMMENT 'Store Id',
   `change_status_at` timestamp NULL DEFAULT NULL COMMENT 'Change Status At',
@@ -9850,7 +10845,7 @@ CREATE TABLE `newsletter_subscriber` (
 -- Struttura della tabella `newsletter_template`
 --
 
-CREATE TABLE `newsletter_template` (
+CREATE TABLE IF NOT EXISTS `newsletter_template` (
   `template_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Template Id',
   `template_code` varchar(150) DEFAULT NULL COMMENT 'Template Code',
   `template_text` text COMMENT 'Template Text',
@@ -9875,7 +10870,7 @@ CREATE TABLE `newsletter_template` (
 -- Struttura della tabella `oauth_consumer`
 --
 
-CREATE TABLE `oauth_consumer` (
+CREATE TABLE IF NOT EXISTS `oauth_consumer` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Created At',
   `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Updated At',
@@ -9897,7 +10892,7 @@ CREATE TABLE `oauth_consumer` (
 -- Struttura della tabella `oauth_nonce`
 --
 
-CREATE TABLE `oauth_nonce` (
+CREATE TABLE IF NOT EXISTS `oauth_nonce` (
   `nonce` varchar(32) NOT NULL COMMENT 'Nonce String',
   `timestamp` int(10) unsigned NOT NULL COMMENT 'Nonce Timestamp',
   UNIQUE KEY `UNQ_OAUTH_NONCE_NONCE` (`nonce`)
@@ -9909,7 +10904,7 @@ CREATE TABLE `oauth_nonce` (
 -- Struttura della tabella `oauth_token`
 --
 
-CREATE TABLE `oauth_token` (
+CREATE TABLE IF NOT EXISTS `oauth_token` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
   `consumer_id` int(10) unsigned NOT NULL COMMENT 'Consumer ID',
   `admin_id` int(10) unsigned DEFAULT NULL COMMENT 'Admin user ID',
@@ -9935,7 +10930,7 @@ CREATE TABLE `oauth_token` (
 -- Struttura della tabella `paypal_cert`
 --
 
-CREATE TABLE `paypal_cert` (
+CREATE TABLE IF NOT EXISTS `paypal_cert` (
   `cert_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Cert Id',
   `website_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Website Id',
   `content` text COMMENT 'Content',
@@ -9950,7 +10945,7 @@ CREATE TABLE `paypal_cert` (
 -- Struttura della tabella `paypal_payment_transaction`
 --
 
-CREATE TABLE `paypal_payment_transaction` (
+CREATE TABLE IF NOT EXISTS `paypal_payment_transaction` (
   `transaction_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `txn_id` varchar(100) DEFAULT NULL COMMENT 'Txn Id',
   `additional_information` blob COMMENT 'Additional Information',
@@ -9965,7 +10960,7 @@ CREATE TABLE `paypal_payment_transaction` (
 -- Struttura della tabella `paypal_settlement_report`
 --
 
-CREATE TABLE `paypal_settlement_report` (
+CREATE TABLE IF NOT EXISTS `paypal_settlement_report` (
   `report_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Report Id',
   `report_date` timestamp NULL DEFAULT NULL COMMENT 'Report Date',
   `account_id` varchar(64) DEFAULT NULL COMMENT 'Account Id',
@@ -9981,7 +10976,7 @@ CREATE TABLE `paypal_settlement_report` (
 -- Struttura della tabella `paypal_settlement_report_row`
 --
 
-CREATE TABLE `paypal_settlement_report_row` (
+CREATE TABLE IF NOT EXISTS `paypal_settlement_report_row` (
   `row_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Row Id',
   `report_id` int(10) unsigned NOT NULL COMMENT 'Report Id',
   `transaction_id` varchar(19) DEFAULT NULL COMMENT 'Transaction Id',
@@ -10010,7 +11005,7 @@ CREATE TABLE `paypal_settlement_report_row` (
 -- Struttura della tabella `persistent_session`
 --
 
-CREATE TABLE `persistent_session` (
+CREATE TABLE IF NOT EXISTS `persistent_session` (
   `persistent_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Session id',
   `key` varchar(50) NOT NULL COMMENT 'Unique cookie key',
   `customer_id` int(10) unsigned DEFAULT NULL COMMENT 'Customer id',
@@ -10030,7 +11025,7 @@ CREATE TABLE `persistent_session` (
 -- Struttura della tabella `poll`
 --
 
-CREATE TABLE `poll` (
+CREATE TABLE IF NOT EXISTS `poll` (
   `poll_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Poll Id',
   `poll_title` varchar(255) DEFAULT NULL COMMENT 'Poll title',
   `votes_count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Votes Count',
@@ -10057,7 +11052,7 @@ INSERT INTO `poll` (`poll_id`, `poll_title`, `votes_count`, `store_id`, `date_po
 -- Struttura della tabella `poll_answer`
 --
 
-CREATE TABLE `poll_answer` (
+CREATE TABLE IF NOT EXISTS `poll_answer` (
   `answer_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Answer Id',
   `poll_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Poll Id',
   `answer_title` varchar(255) DEFAULT NULL COMMENT 'Answer title',
@@ -10083,7 +11078,7 @@ INSERT INTO `poll_answer` (`answer_id`, `poll_id`, `answer_title`, `votes_count`
 -- Struttura della tabella `poll_store`
 --
 
-CREATE TABLE `poll_store` (
+CREATE TABLE IF NOT EXISTS `poll_store` (
   `poll_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Poll Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store id',
   PRIMARY KEY (`poll_id`,`store_id`),
@@ -10103,7 +11098,7 @@ INSERT INTO `poll_store` (`poll_id`, `store_id`) VALUES
 -- Struttura della tabella `poll_vote`
 --
 
-CREATE TABLE `poll_vote` (
+CREATE TABLE IF NOT EXISTS `poll_vote` (
   `vote_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Vote Id',
   `poll_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Poll Id',
   `poll_answer_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Poll answer id',
@@ -10120,7 +11115,7 @@ CREATE TABLE `poll_vote` (
 -- Struttura della tabella `product_alert_price`
 --
 
-CREATE TABLE `product_alert_price` (
+CREATE TABLE IF NOT EXISTS `product_alert_price` (
   `alert_price_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Product alert price id',
   `customer_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer id',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product id',
@@ -10142,7 +11137,7 @@ CREATE TABLE `product_alert_price` (
 -- Struttura della tabella `product_alert_stock`
 --
 
-CREATE TABLE `product_alert_stock` (
+CREATE TABLE IF NOT EXISTS `product_alert_stock` (
   `alert_stock_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Product alert stock id',
   `customer_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer id',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product id',
@@ -10163,7 +11158,7 @@ CREATE TABLE `product_alert_stock` (
 -- Struttura della tabella `rating`
 --
 
-CREATE TABLE `rating` (
+CREATE TABLE IF NOT EXISTS `rating` (
   `rating_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rating Id',
   `entity_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Id',
   `rating_code` varchar(64) NOT NULL COMMENT 'Rating Code',
@@ -10188,7 +11183,7 @@ INSERT INTO `rating` (`rating_id`, `entity_id`, `rating_code`, `position`) VALUE
 -- Struttura della tabella `rating_entity`
 --
 
-CREATE TABLE `rating_entity` (
+CREATE TABLE IF NOT EXISTS `rating_entity` (
   `entity_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `entity_code` varchar(64) NOT NULL COMMENT 'Entity Code',
   PRIMARY KEY (`entity_id`),
@@ -10210,7 +11205,7 @@ INSERT INTO `rating_entity` (`entity_id`, `entity_code`) VALUES
 -- Struttura della tabella `rating_option`
 --
 
-CREATE TABLE `rating_option` (
+CREATE TABLE IF NOT EXISTS `rating_option` (
   `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rating Option Id',
   `rating_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Rating Id',
   `code` varchar(32) NOT NULL COMMENT 'Rating Option Code',
@@ -10247,7 +11242,7 @@ INSERT INTO `rating_option` (`option_id`, `rating_id`, `code`, `value`, `positio
 -- Struttura della tabella `rating_option_vote`
 --
 
-CREATE TABLE `rating_option_vote` (
+CREATE TABLE IF NOT EXISTS `rating_option_vote` (
   `vote_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Vote id',
   `option_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Vote option id',
   `remote_ip` varchar(16) NOT NULL COMMENT 'Customer IP',
@@ -10269,7 +11264,7 @@ CREATE TABLE `rating_option_vote` (
 -- Struttura della tabella `rating_option_vote_aggregated`
 --
 
-CREATE TABLE `rating_option_vote_aggregated` (
+CREATE TABLE IF NOT EXISTS `rating_option_vote_aggregated` (
   `primary_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Vote aggregation id',
   `rating_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Rating id',
   `entity_pk_value` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Product id',
@@ -10289,7 +11284,7 @@ CREATE TABLE `rating_option_vote_aggregated` (
 -- Struttura della tabella `rating_store`
 --
 
-CREATE TABLE `rating_store` (
+CREATE TABLE IF NOT EXISTS `rating_store` (
   `rating_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Rating id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store id',
   PRIMARY KEY (`rating_id`,`store_id`),
@@ -10302,7 +11297,7 @@ CREATE TABLE `rating_store` (
 -- Struttura della tabella `rating_title`
 --
 
-CREATE TABLE `rating_title` (
+CREATE TABLE IF NOT EXISTS `rating_title` (
   `rating_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Rating Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `value` varchar(255) NOT NULL COMMENT 'Rating Label',
@@ -10316,7 +11311,7 @@ CREATE TABLE `rating_title` (
 -- Struttura della tabella `report_compared_product_index`
 --
 
-CREATE TABLE `report_compared_product_index` (
+CREATE TABLE IF NOT EXISTS `report_compared_product_index` (
   `index_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Index Id',
   `visitor_id` int(10) unsigned DEFAULT NULL COMMENT 'Visitor Id',
   `customer_id` int(10) unsigned DEFAULT NULL COMMENT 'Customer Id',
@@ -10337,7 +11332,7 @@ CREATE TABLE `report_compared_product_index` (
 -- Struttura della tabella `report_event`
 --
 
-CREATE TABLE `report_event` (
+CREATE TABLE IF NOT EXISTS `report_event` (
   `event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Event Id',
   `logged_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Logged At',
   `event_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Event Type Id',
@@ -10351,7 +11346,15 @@ CREATE TABLE `report_event` (
   KEY `IDX_REPORT_EVENT_OBJECT_ID` (`object_id`),
   KEY `IDX_REPORT_EVENT_SUBTYPE` (`subtype`),
   KEY `IDX_REPORT_EVENT_STORE_ID` (`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Reports Event Table' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Reports Event Table' AUTO_INCREMENT=3 ;
+
+--
+-- Dump dei dati per la tabella `report_event`
+--
+
+INSERT INTO `report_event` (`event_id`, `logged_at`, `event_type_id`, `object_id`, `subject_id`, `subtype`, `store_id`) VALUES
+(1, '2013-07-29 02:32:40', 1, 3, 38, 1, 1),
+(2, '2013-07-29 02:50:21', 1, 3, 38, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -10359,7 +11362,7 @@ CREATE TABLE `report_event` (
 -- Struttura della tabella `report_event_types`
 --
 
-CREATE TABLE `report_event_types` (
+CREATE TABLE IF NOT EXISTS `report_event_types` (
   `event_type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Event Type Id',
   `event_name` varchar(64) NOT NULL COMMENT 'Event Name',
   `customer_login` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer Login',
@@ -10384,7 +11387,7 @@ INSERT INTO `report_event_types` (`event_type_id`, `event_name`, `customer_login
 -- Struttura della tabella `report_viewed_product_aggregated_daily`
 --
 
-CREATE TABLE `report_viewed_product_aggregated_daily` (
+CREATE TABLE IF NOT EXISTS `report_viewed_product_aggregated_daily` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -10405,7 +11408,7 @@ CREATE TABLE `report_viewed_product_aggregated_daily` (
 -- Struttura della tabella `report_viewed_product_aggregated_monthly`
 --
 
-CREATE TABLE `report_viewed_product_aggregated_monthly` (
+CREATE TABLE IF NOT EXISTS `report_viewed_product_aggregated_monthly` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -10426,7 +11429,7 @@ CREATE TABLE `report_viewed_product_aggregated_monthly` (
 -- Struttura della tabella `report_viewed_product_aggregated_yearly`
 --
 
-CREATE TABLE `report_viewed_product_aggregated_yearly` (
+CREATE TABLE IF NOT EXISTS `report_viewed_product_aggregated_yearly` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -10447,7 +11450,7 @@ CREATE TABLE `report_viewed_product_aggregated_yearly` (
 -- Struttura della tabella `report_viewed_product_index`
 --
 
-CREATE TABLE `report_viewed_product_index` (
+CREATE TABLE IF NOT EXISTS `report_viewed_product_index` (
   `index_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Index Id',
   `visitor_id` int(10) unsigned DEFAULT NULL COMMENT 'Visitor Id',
   `customer_id` int(10) unsigned DEFAULT NULL COMMENT 'Customer Id',
@@ -10460,7 +11463,14 @@ CREATE TABLE `report_viewed_product_index` (
   KEY `IDX_REPORT_VIEWED_PRODUCT_INDEX_STORE_ID` (`store_id`),
   KEY `IDX_REPORT_VIEWED_PRODUCT_INDEX_ADDED_AT` (`added_at`),
   KEY `IDX_REPORT_VIEWED_PRODUCT_INDEX_PRODUCT_ID` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Reports Viewed Product Index Table' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Reports Viewed Product Index Table' AUTO_INCREMENT=3 ;
+
+--
+-- Dump dei dati per la tabella `report_viewed_product_index`
+--
+
+INSERT INTO `report_viewed_product_index` (`index_id`, `visitor_id`, `customer_id`, `product_id`, `store_id`, `added_at`) VALUES
+(1, 38, NULL, 3, 1, '2013-07-29 02:50:21');
 
 -- --------------------------------------------------------
 
@@ -10468,7 +11478,7 @@ CREATE TABLE `report_viewed_product_index` (
 -- Struttura della tabella `review`
 --
 
-CREATE TABLE `review` (
+CREATE TABLE IF NOT EXISTS `review` (
   `review_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Review id',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Review create date',
   `entity_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity id',
@@ -10486,7 +11496,7 @@ CREATE TABLE `review` (
 -- Struttura della tabella `review_detail`
 --
 
-CREATE TABLE `review_detail` (
+CREATE TABLE IF NOT EXISTS `review_detail` (
   `detail_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Review detail id',
   `review_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Review id',
   `store_id` smallint(5) unsigned DEFAULT '0' COMMENT 'Store id',
@@ -10506,7 +11516,7 @@ CREATE TABLE `review_detail` (
 -- Struttura della tabella `review_entity`
 --
 
-CREATE TABLE `review_entity` (
+CREATE TABLE IF NOT EXISTS `review_entity` (
   `entity_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Review entity id',
   `entity_code` varchar(32) NOT NULL COMMENT 'Review entity code',
   PRIMARY KEY (`entity_id`)
@@ -10527,7 +11537,7 @@ INSERT INTO `review_entity` (`entity_id`, `entity_code`) VALUES
 -- Struttura della tabella `review_entity_summary`
 --
 
-CREATE TABLE `review_entity_summary` (
+CREATE TABLE IF NOT EXISTS `review_entity_summary` (
   `primary_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Summary review entity id',
   `entity_pk_value` bigint(20) NOT NULL DEFAULT '0' COMMENT 'Product id',
   `entity_type` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Entity type id',
@@ -10544,7 +11554,7 @@ CREATE TABLE `review_entity_summary` (
 -- Struttura della tabella `review_status`
 --
 
-CREATE TABLE `review_status` (
+CREATE TABLE IF NOT EXISTS `review_status` (
   `status_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Status id',
   `status_code` varchar(32) NOT NULL COMMENT 'Status code',
   PRIMARY KEY (`status_id`)
@@ -10565,7 +11575,7 @@ INSERT INTO `review_status` (`status_id`, `status_code`) VALUES
 -- Struttura della tabella `review_store`
 --
 
-CREATE TABLE `review_store` (
+CREATE TABLE IF NOT EXISTS `review_store` (
   `review_id` bigint(20) unsigned NOT NULL COMMENT 'Review Id',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id',
   PRIMARY KEY (`review_id`,`store_id`),
@@ -10578,7 +11588,7 @@ CREATE TABLE `review_store` (
 -- Struttura della tabella `salesrule`
 --
 
-CREATE TABLE `salesrule` (
+CREATE TABLE IF NOT EXISTS `salesrule` (
   `rule_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rule Id',
   `name` varchar(255) DEFAULT NULL COMMENT 'Name',
   `description` text COMMENT 'Description',
@@ -10613,7 +11623,7 @@ CREATE TABLE `salesrule` (
 -- Struttura della tabella `salesrule_coupon`
 --
 
-CREATE TABLE `salesrule_coupon` (
+CREATE TABLE IF NOT EXISTS `salesrule_coupon` (
   `coupon_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Coupon Id',
   `rule_id` int(10) unsigned NOT NULL COMMENT 'Rule Id',
   `code` varchar(255) DEFAULT NULL COMMENT 'Code',
@@ -10636,7 +11646,7 @@ CREATE TABLE `salesrule_coupon` (
 -- Struttura della tabella `salesrule_coupon_usage`
 --
 
-CREATE TABLE `salesrule_coupon_usage` (
+CREATE TABLE IF NOT EXISTS `salesrule_coupon_usage` (
   `coupon_id` int(10) unsigned NOT NULL COMMENT 'Coupon Id',
   `customer_id` int(10) unsigned NOT NULL COMMENT 'Customer Id',
   `times_used` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Times Used',
@@ -10651,7 +11661,7 @@ CREATE TABLE `salesrule_coupon_usage` (
 -- Struttura della tabella `salesrule_customer`
 --
 
-CREATE TABLE `salesrule_customer` (
+CREATE TABLE IF NOT EXISTS `salesrule_customer` (
   `rule_customer_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rule Customer Id',
   `rule_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Rule Id',
   `customer_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer Id',
@@ -10667,7 +11677,7 @@ CREATE TABLE `salesrule_customer` (
 -- Struttura della tabella `salesrule_customer_group`
 --
 
-CREATE TABLE `salesrule_customer_group` (
+CREATE TABLE IF NOT EXISTS `salesrule_customer_group` (
   `rule_id` int(10) unsigned NOT NULL COMMENT 'Rule Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
   PRIMARY KEY (`rule_id`,`customer_group_id`),
@@ -10681,7 +11691,7 @@ CREATE TABLE `salesrule_customer_group` (
 -- Struttura della tabella `salesrule_label`
 --
 
-CREATE TABLE `salesrule_label` (
+CREATE TABLE IF NOT EXISTS `salesrule_label` (
   `label_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Label Id',
   `rule_id` int(10) unsigned NOT NULL COMMENT 'Rule Id',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id',
@@ -10698,7 +11708,7 @@ CREATE TABLE `salesrule_label` (
 -- Struttura della tabella `salesrule_product_attribute`
 --
 
-CREATE TABLE `salesrule_product_attribute` (
+CREATE TABLE IF NOT EXISTS `salesrule_product_attribute` (
   `rule_id` int(10) unsigned NOT NULL COMMENT 'Rule Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
@@ -10715,7 +11725,7 @@ CREATE TABLE `salesrule_product_attribute` (
 -- Struttura della tabella `salesrule_website`
 --
 
-CREATE TABLE `salesrule_website` (
+CREATE TABLE IF NOT EXISTS `salesrule_website` (
   `rule_id` int(10) unsigned NOT NULL COMMENT 'Rule Id',
   `website_id` smallint(5) unsigned NOT NULL COMMENT 'Website Id',
   PRIMARY KEY (`rule_id`,`website_id`),
@@ -10729,7 +11739,7 @@ CREATE TABLE `salesrule_website` (
 -- Struttura della tabella `sales_bestsellers_aggregated_daily`
 --
 
-CREATE TABLE `sales_bestsellers_aggregated_daily` (
+CREATE TABLE IF NOT EXISTS `sales_bestsellers_aggregated_daily` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -10750,7 +11760,7 @@ CREATE TABLE `sales_bestsellers_aggregated_daily` (
 -- Struttura della tabella `sales_bestsellers_aggregated_monthly`
 --
 
-CREATE TABLE `sales_bestsellers_aggregated_monthly` (
+CREATE TABLE IF NOT EXISTS `sales_bestsellers_aggregated_monthly` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -10771,7 +11781,7 @@ CREATE TABLE `sales_bestsellers_aggregated_monthly` (
 -- Struttura della tabella `sales_bestsellers_aggregated_yearly`
 --
 
-CREATE TABLE `sales_bestsellers_aggregated_yearly` (
+CREATE TABLE IF NOT EXISTS `sales_bestsellers_aggregated_yearly` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -10792,7 +11802,7 @@ CREATE TABLE `sales_bestsellers_aggregated_yearly` (
 -- Struttura della tabella `sales_billing_agreement`
 --
 
-CREATE TABLE `sales_billing_agreement` (
+CREATE TABLE IF NOT EXISTS `sales_billing_agreement` (
   `agreement_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Agreement Id',
   `customer_id` int(10) unsigned NOT NULL COMMENT 'Customer Id',
   `method_code` varchar(32) NOT NULL COMMENT 'Method Code',
@@ -10813,7 +11823,7 @@ CREATE TABLE `sales_billing_agreement` (
 -- Struttura della tabella `sales_billing_agreement_order`
 --
 
-CREATE TABLE `sales_billing_agreement_order` (
+CREATE TABLE IF NOT EXISTS `sales_billing_agreement_order` (
   `agreement_id` int(10) unsigned NOT NULL COMMENT 'Agreement Id',
   `order_id` int(10) unsigned NOT NULL COMMENT 'Order Id',
   PRIMARY KEY (`agreement_id`,`order_id`),
@@ -10826,7 +11836,7 @@ CREATE TABLE `sales_billing_agreement_order` (
 -- Struttura della tabella `sales_flat_creditmemo`
 --
 
-CREATE TABLE `sales_flat_creditmemo` (
+CREATE TABLE IF NOT EXISTS `sales_flat_creditmemo` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
   `adjustment_positive` decimal(12,4) DEFAULT NULL COMMENT 'Adjustment Positive',
@@ -10889,7 +11899,7 @@ CREATE TABLE `sales_flat_creditmemo` (
 -- Struttura della tabella `sales_flat_creditmemo_comment`
 --
 
-CREATE TABLE `sales_flat_creditmemo_comment` (
+CREATE TABLE IF NOT EXISTS `sales_flat_creditmemo_comment` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `is_customer_notified` int(11) DEFAULT NULL COMMENT 'Is Customer Notified',
@@ -10907,7 +11917,7 @@ CREATE TABLE `sales_flat_creditmemo_comment` (
 -- Struttura della tabella `sales_flat_creditmemo_grid`
 --
 
-CREATE TABLE `sales_flat_creditmemo_grid` (
+CREATE TABLE IF NOT EXISTS `sales_flat_creditmemo_grid` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
   `store_to_order_rate` decimal(12,4) DEFAULT NULL COMMENT 'Store To Order Rate',
@@ -10949,7 +11959,7 @@ CREATE TABLE `sales_flat_creditmemo_grid` (
 -- Struttura della tabella `sales_flat_creditmemo_item`
 --
 
-CREATE TABLE `sales_flat_creditmemo_item` (
+CREATE TABLE IF NOT EXISTS `sales_flat_creditmemo_item` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `base_price` decimal(12,4) DEFAULT NULL COMMENT 'Base Price',
@@ -10993,7 +12003,7 @@ CREATE TABLE `sales_flat_creditmemo_item` (
 -- Struttura della tabella `sales_flat_invoice`
 --
 
-CREATE TABLE `sales_flat_invoice` (
+CREATE TABLE IF NOT EXISTS `sales_flat_invoice` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
   `base_grand_total` decimal(12,4) DEFAULT NULL COMMENT 'Base Grand Total',
@@ -11052,7 +12062,7 @@ CREATE TABLE `sales_flat_invoice` (
 -- Struttura della tabella `sales_flat_invoice_comment`
 --
 
-CREATE TABLE `sales_flat_invoice_comment` (
+CREATE TABLE IF NOT EXISTS `sales_flat_invoice_comment` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `is_customer_notified` smallint(5) unsigned DEFAULT NULL COMMENT 'Is Customer Notified',
@@ -11070,7 +12080,7 @@ CREATE TABLE `sales_flat_invoice_comment` (
 -- Struttura della tabella `sales_flat_invoice_grid`
 --
 
-CREATE TABLE `sales_flat_invoice_grid` (
+CREATE TABLE IF NOT EXISTS `sales_flat_invoice_grid` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
   `base_grand_total` decimal(12,4) DEFAULT NULL COMMENT 'Base Grand Total',
@@ -11104,7 +12114,7 @@ CREATE TABLE `sales_flat_invoice_grid` (
 -- Struttura della tabella `sales_flat_invoice_item`
 --
 
-CREATE TABLE `sales_flat_invoice_item` (
+CREATE TABLE IF NOT EXISTS `sales_flat_invoice_item` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `base_price` decimal(12,4) DEFAULT NULL COMMENT 'Base Price',
@@ -11148,7 +12158,7 @@ CREATE TABLE `sales_flat_invoice_item` (
 -- Struttura della tabella `sales_flat_order`
 --
 
-CREATE TABLE `sales_flat_order` (
+CREATE TABLE IF NOT EXISTS `sales_flat_order` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `state` varchar(32) DEFAULT NULL COMMENT 'State',
   `status` varchar(32) DEFAULT NULL COMMENT 'Status',
@@ -11304,7 +12314,7 @@ CREATE TABLE `sales_flat_order` (
 -- Struttura della tabella `sales_flat_order_address`
 --
 
-CREATE TABLE `sales_flat_order_address` (
+CREATE TABLE IF NOT EXISTS `sales_flat_order_address` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned DEFAULT NULL COMMENT 'Parent Id',
   `customer_address_id` int(11) DEFAULT NULL COMMENT 'Customer Address Id',
@@ -11341,7 +12351,7 @@ CREATE TABLE `sales_flat_order_address` (
 -- Struttura della tabella `sales_flat_order_grid`
 --
 
-CREATE TABLE `sales_flat_order_grid` (
+CREATE TABLE IF NOT EXISTS `sales_flat_order_grid` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `status` varchar(32) DEFAULT NULL COMMENT 'Status',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -11379,7 +12389,7 @@ CREATE TABLE `sales_flat_order_grid` (
 -- Struttura della tabella `sales_flat_order_item`
 --
 
-CREATE TABLE `sales_flat_order_item` (
+CREATE TABLE IF NOT EXISTS `sales_flat_order_item` (
   `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item Id',
   `order_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Order Id',
   `parent_item_id` int(10) unsigned DEFAULT NULL COMMENT 'Parent Item Id',
@@ -11472,7 +12482,7 @@ CREATE TABLE `sales_flat_order_item` (
 -- Struttura della tabella `sales_flat_order_payment`
 --
 
-CREATE TABLE `sales_flat_order_payment` (
+CREATE TABLE IF NOT EXISTS `sales_flat_order_payment` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `base_shipping_captured` decimal(12,4) DEFAULT NULL COMMENT 'Base Shipping Captured',
@@ -11538,7 +12548,7 @@ CREATE TABLE `sales_flat_order_payment` (
 -- Struttura della tabella `sales_flat_order_status_history`
 --
 
-CREATE TABLE `sales_flat_order_status_history` (
+CREATE TABLE IF NOT EXISTS `sales_flat_order_status_history` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `is_customer_notified` int(11) DEFAULT NULL COMMENT 'Is Customer Notified',
@@ -11558,7 +12568,7 @@ CREATE TABLE `sales_flat_order_status_history` (
 -- Struttura della tabella `sales_flat_quote`
 --
 
-CREATE TABLE `sales_flat_quote` (
+CREATE TABLE IF NOT EXISTS `sales_flat_quote` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Created At',
@@ -11621,7 +12631,7 @@ CREATE TABLE `sales_flat_quote` (
 -- Struttura della tabella `sales_flat_quote_address`
 --
 
-CREATE TABLE `sales_flat_quote_address` (
+CREATE TABLE IF NOT EXISTS `sales_flat_quote_address` (
   `address_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Address Id',
   `quote_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Quote Id',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Created At',
@@ -11694,7 +12704,7 @@ CREATE TABLE `sales_flat_quote_address` (
 -- Struttura della tabella `sales_flat_quote_address_item`
 --
 
-CREATE TABLE `sales_flat_quote_address_item` (
+CREATE TABLE IF NOT EXISTS `sales_flat_quote_address_item` (
   `address_item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Address Item Id',
   `parent_item_id` int(10) unsigned DEFAULT NULL COMMENT 'Parent Item Id',
   `quote_address_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Quote Address Id',
@@ -11747,7 +12757,7 @@ CREATE TABLE `sales_flat_quote_address_item` (
 -- Struttura della tabella `sales_flat_quote_item`
 --
 
-CREATE TABLE `sales_flat_quote_item` (
+CREATE TABLE IF NOT EXISTS `sales_flat_quote_item` (
   `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item Id',
   `quote_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Quote Id',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Created At',
@@ -11814,7 +12824,7 @@ CREATE TABLE `sales_flat_quote_item` (
 -- Struttura della tabella `sales_flat_quote_item_option`
 --
 
-CREATE TABLE `sales_flat_quote_item_option` (
+CREATE TABLE IF NOT EXISTS `sales_flat_quote_item_option` (
   `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Id',
   `item_id` int(10) unsigned NOT NULL COMMENT 'Item Id',
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product Id',
@@ -11830,7 +12840,7 @@ CREATE TABLE `sales_flat_quote_item_option` (
 -- Struttura della tabella `sales_flat_quote_payment`
 --
 
-CREATE TABLE `sales_flat_quote_payment` (
+CREATE TABLE IF NOT EXISTS `sales_flat_quote_payment` (
   `payment_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Payment Id',
   `quote_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Quote Id',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Created At',
@@ -11863,7 +12873,7 @@ CREATE TABLE `sales_flat_quote_payment` (
 -- Struttura della tabella `sales_flat_quote_shipping_rate`
 --
 
-CREATE TABLE `sales_flat_quote_shipping_rate` (
+CREATE TABLE IF NOT EXISTS `sales_flat_quote_shipping_rate` (
   `rate_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rate Id',
   `address_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Address Id',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Created At',
@@ -11886,7 +12896,7 @@ CREATE TABLE `sales_flat_quote_shipping_rate` (
 -- Struttura della tabella `sales_flat_shipment`
 --
 
-CREATE TABLE `sales_flat_shipment` (
+CREATE TABLE IF NOT EXISTS `sales_flat_shipment` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
   `total_weight` decimal(12,4) DEFAULT NULL COMMENT 'Total Weight',
@@ -11917,7 +12927,7 @@ CREATE TABLE `sales_flat_shipment` (
 -- Struttura della tabella `sales_flat_shipment_comment`
 --
 
-CREATE TABLE `sales_flat_shipment_comment` (
+CREATE TABLE IF NOT EXISTS `sales_flat_shipment_comment` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `is_customer_notified` int(11) DEFAULT NULL COMMENT 'Is Customer Notified',
@@ -11935,7 +12945,7 @@ CREATE TABLE `sales_flat_shipment_comment` (
 -- Struttura della tabella `sales_flat_shipment_grid`
 --
 
-CREATE TABLE `sales_flat_shipment_grid` (
+CREATE TABLE IF NOT EXISTS `sales_flat_shipment_grid` (
   `entity_id` int(10) unsigned NOT NULL COMMENT 'Entity Id',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
   `total_qty` decimal(12,4) DEFAULT NULL COMMENT 'Total Qty',
@@ -11964,7 +12974,7 @@ CREATE TABLE `sales_flat_shipment_grid` (
 -- Struttura della tabella `sales_flat_shipment_item`
 --
 
-CREATE TABLE `sales_flat_shipment_item` (
+CREATE TABLE IF NOT EXISTS `sales_flat_shipment_item` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `row_total` decimal(12,4) DEFAULT NULL COMMENT 'Row Total',
@@ -11987,7 +12997,7 @@ CREATE TABLE `sales_flat_shipment_item` (
 -- Struttura della tabella `sales_flat_shipment_track`
 --
 
-CREATE TABLE `sales_flat_shipment_track` (
+CREATE TABLE IF NOT EXISTS `sales_flat_shipment_track` (
   `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',
   `parent_id` int(10) unsigned NOT NULL COMMENT 'Parent Id',
   `weight` decimal(12,4) DEFAULT NULL COMMENT 'Weight',
@@ -12011,7 +13021,7 @@ CREATE TABLE `sales_flat_shipment_track` (
 -- Struttura della tabella `sales_invoiced_aggregated`
 --
 
-CREATE TABLE `sales_invoiced_aggregated` (
+CREATE TABLE IF NOT EXISTS `sales_invoiced_aggregated` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12032,7 +13042,7 @@ CREATE TABLE `sales_invoiced_aggregated` (
 -- Struttura della tabella `sales_invoiced_aggregated_order`
 --
 
-CREATE TABLE `sales_invoiced_aggregated_order` (
+CREATE TABLE IF NOT EXISTS `sales_invoiced_aggregated_order` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12053,7 +13063,7 @@ CREATE TABLE `sales_invoiced_aggregated_order` (
 -- Struttura della tabella `sales_order_aggregated_created`
 --
 
-CREATE TABLE `sales_order_aggregated_created` (
+CREATE TABLE IF NOT EXISTS `sales_order_aggregated_created` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12085,7 +13095,7 @@ CREATE TABLE `sales_order_aggregated_created` (
 -- Struttura della tabella `sales_order_aggregated_updated`
 --
 
-CREATE TABLE `sales_order_aggregated_updated` (
+CREATE TABLE IF NOT EXISTS `sales_order_aggregated_updated` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12117,7 +13127,7 @@ CREATE TABLE `sales_order_aggregated_updated` (
 -- Struttura della tabella `sales_order_status`
 --
 
-CREATE TABLE `sales_order_status` (
+CREATE TABLE IF NOT EXISTS `sales_order_status` (
   `status` varchar(32) NOT NULL COMMENT 'Status',
   `label` varchar(128) NOT NULL COMMENT 'Label',
   PRIMARY KEY (`status`)
@@ -12145,7 +13155,7 @@ INSERT INTO `sales_order_status` (`status`, `label`) VALUES
 -- Struttura della tabella `sales_order_status_label`
 --
 
-CREATE TABLE `sales_order_status_label` (
+CREATE TABLE IF NOT EXISTS `sales_order_status_label` (
   `status` varchar(32) NOT NULL COMMENT 'Status',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id',
   `label` varchar(128) NOT NULL COMMENT 'Label',
@@ -12159,7 +13169,7 @@ CREATE TABLE `sales_order_status_label` (
 -- Struttura della tabella `sales_order_status_state`
 --
 
-CREATE TABLE `sales_order_status_state` (
+CREATE TABLE IF NOT EXISTS `sales_order_status_state` (
   `status` varchar(32) NOT NULL COMMENT 'Status',
   `state` varchar(32) NOT NULL COMMENT 'Label',
   `is_default` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Is Default',
@@ -12187,7 +13197,7 @@ INSERT INTO `sales_order_status_state` (`status`, `state`, `is_default`) VALUES
 -- Struttura della tabella `sales_order_tax`
 --
 
-CREATE TABLE `sales_order_tax` (
+CREATE TABLE IF NOT EXISTS `sales_order_tax` (
   `tax_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Tax Id',
   `order_id` int(10) unsigned NOT NULL COMMENT 'Order Id',
   `code` varchar(255) DEFAULT NULL COMMENT 'Code',
@@ -12210,7 +13220,7 @@ CREATE TABLE `sales_order_tax` (
 -- Struttura della tabella `sales_order_tax_item`
 --
 
-CREATE TABLE `sales_order_tax_item` (
+CREATE TABLE IF NOT EXISTS `sales_order_tax_item` (
   `tax_item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Tax Item Id',
   `tax_id` int(10) unsigned NOT NULL COMMENT 'Tax Id',
   `item_id` int(10) unsigned NOT NULL COMMENT 'Item Id',
@@ -12227,7 +13237,7 @@ CREATE TABLE `sales_order_tax_item` (
 -- Struttura della tabella `sales_payment_transaction`
 --
 
-CREATE TABLE `sales_payment_transaction` (
+CREATE TABLE IF NOT EXISTS `sales_payment_transaction` (
   `transaction_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Transaction Id',
   `parent_id` int(10) unsigned DEFAULT NULL COMMENT 'Parent Id',
   `order_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Order Id',
@@ -12251,7 +13261,7 @@ CREATE TABLE `sales_payment_transaction` (
 -- Struttura della tabella `sales_recurring_profile`
 --
 
-CREATE TABLE `sales_recurring_profile` (
+CREATE TABLE IF NOT EXISTS `sales_recurring_profile` (
   `profile_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Profile Id',
   `state` varchar(20) NOT NULL COMMENT 'State',
   `customer_id` int(10) unsigned DEFAULT NULL COMMENT 'Customer Id',
@@ -12297,7 +13307,7 @@ CREATE TABLE `sales_recurring_profile` (
 -- Struttura della tabella `sales_recurring_profile_order`
 --
 
-CREATE TABLE `sales_recurring_profile_order` (
+CREATE TABLE IF NOT EXISTS `sales_recurring_profile_order` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Link Id',
   `profile_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Profile Id',
   `order_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Order Id',
@@ -12312,7 +13322,7 @@ CREATE TABLE `sales_recurring_profile_order` (
 -- Struttura della tabella `sales_refunded_aggregated`
 --
 
-CREATE TABLE `sales_refunded_aggregated` (
+CREATE TABLE IF NOT EXISTS `sales_refunded_aggregated` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12332,7 +13342,7 @@ CREATE TABLE `sales_refunded_aggregated` (
 -- Struttura della tabella `sales_refunded_aggregated_order`
 --
 
-CREATE TABLE `sales_refunded_aggregated_order` (
+CREATE TABLE IF NOT EXISTS `sales_refunded_aggregated_order` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12352,7 +13362,7 @@ CREATE TABLE `sales_refunded_aggregated_order` (
 -- Struttura della tabella `sales_shipping_aggregated`
 --
 
-CREATE TABLE `sales_shipping_aggregated` (
+CREATE TABLE IF NOT EXISTS `sales_shipping_aggregated` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12372,7 +13382,7 @@ CREATE TABLE `sales_shipping_aggregated` (
 -- Struttura della tabella `sales_shipping_aggregated_order`
 --
 
-CREATE TABLE `sales_shipping_aggregated_order` (
+CREATE TABLE IF NOT EXISTS `sales_shipping_aggregated_order` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12392,7 +13402,7 @@ CREATE TABLE `sales_shipping_aggregated_order` (
 -- Struttura della tabella `sendfriend_log`
 --
 
-CREATE TABLE `sendfriend_log` (
+CREATE TABLE IF NOT EXISTS `sendfriend_log` (
   `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Log ID',
   `ip` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer IP address',
   `time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Log time',
@@ -12408,7 +13418,7 @@ CREATE TABLE `sendfriend_log` (
 -- Struttura della tabella `shipping_tablerate`
 --
 
-CREATE TABLE `shipping_tablerate` (
+CREATE TABLE IF NOT EXISTS `shipping_tablerate` (
   `pk` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary key',
   `website_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Website Id',
   `dest_country_id` varchar(4) NOT NULL DEFAULT '0' COMMENT 'Destination coutry ISO/2 or ISO/3 code',
@@ -12428,7 +13438,7 @@ CREATE TABLE `shipping_tablerate` (
 -- Struttura della tabella `sitemap`
 --
 
-CREATE TABLE `sitemap` (
+CREATE TABLE IF NOT EXISTS `sitemap` (
   `sitemap_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Sitemap Id',
   `sitemap_type` varchar(32) DEFAULT NULL COMMENT 'Sitemap Type',
   `sitemap_filename` varchar(32) DEFAULT NULL COMMENT 'Sitemap Filename',
@@ -12445,7 +13455,7 @@ CREATE TABLE `sitemap` (
 -- Struttura della tabella `tag`
 --
 
-CREATE TABLE `tag` (
+CREATE TABLE IF NOT EXISTS `tag` (
   `tag_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Tag Id',
   `name` varchar(255) DEFAULT NULL COMMENT 'Name',
   `status` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Status',
@@ -12462,7 +13472,7 @@ CREATE TABLE `tag` (
 -- Struttura della tabella `tag_properties`
 --
 
-CREATE TABLE `tag_properties` (
+CREATE TABLE IF NOT EXISTS `tag_properties` (
   `tag_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Tag Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `base_popularity` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Base Popularity',
@@ -12476,7 +13486,7 @@ CREATE TABLE `tag_properties` (
 -- Struttura della tabella `tag_relation`
 --
 
-CREATE TABLE `tag_relation` (
+CREATE TABLE IF NOT EXISTS `tag_relation` (
   `tag_relation_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Tag Relation Id',
   `tag_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Tag Id',
   `customer_id` int(10) unsigned DEFAULT NULL COMMENT 'Customer Id',
@@ -12498,7 +13508,7 @@ CREATE TABLE `tag_relation` (
 -- Struttura della tabella `tag_summary`
 --
 
-CREATE TABLE `tag_summary` (
+CREATE TABLE IF NOT EXISTS `tag_summary` (
   `tag_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Tag Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `customers` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Customers',
@@ -12518,7 +13528,7 @@ CREATE TABLE `tag_summary` (
 -- Struttura della tabella `tax_calculation`
 --
 
-CREATE TABLE `tax_calculation` (
+CREATE TABLE IF NOT EXISTS `tax_calculation` (
   `tax_calculation_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Tax Calculation Id',
   `tax_calculation_rate_id` int(11) NOT NULL COMMENT 'Tax Calculation Rate Id',
   `tax_calculation_rule_id` int(11) NOT NULL COMMENT 'Tax Calculation Rule Id',
@@ -12546,7 +13556,7 @@ INSERT INTO `tax_calculation` (`tax_calculation_id`, `tax_calculation_rate_id`, 
 -- Struttura della tabella `tax_calculation_rate`
 --
 
-CREATE TABLE `tax_calculation_rate` (
+CREATE TABLE IF NOT EXISTS `tax_calculation_rate` (
   `tax_calculation_rate_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Tax Calculation Rate Id',
   `tax_country_id` varchar(2) NOT NULL COMMENT 'Tax Country Id',
   `tax_region_id` int(11) NOT NULL COMMENT 'Tax Region Id',
@@ -12567,8 +13577,8 @@ CREATE TABLE `tax_calculation_rate` (
 --
 
 INSERT INTO `tax_calculation_rate` (`tax_calculation_rate_id`, `tax_country_id`, `tax_region_id`, `tax_postcode`, `code`, `rate`, `zip_is_range`, `zip_from`, `zip_to`) VALUES
-(1, 'US', 12, '*', 'US-CA-*-Rate 1', 8.2500, NULL, NULL, NULL),
-(2, 'US', 43, '*', 'US-NY-*-Rate 1', 8.3750, NULL, NULL, NULL);
+(1, 'US', 12, '*', 'US-CA-*-Rate 1', '8.2500', NULL, NULL, NULL),
+(2, 'US', 43, '*', 'US-NY-*-Rate 1', '8.3750', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12576,7 +13586,7 @@ INSERT INTO `tax_calculation_rate` (`tax_calculation_rate_id`, `tax_country_id`,
 -- Struttura della tabella `tax_calculation_rate_title`
 --
 
-CREATE TABLE `tax_calculation_rate_title` (
+CREATE TABLE IF NOT EXISTS `tax_calculation_rate_title` (
   `tax_calculation_rate_title_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Tax Calculation Rate Title Id',
   `tax_calculation_rate_id` int(11) NOT NULL COMMENT 'Tax Calculation Rate Id',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id',
@@ -12593,7 +13603,7 @@ CREATE TABLE `tax_calculation_rate_title` (
 -- Struttura della tabella `tax_calculation_rule`
 --
 
-CREATE TABLE `tax_calculation_rule` (
+CREATE TABLE IF NOT EXISTS `tax_calculation_rule` (
   `tax_calculation_rule_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Tax Calculation Rule Id',
   `code` varchar(255) NOT NULL COMMENT 'Code',
   `priority` int(11) NOT NULL COMMENT 'Priority',
@@ -12616,7 +13626,7 @@ INSERT INTO `tax_calculation_rule` (`tax_calculation_rule_id`, `code`, `priority
 -- Struttura della tabella `tax_class`
 --
 
-CREATE TABLE `tax_class` (
+CREATE TABLE IF NOT EXISTS `tax_class` (
   `class_id` smallint(6) NOT NULL AUTO_INCREMENT COMMENT 'Class Id',
   `class_name` varchar(255) NOT NULL COMMENT 'Class Name',
   `class_type` varchar(8) NOT NULL DEFAULT 'CUSTOMER' COMMENT 'Class Type',
@@ -12638,7 +13648,7 @@ INSERT INTO `tax_class` (`class_id`, `class_name`, `class_type`) VALUES
 -- Struttura della tabella `tax_order_aggregated_created`
 --
 
-CREATE TABLE `tax_order_aggregated_created` (
+CREATE TABLE IF NOT EXISTS `tax_order_aggregated_created` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12658,7 +13668,7 @@ CREATE TABLE `tax_order_aggregated_created` (
 -- Struttura della tabella `tax_order_aggregated_updated`
 --
 
-CREATE TABLE `tax_order_aggregated_updated` (
+CREATE TABLE IF NOT EXISTS `tax_order_aggregated_updated` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `period` date DEFAULT NULL COMMENT 'Period',
   `store_id` smallint(5) unsigned DEFAULT NULL COMMENT 'Store Id',
@@ -12678,7 +13688,7 @@ CREATE TABLE `tax_order_aggregated_updated` (
 -- Struttura della tabella `weee_discount`
 --
 
-CREATE TABLE `weee_discount` (
+CREATE TABLE IF NOT EXISTS `weee_discount` (
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Id',
   `website_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Website Id',
   `customer_group_id` smallint(5) unsigned NOT NULL COMMENT 'Customer Group Id',
@@ -12694,7 +13704,7 @@ CREATE TABLE `weee_discount` (
 -- Struttura della tabella `weee_tax`
 --
 
-CREATE TABLE `weee_tax` (
+CREATE TABLE IF NOT EXISTS `weee_tax` (
   `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id',
   `website_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Website Id',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Id',
@@ -12716,7 +13726,7 @@ CREATE TABLE `weee_tax` (
 -- Struttura della tabella `widget`
 --
 
-CREATE TABLE `widget` (
+CREATE TABLE IF NOT EXISTS `widget` (
   `widget_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Widget Id',
   `widget_code` varchar(255) DEFAULT NULL COMMENT 'Widget code for template directive',
   `widget_type` varchar(255) DEFAULT NULL COMMENT 'Widget Type',
@@ -12731,7 +13741,7 @@ CREATE TABLE `widget` (
 -- Struttura della tabella `widget_instance`
 --
 
-CREATE TABLE `widget_instance` (
+CREATE TABLE IF NOT EXISTS `widget_instance` (
   `instance_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Instance Id',
   `instance_type` varchar(255) DEFAULT NULL COMMENT 'Instance Type',
   `package_theme` varchar(255) DEFAULT NULL COMMENT 'Package Theme',
@@ -12748,7 +13758,7 @@ CREATE TABLE `widget_instance` (
 -- Struttura della tabella `widget_instance_page`
 --
 
-CREATE TABLE `widget_instance_page` (
+CREATE TABLE IF NOT EXISTS `widget_instance_page` (
   `page_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Page Id',
   `instance_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Instance Id',
   `page_group` varchar(25) DEFAULT NULL COMMENT 'Block Group Type',
@@ -12767,7 +13777,7 @@ CREATE TABLE `widget_instance_page` (
 -- Struttura della tabella `widget_instance_page_layout`
 --
 
-CREATE TABLE `widget_instance_page_layout` (
+CREATE TABLE IF NOT EXISTS `widget_instance_page_layout` (
   `page_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Page Id',
   `layout_update_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Layout Update Id',
   UNIQUE KEY `UNQ_WIDGET_INSTANCE_PAGE_LAYOUT_LAYOUT_UPDATE_ID_PAGE_ID` (`layout_update_id`,`page_id`),
@@ -12781,7 +13791,7 @@ CREATE TABLE `widget_instance_page_layout` (
 -- Struttura della tabella `wishlist`
 --
 
-CREATE TABLE `wishlist` (
+CREATE TABLE IF NOT EXISTS `wishlist` (
   `wishlist_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Wishlist ID',
   `customer_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Customer ID',
   `shared` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Sharing flag (0 or 1)',
@@ -12798,7 +13808,7 @@ CREATE TABLE `wishlist` (
 -- Struttura della tabella `wishlist_item`
 --
 
-CREATE TABLE `wishlist_item` (
+CREATE TABLE IF NOT EXISTS `wishlist_item` (
   `wishlist_item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Wishlist item ID',
   `wishlist_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Wishlist ID',
   `product_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Product ID',
@@ -12818,7 +13828,7 @@ CREATE TABLE `wishlist_item` (
 -- Struttura della tabella `wishlist_item_option`
 --
 
-CREATE TABLE `wishlist_item_option` (
+CREATE TABLE IF NOT EXISTS `wishlist_item_option` (
   `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Id',
   `wishlist_item_id` int(10) unsigned NOT NULL COMMENT 'Wishlist Item Id',
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product Id',
@@ -12834,7 +13844,7 @@ CREATE TABLE `wishlist_item_option` (
 -- Struttura della tabella `xmlconnect_application`
 --
 
-CREATE TABLE `xmlconnect_application` (
+CREATE TABLE IF NOT EXISTS `xmlconnect_application` (
   `application_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Application Id',
   `name` varchar(255) NOT NULL COMMENT 'Application Name',
   `code` varchar(32) NOT NULL COMMENT 'Application Code',
@@ -12856,7 +13866,7 @@ CREATE TABLE `xmlconnect_application` (
 -- Struttura della tabella `xmlconnect_config_data`
 --
 
-CREATE TABLE `xmlconnect_config_data` (
+CREATE TABLE IF NOT EXISTS `xmlconnect_config_data` (
   `application_id` smallint(5) unsigned NOT NULL COMMENT 'Application Id',
   `category` varchar(60) NOT NULL DEFAULT 'default' COMMENT 'Category',
   `path` varchar(250) NOT NULL COMMENT 'Path',
@@ -12870,7 +13880,7 @@ CREATE TABLE `xmlconnect_config_data` (
 -- Struttura della tabella `xmlconnect_history`
 --
 
-CREATE TABLE `xmlconnect_history` (
+CREATE TABLE IF NOT EXISTS `xmlconnect_history` (
   `history_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'History Id',
   `application_id` smallint(5) unsigned NOT NULL COMMENT 'Application Id',
   `created_at` timestamp NULL DEFAULT NULL COMMENT 'Created At',
@@ -12890,7 +13900,7 @@ CREATE TABLE `xmlconnect_history` (
 -- Struttura della tabella `xmlconnect_notification_template`
 --
 
-CREATE TABLE `xmlconnect_notification_template` (
+CREATE TABLE IF NOT EXISTS `xmlconnect_notification_template` (
   `template_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Template Id',
   `name` varchar(255) NOT NULL COMMENT 'Template Name',
   `push_title` varchar(140) NOT NULL COMMENT 'Push Notification Title',
@@ -12909,7 +13919,7 @@ CREATE TABLE `xmlconnect_notification_template` (
 -- Struttura della tabella `xmlconnect_queue`
 --
 
-CREATE TABLE `xmlconnect_queue` (
+CREATE TABLE IF NOT EXISTS `xmlconnect_queue` (
   `queue_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Queue Id',
   `create_time` timestamp NULL DEFAULT NULL COMMENT 'Created At',
   `exec_time` timestamp NULL DEFAULT NULL COMMENT 'Scheduled Execution Time',
@@ -13069,29 +14079,29 @@ ALTER TABLE `catalog_category_entity_varchar`
 -- Limiti per la tabella `catalog_category_flat_store_1`
 --
 ALTER TABLE `catalog_category_flat_store_1`
-  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_1_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_1_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_1_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_1_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `catalog_category_flat_store_2`
 --
 ALTER TABLE `catalog_category_flat_store_2`
-  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_2_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_2_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_2_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_2_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `catalog_category_flat_store_3`
 --
 ALTER TABLE `catalog_category_flat_store_3`
-  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_3_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_3_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_3_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_3_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `catalog_category_flat_store_4`
 --
 ALTER TABLE `catalog_category_flat_store_4`
-  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_4_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_4_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_CAT_CTGR_FLAT_STORE_4_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_CATALOG_CATEGORY_FLAT_STORE_4_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `catalog_category_product`
