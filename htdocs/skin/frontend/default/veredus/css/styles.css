@@ -111,7 +111,7 @@ ul,ol         { list-style:none; }
 
 /* Base Columns */
 .col-left { float:left; width:254px; padding:0 0 1px; }
-.col-main { float:left; width:auto; padding:0 0 1px; }
+.col-main { float:left; width:735px; padding:0 0 1px 15px; }
 .col-right { float:right; width:254px; padding:0 0 1px; }
 
 /* 1 Column Layout */
@@ -381,18 +381,19 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .sub-title { clear:both; padding:15px 0 0; font-size:15px; font-weight:bold; margin:0 0 6px; color:#e25203; }
 
 /* Pager */
-.pager { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:4px 8px; border-top:1px solid #e2e2e2; text-align:center; }
+.pager { padding:4px 8px; text-align:center; }
 .pager .amount { float:left; margin:0; }
-.pager .limiter { float:right; }
-.pager .limiter label { vertical-align:middle; }
-.pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
+.pager .limiter { float:left; margin-left: 30px; width: 185px}
+.pager .limiter label { vertical-align:middle; float: left; margin-right: 10px; padding: 7px 0px}
+.pager .limiter .mps-ui-select {float: left; margin-right: 10px}
+
 .pager .pages { margin:0 140px; }
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
 
 /* Sorter */
-.sorter { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:3px 8px; border-top:1px solid #e2e2e2; }
+.sorter { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:3px 8px; }
 .sorter .view-mode { float:left; margin:0; }
 .sorter .sort-by { float:right; padding-right:36px; }
 .sorter .sort-by label { vertical-align:middle; }
@@ -401,8 +402,10 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 /* Toolbar */
 .toolbar {}
-.toolbar .pager { padding:3px 8px; border-bottom:1px solid #fff; }
-.toolbar .sorter { border-bottom:1px solid #fff; }
+.toolbar .pager { padding:3px 8px; }
+.toolbar .sorter { float: left }
+.toolbar .sort-by { float: left; margin-left: 30px; } 
+.toolbar .sort-by label { float: left; margin-right: 10px; padding: 7px 0px}
 .toolbar-bottom {}
 
 /* Data Table */
@@ -674,6 +677,9 @@ tr.summary-details-excluded { font-style:italic; }
 /********** Navigation > */
 /* ======================================================================================= */
 
+/* Content Styles ================================================================= */
+.product-name { margin:0; font-size:1em; font-weight:normal; }
+.product-name a { color:#3e3d40; }
 
 /* Sidebar =============================================================================== */
 .block { margin:0 0 15px; }
@@ -750,7 +756,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-layered-nav .block-content { }
 .block-layered-nav dt { background:url(../images/veredus_v_1_0.png) 0px -305px no-repeat; padding:7px 10px 8px 15px; font-weight:bold; text-transform:uppercase; }
 .block-layered-nav dt div {width: 7px; height: 7px; margin:5px; float: left; background:url(../images/veredus_v_1_0.png) -16px -4px no-repeat; }
-.block-layered-nav dt div.closed { background:url(../images/veredus_v_1_0.png) -5px -4px no-repeat; }
+.block-layered-nav dt.closed div { background:url(../images/veredus_v_1_0.png) -5px -4px no-repeat; }
 .block-layered-nav dd { padding:0 12px 12px; background:url(../images/bkg_block-layered-dd.gif) 0 100% repeat-x; }
 .block-layered-nav dd.last { background:none; }
 .block-layered-nav ol li { margin: 5px 0px }
@@ -879,15 +885,24 @@ tr.summary-details-excluded { font-style:italic; }
 /* View Type: Grid */
 .products-grid { border-bottom:1px solid #d9ddd3; background:url(../images/bkg_grid.gif) 0 0 repeat; position:relative; }
 .products-grid.last { border-bottom:0; }
-.products-grid li.item { float:left; width:138px; padding:12px 10px 80px; }
-.products-grid .product-image { display:block; width:135px; height:135px; margin:0 0 10px; }
-.products-grid .product-name { /*min-height:2.7em;*/ margin:0 0 5px; font-weight:bold; font-size:13px; color:#203548; }
-.products-grid .product-name a { color:#203548; }
+.products-grid li.item { float:left; width:240px; padding:12px 5px 80px 0px; }
+.products-grid li.item.last { padding-right: 0px }
+.products-grid .product-image { display:block; width:240px; height:252px; margin:0 0 10px; 
+                                background: transparent url(../images/bkg-product.png) center bottom no-repeat; }
+.products-grid .product-name-container { border: 1px solid #dadada; padding: 2px;overflow: hidden; max-height: 60px }
+.products-grid .product-name-container>div {width: 48%; float: left}
+.products-grid .product-name-container>div>p { color: #3e3d40; font-weight: bold }
+.products-grid .product-name { margin:0 0 5px;  font-size:16px; }
+.products-grid .product-name a { }
 .products-grid .price-box { margin:5px 0; }
 .products-grid .availability { line-height:21px; }
-.products-grid .actions { position:absolute; bottom:12px; }
+.products-grid .actions {  }
+.products-grid .actions button { float: right}
+.products-grid .actions button>span { background: transparent url(../images/add-to-cart.png) center 2% no-repeat;height: auto}
+.products-grid .actions button .price-box {margin-top: 13px;} 
+.products-grid .actions button .price-box .price { color: #fff!important}
 .col2-left-layout .products-grid,
-.col2-right-layout .products-grid { width:632px; margin:0 auto; }
+.col2-right-layout .products-grid { margin:0 auto; }
 .col1-layout .products-grid { width:790px; margin:0 auto; }
 
 .category-products.custom .products-grid {width: 100%; border: none }
@@ -906,7 +921,8 @@ tr.summary-details-excluded { font-style:italic; }
 /* View Type: List */
 .products-list li.item { border-bottom:1px solid #d9ddd3; padding:12px 10px; }
 .products-list li.item.last { border-bottom:0; }
-.products-list .product-image { float:left; width:135px; height:135px; margin:0 0 10px; }
+.products-list .product-image { float:left; display:block; width:240px; height:252px; margin:0 0 10px; 
+                                background: transparent url(../images/bkg-product.png) center bottom no-repeat;  }
 .products-list .product-shop { margin-left:150px; }
 .products-list .product-name { margin:0 0 5px; font-weight:bold; font-size:13px; color:#203548; }
 .products-list .product-name a { color:#203548; }
@@ -1233,10 +1249,6 @@ tr.summary-details-excluded { font-style:italic; }
 .send-friend .buttons-set .limit { float:right; margin:0 7px 0 0; font-size:11px; line-height:21px; }
 /* ======================================================================================= */
 
-
-/* Content Styles ================================================================= */
-.product-name { margin:0; font-size:1em; font-weight:normal; }
-.product-name a { color:#1e7ec8; }
 
 /* Product Tags */
 .tags-list { display:block; font-size:13px; border:1px solid #c1c4bc; background:#f8f7f5; padding:10px; }
@@ -1940,7 +1952,23 @@ INPUT[type="checkbox"],
 .mps-ui-checkbox {background: transparent url('../images/veredus_v_1_0.png') -2px -14px no-repeat;}
 .mps-ui-checkbox.checked {background-position:  -18px -14px;}
 
+.mps-ui-select { overflow: hidden; border:1px solid #b6b6b6; 
+                 padding:2px; -webkit-border-radius: 4px;
+                 -moz-border-radius: 4px;
+                 border-radius: 4px; 
+                 background:  #FFF url('../images/row-down.png') right 5px no-repeat;}
+.mps-ui-select select {border: none; background: transparent; padding: 3px 0 2px 6px; -webkit-appearance: none; vertical-align: top;}
+
 .set-container {width: 100%; height: auto;}
 .set-container .set-left {float: left}
 .set-container .set-right {float: right} 
 .set-container>div {margin-right: 10px;}    
+
+.show-type {height: 27px; width: 27px; cursor: pointer; float: left}
+.show-type.selected { cursor: default }
+.show-type.show-list { background: url('../images/veredus_v_1_0.png') -273px -0px no-repeat;}
+.show-type.show-grid.selected { background: url('../images/veredus_v_1_0.png') -245px -0px no-repeat;}
+.show-type.show-list.selected { background: url('../images/veredus_v_1_0.png') -273px -28px no-repeat;}
+.show-type.show-grid { background: url('../images/veredus_v_1_0.png') -245px -28px no-repeat;}
+
+.toolbar-bottom .sorter, .toolbar-bottom .sort-by, .toolbar-bottom .limiter {display: none}

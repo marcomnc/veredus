@@ -1,0 +1,59 @@
+<?php
+/**
+ * Product list toolbar
+ *
+ * @see Mage_Catalog_Block_Product_List_Toolbar
+ */
+?>
+<?php if($this->getCollection()->getSize()): ?>
+<div class="toolbar">
+    <div class="pager">
+        <?php if( $this->isExpanded() ): ?>
+            <div class="sorter">
+                <?php if( $this->isEnabledViewSwitcher() ): ?>
+                    <?php $_modes = $this->getModes(); ?>
+                    <?php if($_modes && count($_modes)>1): ?>
+                    <!--<label><?php //echo $this->__('View as') ?>:</label>-->
+                    <?php foreach ($this->getModes() as $_code=>$_label): ?>
+                            <div class="show-type show-<?php echo $_code;?><?php if($this->isModeActive($_code)): ?> selected<?php endif; ?>" 
+                                 <?php if(!$this->isModeActive($_code)): ?>
+                                 onclick="jQuery.fn.AsyncRedirect('<?php echo $this->getModeUrl($_code) ?>')"
+                                 <?php endif; ?>
+                                 >&nbsp;</div>                            
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
+
+            </div>
+        <?php endif; ?>
+
+		
+        <div class="sort-by">
+            <label><?php echo $this->__('Sort By') ?></label>
+            <select onchange="setLocation(this.value)">
+            <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
+                <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
+                    <?php echo $this->__($_order) ?>
+                </option>
+            <?php endforeach; ?>
+            </select>            
+        </div>
+
+        <div class="limiter">
+            <label><?php echo $this->__('Show') ?></label>
+            <select onchange="setLocation(this.value)">
+            <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
+                <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
+                    <?php echo $_limit ?>
+                </option>
+            <?php endforeach; ?>
+            </select>
+            <label><?php echo $this->__('per page') ?></label>
+			
+        </div>
+        <?php echo $this->getPagerHtml() ?>
+        
+    </div>
+
+</div>
+<?php endif ?>

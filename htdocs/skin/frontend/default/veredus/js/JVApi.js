@@ -3,7 +3,20 @@ jQuery(document).ready(function(){
     //on load function
     jQuery(".header-selector .selected").headerSwitchers();
     jQuery.fn.MpsUi();
-    jQuery("#ajax-login").ajaxLogin()
+    jQuery("#ajax-login").ajaxLogin();
+    
+    if (jQuery(".block-layered-nav dl dt").length>0){
+        jQuery(".block-layered-nav dl dt").css("cursor", "pointer");
+        jQuery(".block-layered-nav dl dt").bind ("click", function(){
+            if (!jQuery(this).hasClass("closed")) {
+                jQuery(this).addClass("closed");
+                jQuery(this).next("dd").slideUp("slow");
+            } else {
+                jQuery(this).removeClass("closed");
+                jQuery(this).next("dd").slideDown("slow");
+            }
+        })
+    }
 });
 
 //Header Switcher
@@ -128,6 +141,13 @@ jQuery(document).ready(function(){
         $('[type="checkbox"]').each(function(idx, elem) {
             var $this = $(elem);
             $this.wrapAll('<span class="mps-ui-checkbox"/>');
+        });
+        
+        $('select').each(function(idx, elem) {
+            var $this = $(elem);
+            var width = $this.outerWidth(true);
+            $this.css({'width' : (width + 15)+'px'})
+            $this.wrapAll('<div class="mps-ui-select" style="width: '+width + 'px"/>');
         });
         
         $('.mps-ui-checkbox').on('mouseover mouseout click', function(evt) {

@@ -131,6 +131,17 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </cms-block-privacy-register>
+                        <shop_by_plus>
+                            <label>Selezioni aggiuntive catalogo</label>
+                            <frontend_model>veredus/adminhtml_catalog_product_list_type</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Indica le selezioni aggiuntive per il menù di ricerca della barra laterale nel catalogo</comment>
+                        </shop_by_plus>
+                        
                         <!--<category-brands>
                             <label>Categoria dei Brand</label>
                             <frontend_type>select</frontend_type>

@@ -51,4 +51,6 @@
         <?php endif; ?>
     </div>
 </div>
+<?php else: ?>
+NO! <?php echo count($this->getLayer()->getState()->getFilters()); ?>
 <?php endif; ?>
