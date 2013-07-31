@@ -406,6 +406,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .toolbar .sorter { float: left }
 .toolbar .sort-by { float: left; margin-left: 30px; } 
 .toolbar .sort-by label { float: left; margin-right: 10px; padding: 7px 0px}
+.toolbar .sort-by .mps-ui-select {float: left}
 .toolbar-bottom {}
 
 /* Data Table */
