@@ -65,7 +65,13 @@
                         endif; ?>
                         
             </dl>
-            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+            <script type="text/javascript">
+                decorateDataList('narrow-by-list')
+                $$('.m-filter-item-list').each (function(elem) {
+                    decorateList(elem);
+                });
+
+            </script>
         <?php endif; ?>
     </div>
 </div>

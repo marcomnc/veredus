@@ -3,7 +3,9 @@ jQuery(document).ready(function(){
     //on load function
     jQuery(".header-selector .selected").headerSwitchers();
     jQuery.fn.MpsUi();
-    jQuery("#ajax-login").ajaxLogin();
+    if ( jQuery("#ajax-login").length > 0 && jQuery('.popup-login-content').length > 0) {
+        jQuery("#ajax-login").ajaxLogin();
+    }
     
     if (jQuery(".block-layered-nav dl dt").length>0){
         jQuery(".block-layered-nav dl dt").css("cursor", "pointer");
