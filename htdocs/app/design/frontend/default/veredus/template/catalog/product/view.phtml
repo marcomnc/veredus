@@ -69,7 +69,7 @@
 
 $tabber = array();
 $tabber['description'] = array('label' => $this->__('Description'), 
-                               'data' => $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description'));
+                               'data' => $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description'));
 if ($_product->getCareInfo()."" != ""):
 	$tabber['care'] = array('label' => $this->__('Care info'), 
 	   			'data' => $_helper->productAttribute($_product, nl2br($_product->getCareInfo()), 'care'));
@@ -131,8 +131,9 @@ endif;
                                                         <div class="input-box">
                                                         <select name="qty" id="qty" class="required-entry super-attribute-select"
                                                                 rel="<?php echo $this->__('Choose Qty');?>">
+                                                        <option value="<?php $i ?>"><?php echo $this->__('Scegli Qta'); ?></option>
                                                         <?php for ($i = 1; $i <= 10; $i++): ?>
-                                                        <option><?php echo $i; ?></option>
+                                                        <option value="<?php $i ?>"><?php echo $i; ?></option>
                                                       <?php endfor; ?>
                                                             </select>
                                                             </div>
@@ -249,10 +250,12 @@ endif;
 ?>
     <div class="product-collateral">
         <div class="left sub-description">
-            <?php if ($_product->hasViewDescription()): ?>
+            <?php if ($_product->hasViewDescription() && $_product->getViewDescription() != ""): ?>
                 <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getViewDescription()), 'view_description'); ?>"</p>
-            <?php else: ?>
-                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description'); ?>"</p>
+            <?php elseif ($_product->getDescription() != ""): ?>
+                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description'); ?>"</p>
+            <?php else: ?>    
+                <p></p>
             <?php endif; ?>
         </div>
         <div class="right">

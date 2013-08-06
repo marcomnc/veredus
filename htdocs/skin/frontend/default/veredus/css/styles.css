@@ -383,11 +383,11 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* Pager */
 .pager { padding:4px 8px; text-align:center; }
 .pager .amount { float:left; margin:0; }
-.pager .limiter { float:left; margin-left: 30px; width: 185px}
+.pager .limiter { float:left; width: 185px}
 .pager .limiter label { vertical-align:middle; float: left; margin-right: 10px; padding: 7px 0px}
 .pager .limiter .mps-ui-select {float: left; margin-right: 10px}
 
-.pager .pages { margin:0 140px; }
+.pager .pages { margin:6px 0 0; float: right; }
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
@@ -404,7 +404,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .toolbar {}
 .toolbar .pager { padding:3px 8px; }
 .toolbar .sorter { float: left }
-.toolbar .sort-by { float: left; margin-left: 30px; } 
+.toolbar .sort-by { float: left; margin-left: 30px; width: 265px; } 
 .toolbar .sort-by label { float: left; margin-right: 10px; padding: 7px 0px}
 .toolbar-bottom {}
 
@@ -698,7 +698,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block .actions button.button { float:right; }
 .block .empty { margin:0; padding:5px 9px; }
 
-.block li.odd { background-color:#f4f3f3; }
+.block li.odd { background-color: transparent; }
 .block li.even { background-color: transparent; }
 
 /* Mini Blocks */

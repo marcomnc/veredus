@@ -100,7 +100,7 @@
                             <?php if ($_product->hasGridDescription()):
                                     $_gDescription = $this->stripTags($_product->getGridDescription());
                                 else:
-                                    $_gDescription = $this->stripTags($_product->getShortDescription());
+                                    $_gDescription = "";//$this->stripTags($_product->getShortDescription());
                                 endif; 
                                 echo $_gDescription;?>
                         </p>

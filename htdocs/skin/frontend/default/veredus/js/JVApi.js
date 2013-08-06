@@ -148,7 +148,7 @@ jQuery(document).ready(function(){
         $('select').each(function(idx, elem) {
             var $this = $(elem);
             var width = $this.outerWidth(true);
-            $this.css({'width' : (width + 15)+'px'})
+            $this.css({'width' : (width + 25)+'px'})
             $this.wrapAll('<div class="mps-ui-select" style="width: '+width + 'px"/>');
         });
         
