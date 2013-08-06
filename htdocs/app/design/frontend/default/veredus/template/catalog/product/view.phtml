@@ -82,7 +82,7 @@ $_block =$this->getLayout()->createBlock("catalog/product_view_attributes");
 $_addData = ($_block->getAdditionalData()) ? true : false;
 if ($_addData): 
 	$tabber['additional'] = array('label' => $this->__('Additional Data'), 
-	   										    	  'data' => $_block->setTemplate("catalog/product/view/attributes.phtml")->toHtml());
+                                      'data' => $_block->setTemplate("catalog/product/view/attributes.phtml")->toHtml());
 endif;
 
 ?>
