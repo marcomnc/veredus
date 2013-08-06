@@ -47,9 +47,9 @@
 </p>
 
 
-
-<?php if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views">
+<?php if (count($this->getGalleryImages()) > 0): ?>
+
     <h2><?php echo $this->__('More Views') ?></h2>
     <ul>
     <?php foreach ($this->getGalleryImages() as $_image): ?>
@@ -58,31 +58,44 @@
                 <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(90); ?>" width="90" height="90" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a>
         </li>
     <?php endforeach; ?>
-    <?php if ($_product->hasData('zoom_360_url')):  ?>
+    <?php if ($_product->hasData('zoom_360_url') && $_product->getData('zoom_360_url') != ""):  ?>
         <li class="zoom-360">
-            <a href="#">
+            <a class="iframe" href="<?php echo $_product->getData('zoom_360_url'); ?>" id="zoom360">
                 <img src="<?php echo $this->getSkinUrl('images/360.png')?>"/></a>
         </li>
     <?php endif;?>
     </ul>
-</div>
+    <?php if ($_product->hasData('zoom_360_url') && $_product->getData('zoom_360_url') != ""):  ?>
+<script>
+    jQuery(document).ready(function() {
+        jQuery("a#zoom360").fancybox({
+                        'transitionIn'	:	'elastic',
+                        'transitionOut'	:	'elastic',
+                        'speedIn'		:	600, 
+                        'speedOut'		:	200, 
+                        'width':400,
+                        'height':400
+                });
+    });
+</script>
+    <?php endif; ?>        
 <?php endif; ?>
-
+</div>
 <?php if (Mage::Helper('vsocial/fb')->isEnabled()): ?>
 <div class="linkSocial">
     <ol>
         <li>
-            <div class="facebook" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>">
+            <div class="facebook" href="#" onclick="fbs_click('<?php echo $this->getUrl();?>', '<?php echo $this->getLayout()->getBlock('head')->getTitle(); ?>');">
                 &nbsp;
             </div>
         </li>
         <li>
-            <div class="twitter" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>">
+            <div class="twitter" href="#" onclick="tws_click('<?php echo $this->getUrl();?>', '<?php echo $this->getLayout()->getBlock('head')->getTitle(); ?>');">
                 &nbsp;
             </div>
         </li>
         <li>
-            <div class="pintrest" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>">
+            <div class="pintrest" href="#" onclick="pin_click('<?php echo $this->getUrl();?>', '<?php echo $this->getLayout()->getBlock('head')->getTitle(); ?>', '<?php echo Mage::getModel('catalog/product_media_config')->getMediaUrl( $_product->getImage() );?>');">
                 &nbsp;
             </div>
         </li>

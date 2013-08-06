@@ -47,23 +47,124 @@
 
         <div class="product-shop">
             <div class="product-name">
-                <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                <h1>
+                    <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                </h1>
+                <?php 
+                    $allIds = $_product->getCategoryIds();                    
+                    $category = Mage::getModel('catalog/category')->load(isset($allIds[0]) ? $allIds[0] : $allIds );
+                    $category_url = (!is_null($category)) ? $this->getUrl($category->getUrlPath()) : "";
+                ?>
+                <h2 class="produttore">
+                    <?php if ($category_url != ""):?>
+                    <a href="<?php echo $category_url; ?>">
+                    <?php endif;?>
+                    <?php echo $_product->getAttributeText('manufacturer');?>
+                    <?php if ($category_url != ""):?>
+                    </a>
+                    <?php endif;?>
+                </h2>                
             </div>
+<?php
 
+$tabber = array();
+$tabber['description'] = array('label' => $this->__('Description'), 
+                               'data' => $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description'));
+if ($_product->getCareInfo()."" != ""):
+	$tabber['care'] = array('label' => $this->__('Care info'), 
+	   			'data' => $_helper->productAttribute($_product, nl2br($_product->getCareInfo()), 'care'));
+endif;
+if ($_product->getShippingInfo()."" != ""): 
+	$tabber['delivery'] = array('label' => $this->__('Delivery info'), 
+                                    'data' => $_helper->productAttribute($_product, nl2br($_product->getShippingInfo()), 'shipping_info'));
+endif;
+$_block =$this->getLayout()->createBlock("catalog/product_view_attributes");
+$_addData = ($_block->getAdditionalData()) ? true : false;
+if ($_addData): 
+	$tabber['additional'] = array('label' => $this->__('Additional Data'), 
+	   										    	  'data' => $_block->setTemplate("catalog/product/view/attributes.phtml")->toHtml());
+endif;
+
+?>
+<div id="tabber">
+	<ul>
+		<?php 
+				$first = true;
+				foreach ($tabber as $k=>$v): ?>
+			<li class="<?php if ($first): echo 'first'; $first = false; endif;?>">
+	      <a rel="#<?php echo $k ?>" class="detail <?php echo $k; ?>">
+	          <span><?php echo $v['label']; ?></span>
+	      </a>
+		</li>							
+	  <?php endforeach; 
+
+	  		for ($i = sizeof($tabber); $i <4; $i++) :
+	  		echo "<li></li>";
+	  		endfor;?>
+  </ul>
+  	<?php	  
+	  		foreach ($tabber as $k=>$v): ?>
+
+	  <div id="<?php echo $k ?>" class="desc <?php echo $k; ?>">
+    	<div class="short-description">
+      	<div class="std">
+      		<?php echo $v['data']; ?>	
+      	</div>				
+     	</div>
+		</div>
+   	<?php endforeach; ?>
+</div>
             
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-            <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getTierPriceHtml() ?>
-            <?php echo $this->getChildHtml('extrahint') ?>
-
+            <?php //echo $this->getReviewsSummaryHtml($_product, false, true)?>
+            <?php //echo $this->getChildHtml('alert_urls') ?>
+            <?php //echo $this->getChildHtml('product_type_data') ?>
+            <?php //echo $this->getTierPriceHtml() ?>
+            <?php //echo $this->getChildHtml('extrahint') ?>
+		
+		<?php if ($this->hasOptions()):?>
+<div class="product-options" id="product-options-wrapper">
+                
+												<div>
+	                        <?php echo $this->getChildHtml('product_options_wrapper'); ?>
+	                        <?php if ($_product->getTypeId()!="grouped"): ?>
+	                        	<div id="qty" class="attribute-chooser">
+                                                        <div class="input-box">
+                                                        <select name="qty" id="qty" class="required-entry super-attribute-select"
+                                                                rel="<?php echo $this->__('Choose Qty');?>">
+                                                        <?php for ($i = 1; $i <= 10; $i++): ?>
+                                                        <option><?php echo $i; ?></option>
+                                                      <?php endfor; ?>
+                                                            </select>
+                                                            </div>
+                                                            <ul rel="qty" style="display: none">
+                                                            <?php for ($i = 1; $i <= 10; $i++): ?>
+                                                                    <li><?php echo $i; ?></li>
+                    					<?php endfor; ?>
+                    					</ul>
+        										</div>
+	                        <?php endif; ?>
+                        </div>
+<?php
+                        if ($_product->getTypeId()=="grouped"):
+                            echo $this->getChildHtml("product_type_data");
+                        endif;
+?>
+</div>
+		<?php endif; ?>
+		<div class="clearer"></div>
+								<div class="add-to-box">
+                	  <?php echo $this->getPriceHtml($_product, false); ?>
+                    <?php if($_product->isSaleable()): ?>
+                        <?php echo $this->getChildHtml('addtocart') ?>                        
+                    <?php endif; ?>
+                    <?php echo $this->getChildHtml('addto') ?>
+                </div>
+<!--
             <?php if (!$this->hasOptions()):?>
                 <div class="add-to-box">
+                	  <?php echo $this->getPriceHtml($_product, false); ?>
                     <?php if($_product->isSaleable()): ?>
-                        <?php echo $this->getChildHtml('addtocart') ?>
-                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                            <span class="or"><?php echo $this->__('OR') ?></span>
-                        <?php endif; ?>
+                        <?php echo $this->getChildHtml('addtocart') ?>                        
                     <?php endif; ?>
                     <?php echo $this->getChildHtml('addto') ?>
                 </div>
@@ -72,31 +173,15 @@
                 <div class="add-to-box">
                     <?php echo $this->getChildHtml('addto') ?>
                 </div>
-            <?php endif; ?>
-
-            <?php if ($_product->getShortDescription()):?>
-                <div class="short-description">
-                    <h2><?php echo $this->__('Quick Overview') ?></h2>
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                </div>
-            <?php endif;?>
-
-            <?php echo $this->getChildHtml('other');?>
-
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif;?>
-
+            <?php endif; ?>            
+-->
         </div>
 
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
         </div>
 
-        <div class="clearer"></div>
-        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-        <?php endif;?>
+        <div class="clearer"></div>        
     </form>
     <script type="text/javascript">
     //<![CDATA[
@@ -147,20 +232,56 @@
                 Object.extend(Validation.methods, nv);
             }
         }.bind(productAddToCartForm);
+        
+        jQuery(document).ready(function () {
+           jQuery('#tabber').multiminitabs('class'); 
+        });
     //]]>
     </script>
     </div>
+<?php $_collateral = array();
+    //$_collateral[0] = $this->getChildHtml("product_related") . '';
+    $_collateral[0] = $this->getLayout()->createBlock('catalog/product_list_related')
+                                      ->setTemplate('catalog/product/list/related.phtml')->toHtml(). '';
+    $_collateral[1] = $this->getChildHtml("upsell_products") . '';
+    $_collateral[2] = $this->getChildHtml("reports_product_viewed") . '';
 
+?>
     <div class="product-collateral">
-<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
-            <?php if ($title = $this->getChildData($alias, 'title')):?>
-            <h2><?php echo $this->escapeHtml($title); ?></h2>
-            <?php endif;?>
-            <?php echo $html; ?>
+        <div class="left sub-description">
+            <?php if ($_product->hasViewDescription()): ?>
+                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getViewDescription()), 'view_description'); ?>"</p>
+            <?php else: ?>
+                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description'); ?>"</p>
+            <?php endif; ?>
         </div>
-<?php endforeach;?>
-        <?php echo $this->getChildHtml('upsell_products') ?>
-        <?php echo $this->getChildHtml('product_additional_data') ?>
+        <div class="right">
+            <?php for ($i = 0; $i < 3; $i++):
+                if (isset($_collateral[$i]) && $_collateral[$i] != ""):
+                    echo $_collateral[$i];
+                    $_collateral[$i] = "";
+                    break;
+                endif;
+            endfor; ?>    
+        </div>
+        <div class="clearer"></div>
+        <div class="left">
+            <?php for ($i = 0; $i < 3; $i++):
+                if (isset($_collateral[$i]) && $_collateral[$i] != ""):
+                    echo $_collateral[$i];
+                    $_collateral[$i] = "";
+                    break;
+                endif;
+            endfor; ?>    
+        </div>
+        <div class="right">
+            <?php for ($i = 0; $i < 3; $i++):
+                if (isset($_collateral[$i]) && $_collateral[$i] != ""):
+                    echo $_collateral[$i];
+                    $_collateral[$i] = "";
+                    break;
+                endif;
+            endfor; ?>    
+        </div>        
     </div>
 </div>

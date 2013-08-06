@@ -220,5 +220,5 @@ jQuery(document).ready(function(){
             $.fn.layerShow(true,'medium',true, null, null);
             window.location = url;
         }
-    }
+    };
 })(jQuery, this);

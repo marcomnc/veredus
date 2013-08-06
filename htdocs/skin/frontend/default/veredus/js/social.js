@@ -55,3 +55,16 @@ Social.FBConnect.prototype = {
         this.imgLoaderUrl = imgUrl;
     }        
 }
+
+function fbs_click(urlToShare, titleToShare) {
+    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(urlToShare)+'&t='+encodeURIComponent(titleToShare),'fb_sharer','toolbar=0,status=0,width=626,height=436');
+    return false;
+}
+
+function tws_click(urlToShare, titleToShare) {
+    window.open('http://twitter.com/home?status='+encodeURIComponent(titleToShare)+' '+encodeURIComponent(urlToShare),'tw_sharer','toolbar=0,status=0,width=626,height=436');
+}
+
+function pin_click(urlToShare, titleToShare, urlImg){
+    window.open('http://pinterest.com/pin/create/button/?url='+encodeURIComponent(urlToShare)+'&media='+encodeURIComponent(urlImg)+'&description='+encodeURIComponent(titleToShare)+'','Pin_sharer','toolbar=0,status=0,width=626,height=436');
+}
