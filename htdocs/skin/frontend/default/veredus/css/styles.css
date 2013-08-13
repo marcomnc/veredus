@@ -565,9 +565,9 @@ tr.summary-details-excluded { font-style:italic; }
                                     -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
 .header .form-search button.button span { border:0; width:27px; height: 26px; background: url('../images/veredus_v_1_0.png') -190px -100px no-repeat; padding: 0px}
 .header .form-search button.button span span {  }
-.header .form-search .search-autocomplete { z-index:999; left:40px !important; top:22px !important; }
-.header .form-search .search-autocomplete ul { border:1px solid #5c7989; background-color:#f9f5f0; }
-.header .form-search .search-autocomplete li { text-align:left; border-bottom:1px solid #f4eee7; padding:2px 8px 1px 8px; cursor:pointer; }
+.header .form-search .search-autocomplete { z-index:999; left:40px; top:22px; }
+.header .form-search .search-autocomplete ul { background-color:#f9f5f0; }
+.header .form-search .search-autocomplete li { text-align:left; border-bottom:1px solid #f4eee7; padding:2px 8px 1px 8px; cursor:pointer; width: 100% }
 .header .form-search .search-autocomplete li .amount { float:right; font-weight:bold; }
 .header .form-search .search-autocomplete li.odd { background-color:#fffefb; }
 .header .form-search .search-autocomplete li.selected { background-color:#f7e8dd; }
@@ -1137,7 +1137,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .product-collateral .box-collateral { margin:25px 0; }
 
 /* Product Images */
-.product-view .product-img-box { float:left; width:495px; padding:  10px 0 0 0 }
+.product-view .product-img-box { float:left; width:495px; padding:  10px 0 0 0; position: relative }
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
 .product-view .product-img-box .product-image { margin:22px 8px 0 0; float: right; }
 .product-view .product-img-box .product-image-zoom { position:relative; overflow:hidden; z-index:9; }
@@ -1155,6 +1155,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .product-view .product-img-box .more-views li.zoom-360 {height: auto}
 .product-view .product-img-box .more-views li a { float:left; width:90px; height:90px; overflow:hidden; border: 1px solid #605F62 }
 .product-view .product-img-box .more-views li.zoom-360 a { border: none; width:auto; height:auto; margin: 10px 0 0 10px }
+.product-view .product-img-box #wrap11 {position: absolute; right: 0px; top: 19px; z-index: 10000}
 
 .product-image-popup { margin:0 auto; }
 .product-image-popup .buttons-set { float:right; clear:none; border:0; margin:0; padding:0; }
@@ -1167,6 +1168,8 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .col1-layout .product-view .product-shop { float:right; width:495px; }
 .col3-layout .product-view .product-shop { float:none; width:auto; }
 .product-view .product-shop .product-name { margin:0 0 5px; }
+.product-view .product-shop .product-name>div { float:left }
+.product-view .product-shop .product-name>img { float:right }
 .product-view .product-shop .product-name h1 { margin:0; font-size: 22px; font-weight: bold; text-transform: uppercase }
 .product-view .product-shop .availability { margin:10px 0; }
 .product-view .product-shop .short-description { margin:10px 0; padding:10px 0 0; }

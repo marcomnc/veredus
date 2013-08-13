@@ -47,23 +47,28 @@
 
         <div class="product-shop">
             <div class="product-name">
-                <h1>
-                    <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
-                </h1>
-                <?php 
-                    $allIds = $_product->getCategoryIds();                    
-                    $category = Mage::getModel('catalog/category')->load(isset($allIds[0]) ? $allIds[0] : $allIds );
-                    $category_url = (!is_null($category)) ? $this->getUrl($category->getUrlPath()) : "";
-                ?>
-                <h2 class="produttore">
-                    <?php if ($category_url != ""):?>
-                    <a href="<?php echo $category_url; ?>">
-                    <?php endif;?>
-                    <?php echo $_product->getAttributeText('manufacturer');?>
-                    <?php if ($category_url != ""):?>
-                    </a>
-                    <?php endif;?>
-                </h2>                
+                <div>
+                    <h1>
+                        <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                    </h1>
+                    <?php 
+                        $allIds = $_product->getCategoryIds();                    
+                        $category = Mage::getModel('catalog/category')->load(isset($allIds[0]) ? $allIds[0] : $allIds );
+                        $category_url = (!is_null($category)) ? $this->getUrl($category->getUrlPath()) : "";
+                    ?>
+                    <h2 class="produttore">
+                        <?php if ($category_url != ""):?>
+                        <a href="<?php echo $category_url; ?>">
+                        <?php endif;?>
+                        <?php echo $_product->getAttributeText('manufacturer');?>
+                        <?php if ($category_url != ""):?>
+                        </a>
+                        <?php endif;?>
+                    </h2>                
+                </div>
+                <?php if ($_product->hasBrandImg() && $_product->getBrandImg() != 'no_selection' && $_product->getBrandImg()): ?>
+                    <img src="<?php echo $this->helper('catalog/image')->init($_product, 'brand_img')->resize(150,50); ?>" width="150" height="50"/>
+               <?php endif; ?>
             </div>
 <?php
 
@@ -121,11 +126,13 @@ endif;
             <?php //echo $this->getTierPriceHtml() ?>
             <?php //echo $this->getChildHtml('extrahint') ?>
 		
-		<?php if ($this->hasOptions()):?>
+		
 <div class="product-options" id="product-options-wrapper">
                 
-												<div>
+                        <div>
+                            <?php if ($this->hasOptions()):?>
 	                        <?php echo $this->getChildHtml('product_options_wrapper'); ?>
+                            <?php endif; ?>
 	                        <?php if ($_product->getTypeId()!="grouped"): ?>
 	                        	<div id="qty" class="attribute-chooser">
                                                         <div class="input-box">
@@ -151,7 +158,7 @@ endif;
                         endif;
 ?>
 </div>
-		<?php endif; ?>
+
 		<div class="clearer"></div>
 								<div class="add-to-box">
                 	  <?php echo $this->getPriceHtml($_product, false); ?>
@@ -252,8 +259,8 @@ endif;
         <div class="left sub-description">
             <?php if ($_product->hasViewDescription() && $_product->getViewDescription() != ""): ?>
                 <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getViewDescription()), 'view_description'); ?>"</p>
-            <?php elseif ($_product->getDescription() != ""): ?>
-                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description'); ?>"</p>
+            <?php elseif ($_product->getGridDescription() != ""): ?>
+                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getGridDescription()), 'grid_description'); ?>"</p>
             <?php else: ?>    
                 <p></p>
             <?php endif; ?>

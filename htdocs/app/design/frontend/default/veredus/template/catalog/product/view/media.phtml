@@ -35,16 +35,33 @@
     $_helper = $this->helper('catalog/output');
 ?>
 
+<?php
+  if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+<a id="Zommer" class = "cloud-zoom"
+   rel="position:'inside'" href="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(1500) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel()); ?>">
+    <?php
+        $_img = '<img id="image" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(378).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+</a>
 
+<?php else: ?>
 <p class="product-image">
     <?php
-        $_img = '<img id="image" ';
-        $_img .= ' src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(378).'" ';
-        $_img .= ' alt="'.$this->htmlEscape($this->getImageLabel()).'" ';
-        $_img .= ' title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(378).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
 </p>
+<?php endif;
+
+//Aggiunta emanuele per far vedere l'immagine del saldo sopra all'altra .L'immagine la legge dall'attributo IMG_SALDI all'interno del prodotto....
+$img_sconto = Mage::getModel('catalog/product')->load($_product->getId())->getimg_saldi();
+if (!empty($img_sconto)) :?>
+ <div id="wrap11"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'images/'.$img_sconto ?>" alt="<?php $this->__('Saldi');?>" /></div>
+ <?php endif;
+ // fine modifica
+ ?>
+
 
 
 <div class="more-views">
@@ -54,7 +71,10 @@
     <ul>
     <?php foreach ($this->getGalleryImages() as $_image): ?>
         <li>
-            <a href="#" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
+            <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1500); ?>"
+               title="<?php echo $this->htmlEscape($_image->getLabel()) ?>"
+               class="cloud-zoom-gallery"
+               rel="useZoom: 'Zoomer', smallImage : '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(378); ?>'">
                 <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(90); ?>" width="90" height="90" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a>
         </li>
     <?php endforeach; ?>
