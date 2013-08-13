@@ -45,20 +45,13 @@ $_typeLayouts = unserialize(Mage::getStoreConfig('veredus/settings/attribute_typ
                 <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" 
                 	      id="attribute<?php echo $_attribute->getAttributeId() ?>" 
                 	      class="required-entry super-attribute-select"
-                	      rel="<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>">
-                    <option <?php if ($_typeLayout != ""): ?> style="display:none" <?php endif; ?>>
+                	      rel="default: '<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>', type: 'custom', col: 3, class:'<?php echo $_attribute->getCode(); ?>-selector'">
+                    <option value="" <?php if ($_typeLayout != ""): ?> style="display:none" <?php endif; ?>>
                     	<?php echo $this->__('Choose') ?> <?php echo $_attribute->getLabel(); ?>
                     </option>
                   </select>
               </div>
-              
-              <?php 
-              	if ($_typeLayout != ""): ?>
-              		<ul rel="attribute<?php echo $_attribute->getAttributeId() ?>" style="display:none">
-              				
-              		</ul>
-             <?php
-              	endif;?>
+                            
         </div>
     <?php endforeach; ?>
     <script type="text/javascript">

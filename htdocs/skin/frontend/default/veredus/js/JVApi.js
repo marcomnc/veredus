@@ -146,10 +146,108 @@ jQuery(document).ready(function(){
         });
         
         $('select').each(function(idx, elem) {
+            
             var $this = $(elem);
+            var opts = {type: 'normal', col: "1", default: '', class: ''};
+            
+            if (typeof($this.attr('rel')) !=  'undefined') {
+                eval('var a = {' + $this.attr('rel') + '}');
+                var relOpts = a;                
+                opts = $.extend({}, opts, relOpts);
+            }
             var width = $this.outerWidth(true);
-            $this.css({'width' : (width + 25)+'px'})
-            $this.wrapAll('<div class="mps-ui-select" style="width: '+width + 'px"/>');
+            $this.css({'width' : (width + 25)+'px'});
+            var id = $this.attr('id');
+            if (typeof(id)=='undefined' && id == '') {
+                id = (new Date()).getTick();
+            }
+            id = "select_container_"+id;
+            
+            var $wrap = $this.wrapAll('<div class="mps-ui-select-container '+ opts.class +'" id="' + id + '"><div class="mps-ui-select" style="width: ' + width + 'px"/></div>');
+            if (opts.type != 'normal') {
+                $this.css({'display': 'none'});
+                var initText = opts.default;
+                if ($this.find('option:selected').attr('value') != "") {
+                     initText = $this.find('option:selected').text();
+                }    
+                $('#'+id+" .mps-ui-select").append($('<div>', {'class': 'select-value'}).text(initText));
+                var open = false;
+                var html = "";                
+                for (var i = 0; i < $this.find('option').length; i++) {
+                    if (i == 0 || (i%(opts.col+1)) == 0) {
+                        html += '<ul class="options" style="display:none">';
+                    }
+                    
+                    if ($this.find('option')[i].value != "") {                        
+                        var selectClass = ($this.find('option')[i].value === $this.find('option:selected').attr('value')) ? 'selected': '';
+                        html += '<li class="'+selectClass+'">';
+                        
+                        if (typeof($this.find('option')[i].attributes['src']) != 'undefined' && $this.find('option')[i].attributes['src'] != "") {
+                            html += '<div class="select-li-value" rel="' + $this.find('option')[i].value + '"';
+                            html += 'style="width: 100%; height: 100%; background-image:url('+$this.find('option')[i].attr('src')+')"></div>';
+                        } else { 
+                            html += '<div class="select-li-value" rel="' + $this.find('option')[i].value + '">'+$this.find('option')[i].text+'</div>';
+                        }                        
+                        html += '</li>';
+                    }
+                    
+                    if (i == ($this.find('option').length - 1) || ( i != 0  &&  ((i%opts.col) == 0))) {
+                        html += "</ul>";
+                    }
+                }
+                
+                $("#"+id).append($('<div>', {'class': 'options-container', 'style': 'display:none;'}).append(html));
+                $('#'+id+" .options").each(function(idx, elem) {
+                    if (idx == 0) {
+                        $(elem).addClass('first');                        
+                    }
+                    if (idx == ($('#'+id+" .options").length-1)) {
+                        $(elem).addClass('last');                      
+                    }
+                    $(elem).find('li').each(function(idxLi, elemLi) {
+                        if (idxLi == 0) {
+                            $(elemLi).addClass('first');                        
+                        }
+                        if (idxLi == ($(elem).find('li').length-1)) {
+                            $(elemLi).addClass('last');                      
+                        }
+                    });
+                });
+                
+                $('#'+id+" .mps-ui-select").click(function(event) {
+                   event.preventDefault();
+                   event.stopPropagation();
+                   if ($('#'+id+" .options-container li").length == 0)
+                        return false;
+                   if (!open) {
+                       $('#'+id).addClass('open');                       
+                       $('#'+id+" .options-container").css({'display': 'block'});
+                       if ($('#'+id+" .options-container").width() <= (width+4)){
+                           $('#'+id+" .options-container").addClass('no-angle');
+                       } else {
+                           $('#'+id+" .options-container").removeClass('no-angle');                           
+                       }
+                       $('#'+id+" .options").slideDown('fast');                       
+                   }  else {
+                       $('#'+id+" .options").slideUp('fast', function() { $('#'+id+" .options-container").css({'display': 'none'}); $('#'+id).removeClass('open'); });
+                       $('#'+id+' .select-value').text( ($this.val() != "") ? $this.find('option:selected').text() : initText);
+                   }
+                   open=!open;
+                });
+                
+                $('#'+id+" .options-container li").mouseover(function() {
+                    $(this).addClass('over');
+                }).mouseout(function() {
+                    $(this).removeClass('over');
+                }).click(function() {                    
+                    $('#'+id+" .options-container li").removeClass('selected');
+                    $(this).addClass('selected');
+                    $this.val($(this).find('div').attr('rel'));
+                    $('#'+id+' .select-value').text( ($this.val() != "") ? $this.find('option:selected').text() : initText);
+                    spConfig.configureElement(document.getElementById($this.attr('id')));
+                });
+                
+            }
         });
         
         $('.mps-ui-checkbox').on('mouseover mouseout click', function(evt) {
@@ -220,5 +318,5 @@ jQuery(document).ready(function(){
             $.fn.layerShow(true,'medium',true, null, null);
             window.location = url;
         }
-    };
+    };    
 })(jQuery, this);

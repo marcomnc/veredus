@@ -137,19 +137,14 @@ endif;
 	                        	<div id="qty" class="attribute-chooser">
                                                         <div class="input-box">
                                                         <select name="qty" id="qty" class="required-entry super-attribute-select"
-                                                                rel="<?php echo $this->__('Choose Qty');?>">
+                                                                rel="default: '<?php echo $this->__('Choose Qty');?>', type: 'custom', col: 5, class:'qty-selector'">
                                                         <option value="<?php $i ?>"><?php echo $this->__('Scegli Qta'); ?></option>
                                                         <?php for ($i = 1; $i <= 10; $i++): ?>
-                                                        <option value="<?php $i ?>"><?php echo $i; ?></option>
+                                                        <option value="<?php echo $i ?>"><?php echo $i; ?></option>
                                                       <?php endfor; ?>
                                                             </select>
-                                                            </div>
-                                                            <ul rel="qty" style="display: none">
-                                                            <?php for ($i = 1; $i <= 10; $i++): ?>
-                                                                    <li><?php echo $i; ?></li>
-                    					<?php endfor; ?>
-                    					</ul>
-        										</div>
+                                            </div>
+                                        </div>
 	                        <?php endif; ?>
                         </div>
 <?php
