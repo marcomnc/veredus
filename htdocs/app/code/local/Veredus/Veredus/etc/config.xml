@@ -46,6 +46,11 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
             <veredus>
                     <class>Veredus_Veredus_Block</class>
             </veredus>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_attribute_edit_tabs>Veredus_Veredus_Block_Adminhtml_Catalog_Attribute_Edit_Tabs</catalog_product_attribute_edit_tabs>
+                </rewrite>
+            </adminhtml>
         </blocks>
         <helpers>
             <veredus>
