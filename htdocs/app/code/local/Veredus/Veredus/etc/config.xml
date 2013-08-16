@@ -30,6 +30,18 @@
     </admin>    
     
     <global>
+        
+        <events>
+            <catalog_entity_attribute_save_after>
+                <observers>
+                    <veredus_observer>
+                        <type>singleton</type>
+                        <class>Veredus_Veredus_Model_Product_Observer</class>
+                        <method>on_attribute_after_save</method>
+                    </veredus_observer>
+                </observers>
+            </catalog_entity_attribute_save_after>
+        </events>
 <!--
 Overload controller per gestione campagne ad su registrazione news letter
 http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_development_in_magento/how_to_overload_a_controller
@@ -48,7 +60,10 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
             </veredus>
             <adminhtml>
                 <rewrite>
+                    <!-- Aggiungo la tab manage colors -->
                     <catalog_product_attribute_edit_tabs>Veredus_Veredus_Block_Adminhtml_Catalog_Attribute_Edit_Tabs</catalog_product_attribute_edit_tabs>
+                    <!-- Aggiungo l'encrypt type sul form -->
+                    <catalog_product_attribute_edit_form>Veredus_Veredus_Block_Adminhtml_Catalog_Attribute_Edit_Form</catalog_product_attribute_edit_form>
                 </rewrite>
             </adminhtml>
         </blocks>

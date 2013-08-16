@@ -61,13 +61,31 @@ class Veredus_Veredus_Helper_Media extends Veredus_Veredus_Helper_Data {
      */
     public function getImageColorUrl($optionId, $imgFormat = 'jpg')
     {
-        $uploadDir = Mage::getBaseDir(Mage_Core_Model_Store::URL_TYPE_MEDIA) . DIRECTORY_SEPARATOR .
-                                                    'mps' . DIRECTORY_SEPARATOR . 'colormanager' . DIRECTORY_SEPARATOR;
+        $uploadDir = $this->getUplaodDir();
         if (file_exists($uploadDir . $optionId . '.' . $imgFormat))
         {
             return Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)  . 'mps/colormanager/' . $optionId . '.' . $imgFormat;
         }
         return '';
+    }
+    
+    /**
+     * Cancello il file immagine selezionato
+     * @param type $filename
+     */
+    public function deleteImageFile($filename) {
+        $file = $this->getUplaodDir() . $filename;
+        if (file_exists($file)) {
+            if (!unlink($file)) {
+                Mage::throwException($this->__('errore in fase di cancellazione di ' . $file));
+            }
+        } else {
+            Mage::throwException($this->__('File da cancellare inesistente' ."($file)"));
+        }
+    }
+    
+    public function getUplaodDir() {
+        return Mage::getBaseDir(Mage_Core_Model_Store::URL_TYPE_MEDIA) . DS . 'mps' . DS . 'colormanager' . DS;
     }
     
     private function _getAttributeArray($type) {

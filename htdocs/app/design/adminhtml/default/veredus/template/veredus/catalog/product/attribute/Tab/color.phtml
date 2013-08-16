@@ -1,4 +1,4 @@
-<div class="entity-edit">
+<div class="entity-edit color-manager">
     <div class="entry-edit-head">
         <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('veredus')->__('Manage Colors') ?></h4>
     </div>
@@ -8,40 +8,46 @@
                 <tr>
                     <th width="150"><?php echo Mage::helper('veredus')->__('Color Label') ?></th>
                     <th width="250"><?php echo Mage::helper('veredus')->__('Upload Swatch Image') ?></th>
-                    <th><?php echo Mage::helper('veredus')->__('Preview') ?></th>
-                    <th><?php echo Mage::helper('veredus')->__('Delete') ?></th>
+                    <!--<th><?php echo Mage::helper('veredus')->__('Preview') ?></th>-->
                 </tr>
                 <?php foreach (MAge::helper('veredus/media')->getAttributeOptions($this->getAttribute()) as $_attribute): ?>
                 <tr>
                     <td>
                         <?php echo $_attribute['label']; ?>
                     </td>
-                    <td>
-                        <?php echo $this->getLayout()->createBlock('Mage_Adminhtml_Block_Widget_Form_Element')
-                                   ->setElement(new Varien_Data_Form_Element_Image(array(
-                                                                                    'label'     => Mage::helper('veredus')->__('Image File'),
-                                                                                    'required'  => false,
-                                                                                    'name'      => 'filename',
-                                                                                    )))
-                                   ->toHtml();?>
-                        <?php $block = new Varien_Data_Form_Element_Image(array(
-                                                                                    'label'     => Mage::helper('veredus')->__('Image File'),
-                                                                                    'required'  => false,
-                                                                                    'name'      => 'filename',
-                                                                                    ));
-                              echo $block->toHtml();?>
+                    <td class="value">
+                    <?php 
+                        $_img = Mage::Helper('veredus/media')->getImageColorUrl($_attribute['value']);
+                        if ($_img != ""): ?>
+                            <a href="<?php echo $_img; ?>" onclick="imagePreview('filename_image_<?php echo $_attribute["value"];?>'); return false;">
+                                <img src="<?php echo $_img; ?>" id="filename_image_<?php echo $_attribute['value'];?>" 
+                                     title="<?php echo $_attribute['value']?>.jpg" alt="<?php echo $_attribute['label'];?>" 
+                                     height="22" width="22" class="small-image-preview v-middle"/>
+                            </a> 
+                    <?php
+                        endif; ?>
+                        
+                        <input id="filename" name="filename[<?php echo $_attribute['value'];?>]" 
+                               value="<?php if ($_img != ''): echo $_attribute['value'].'.jpg'; endif;?>" 
+                               type="file" class="input-file" accept="image/jpeg"/>
+                    <?php 
+                        if ($_img != ""): ?>
+                            <span class="delete-image">
+                                <input type="checkbox" name="filename_delete[<?php echo $_attribute['value'];?>]" 
+                                       value="1" class="checkbox" id="filename_delete_<?php echo $_attribute['value'];?>"/>
+                                <label for="filename_delete"> <?php echo $this->__('Delete image');?></label>
+                            </span>            
+                    <?php
+                        endif; ?>                        
                     </td>
-                    <td>
+                    <!--<td>
                         <?php $_img = MAge::Helper('veredus/media')->getImageColorUrl($_attribute['value']);
                         if ($_img != ""): ?>
                             <img src="<?php echo $_img;?>" />
                         <?php else: ?>
                             &nbsp;
                         <?php endif; ?>
-                    </td>
-                    <td>
-                        delete
-                    </td>
+                    </td>-->
                 </tr>
                 <?php endforeach; ?>
             </table>
