@@ -54,6 +54,10 @@ class Veredus_Veredus_Helper_Media extends Veredus_Veredus_Helper_Data {
         return $ret;
     }
     
+    public function getImageUrl() {
+        return Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)  . 'mps/colormanager/';
+    }
+    
     /**
      * Data un id opzione di ritorna il percorso dell'immagine relativa
      * @param type $optionId
@@ -61,7 +65,7 @@ class Veredus_Veredus_Helper_Media extends Veredus_Veredus_Helper_Data {
      */
     public function getImageColorUrl($optionId, $imgFormat = 'jpg')
     {
-        $uploadDir = $this->getUplaodDir();
+        $uploadDir = $this->getUploadDir();
         if (file_exists($uploadDir . $optionId . '.' . $imgFormat))
         {
             return Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)  . 'mps/colormanager/' . $optionId . '.' . $imgFormat;
@@ -74,7 +78,7 @@ class Veredus_Veredus_Helper_Media extends Veredus_Veredus_Helper_Data {
      * @param type $filename
      */
     public function deleteImageFile($filename) {
-        $file = $this->getUplaodDir() . $filename;
+        $file = $this->getUploadDir() . $filename;
         if (file_exists($file)) {
             if (!unlink($file)) {
                 Mage::throwException($this->__('errore in fase di cancellazione di ' . $file));
@@ -84,7 +88,7 @@ class Veredus_Veredus_Helper_Media extends Veredus_Veredus_Helper_Data {
         }
     }
     
-    public function getUplaodDir() {
+    public function getUploadDir() {
         return Mage::getBaseDir(Mage_Core_Model_Store::URL_TYPE_MEDIA) . DS . 'mps' . DS . 'colormanager' . DS;
     }
     

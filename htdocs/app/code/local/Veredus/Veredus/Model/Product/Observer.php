@@ -42,7 +42,7 @@ class Veredus_Veredus_Model_Product_Observer {
                         $uploader->setAllowRenameFiles(false);
                         $uploader->setFilesDispersion(false);
 
-                        $result = $uploader->save(Mage::helper('veredus/media')->getUplaodDir(), "$id.jpg" );
+                        $result = $uploader->save(Mage::helper('veredus/media')->getUploadDir(), "$id.jpg" );
 
                     } catch (Exception $ex) {
                         Mage::getSingleton('adminhtml/session')->addError(Mage::helper('veredus/media')->__($ex->getMessage()));

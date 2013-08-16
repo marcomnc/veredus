@@ -2011,6 +2011,8 @@ INPUT[type="checkbox"],
 .mps-ui-select-container.qty-selector .options li.over {background-color: #ABD7C5}
 .mps-ui-select-container.qty-selector .options li.selected {background-color: #79978B }
 
+.mps-ui-select-container.color-selector .options .select-li-value {height: 40px; width: 30px;}
+
 .set-container {width: 100%; height: auto;}
 .set-container .set-left {float: left}
 .set-container .set-right {float: right} 

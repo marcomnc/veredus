@@ -37,7 +37,7 @@
         <?php if (($_cartQty = $this->getSummaryCount()) > 0): ?>
             <a id="header-cart-link" href="<?php echo $this->getUrl('checkout/cart/'); ?>">
                 <?php echo $this->__("Shopping Cart"); ?><br>
-                <?php echo "450,00 Eur";// Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+                <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
             </a> 
         <?php else: ?>
             <?php echo $this->__("Shopping Cart - No Item"); ?>
@@ -47,7 +47,7 @@
         <?php if ($_cartQty > 0): ?>
             <div class="cart-items">
                 <a id="header-cart-link" href="<?php echo $this->getUrl('checkout/cart/'); ?>">
-                        <?php echo 1;//$_cartQty; ?>
+                        <?php echo $_cartQty; ?>
                 </a>
             </div>
         <?php endif; ?>

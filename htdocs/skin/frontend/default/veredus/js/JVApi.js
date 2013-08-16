@@ -136,6 +136,155 @@ jQuery(document).ready(function(){
 
 //UI
 (function ($, window, undefined){
+    
+    $.fn.CreateSelect = function(elem, reload) {
+        var $this = $(elem);
+        var opts = {type: 'normal', col: "1", default: '', class: '', imgBaseUrl: '', reloadElem: ''};
+
+        if (typeof($this.attr('mps-rel')) !=  'undefined') {
+            eval('var a = {' + $this.attr('mps-rel') + '}');
+            var relOpts = a;                
+            opts = $.extend({}, opts, relOpts);
+        }
+        var width = $this.outerWidth(true);
+        $this.css({'width' : (width + 25)+'px'});        
+        var id = $this.attr('id');
+        
+        if (!reload) {
+            if (typeof(id)=='undefined' && id == '') {
+                id = (new Date()).getTick();
+            }
+            id = "select_container_"+id;
+        } else {
+            for(var i=0; i < $('.mps-ui-select-container').length; i++) {
+                if ($($('.mps-ui-select-container')[i]).find('select').attr('id') == $this.attr('id')) {
+                    id = $($('.mps-ui-select-container')[i]).attr('id');
+                    break;
+                }
+            }
+        }
+
+        if (!reload)
+            var $wrap = $this.wrapAll('<div class="mps-ui-select-container '+ opts.class +'" id="' + id + '"><div class="mps-ui-select" style="width: ' + width + 'px"/></div>');
+        
+        if (opts.type != 'normal') {
+            $this.css({'display': 'none'});
+            var initText = opts.default;
+            if ($this.find('option:selected').attr('value') != "") {
+                 initText = $this.find('option:selected').text();
+            }    
+            if (!reload) {
+                $('#'+id+" .mps-ui-select").append($('<div>', {'class': 'select-value'}));                
+            }
+            $('#'+id+" .mps-ui-select div.select-value").text(initText);
+            
+            var open = false;
+            if (reload) {
+                $('#'+id+" .options-container").remove();
+            }
+            var html = "";                
+            for (var i = 0; i < $this.find('option').length; i++) {            
+                if (i == 0 || (i%(opts.col+1)) == 0) {
+                    html += '<ul class="options" style="display:none">';
+                }
+
+                if ($this.find('option')[i].value != "" && i != 0) {                        
+                    var selectClass = ($this.find('option')[i].value === $this.find('option:selected').attr('value')) ? 'selected': '';
+                    html += '<li class="selectable '+selectClass+'">';
+
+                    if ((typeof($this.find('option')[i].attributes['src']) != 'undefined' && $this.find('option')[i].attributes['src'] != "") || 
+                        (opts.imgBaseUrl!='')) {
+                        var url = (typeof($this.find('option')[i].attributes['src']) != 'undefined' && $this.find('option')[i].attributes['src'] != "") ? $this.find('option')[i].attributes['src'] : (opts.imgBaseUrl + $this.find('option')[i].value+".jpg") ;
+
+                        html += '<div class="select-li-value" rel="' + $this.find('option')[i].value + '"';
+                        html += 'style="background-image:url('+url+')"></div>';
+                    } else { 
+                        html += '<div class="select-li-value" rel="' + $this.find('option')[i].value + '">'+$this.find('option')[i].text+'</div>';
+                    }                        
+                    html += '</li>';
+                }
+
+                if (i == ($this.find('option').length - 1) || ( i != 0  &&  ((i%opts.col) == 0))) {
+                    html += "</ul>";
+                }
+            }
+
+            $("#"+id).append($('<div>', {'class': 'options-container', 'style': 'display:none;'}).append(html));
+            
+            $('#'+id+" .options").each(function(idx, elem) {
+                if (idx == 0) {
+                    $(elem).addClass('first');                        
+                } 
+                if (idx == ($('#'+id+" .options").length-1)) {
+                    $(elem).addClass('last');              
+                    if (idx != 0) {
+                        while ($(elem).find('li').length < opts.col) {                    
+                            $(elem).append($('<li>'));
+                        }
+                    }
+                }
+                
+                $(elem).find('li').each(function(idxLi, elemLi) {
+                    if (idxLi == 0) {
+                        $(elemLi).addClass('first');                        
+                    }
+                    if (idxLi == ($(elem).find('li').length-1)) {
+                        $(elemLi).addClass('last');                      
+                    }
+                });
+            });
+
+            $('#'+id+" .mps-ui-select").click(function(event) {
+               event.preventDefault();
+               event.stopPropagation();
+               if ($('#'+id+" .options-container li").length == 0)
+                    return false;
+               if (!open) {              
+                   for (var i=0; i < $(".mps-ui-select-container.open").length; i++) {
+                       var hideId = $($(".mps-ui-select-container.open")[i]).attr('id')
+                       if (hideId != id) {
+                           $('#'+hideId+" .options").slideUp('fast', function() { $('#'+hideId+" .options-container").css({'display': 'none'}); $('#'+hideId).removeClass('open'); });
+                       }
+                   }
+                   $('#'+id).addClass('open');                       
+                   $('#'+id+" .options-container").css({'display': 'block'});
+                   if ($('#'+id+" .options-container").width() <= (width+4)){
+                       $('#'+id+" .options-container").addClass('no-angle');
+                   } else {
+                       $('#'+id+" .options-container").removeClass('no-angle');                           
+                   }
+                   $('#'+id+" .options").slideDown('fast');                       
+               }  else {
+                   $('#'+id+" .options").slideUp('fast', function() { $('#'+id+" .options-container").css({'display': 'none'}); $('#'+id).removeClass('open'); });
+                   $('#'+id+' .select-value').text( ($this.val() != "") ? $this.find('option:selected').text() : initText);
+               }
+               open=!open;
+            });
+
+            $('#'+id+" .options-container li.selectable").mouseover(function() {
+                $(this).addClass('over');
+            }).mouseout(function() {
+                $(this).removeClass('over');
+            }).click(function() {                    
+                $('#'+id+" .options-container li").removeClass('selected');
+                $(this).addClass('selected');
+                $this.val($(this).find('div').attr('rel'));
+                $('#'+id+' .select-value').text( ($this.val() != "") ? $this.find('option:selected').text() : initText);
+                try {
+                    spConfig.configureElement(document.getElementById($this.attr('id')));
+                    var elemIds = opts.reloadElem.split(',');
+                    for (var i=0; i < elemIds.length; i++) {
+                        if (elemIds[i] != '')
+                            $.fn.CreateSelect(document.getElementById(elemIds[i]), true);
+                    }
+                } catch (ex) {
+                    console.log(ex);
+                }
+                $('#'+id+" .mps-ui-select").trigger('click');
+            });
+
+        }
+    };
     // Inizializzazione grafica
     $.fn.MpsUi =  function() {
         
@@ -146,108 +295,7 @@ jQuery(document).ready(function(){
         });
         
         $('select').each(function(idx, elem) {
-            
-            var $this = $(elem);
-            var opts = {type: 'normal', col: "1", default: '', class: ''};
-            
-            if (typeof($this.attr('rel')) !=  'undefined') {
-                eval('var a = {' + $this.attr('rel') + '}');
-                var relOpts = a;                
-                opts = $.extend({}, opts, relOpts);
-            }
-            var width = $this.outerWidth(true);
-            $this.css({'width' : (width + 25)+'px'});
-            var id = $this.attr('id');
-            if (typeof(id)=='undefined' && id == '') {
-                id = (new Date()).getTick();
-            }
-            id = "select_container_"+id;
-            
-            var $wrap = $this.wrapAll('<div class="mps-ui-select-container '+ opts.class +'" id="' + id + '"><div class="mps-ui-select" style="width: ' + width + 'px"/></div>');
-            if (opts.type != 'normal') {
-                $this.css({'display': 'none'});
-                var initText = opts.default;
-                if ($this.find('option:selected').attr('value') != "") {
-                     initText = $this.find('option:selected').text();
-                }    
-                $('#'+id+" .mps-ui-select").append($('<div>', {'class': 'select-value'}).text(initText));
-                var open = false;
-                var html = "";                
-                for (var i = 0; i < $this.find('option').length; i++) {
-                    if (i == 0 || (i%(opts.col+1)) == 0) {
-                        html += '<ul class="options" style="display:none">';
-                    }
-                    
-                    if ($this.find('option')[i].value != "") {                        
-                        var selectClass = ($this.find('option')[i].value === $this.find('option:selected').attr('value')) ? 'selected': '';
-                        html += '<li class="'+selectClass+'">';
-                        
-                        if (typeof($this.find('option')[i].attributes['src']) != 'undefined' && $this.find('option')[i].attributes['src'] != "") {
-                            html += '<div class="select-li-value" rel="' + $this.find('option')[i].value + '"';
-                            html += 'style="width: 100%; height: 100%; background-image:url('+$this.find('option')[i].attr('src')+')"></div>';
-                        } else { 
-                            html += '<div class="select-li-value" rel="' + $this.find('option')[i].value + '">'+$this.find('option')[i].text+'</div>';
-                        }                        
-                        html += '</li>';
-                    }
-                    
-                    if (i == ($this.find('option').length - 1) || ( i != 0  &&  ((i%opts.col) == 0))) {
-                        html += "</ul>";
-                    }
-                }
-                
-                $("#"+id).append($('<div>', {'class': 'options-container', 'style': 'display:none;'}).append(html));
-                $('#'+id+" .options").each(function(idx, elem) {
-                    if (idx == 0) {
-                        $(elem).addClass('first');                        
-                    }
-                    if (idx == ($('#'+id+" .options").length-1)) {
-                        $(elem).addClass('last');                      
-                    }
-                    $(elem).find('li').each(function(idxLi, elemLi) {
-                        if (idxLi == 0) {
-                            $(elemLi).addClass('first');                        
-                        }
-                        if (idxLi == ($(elem).find('li').length-1)) {
-                            $(elemLi).addClass('last');                      
-                        }
-                    });
-                });
-                
-                $('#'+id+" .mps-ui-select").click(function(event) {
-                   event.preventDefault();
-                   event.stopPropagation();
-                   if ($('#'+id+" .options-container li").length == 0)
-                        return false;
-                   if (!open) {
-                       $('#'+id).addClass('open');                       
-                       $('#'+id+" .options-container").css({'display': 'block'});
-                       if ($('#'+id+" .options-container").width() <= (width+4)){
-                           $('#'+id+" .options-container").addClass('no-angle');
-                       } else {
-                           $('#'+id+" .options-container").removeClass('no-angle');                           
-                       }
-                       $('#'+id+" .options").slideDown('fast');                       
-                   }  else {
-                       $('#'+id+" .options").slideUp('fast', function() { $('#'+id+" .options-container").css({'display': 'none'}); $('#'+id).removeClass('open'); });
-                       $('#'+id+' .select-value').text( ($this.val() != "") ? $this.find('option:selected').text() : initText);
-                   }
-                   open=!open;
-                });
-                
-                $('#'+id+" .options-container li").mouseover(function() {
-                    $(this).addClass('over');
-                }).mouseout(function() {
-                    $(this).removeClass('over');
-                }).click(function() {                    
-                    $('#'+id+" .options-container li").removeClass('selected');
-                    $(this).addClass('selected');
-                    $this.val($(this).find('div').attr('rel'));
-                    $('#'+id+' .select-value').text( ($this.val() != "") ? $this.find('option:selected').text() : initText);
-                    spConfig.configureElement(document.getElementById($this.attr('id')));
-                });
-                
-            }
+            $.fn.CreateSelect(elem);
         });
         
         $('.mps-ui-checkbox').on('mouseover mouseout click', function(evt) {

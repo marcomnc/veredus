@@ -29,23 +29,37 @@
 $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 $_config = Mage::Helper('core')->jsonDecode($this->getJsonConfig());
-$_typeLayouts = unserialize(Mage::getStoreConfig('veredus/settings/attribute_type_layout'));
+$_attributeColorArray = preg_split('/,/', Mage::getStoreConfig('veredus/settings/attribute_color'));
+$_attributeSizeArray = preg_split('/,/', Mage::getStoreConfig('veredus/settings/attribute_size'));
+
+
+
 ?>
 
 <?php if ($_product->isSaleable() && count($_attributes)):?>
     <?php foreach($_attributes as $_attribute): 
-    				$_typeLayout = "";
-          	foreach ($_typeLayouts as $_lay):
-          		if (strtolower($_lay['attribute']) == strtolower($_attribute->getCode())):
-          			$_typeLayout = $_lay['type'];
-          		endif;
-          	endforeach;?>   
-        <div class="attribute-chooser<?php if ($_attribute->decoratedIsLast){?> last<?php }?>">
+
+            $_isColor = (array_search($_attribute->getProductAttribute()->getAttributeCode(),$_attributeColorArray ) !== false) ? true : false;
+            $_isSize  = (array_search($_attribute->getProductAttribute()->getAttributeCode(),$_attributeSizeArray  ) !== false) ? true : false;
+            $_elemetToReload = array();
+            $_find = false;
+            foreach ($_config['attributes'] as $k=>$v) :
+                if ($_find):
+                    $_elemetToReload[] = "attribute$k";
+                endif;
+                if ($k == $_attribute->getAttributeId()) :
+                    $_find = true;
+                endif;
+                
+            endforeach;
+          	?>   
+        <div class="attribute-chooser<?php if ($_attribute->decoratedIsLast):?> last<?php endif;?>">
             <div class="input-box">
                 <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" 
                 	      id="attribute<?php echo $_attribute->getAttributeId() ?>" 
                 	      class="required-entry super-attribute-select"
-                	      rel="default: '<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>', type: 'custom', col: 3, class:'<?php echo $_attribute->getCode(); ?>-selector'">
+                              rel="<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>"
+                	      mps-rel="default: '<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>', type: 'custom', col: 3, class:'<?php echo $_attribute->getProductAttribute()->getAttributeCode(); ?>-selector'<?php if($_isColor): ?>, imgBaseUrl: '<?php echo MAge::Helper('veredus/media')->getImageUrl(); ?>'<?php endif;?><?php if (sizeof($_elemetToReload)>0): ?>, reloadElem: '<?php echo implode(',', $_elemetToReload); ?>'<?php endif; ?>">
                     <option value="" <?php if ($_typeLayout != ""): ?> style="display:none" <?php endif; ?>>
                     	<?php echo $this->__('Choose') ?> <?php echo $_attribute->getLabel(); ?>
                     </option>
