@@ -342,23 +342,34 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .v-fix .validation-advice { display:block; width:12em; margin-right:-12em; position:relative; }
 
 /* Global Messages  */
+/* Global Messages  */
 .success { color:#3d6611; font-weight:bold; }
-.error { color:#df280a; font-weight:bold; }
-.notice { color:#e26703; }
+.error { color:#f00; font-weight:bold; }
+.notice { color:#ccc; }
 
 .messages,
 .messages ul { list-style:none !important; margin:0 !important; padding:0 !important; }
 .messages { width:100%; overflow:hidden; }
-.messages li { margin:0 0 10px !important; }
-.messages li li { margin:0 0 3px !important; }
+.messages li { margin:0 0 10px; padding: 15px 0 10px 0;}
+.messages li li {
+  margin:0 0 3px;
+  line-height: 120%;
+}
 .error-msg,
 .success-msg,
 .note-msg,
-.notice-msg { border-style:solid !important; border-width:1px !important; background-position:10px 9px !important; background-repeat:no-repeat !important; min-height:24px !important; padding:8px 8px 8px 32px !important; font-size:11px !important; font-weight:bold !important; }
-.error-msg { border-color:#f16048; background-color:#faebe7; background-image:url(../images/i_msg-error.gif); color:#df280a; }
-.success-msg { border-color:#446423; background-color:#eff5ea; background-image:url(../images/i_msg-success.gif); color:#3d6611; }
+.notice-msg {
+  min-height:24px !important;
+  padding:8px 8px 8px 8px !important;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+}
+.error-msg { border-color:#f16048; background-color:#faebe7; background:url("../images/veredus_v_1_0.png") -0px -140px repeat; color:#df280a; }
+.success-msg { border-color:#3E3D40; background:url("../images/veredus_v_1_0.png") -0px -140px repeat; color:#3E3D40; }
 .note-msg,
-.notice-msg { border-color:#fcd344; background-color:#fafaec; background-image:url(../images/i_msg-note.gif); color:#3d6611; }
+.notice-msg { border-color:#3E3D40; background-color:#fafaec; background:url("../images/veredus_v_1_0.png") -0px -140px repeat; color:#3E3D40; }
+
 
 /* BreadCrumbs */
 .breadcrumbs { font-size:11px; line-height:1.25; margin:6px 0 13px; }
@@ -366,7 +377,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .breadcrumbs li strong { font-weight:bold; }
 
 /* Page Heading */
-.page-title { width:100%; overflow:hidden; border-bottom:1px solid #ccc; margin:0 0 25px; }
+.page-title { width:100%; overflow:hidden; border-bottom:1px solid #89a39f; margin:0 0 25px; }
 .page-title h1,
 .page-title h2 { margin:0; font-size:20px; color:#0a263c; }
 .page-title .separator { margin:0 3px; }
@@ -1378,7 +1389,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .cart .totals .table-sep td { border-bottom: 2px solid #89a39f; padding: 5px 0; }
 
 /* Options Tool Tip */
-.item-options dt { font-weight:bold; font-style:italic; }
+.item-options dt { font-weight:bold; font-style:italic; float: left; margin: 0 10px 0 }
 .item-options dd { padding-left:10px; margin:0 0 6px; }
 .truncated { cursor:help; }
 .truncated a.dots { cursor:help; }
@@ -1511,7 +1522,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .opc .ul { list-style:disc outside; padding-left:18px; }
 
 .opc { position:relative; }
-.opc li.section.active {border-top: 3px solid #89a39f}
+.opc li.section.active {/* border-top: 3px solid #89a39f */}
 
 .opc .step-title { display:none }
 .opc .step-title .number { float:left; background:#fff; border:1px solid #fff; padding:0 4px; margin:0 5px 0 0; font:bold 11px/14px arial, helvetica, sans-serif; color:#999; }
@@ -1529,7 +1540,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 /*.opc .active .step-title a { display:none; }*/
 
 .opc .step {border-top:0; position:relative; }
-.opc .step .row-title {border-bottom: 3px solid #89a39f;}
+.opc .step .row-title {border-bottom: 1px solid #89a39f;}
 .opc .step .tool-tip { right:30px; }
 
 #opc-login .buttons-set { border-top:0; }
@@ -2056,14 +2067,14 @@ INPUT[type="checkbox"],
 #checkout-review-table td,
 #shopping-cart-table th,
 #shopping-cart-table td{ vertical-align: middle; padding: 3px 0px 7px 0px; }
-#shopping-cart-table th { border-top: 3px solid #89a39f}
+#shopping-cart-table th { }
 #shopping-cart-table th.first {padding-left: 7px;}
 #shopping-cart-table th.last {padding-right: 7px;}
 .data-table td.item-qty input { float: left }
 .data-table td a.modify {width: 18px; height: 18px; display: block; float: left; cursor: pointer}
 .data-table td a.add-qty { background:transparent url('../images/veredus_v_1_0.png') 0px -352px no-repeat; }
 .data-table td a.rem-qty { background:transparent url('../images/veredus_v_1_0.png') -22px -352px no-repeat; }
-.opc-block-progress {height: 47px}
+.opc-block-progress {height: 47px; border-bottom: 3px solid #89a39f; }
 .opc-block-progress .opc-is { float:left; height: 44px; position:relative; text-align: center;  }
 .opc-block-progress .opc-is-cart { width: 160px; text-align: left; padding-left: 6px}
 .opc-block-progress .opc-is-login { width: 135px;}
@@ -2121,6 +2132,12 @@ INPUT[type="checkbox"],
   clear: none;
 }
 
+.opc .form-list .input-box {width: 290px}
+.opc .form-list .input-box {width: 290px}
+.opc .form-list .field { width: 305px }
+
+#co-shipping-form .form-list .field { width: 340px}
+
 #login-form #remember-me-box,
 #login-form li.forgot-password {margin: 5px 0 0 175px;}
 #login-form #fb-connect {float: right}
@@ -2133,4 +2150,12 @@ INPUT[type="checkbox"],
 #login-button-set button{
   float: left;
   margin-left: 175px
+}
+.cartStepTitle { font-size: 16px; margin: 0 0 5px 5px;border-bottom: 1px solid #89a39f;}
+#product-added-to-cart-conclude-shopping { display: block; position: relative; top: -64px; left: 720px; height: 43px; min-width: 230px; font-size: 20px; font-weight: bold;}
+
+#co-shipping-form .directory label {
+    width: 55px;
+}
+#co-billing-form, #co-shipping-form { margin-left: auto; margin-right: auto; text-align: center; width: 687px; display: block;
 }

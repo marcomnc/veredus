@@ -37,6 +37,10 @@
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<button onclick="jQuery.fn.AsyncRedirect('<?php echo Mage::Helper('checkout/cart')->getCartUrl(); ?>');"
+        id="product-added-to-cart-conclude-shopping" style="display: none;" title="<?php echo $this->__('Conclude shopping');?>"
+        type="button" class="button"><span><span><?php echo $this->__('Conclude shopping');?></span></span>
+</button>
 <div class="product-view">
     <div class="product-essential">
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
@@ -239,6 +243,12 @@ endif;
         jQuery(document).ready(function () {
            jQuery('#tabber').multiminitabs('class'); 
         });
+        
+        jQuery('.success-msg').each(function() {
+          jQuery('#product-added-to-cart-conclude-shopping').css("display", "block");
+          jQuery('.messages li li').css("width", "720px");
+        });
+        
     //]]>
     </script>
     </div>
