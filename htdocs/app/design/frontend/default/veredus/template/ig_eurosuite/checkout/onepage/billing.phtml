@@ -20,9 +20,6 @@
 $eurosuite = Mage::getModel('ig_eurosuite/eurosuite');
 ?>
 <h2 class="cartStepTitle"><?php echo $this->__('Billing address'); ?></h2>
-<div class="spaziatoreLungo">
-<hr style="padding: 0;margin: 0px">
-</div>
 <form id="co-billing-form" action="">
 	<fieldset>
 		<ul class="form-list">
@@ -184,9 +181,7 @@ $eurosuite = Mage::getModel('ig_eurosuite/eurosuite');
                           <span>
                             <?php echo $this->__('Login info');?>
                           </span>  
-                            <div class="spaziatoreLungo">
-                              <hr style="padding: 0;margin: 0px">
-                            </div>
+                            
                         </li>
                         <li class="fields">
 							<?php if (!$this->isCustomerLoggedIn()): ?>
@@ -293,6 +288,6 @@ $eurosuite = Mage::getModel('ig_eurosuite/eurosuite');
 	    //billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');
 	    $('billing-address-select') && billing.newAddress(!$('billing-address-select').value);
 	
-	    var billingRegionUpdater = new RegionUpdater('billing:country_id', 'billing:region', 'billing:region_id', countryRegions, undefined, 'billing:postcode');
+	    var billingRegionUpdater = new RegionUpdater('billing:country_id', 'billing:region', 'billing:region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'billing:postcode');
 	//]]>
 </script>

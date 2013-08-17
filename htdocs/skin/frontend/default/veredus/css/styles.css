@@ -377,7 +377,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .breadcrumbs li strong { font-weight:bold; }
 
 /* Page Heading */
-.page-title { width:100%; overflow:hidden; border-bottom:1px solid #89a39f; margin:0 0 25px; }
+.page-title { width:100%; overflow:hidden;  margin:0 0 25px; }
 .page-title h1,
 .page-title h2 { margin:0; font-size:20px; color:#0a263c; }
 .page-title .separator { margin:0 3px; }
@@ -485,6 +485,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart-tax-total .price { display:inline !important; font-weight:normal !important; }
 .cart-tax-total-expanded { background-position:100% -52px; }
 
+.cart-help {font-size: 13px;margin: 20px 0 0;text-align: left;}
 /* Class: std - styles for admin-controlled content */
 .std .subtitle { padding:0; }
 .std ol.ol { list-style:decimal outside; padding-left:1.5em; }
@@ -1541,6 +1542,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 
 .opc .step {border-top:0; position:relative; }
 .opc .step .row-title {border-bottom: 1px solid #89a39f;}
+.opc .step .row-title { border-width: 0px }
 .opc .step .tool-tip { right:30px; }
 
 #opc-login .buttons-set { border-top:0; }
@@ -1987,16 +1989,18 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 INPUT[type="checkbox"], 
 .mps-ui-checkbox input {display: none}
 .mps-ui-checkbox,
-.mps-ui-checkbox.checked { width: 13px; height: 14px; float: left }
+.mps-ui-checkbox.checked { width: 13px; height: 14px; float: left; position: relative;}
 .mps-ui-checkbox {background: transparent url('../images/veredus_v_1_0.png') -2px -14px no-repeat;}
 .mps-ui-checkbox.checked {background-position:  -18px -14px;}
+.mps-ui-checkbox .validation-advice { position: absolute; top: 15px; width: 300px }
 
 .mps-ui-select { overflow: hidden; border:1px solid #b6b6b6; 
-                 padding:2px; 
+                 padding:2px; position: relative;
                  -webkit-border-radius: 4px;
                  -moz-border-radius: 4px;
                  border-radius: 4px; 
                  background:  #FFF url('../images/row-down.png') right 5px no-repeat;}
+.mps-ui-select .validation-advice { position: absolute; top: 15px; width: 300px }
 .mps-ui-select select {border: none; background: transparent; padding: 3px 0 2px 6px; -webkit-appearance: none; vertical-align: top;}
 .mps-ui-select-container.open .mps-ui-select {-webkit-border-radius:4px 4px 0px 0px ;
                     -moz-border-radius: 4px 4px 0px 0px ;
@@ -2132,9 +2136,11 @@ INPUT[type="checkbox"],
   clear: none;
 }
 
-.opc .form-list .input-box {width: 290px}
+#login-form .form-list .input-box {width: 340px}
 .opc .form-list .input-box {width: 290px}
 .opc .form-list .field { width: 305px }
+
+.billing-info-text { color: #959FA1; float: left; margin-left: 3px;}
 
 #co-shipping-form .form-list .field { width: 340px}
 
@@ -2151,11 +2157,20 @@ INPUT[type="checkbox"],
   float: left;
   margin-left: 175px
 }
-.cartStepTitle { font-size: 16px; margin: 0 0 5px 5px;border-bottom: 1px solid #89a39f;}
+.cartStepTitle { font-size: 16px; padding:  0 0 5px 5px;border-bottom: 1px solid #89a39f;}
 #product-added-to-cart-conclude-shopping { display: block; position: relative; top: -64px; left: 720px; height: 43px; min-width: 230px; font-size: 20px; font-weight: bold;}
 
 #co-shipping-form .directory label {
     width: 55px;
 }
 #co-billing-form, #co-shipping-form { margin-left: auto; margin-right: auto; text-align: center; width: 687px; display: block;
-}
+}#co-billing-form select, #co-shipping-form select {width: 165px;}
+#co-billing-form .mps-ui-select-container , #co-shipping-form .mps-ui-select-container  { float:right} 
+#co-billing-form .form-list .checkbox-field input, 
+#co-shipping-form .form-list .checkbox-field input {float: none; margin-left: 125px; width: 13px;}
+#co-billing-form .form-list .checkbox-field .mps-ui-checkbox,
+#co-shipping-form .form-list .checkbox-field .mps-ui-checkbox { margin-left: 125px; }
+#co-billing-form .checkbox-field,
+#co-shipping-form .checkbox-field { text-align: left;}
+#co-billing-form .title-list-item, 
+#co-shipping-form .title-list-item {font-size: 14px;text-align: left; border-bottom: 1px solid #89a39f; padding-bottom: 5px}

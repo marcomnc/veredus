@@ -176,7 +176,9 @@ Default layout, loads most of the pages
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
-        
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/regionupdater.js</name></action>
+        </reference>
         <!-- Use for ajax login -->        
         <reference name="header">
             <remove name="customer_ajax_login"/>

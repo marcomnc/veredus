@@ -308,10 +308,10 @@ jQuery(document).ready(function(){
                     break;
                 default:
                     if ($(this).hasClass('checked')) {
-                        $(this).find('input').prop("checked", true);
+                        $(this).find('input').prop("checked", false).val(0);
                         $(this).removeClass('checked');
                     } else {
-                        $(this).find('input').prop("checked", false);
+                        $(this).find('input').prop("checked", true).val(1);
                         $(this).addClass('checked');
                     }
                     break;
