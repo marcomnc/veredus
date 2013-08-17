@@ -1,0 +1,103 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * 
+ * Mage::app()->getFrontController()->getRequest()->getControllerName() 
+ * cart => Sono nel carrello
+ * onepage => Sono al checkout
+ */
+?>
+
+<?php     
+    
+    //Mage::Log($this->getCheckout()->getData());
+    $_steps = $this->getCheckout()->getSteps(); 
+    if (Mage::app()->getFrontController()->getRequest()->getControllerName() =="checkout_cart"):
+        //sono sul carrello
+        $_step = "cart";
+    elseif (isset($_steps["review"]["allow"]) &&  $_steps["review"]["allow"] == 1):
+        $_step = "review"; 
+    elseif (isset($_steps["payment"]["allow"]) &&  $_steps["payment"]["allow"] == 1):
+        $_step = "payment"; 
+    elseif (isset($_steps["shipping_method"]["allow"]) &&  $_steps["shipping_method"]["allow"] == 1):
+        $_step = "shipping"; 
+    elseif (isset($_steps["shipping"]["allow"]) &&  $_steps["shipping"]["allow"] == 1):
+        $_step = "shipping"; 
+    elseif (isset($_steps["billing"]["allow"]) &&  $_steps["billing"]["allow"] == 1):
+        $_step = "billing"; 
+    elseif (isset($_steps["login"]["allow"]) &&  $_steps["login"]["allow"] == 1):
+        $_step = "billing"; 
+    else:
+        $_step = "cart";
+    endif;
+        
+    Mage::Log("Active progress step $_step/");
+    ?>
+<div class="block block-progress opc-block-progress">
+    <div class="opc-is opc-is-cart<?php if ($_step =="cart"): echo ' selected'; endif;?>"
+         id ="opc-is-cart">
+        <a href="<?php echo $this->getUrl('checkout/cart');?>" title="<?php echo $this->__('Cart')?>">
+            <h2>1. <?php echo $this->__("Cart")?></h2>
+        </a>
+        <div class="opc-select-step">        
+        </div>        
+    </div>
+    <div class="opc-is opc-is-login<?php if ($_step =="billing"): echo ' selected'; endif;?>"
+         id="opc-is-login">
+        <a href="<?php echo $this->getUrl('checkout/onepage');?>" title="<?php echo $this->__('Login')?>">
+            <h2>2. <?php echo $this->__("Login")?></h2>
+        </a>
+        <div class="opc-select-step">        
+        </div>
+    </div>
+    <div class="opc-is opc-is-detail<?php if ($_step =="shipping"): echo ' selected'; endif;?>"
+         id="opc-is-detail">
+        <a href="<?php echo $this->getUrl('checkout/onepage');?>" title="<?php echo $this->__('Shipping Method')?>"
+           onclick="billing.save(); shipping.save(); return false;">
+            <h2>3. <?php echo $this->__("Shipping Method")?></h2>
+        </a>
+        <div class="opc-select-step">
+        </div>
+    </div>
+    <div class="opc-is opc-is-payment<?php if ($_step =="payment"): echo ' selected'; endif;?>"
+         id="opc-is-payment" >
+        <a href="<?php echo $this->getUrl('checkout/onepage');?>" title="<?php echo $this->__('Payment Method')?>"
+           onclick="shippingMethod.save(); return false;">
+            <h2>4. <?php echo $this->__("Payment Method")?></h2>
+        </a>
+        <div class="opc-select-step">        
+        </div>
+    </div>
+    <div class="opc-is opc-is-confirm<?php if ($_step =="review"): echo ' selected'; endif;?>"
+         id="opc-is-confirm">
+        <a href="<?php echo $this->getUrl('checkout/onepage');?>" title="<?php echo $this->__('Order Review')?>"
+           onclick="payment.save(); return false;">
+            <h2>5. <?php echo $this->__("Order Review")?></h2>
+        </a>
+         <div class="opc-select-step">
+        </div>
+</div>    
+        
+</div>
+

@@ -107,7 +107,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container { background:transparent }
-.main { /*width:970px;*/ width: 100%; margin:0 auto; min-height:400px; padding:0px 0px 80px; background:transparent; text-align:left; }
+.main { width: 100%; margin:0 auto; min-height:400px; padding:0px 0px 40px; background:transparent; text-align:left; }
 
 /* Base Columns */
 .col-left { float:left; width:245px; padding:0 0 1px; }
@@ -129,6 +129,8 @@ ul,ol         { list-style:none; }
 /* Content Columns */
 .col2-set .col-1 { float:left; width:48.5%; }
 .col2-set .col-2 { float:right; width:48.5%; }
+.col2-set.row-content .col-1, 
+.col2-set.row-content .col-2 { margin-top: 5px}
 .col2-set .col-narrow { width:32%; }
 .col2-set .col-wide { width:65%; }
 
@@ -194,7 +196,7 @@ button.btn-checkout.no-checkout span span { background-position:100% 100%; }
 p.control input.checkbox,
 p.control input.radio { margin-right:6px; }
 /* Form Highlight */
-input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -38px ; }
+input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -375px repeat ; }
 /*.highlight { background:#efefef; }*/
 
 /* Form lists */
@@ -203,13 +205,13 @@ input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../
 .form-list li { margin:0 0 8px; }
 .form-list label { float:left; color:#666; font-weight:bold; position:relative; z-index:0; }
 .form-list label.required {}
-.form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-8px; }
+.form-list label.required em {  font-style:normal; color:#eb340a; top:0; right:-8px; margin-right: 3px}
 .form-list li.control label { float:none; }
 .form-list li.control input.radio,
 .form-list li.control input.checkbox { margin-right:6px; }
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
 /*.form-list li.fields { margin-right:-15px; }*/
-.form-list .input-box { display:block; clear:both; width:260px; }
+.form-list .input-box { display:block; clear:both; width:340px; }
 .form-list .field { float:left; width:275px; }
 .form-list input.input-text { width:254px; }
 .form-list textarea { width:254px; height:10em; }
@@ -319,7 +321,7 @@ input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../
 .form-list .customer-dob .dob-year { width:140px; }
 .form-list .customer-dob .dob-year input.input-text { width:134px; }*/
 
-.buttons-set { clear:both; margin:4em 0 0; padding:8px 0 0; border-top:1px solid #e4e4e4; text-align:right; }
+.buttons-set { clear:both; margin:4em 0 0; padding:8px 0 0; text-align:right; }
 .buttons-set p.required { margin:0 0 10px; }
 .buttons-set .back-link { float:left; margin:0; }
 .buttons-set button.button { float:right; margin-left:5px; }
@@ -409,40 +411,40 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .toolbar-bottom {}
 
 /* Data Table */
-.data-table { width:100%; border:1px solid #bebcb7; }
-.data-table .odd  { background:#f8f7f5 }
-.data-table .even { background:#eeeded; }
+.data-table { width:100%; }
+.data-table .odd  { }
+.data-table .even {  }
 /*.data-table tr.odd:hover,
 .data-table tr.even:hover { background:#ebf1f6; }*/
 .data-table td.last,
-.data-table th.last { border-right:0; }
+.data-table th.last { }
 .data-table tr.last th,
-.data-table tr.last td { border-bottom:0 !important; }
-.data-table th { padding:3px 8px; font-weight:bold; }
-.data-table td { padding:3px 8px; }
-
-.data-table thead th { font-weight:bold; border-right:1px solid #c2d3e0; padding:2px 8px; color:#0a263c; white-space:nowrap; vertical-align:middle; }
+.data-table tr.last td {  }
+.data-table th { padding:5px 5px 10px; border:none; font-weight:normal; white-space:nowrap; font-size: 14px;   }
+.data-table td { padding:5px; }
+.data-table td.item-price {font-style: italic}
+.data-table thead th { font-weight:bold; border-bottom:3px solid #89a39f; padding:2px 8px; color:#0a263c; white-space:nowrap; vertical-align:middle; }
 .data-table thead th.wrap { white-space:normal; }
 .data-table thead th a,
 .data-table thead th a:hover { color:#fff; }
-.data-table thead th { background:url(../images/bkg_th.gif) repeat-x 0 100% #d9e5ee; }
+.data-table thead th { }
 .data-table thead th .tax-flag { font-size:11px; white-space:nowrap; }
 
-.data-table tfoot { border-bottom:1px solid #d9dde3; }
-.data-table tfoot tr.first td { background:url(../images/bkg_tfoot.gif) 0 0 repeat-x; }
-.data-table tfoot tr { background-color:#dee5e8 !important; }
-.data-table tfoot td { padding-top:1px; padding-bottom:1px; border-bottom:0; border-right:1px solid #d9dde3; }
+.data-table tfoot { border-bottom:3px solid #89a39f; }
+.data-table tfoot tr.first td {  }
+.data-table tfoot tr {  }
+.data-table tfoot td { padding-top:1px; padding-bottom:1px; border-bottom:0; border-bottom:2px solid #89a39f; }
 .data-table tfoot strong { font-size:16px; }
 
 .data-table tbody th,
-.data-table tbody td { border-bottom:1px solid #d9dde3; border-right:1px solid #d9dde3; }
+.data-table tbody td { border-bottom:2px solid #89a39f;  }
 /* Bundle products tables */
-.data-table tbody.odd tr { background:#f8f7f5 !important; }
-.data-table tbody.even tr { background:#f6f6f6 !important; }
+.data-table tbody.odd tr { }
+.data-table tbody.even tr {  }
 .data-table tbody.odd tr td,
-.data-table tbody.even tr td { border-bottom:0; }
+.data-table tbody.even tr td { }
 .data-table tbody.odd tr.border td,
-.data-table tbody.even tr.border td { border-bottom:1px solid #d9dde3; }
+.data-table tbody.even tr.border td {  }
 
 .data-table tbody td .option-label { font-weight:bold; font-style:italic; }
 .data-table tbody td .option-value { padding-left:10px; }
@@ -457,11 +459,10 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* Shopping cart total summary row expandable to details */
 tr.summary-total { cursor:pointer; }
 tr.summary-total td {}
-tr.summary-total .summary-collapse { float:right; text-align:right; padding-left:20px; background:url(../images/bkg_collapse.gif) 0 5px no-repeat; cursor:pointer; }
-tr.show-details .summary-collapse { background-position:0 -52px; }
+tr.summary-total .summary-collapse { width: 8px; height: 8px; float:right; text-align:right;  background:url(../images/veredus_v_1_0.png) -16px -4px no-repeat; cursor:pointer; }
+tr.show-details .summary-collapse { background-position:-5px -3px; }
 tr.show-details td {}
-tr.summary-details td { font-size:11px; background-color:#dae1e4; color:#626465; }
-tr.summary-details-first td { border-top:1px solid #d2d8db; }
+tr.summary-details td { font-size:11px; font-style:italic; }
 tr.summary-details-excluded { font-style:italic; }
 
 /* Shopping cart tax info */
@@ -512,10 +513,9 @@ tr.summary-details-excluded { font-style:italic; }
 .link-compare { font-weight:bold; }
 .link-print { /*background:url(../images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px;*/ font-weight:bold; color:#dc6809; }
 .link-rss { background:url(../images/i_rss.gif) 0 2px no-repeat; padding-left:18px; line-height:14px; white-space:nowrap; }
-.btn-remove  { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url(../images/btn_remove.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
-.btn-previous  { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url(../images/btn_previous.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
-.btn-remove2 { display:block; width:16px; height:16px; font-size:0; line-height:0; background:url(../images/btn_trash.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
-.btn-edit    { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url(../images/btn_edit.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
+.btn-remove2 { display:block; width:13px; height:13px; font-size:0; line-height:0; background:url(../images/veredus_v_1_0.png) -0px -337px no-repeat; text-indent:-999em; overflow:hidden; margin: auto}
+.btn-previous  { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url(../images/veredus_v_1_0.png) -15px -338px no-repeat; text-indent:-999em; overflow:hidden; margin: auto }
+.btn-edit    { display:block; width:10px; height:10px; font-size:0; line-height:0; background:url(../images/veredus_v_1_0.png) -30px -338px no-repeat; text-indent:-999em; overflow:hidden; margin: auto }
 
 .cards-list dt { margin:5px 0 0; }
 .cards-list .offset { padding:2px 0 2px 20px; }
@@ -774,7 +774,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Cart */
 .block-cart .block-title { /*border-bottom:0;*/ }
-.block-cart .block-title strong { background-image:url(../images/i_block-cart.gif); }
+.block-cart .block-title strong { }
 .block-cart .summary { background:#fff; padding:2px 8px 8px; margin:-1px 0 0; position:relative; z-index:1; }
 .block-cart .amount { margin:0; }
 .block-cart .amount a { font-weight:bold; }
@@ -785,24 +785,24 @@ tr.summary-details-excluded { font-style:italic; }
 .block-cart .actions .paypal-logo .paypal-or { clear:both; display:block; padding:0 55px 8px 0; }
 
 /* Block: Wishlist */
-.block-wishlist .block-title strong { background-image:url(../images/i_block-wishlist.gif); }
+.block-wishlist .block-title strong {  }
 .block-wishlist .actions { text-align:right; }
 .block-wishlist .actions a { float:none; }
 
 /* Block: Related */
-.block-related .block-title strong { background-image:url(../images/i_block-related.gif); background-position:0 1px; }
+.block-related .block-title strong {  }
 .block-related input.checkbox { float:left; }
 .block-related .product { margin-left:20px; }
 
 /* Block: Compare Products */
-.block-compare .block-title strong { background-image:url(../images/i_block-list.gif); background-position:0 1px; }
+.block-compare .block-title strong { }
 .block-compare button.button span { border-color:#406a83; background:#618499; }
 .page-popup .link-print { background:url(../images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px; font-weight:bold; color:#1e7ec8; }
 .compare-table { border:0; }
 .compare-table thead tr.first th,
 .compare-table thead tr.first td { border:0; background:none; padding:0; font-size:0; line-height:0; }
-.compare-table .btn-remove { float:right; background-image:url(../images/btn_remove2.gif); width:72px; height:15px; }
-.compare-table tbody th { background:#d9e5ee url(../images/bkg_th-v.gif) 100% 0 repeat-y; }
+.compare-table .btn-remove { float:right;  width:72px; height:15px; }
+.compare-table tbody th { background-color:#d9e5ee; }
 .compare-table tbody th,
 .compare-table tbody td { padding:10px; border:0; border-top:1px solid #ccc; border-left:1px solid #ccc; }
 .compare-table tbody td.last { border-right:1px solid #ccc; }
@@ -827,10 +827,10 @@ tr.summary-details-excluded { font-style:italic; }
 .block-related .block-content li.item {float: left; padding: 0px ; margin-right: 10px}
  
 /* Block: Recently Compared */
-.block-compared .block-title strong { background-image:url(../images/i_block-list.gif); background-position:0 1px; }
+.block-compared .block-title strong {  }
 
 /* Block: Poll */
-.block-poll .block-title strong { background-image:url(../images/i_block-poll.gif); }
+.block-poll .block-title strong { }
 .block-poll .block-subtitle { font-size:12px; }
 .block-poll label { color:#777; font-weight:bold; }
 .block-poll input.radio { float:left; margin:1px -18px 0 0; }
@@ -842,7 +842,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-poll .votes { float:right; margin-left:10px; }
 
 /* Block: Tags */
-.block-tags .block-title strong { background-image:url(../images/i_block-tags.gif); }
+.block-tags .block-title strong {  }
 .block-tags .block-content .tags-list { background:none; border:0; font-size:12px; }
 .block-tags .block-content a { color:#1b2d3b; }
 .block-tags .actions { text-align:right; }
@@ -870,7 +870,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-banner .block-content { padding:0; text-align:center; }
 
 /* Block: Login */
-.block-login .block-title strong { background-image:url(../images/i_ma-info.gif); }
+.block-login .block-title strong {  }
 .block-login .block-content { padding:5px 10px; }
 .block-login label { font-weight:bold; color:#666; }
 .block-login input.input-text { display:block; width:167px; margin:3px 0; }
@@ -1331,8 +1331,8 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .cart-table .btn-update { margin-left:10px; }
 
 /* Shopping Cart Collateral boxes */
-.cart .cart-collaterals { padding:25px 0 0; }
-.cart .cart-collaterals .col2-set { float:left; width:605px; }
+.cart .cart-collaterals { padding:5px 0 0; }
+.cart .cart-collaterals .col2-set { float:left; width:505px; }
 .cart .cart-collaterals .col2-set .col-2 { width:294px; }
 
 .cart .crosssell { border:1px solid #cec3b6; background:#fafaec; padding:12px 15px; }
@@ -1345,17 +1345,14 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 
 /* Discount Codes & Estimate Shipping and Tax Boxes */
 .cart .discount,
-.cart .shipping { border:1px solid #d0cbc1; background:#fff url(../images/bkg_block-title.gif) 0 0 repeat-x; padding:12px 15px; margin:0 0 18px; }
+.cart .shipping { margin:0 0 18px; }
 .cart .discount h2,
-.cart .shipping h2 { background-position:0 0; background-repeat:no-repeat; font:bold 13px/16px Arial, Helvetica, sans-serif; padding:0 0 0 21px; color:#e26703; text-transform:uppercase; }
-.cart .discount button span,
-.cart .shipping button span { border-color:#406a83; background:#618499; }
+.cart .shipping h2 { font-size: 16px; font-weight: bold; text-transform:uppercase; }
 .cart .discount .buttons-set,
 .cart .shipping .buttons-set { margin:10px 0 0; border:0; padding:0; text-align:left; }
 .cart .discount .buttons-set button.button,
 .cart .shipping .buttons-set button.button { float:none; margin-left:0; }
 
-.cart .discount h2 { background-image:url(../images/i_discount.gif); }
 .cart .discount .input-box { margin:8px 0 0; width:260px; }
 .cart .discount input.input-text { width:254px; }
 
@@ -1363,16 +1360,22 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .cart .shipping .sp-methods { margin:10px 0 0; padding:5px 0 0; background:url(../images/bkg_divider1.gif) 0 0 repeat-x; }
 
 /* Shopping Cart Totals */
-.cart .totals { float:right; width:268px; background:#dee5e8; border:1px solid #bebcb7; }
+.cart .totals { float:right; width:380px; }
 .cart .totals table { width:100%; margin:7px 0; }
 .cart .totals td { padding:1px 15px 1px 7px; }
 .cart .totals tr.last td {}
 .cart .totals tfoot th { padding:5px 15px 5px 7px; }
 .cart .totals tfoot td { padding-top:5px; padding-bottom:5px; }
 .cart .totals tfoot th strong,
-.cart .totals tfoot td strong { font-size:15px; }
+.cart .totals tfoot td strong,
+.cart .totals tfoot td strong span.price{ font-size:18px; text-transform: uppercase}
+.cart .totals table td.totals-title {font-size: 16px; line-height: 14px; vertical-align: middle; float: right; font-weight: bold; }
 .cart .totals .checkout-types { font-size:13px; padding:8px 15px 15px; text-align:right; }
 .cart .totals .checkout-types li { clear:both; margin:10px 0; }
+.cart .totals .price {font-size: 16px; font-weight: bold;}
+.cart .totals table td.tax-total-title,
+.cart .totals table td.tax-total-title .price {font-size: 11px; font-weight: normal }
+.cart .totals .table-sep td { border-bottom: 2px solid #89a39f; padding: 5px 0; }
 
 /* Options Tool Tip */
 .item-options dt { font-weight:bold; font-style:italic; }
@@ -1508,9 +1511,9 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .opc .ul { list-style:disc outside; padding-left:18px; }
 
 .opc { position:relative; }
-.opc li.section {}
+.opc li.section.active {border-top: 3px solid #89a39f}
 
-.opc .step-title { border-width:0 1px; border-style:solid; border-color:#fff #d9dde3 #d9dde3; background:#eee url(../images/bkg_opc-title-off.gif) 0 100% repeat-x; padding:4px 8px 6px; text-align:right; }
+.opc .step-title { display:none }
 .opc .step-title .number { float:left; background:#fff; border:1px solid #fff; padding:0 4px; margin:0 5px 0 0; font:bold 11px/14px arial, helvetica, sans-serif; color:#999; }
 .opc .step-title h2 { float:left; margin:0; font:bold 13px/16px Arial, Helvetica, sans-serif; color:#999; }
 .opc .step-title a { display:none; float:right; font-size:11px; line-height:16px; }
@@ -1520,12 +1523,13 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .opc .allow .step-title h2 { color:#a4b3b9; }
 /*.opc .allow .step-title a { display:block; }*/
 
-.opc .active .step-title { background:#f9f3e3; border:1px solid #bbafa0; padding-bottom:5px; color:#f18200; cursor:default; }
+.opc .active .step-title { background:#f9f3e3; border:1px solid #bbafa0; padding-bottom:5px; color:#f18200; cursor:default; display: none}
 .opc .active .step-title .number { background:#f18200; border-color:#f19900; color:#fff; }
 .opc .active .step-title h2 { color:#f18200; }
 /*.opc .active .step-title a { display:none; }*/
 
-.opc .step { border:1px solid #bbafa0; border-top:0; background:#fbfaf6 url(../images/bkg_checkout.gif) 0 0 repeat-x; padding:15px 30px; position:relative; }
+.opc .step {border-top:0; position:relative; }
+.opc .step .row-title {border-bottom: 3px solid #89a39f;}
 .opc .step .tool-tip { right:30px; }
 
 #opc-login .buttons-set { border-top:0; }
@@ -2046,3 +2050,87 @@ INPUT[type="checkbox"],
 .desc{ clear:both; }
 
 #additional { max-height: 150px; overflow-x: hidden;}
+
+/*** Checckout / Cart Table **/
+#checkout-review-table th,
+#checkout-review-table td,
+#shopping-cart-table th,
+#shopping-cart-table td{ vertical-align: middle; padding: 3px 0px 7px 0px; }
+#shopping-cart-table th { border-top: 3px solid #89a39f}
+#shopping-cart-table th.first {padding-left: 7px;}
+#shopping-cart-table th.last {padding-right: 7px;}
+.data-table td.item-qty input { float: left }
+.data-table td a.modify {width: 18px; height: 18px; display: block; float: left; cursor: pointer}
+.data-table td a.add-qty { background:transparent url('../images/veredus_v_1_0.png') 0px -352px no-repeat; }
+.data-table td a.rem-qty { background:transparent url('../images/veredus_v_1_0.png') -22px -352px no-repeat; }
+.opc-block-progress {height: 47px}
+.opc-block-progress .opc-is { float:left; height: 44px; position:relative; text-align: center;  }
+.opc-block-progress .opc-is-cart { width: 160px; text-align: left; padding-left: 6px}
+.opc-block-progress .opc-is-login { width: 135px;}
+.opc-block-progress .opc-is-detail { width: 248px; }
+.opc-block-progress .opc-is-payment { width: 248px}
+.opc-block-progress .opc-is-confirm { width: 190px}
+.opc-block-progress .opc-is a { text-decoration: none}
+.opc-block-progress .opc-is h2 { color:#ababab; font-size: 20px; margin: 8px 0 0; }
+.opc-block-progress .selected h2 { color: #3E3D40 }
+.opc-block-progress .opc-select-step {background:  transparent url('../images/veredus_v_1_0.png') 0px -140px repeat;
+                                    -webkit-border-radius: 2px;
+                                     -moz-border-radius: 2px;
+                                     border-radius: 2px;
+                                     width: 100%; height: 106%; position: absolute;
+                                     top:0; left: 0; display: none;}
+.opc-block-progress .selected .opc-select-step { display: block;  }
+
+#cart-button-continue-shopping { float: left; display: none  }
+
+.checkout-onepage-index .page-title {display: none}
+
+.cart-login-new-user-text {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.cart-login-new-user-text li {
+  margin-left: 40px;
+}
+
+.cart-login-registered-user-text {
+  font-size: 13px;
+  margin: 10px 44px 10px 0px;
+}
+
+#co-billing-form .form-list input,
+#co-shipping-form .form-list input,
+#login-form .form-list input{
+  float:right;
+  width: 160px;
+  height: 16px;
+  border: 1px solid #DFE2E2;
+}
+
+#co-billing-form .form-list .input-box,
+#co-shipping-form .form-list .input-box,
+#login-form .form-list .input-box{
+  clear: none;
+}
+
+#co-billing-form .form-list li,
+#co-shipping-form .form-list li,
+#login-form .form-list li{
+  margin: 0 0 4px 0;
+  clear: none;
+}
+
+#login-form #remember-me-box,
+#login-form li.forgot-password {margin: 5px 0 0 175px;}
+#login-form #fb-connect {float: right}
+
+#login-button-set{
+  margin: 0;
+  padding: 0;
+}
+
+#login-button-set button{
+  float: left;
+  margin-left: 175px
+}
