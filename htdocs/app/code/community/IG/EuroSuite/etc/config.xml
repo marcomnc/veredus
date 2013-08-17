@@ -1,0 +1,289 @@
+<config>
+	<modules>
+		<IG_EuroSuite>
+			<version>1.0.1</version>
+		</IG_EuroSuite>
+	</modules>
+
+	<global>
+		<helpers>
+			<ig_eurosuite>
+				<class>IG_EuroSuite_Helper</class>
+			</ig_eurosuite>
+        </helpers>
+		<blocks>
+			<ig_eurosuite>
+				<class>IG_EuroSuite_Block</class>
+			</ig_eurosuite>
+		</blocks>
+		<models>
+			<tax>
+				<rewrite>
+					<calculation>IG_EuroSuite_Model_Tax_Calculation</calculation>
+				</rewrite>
+			</tax>
+			<tax_mysql4>
+				<rewrite>
+					<calculation>IG_EuroSuite_Model_Tax_Mysql4_Calculation</calculation>
+				</rewrite>
+			</tax_mysql4>
+			<checkout>
+				<rewrite>
+					<type_onepage>IG_EuroSuite_Model_Checkout_Type_Onepage</type_onepage>
+				</rewrite>
+			</checkout>
+			<ig_eurosuite>
+				<class>IG_EuroSuite_Model</class>
+			</ig_eurosuite>
+		</models>
+		<customer>
+            <address>
+                <formats>
+                    <text translate="title" module="ig_eurosuite">
+                        <title>Text</title>
+                        <defaultFormat><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}
+{{depend company}}{{var company}}{{/depend}}
+{{depend ig_eurosuite_vat}}VAT Number: {{var ig_eurosuite_vat}}{{/depend}}
+{{depend ig_eurosuite_fcode}}F.COD: {{var ig_eurosuite_fcode}}{{/depend}}
+{{var street1}}
+{{depend street2}}{{var street2}}{{/depend}}
+{{depend street3}}{{var street3}}{{/depend}}
+{{depend street4}}{{var street4}}{{/depend}}
+{{depend city}}{{var city}},  {{/depend}}{{depend region}}{{var region}}, {{/depend}}{{var postcode}}
+{{var country}}
+T: {{var telephone}}
+{{depend fax}}F: {{var fax}}{{/depend}}
+{{depend mobile}}M: {{var mobile}}{{/depend}}
+                        ]]></defaultFormat>
+                    </text>
+                    <oneline translate="title" module="ig_eurosuite">
+                        <title>Text One Line</title>
+                        <htmlEscape>true</htmlEscape>
+                        <defaultFormat>
+<![CDATA[{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}, {{var street}}, {{var city}}, {{var region}} {{var postcode}}, {{var country}}]]>
+                        </defaultFormat>
+                    </oneline>
+                    <html translate="title" module="ig_eurosuite">
+                        <title>HTML</title>
+                        <htmlEscape>true</htmlEscape>
+                        <defaultFormat><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}<br/>
+{{depend company}}{{var company}}<br />{{/depend}}
+{{depend ig_eurosuite_vat}}VAT Number: {{var ig_eurosuite_vat}}<br/>{{/depend}}
+{{depend ig_eurosuite_fcode}}F.COD: {{var ig_eurosuite_fcode}}<br/>{{/depend}}
+{{var street1}}<br />
+{{depend street2}}{{var street2}}<br />{{/depend}}
+{{depend street3}}{{var street3}}<br />{{/depend}}
+{{depend street4}}{{var street4}}<br />{{/depend}}
+{{depend city}}{{var city}},  {{/depend}}{{depend region}}{{var region}}, {{/depend}}{{var postcode}}<br/>
+{{var country}}<br/>
+{{depend telephone}}T: {{var telephone}}{{/depend}}
+{{depend fax}}<br/>F: {{var fax}}{{/depend}}
+{{depend mobile}}<br/>M: {{var mobile}}{{/depend}}
+            ]]></defaultFormat>
+                    </html>
+                    <pdf translate="title" module="ig_eurosuite">
+                        <title>PDF</title>
+                        <defaultFormat><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}|
+{{depend company}}{{var company}}|{{/depend}}
+{{depend ig_eurosuite_vat}}VAT Number: {{var ig_eurosuite_vat}}|{{/depend}}
+{{depend ig_eurosuite_fcode}}F.COD: {{var ig_eurosuite_fcode}}|{{/depend}}
+{{var street1}}|
+{{depend street2}}{{var street2}}|{{/depend}}
+{{depend street3}}{{var street3}}|{{/depend}}
+{{depend street4}}{{var street4}}|{{/depend}}
+{{depend city}}{{var city}},  {{/depend}}{{depend region}}{{var region}}, {{/depend}}{{var postcode}}|
+{{var country}}|
+{{depend telephone}}T: {{var telephone}}{{/depend}}|
+{{depend fax}}<br/>F: {{var fax}}{{/depend}}|
+{{depend mobile}}<br/>M: {{var mobile}}{{/depend}}|
+            ]]></defaultFormat>
+                    </pdf>
+                    <js_template template="title" module="ig_eurosuite">
+                        <title>Javascript Template</title>
+                        <defaultFormat><![CDATA[#{prefix} #{firstname} #{middlename} #{lastname} #{suffix}<br/>#{company}<br/>#{street0}<br/>#{street1}<br/>#{street2}<br/>#{street3}<br/>#{city}, #{region}, #{postcode}<br/>#{country_id}<br/>VAT: #{ig_eurosuite_vat}<br/>F.COD: #{ig_eurosuite_fcode}<br/>T: #{telephone}<br/>F: #{fax}<br/>M: #{mobile}]]></defaultFormat>
+                    </js_template>
+                </formats>
+            </address>
+        </customer>
+		
+		<resources>
+			<ig_eurosuite_setup>
+				<setup>
+					<module>IG_EuroSuite</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</ig_eurosuite_setup>
+			
+			<ig_eurosuite_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</ig_eurosuite_write>
+			
+			<ig_eurosuite_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</ig_eurosuite_read>
+        </resources>
+		
+		<fieldsets>
+			<sales_copy_order_billing_address>
+				<ig_eurosuite_vat><to_order>*</to_order></ig_eurosuite_vat>
+				<ig_eurosuite_fcode><to_order>*</to_order></ig_eurosuite_fcode>
+				<ig_eurosuite_vies><to_order>*</to_order></ig_eurosuite_vies>
+			</sales_copy_order_billing_address>
+			
+			<!--<sales_copy_order_shipping_address>
+				<ig_eurosuite_vat><to_order>*</to_order></ig_eurosuite_vat>
+			</sales_copy_order_shipping_address>-->
+			
+			<sales_convert_quote_address>
+				<ig_eurosuite_vat><to_order_address>*</to_order_address><to_customer_address>*</to_customer_address></ig_eurosuite_vat>
+				<ig_eurosuite_fcode><to_order_address>*</to_order_address><to_customer_address>*</to_customer_address></ig_eurosuite_fcode>
+				<ig_eurosuite_vies><to_order_address>*</to_order_address><to_customer_address>*</to_customer_address></ig_eurosuite_vies>
+			</sales_convert_quote_address>
+
+			<sales_convert_order_address>
+				<ig_eurosuite_vat><to_quote_address>*</to_quote_address></ig_eurosuite_vat>
+				<ig_eurosuite_fcode><to_quote_address>*</to_quote_address></ig_eurosuite_fcode>		
+				<ig_eurosuite_vies><to_quote_address>*</to_quote_address></ig_eurosuite_vies>
+			</sales_convert_order_address>
+			
+			<customer_address>
+				<ig_eurosuite_vat><to_quote_address>*</to_quote_address></ig_eurosuite_vat>
+				<ig_eurosuite_fcode><to_quote_address>*</to_quote_address></ig_eurosuite_fcode>
+				<ig_eurosuite_vies><to_quote_address>*</to_quote_address></ig_eurosuite_vies>
+			</customer_address>
+		</fieldsets>
+	</global>
+	
+	<frontend>
+  		<routers>
+			<customer>
+				<args>
+					<modules>
+						<ig_eurosuite before="Mage_Customer">IG_EuroSuite</ig_eurosuite>
+					</modules>
+				</args>
+			</customer>
+			
+			<checkout>
+				<args>
+					<modules>
+						<ig_eurosuite before="Mage_Customer">IG_EuroSuite</ig_eurosuite>
+					</modules>
+				</args>
+			</checkout>
+			
+			<newsletter>
+				<args>
+					<modules>
+						<ig_eurosuite before="Mage_Newsletter">IG_EuroSuite</ig_eurosuite>
+					</modules>
+				</args>
+			</newsletter>
+			
+			<ig_eurosuite>
+				<use>standard</use>
+				<args>
+					<module>IG_EuroSuite</module>
+					<frontName>ig_eurosuite</frontName>
+				</args>
+			</ig_eurosuite>
+		</routers>
+		<layout>
+			<updates>
+				<ig_eurosuite module="IG_EuroSuite">
+					<file>ig_eurosuite.xml</file>
+				</ig_eurosuite>
+			</updates>
+		</layout>
+		<translate>
+			<modules>
+				<ig_eurosuite>
+					<files>
+						<default>IG_EuroSuite.csv</default>
+					</files>
+				</ig_eurosuite>
+			</modules>
+		</translate>
+	</frontend>
+	
+	<adminhtml>
+		<translate>
+			<modules>
+				<ig_eurosuite>
+					<files>
+						<default>IG_EuroSuite.csv</default>
+					</files>
+				</ig_eurosuite>
+			</modules>
+		</translate>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<ig_eurosuite translate="title" module="ig_eurosuite">
+											<title>IG EuroSuite</title>
+											<sort_order>50</sort_order>
+										</ig_eurosuite>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+    </adminhtml>
+		
+	<default>
+		<ig_eurosuite>
+			<general>
+				<enabled>1</enabled>
+			</general>
+			<privacy>
+				<create-account-enabled>1</create-account-enabled>
+				<contacts-enabled>1</contacts-enabled>
+				<checkout-enabled>1</checkout-enabled>
+				<newsletter-enabled>1</newsletter-enabled>
+				<cms-page></cms-page>
+			</privacy>
+			<tos>
+				<create-account-enabled>1</create-account-enabled>
+				<contacts-enabled>1</contacts-enabled>
+				<checkout-enabled>1</checkout-enabled>
+				<newsletter-enabled>1</newsletter-enabled>
+				<cms-page></cms-page>
+			</tos>
+			<euvat>
+				<enabled>1</enabled>
+				
+				<vat-validate>1</vat-validate>
+				<vat-required>eu-companies</vat-required>
+				
+				<fiscal-code>show</fiscal-code>
+				<fiscal-code-validate>1</fiscal-code-validate>
+
+				<fiscal-code-countries>IT</fiscal-code-countries>
+				<eu-countries>AT,BE,BG,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,PL,PT,RO,SK,SI,ES,SE,NL,GB</eu-countries>
+				<vat-taxes></vat-taxes>
+				
+				<apply-tax-for-eu-vat>0</apply-tax-for-eu-vat>
+				<apply-tax-for-non-eu>0</apply-tax-for-non-eu>
+				
+				<use-shipping-address>1</use-shipping-address>
+			</euvat>
+		</ig_eurosuite>
+	</default>
+</config>

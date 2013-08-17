@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+		<ig translate="label" module="ig_eurosuite">
+            <label>IdealiaGroup</label>
+            <sort_order>200</sort_order>
+		</ig>
+    </tabs>
+    <sections>
+		<ig_eurosuite translate="label" module="ig_eurosuite">
+			<label>IG EuroSuite</label>
+			<tab>ig</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>General</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label">
+							<label>Enable EuroSuite</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled>
+					</fields>
+				</general>
+				
+				<privacy translate="label">
+					<label>Privacy Settings (2002/58/CE)</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<create-account-enabled translate="label">
+							<label>Enable on Account Creation</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</create-account-enabled>
+						<contacts-enabled translate="label">
+							<label>Enable on Contacts</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</contacts-enabled>
+						<checkout-enabled translate="label">
+							<label>Enable on Guest and New User Checkout</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</checkout-enabled>
+						<newsletter-enabled translate="label">
+							<label>Enable on Newsletter</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</newsletter-enabled>
+						<cms-page translate="label">
+							<label>CMS Page</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_cms_page</source_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</cms-page>
+					</fields>
+				</privacy>
+				
+				<tos translate="label">
+					<label>Terms of Service Settings (2002/58/CE)</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<create-account-enabled translate="label">
+							<label>Enable on Account Creation</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</create-account-enabled>
+						<contacts-enabled translate="label">
+							<label>Enable on Contacts</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</contacts-enabled>
+						<checkout-enabled translate="label">
+							<label>Enable on Guest and New User Checkout</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</checkout-enabled>
+						<newsletter-enabled translate="label">
+							<label>Enable on Newsletter</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</newsletter-enabled>
+						<cms-page translate="label">
+							<label>CMS Page</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_cms_page</source_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</cms-page>
+					</fields>
+				</tos>
+				
+				<euvat translate="label">
+					<label>EU VAT Settings (2002/38/CE)</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>40</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label">
+							<label>Enable EUVAT (2002/38/CE)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled>
+						<vat-required translate="label">
+							<label>Require VAT Number</label>
+							<frontend_type>select</frontend_type>
+							<source_model>ig_eurosuite/adminhtml_system_config_source_vatrequired</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</vat-required>
+						<vat-validate translate="label">
+							<label>Validate VAT Number (VIES)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</vat-validate>
+						<vat-taxes translate="label">
+							<label>VAT Taxes</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>ig_eurosuite/adminhtml_system_config_source_tax</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</vat-taxes>
+						
+						<eu-countries translate="label">
+							<label>EU Countries</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</eu-countries>
+						<apply-tax-for-eu-vat translate="label">
+							<label>Apply VAT to foreign EU customers with VAT number</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</apply-tax-for-eu-vat>
+						<apply-tax-for-non-eu translate="label">
+							<label>Apply VAT to non-EU customers</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</apply-tax-for-non-eu>
+						<use-shipping-address translate="label">
+							<label>Use shipping address for VAT calculation</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</use-shipping-address>
+						
+						<fiscal-code translate="label">
+							<label>Fiscal code</label>
+							<frontend_type>select</frontend_type>
+							<source_model>ig_eurosuite/adminhtml_system_config_source_fiscalcode</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</fiscal-code>
+						<fiscal-code-validate translate="label">
+							<label>Check Fiscal Code Format</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>101</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</fiscal-code-validate>
+						<fiscal-code-countries translate="label">
+							<label>Countries where Fiscal Code is appicalble</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</fiscal-code-countries>
+					</fields>
+				</euvat>
+			</groups>
+		</ig_eurosuite>
+    </sections>
+</config>
