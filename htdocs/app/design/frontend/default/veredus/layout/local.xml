@@ -45,6 +45,7 @@ Default layout, loads most of the pages
             <remove name="catalog.compare.sidebar" />      
             <remove name="left.newsletter" />    
             <remove name="currency"/>  
+            <remove name="sale.reorder.sidebar" />
         </reference> 
         <reference name="right">
             <remove name="cart_sidebar" />
@@ -142,6 +143,23 @@ Default layout, loads most of the pages
     
     <customer_account>
         <remove name="footer.newsletter"/>
+
+        <reference name="customer_account_navigation">
+            <action method="removeLinkByName"><name>downloadable_products</name></action>
+            <action method="removeLinkByName"><name>OAuth Customer Tokens</name></action>
+            <action method="removeLinkByName"><name>orders</name></action>
+            <action method="removeLinkByName"><name>reviews</name></action>
+            <action method="removeLinkByName"><name>tags</name></action>
+            <action method="removeLinkByName"><name>recurring_profiles</name></action>
+            <action method="removeLinkByName"><name>billing_agreements</name></action>
+        </reference>
+        <reference name="left">
+            <block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/sidebar.phtml">
+                <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            </block>
+        </reference>
     </customer_account>
     
     <customer_account_login>

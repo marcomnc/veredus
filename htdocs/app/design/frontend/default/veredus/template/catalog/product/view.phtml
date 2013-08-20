@@ -139,6 +139,7 @@ endif;
                             <?php endif; ?>
 	                        <?php if ($_product->getTypeId()!="grouped"): ?>
 	                        	<div id="qty" class="attribute-chooser">
+                                                        <label class="required"><?php echo $this->__('Qty'); ?></label> 
                                                         <div class="input-box">
                                                         <select name="qty" id="qty" class="required-entry super-attribute-select"
                                                                 mps-rel="default: '<?php echo $this->__('Choose Qty');?>', type: 'custom', col: 5, class:'qty-selector'">

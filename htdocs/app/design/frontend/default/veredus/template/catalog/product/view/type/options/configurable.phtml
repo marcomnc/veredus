@@ -54,14 +54,15 @@ $_attributeSizeArray = preg_split('/,/', Mage::getStoreConfig('veredus/settings/
             endforeach;
           	?>   
         <div class="attribute-chooser<?php if ($_attribute->decoratedIsLast):?> last<?php endif;?>">
+            <label class="required"><?php echo $_attribute->getLabel() ?></label>
             <div class="input-box">
                 <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" 
                 	      id="attribute<?php echo $_attribute->getAttributeId() ?>" 
                 	      class="required-entry super-attribute-select"
                               rel="<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>"
-                	      mps-rel="default: '<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>', type: 'custom', col: 3, class:'<?php echo $_attribute->getProductAttribute()->getAttributeCode(); ?>-selector'<?php if($_isColor): ?>, imgBaseUrl: '<?php echo MAge::Helper('veredus/media')->getImageUrl(); ?>'<?php endif;?><?php if (sizeof($_elemetToReload)>0): ?>, reloadElem: '<?php echo implode(',', $_elemetToReload); ?>'<?php endif; ?>">
-                    <option value="" <?php if ($_typeLayout != ""): ?> style="display:none" <?php endif; ?>>
-                    	<?php echo $this->__('Choose') ?> <?php echo $_attribute->getLabel(); ?>
+                	      mps-rel="default: '<?php echo $this->__('Choose Oprions');?>', type: 'custom', col: 3, class:'<?php echo $_attribute->getProductAttribute()->getAttributeCode(); ?>-selector'<?php if($_isColor): ?>, imgBaseUrl: '<?php echo MAge::Helper('veredus/media')->getImageUrl(); ?>'<?php endif;?><?php if (sizeof($_elemetToReload)>0): ?>, reloadElem: '<?php echo implode(',', $_elemetToReload); ?>'<?php endif; ?>">
+                    <option value="">
+                    	<?php echo $this->__('Choose Options') ?>
                     </option>
                   </select>
               </div>

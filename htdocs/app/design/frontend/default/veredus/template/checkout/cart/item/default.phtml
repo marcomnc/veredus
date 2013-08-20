@@ -100,7 +100,7 @@ $_product = MAge::getModel("catalog/product")->Load($this->getProduct()->getId()
         <a class="modify rem-qty" sign="-" rel="qty-<?php echo $_item->getId() ?>">&nbsp;</a>            
     </td>
     <td class="item-delete a-center">
-        <a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn-remove btn-remove2">
+        <a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" mps-type="async-link" class="btn-remove btn-remove2">
             &nbsp;
         </a>
     </td>

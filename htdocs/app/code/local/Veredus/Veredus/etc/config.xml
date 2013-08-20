@@ -66,6 +66,12 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
                     <catalog_product_attribute_edit_form>Veredus_Veredus_Block_Adminhtml_Catalog_Attribute_Edit_Form</catalog_product_attribute_edit_form>
                 </rewrite>
             </adminhtml>
+            <customer>
+                <rewrite>
+                    <!-- Per togliere i link da local.xml -->
+                    <account_navigation>Veredus_Veredus_Block_Customer_Account_Navigation</account_navigation>
+                </rewrite>
+            </customer>
         </blocks>
         <helpers>
             <veredus>
