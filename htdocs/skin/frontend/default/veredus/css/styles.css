@@ -40,7 +40,7 @@ body          {
 
 img           { border:0; vertical-align:top; }
 
-a             { color:#959FA1; text-decoration:underline; }
+a             { color:#000000; text-decoration:none; }
 a:hover       { text-decoration:none; }
 :focus        { outline:0; }
 
@@ -184,7 +184,7 @@ button.button span { display:block; height:20px;
                      background:#7b9790; padding:3px 8px 0; font-weight: bold; 
                      font-size: 12px; text-align:center; white-space:nowrap; color:#fff;
                      background: transparent }
-button.button span span { border:0; padding:0; }
+button.button span span { border:0; padding:0; height: auto; }
 
 button.button:active {
     background: #F8F8F6; /* Old browsers */
@@ -205,7 +205,7 @@ button.btn-checkout.no-checkout span span { background-position:100% 100%; }
 p.control input.checkbox,
 p.control input.radio { margin-right:6px; }
 /* Form Highlight */
-input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -375px repeat ; }
+input.input-text:focus,select:focus { background:#FFFFFF url('../images/veredus_v_1_0.png') 0px -375px repeat ; }
 /*.highlight { background:#efefef; }*/
 
 /* Form lists */
@@ -338,8 +338,8 @@ input.input-text:focus,select:focus,textarea:focus { background:#FFFFFF url('../
 .buttons-set-order { margin:10px 0 0; }
 .buttons-set-order .please-wait { padding:12px 7px 0 0; }
 
-.fieldset { border:1px solid #bbafa0; background:#fbfaf6; padding:22px 25px 12px 33px; margin:28px 0; }
-.fieldset .legend { float:left; font-weight:bold; font-size:13px; border:1px solid #89a39f; background:#FFFFFF; color:#89a39f; margin:-33px 0 0 -10px; padding:0 8px; position:relative; }
+.fieldset { padding:22px 25px 12px 33px; margin:28px 0; }
+.fieldset .legend { background: none repeat scroll 0 0 #DEDEDE; border: 1px solid #FEFEFE; color: #333333; float: left; font-size: 13px; font-weight: bold;margin: -33px 0 0 -10px; padding: 0 8px; position: relative; }
 
 /* Form Validation */
 .validation-advice { clear:both; min-height:13px; margin:3px 0 0; padding-left:17px; font-size:11px; font-weight:bold; line-height:13px; background:url(../images/validation_advice_bg.gif) 2px 0 no-repeat; color:#eb340a; }
@@ -388,7 +388,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* Page Heading */
 .page-title { width:100%; overflow:hidden;  margin:0 0 25px; }
 .page-title h1,
-.page-title h2 { margin:0; font-size:20px; color:#0a263c; }
+.page-title h2 { margin:20px 0px; font-size:20px; color:#0a263c; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; margin:7px 0 0; }
 .title-buttons { text-align:right; }
@@ -399,6 +399,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .title-buttons h5,
 .title-buttons h6 { float:left; }
 
+.title-buttons button { margin-top: 10px; }
 .subtitle,
 .sub-title { clear:both; padding:15px 0 0; font-size:15px; font-weight:bold; margin:0 0 6px; color:#e25203; }
 
@@ -529,15 +530,16 @@ tr.summary-details-excluded { font-style:italic; }
 .links li.first { padding-left:0 !important; }
 .links li.last { background:none !important; padding-right:0 !important; }
 
-.link-cart { color:#dc6809 !important; font-weight:bold; }
+.link-cart { color:#FF0000 !important; font-weight:bold; }
 .link-wishlist { color:#dc6809 !important; font-weight:bold; }
-.link-reorder { font-weight:bold; color:#dc6809 !important; }
+.link-reorder { font-weight:bold;  }
 .link-compare { font-weight:bold; }
 .link-print { /*background:url(../images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px;*/ font-weight:bold; color:#dc6809; }
 .link-rss { background:url(../images/i_rss.gif) 0 2px no-repeat; padding-left:18px; line-height:14px; white-space:nowrap; }
-.btn-remove2 { display:block; width:13px; height:13px; font-size:0; line-height:0; background:url(../images/veredus_v_1_0.png) -0px -337px no-repeat; text-indent:-999em; overflow:hidden; margin: auto}
+.btn-remove2, .btn-remove { display:block; width:13px; height:13px; font-size:0; line-height:0; background:url(../images/veredus_v_1_0.png) -0px -337px no-repeat; text-indent:-999em; overflow:hidden; margin: auto}
 .btn-previous  { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url(../images/veredus_v_1_0.png) -15px -338px no-repeat; text-indent:-999em; overflow:hidden; margin: auto }
 .btn-edit    { display:block; width:10px; height:10px; font-size:0; line-height:0; background:url(../images/veredus_v_1_0.png) -30px -338px no-repeat; text-indent:-999em; overflow:hidden; margin: auto }
+.btn-remove {text-indent: -999px}
 
 .cards-list dt { margin:5px 0 0; }
 .cards-list .offset { padding:2px 0 2px 20px; }
@@ -705,17 +707,17 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Sidebar =============================================================================== */
 .block { margin:0 0 15px; }
-.block .block-title { padding:2px 9px; }
+.block .block-title { border: 0; padding: 3px 10px;}
 .block .block-title strong { display:block; min-height:16px; padding:1px 0 1px; font-size: 18px; color: #414141; line-height: 14px}
 .block .block-title strong span {}
 .block .block-title a { text-decoration:none !important; }
-.block .block-subtitle { margin:0; padding:5px 9px; font-size:1em; font-weight:bold; color:#0a263c; }
+.block .block-subtitle { margin:0; padding:0px 0px 8px 11px; font-size:1em; color:#0a263c; }
 .block .block-content {  }
 .block .block-content li.item { padding:7px 9px; }
 .block .block-content .product-name { color:#1e7ec8; }
 .block .btn-remove,
 .block .btn-edit { float:right; margin:1px 0 2px 5px; }
-.block .actions { padding:6px 9px; text-align:right; }
+.block .actions { 0px 9px 0px 0px; text-align:right; }
 .block .actions a { float:left; }
 .block .actions button.button { float:right; }
 .block .empty { margin:0; padding:5px 9px; }
@@ -744,14 +746,30 @@ tr.summary-details-excluded { font-style:italic; }
 .block-compared .block-title strong,
 .block-related .block-title strong,
 .block-tags .block-title strong,
-.block-login .block-title strong {  background-position:0 0; background-repeat:no-repeat; padding-left:21px; }
+.block-login .block-title strong {  background-position:0 0; background-repeat:no-repeat; padding: 8px 0; }
 
 /* Mini Products List */
-.mini-products-list .product-image { float:left; width:50px; border:1px solid #a9a9a9; }
+.mini-products-list .product-image { float:left; border:1px solid #a9a9a9; }
 .mini-products-list .product-details { margin-left:60px; }
 .block-cart .mini-products-list .product-details .product-name,
-.block-cart .mini-products-list .product-details .nobr small { word-wrap:break-word; }
+.block-cart .mini-products-list .product-details .nobr small, 
+.block-wishlist .mini-products-list .product-details .product-name,
+.block-wishlist .mini-products-list .product-details .nobr small { word-wrap:break-word; color: #1A1A1A;
+                            font-size: 14px;line-height: 18px;margin: 0 0 13px; text-decoration: none;}
+                            
+.block-wishlist .mini-products-list .product-details .nobr,
 .block-cart .mini-products-list .product-details .nobr { white-space:normal !important; }
+.block-wishlist .mini-products-list .product-details .product-name a,
+.block-cart .mini-products-list .product-details .product-name a {text-decoration: none;}
+.block-wishlist .mini-products-list .product-details .product-name a:hover,
+.block-cart .mini-products-list .product-details .product-name a:hover {text-decoration: underline;}
+
+.block-cart .mini-products-list .product-details .price, 
+.block-wishlist .mini-products-list .product-details .price {font-style: italic }
+
+
+.block-wishlist .mini-products-list .product-details { margin-left:80px; }
+
 
 /* Block: Account */
 .block-account { border-color:#bbb; }
@@ -800,9 +818,9 @@ tr.summary-details-excluded { font-style:italic; }
 .block-cart .summary { background:#fff; padding:2px 8px 8px; margin:-1px 0 0; position:relative; z-index:1; }
 .block-cart .amount { margin:0; }
 .block-cart .amount a { font-weight:bold; }
-.block-cart .subtotal { margin:5px 0 0; padding:2px 0; background:#fbebd9; text-align:center; }
+.block-cart .subtotal { background: none repeat scroll 0 0 #EEEEEE; margin: 0 0 8px; padding: 3px 7px 4px 11px; text-align: left; }
 .block-cart .subtotal .price { font-weight:bold; }
-.block-cart .actions { border-bottom:1px solid #c2c2c2; }
+.block-cart .actions { }
 .block-cart .actions .paypal-logo { float:left; width:100%; margin:3px 0 0; text-align:right; }
 .block-cart .actions .paypal-logo .paypal-or { clear:both; display:block; padding:0 55px 8px 0; }
 
@@ -1020,7 +1038,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .price { white-space:nowrap !important; }
 
 .price-box { margin:5px 0; }
-.price-box .price { font-weight:bold; color:#3e3d40; }
+.price-box .price { font-weight:bold; color:#3e3d40; font-style: italic;}
 
 /* Regular price */
 .regular-price { color:#3e3d40; }
@@ -1036,7 +1054,7 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 /* Special price */
 .special-price { margin:0; padding:3px 0; }
 .special-price .price-label { font-size:13px; font-weight:bold; white-space:nowrap; color:#cd5033; }
-.special-price .price { font-size:13px; font-weight:bold; color:#3e3d40; }
+.special-price .price { font-size:13px; font-weight:bold; color:#00B0CB!important; }
 
 /* Minimal price (as low as) */
 .minimal-price { margin:0; }
@@ -1413,8 +1431,8 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .cart .totals .table-sep td { border-bottom: 2px solid #89a39f; padding: 5px 0; }
 
 /* Options Tool Tip */
-.item-options dt { font-weight:bold; font-style:italic; float: left; margin: 0 10px 0 }
-.item-options dd { padding-left:10px; margin:0 0 6px; }
+.item-options dt { font-weight:bold; font-style:italic; float: left; margin: 0 10px 0; float: left }
+.item-options dd { padding-right: 10px; margin:0 0 6px; float: left }
 .truncated { cursor:help; }
 .truncated a.dots { cursor:help; }
 .truncated a.details { cursor:help; }
@@ -1585,6 +1603,11 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 #opc-review .authentication { margin:0 auto; width:570px; }
 #opc-review .warning-message { color:#222; font-weight:bold; text-align:center; padding:10px 10px 0; }
 
+#form-validate label {color: #000000;font-family: Arial,Helvetica,sans-serif;font-size: 11px;font-weight: normal;line-height: 26px;}
+#form-validate label[for="change_password"],
+#form-validate label[for="primary_billing"],
+#form-validate label[for="primary_shipping"] {line-height: 0px; margin-left: 5px}
+
 /* Multiple Addresses Checkout */
 .checkout-progress { padding:0 90px; margin:0 0 20px; }
 .checkout-progress li { float:left; width:19%; margin:0 3px 0 0; border-top:10px solid #999; padding:2px 0 0; font-weight:bold; text-align:center; color:#abb5ba; }
@@ -1737,14 +1760,14 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 /********** Dashboard > */
 
 /* Address Book */
-.addresses-list h2 { font-weight:bold; font-size:13px; color:#e26703; text-transform:uppercase; }
+.addresses-list h2 { font-weight:bold; font-size:13px; text-transform:uppercase; }
 .addresses-list h3 { font-weight:bold; font-size:13px; }
 .addresses-list address { margin:0 0 3px; }
 .addresses-list p { margin:0; }
 .addresses-list a { font-weight:bold; }
 .addresses-list .link-remove { color:#646464; }
 .addresses-list .separator { margin:0 3px; }
-.addresses-list li.item { background:#fff url(../images/bkg_account_box.gif) 0 0 repeat-x; border:1px solid #ccc; padding:10px 13px; margin:0 0 10px; }
+.addresses-list li.item { margin:0 0 20px; }
 .addresses-list li.empty { background:none; border:0; padding:0; }
 .addresses-list li.empty p { font-weight:bold; }
 .addresses-list .addresses-additional li.item { background:none; border:0; padding:0; }
@@ -1991,30 +2014,6 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .linkSocial div.twitter {background: url(../images/veredus_v_1_0.png) -273px -55px no-repeat}
 .linkSocial div.pintrest {background: url(../images/veredus_v_1_0.png) -273px -82px no-repeat}
 .linkSocial .like {margin: 26px 0 0 35px}
-
-.popup-loading-layer {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; text-align: center;
-                      background: #000000;}
-.popup-loading-layer.strong {opacity:0.4; filter:alpha(opacity=40); /* For IE8 and earlier */}
-.popup-loading-layer.medium {opacity:0.2; filter:alpha(opacity=20); /* For IE8 and earlier */}
-
-.popup-loading {position: absolute; top: 50%; left: 50%;z-index: 9999; }
-
-
-.popup-login-content { background-image: url('../images/sfondoMenu.png'); z-index: 20000; 
-                         border:solid 2px #89a39f; float:left; padding: 15px 10px 10px; position: absolute;
-                         width: 350px; height: 175px;
-                         -webkit-border-radius: 6px;
-                         -moz-border-radius: 6px;
-                         border-radius: 6px;}
-.popup-login-content .registered-users {float: left; font-size: 14px}
-.popup-login-content .form-list .input-box { width: 160px}
-.popup-login-content .form-list input.input-text { width: 160px}
-.popup-login-content .new-users {float: left; width: 50%; font-size: 16px; font-weight: bold; text-align: center}
-.popup-login-content .new-users>div {padding: 5px 0}
-.popup-login-content .create {margin-right: 35px}
-.popup-login-content .forgot {margin-top: 10px}
-.popup-login-content button#send2 {float: left}
-.popup-login-content button {margin-top: 5px; float: right}
 
 INPUT[type="checkbox"], 
 .mps-ui-checkbox input {display: none}
@@ -2268,3 +2267,34 @@ button.btn-checkout span span{ font-size: 18px; background-position:100% 0; padd
 .cart-shipping-method-title { }
 .cart-shipment-method-after { font-size: 14px; }
 .cart-order-confirmation { font-size: 14px; margin: 10px 0 10px 5px; }
+
+.popup-loading-layer {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; text-align: center;
+                      background: #000000;}
+.popup-loading-layer.strong {opacity:0.4; filter:alpha(opacity=40); /* For IE8 and earlier */}
+.popup-loading-layer.medium {opacity:0.2; filter:alpha(opacity=20); /* For IE8 and earlier */}
+
+.popup-loading {position: absolute; top: 50%; left: 50%;z-index: 9999; }
+
+
+.popup-login-content { background-image: url('../images/sfondoMenu.png'); z-index: 20000; 
+                         border:solid 2px #89a39f; float:left; padding: 15px 10px 10px; position: absolute;
+                         width: 350px; height: 175px;
+                         -webkit-border-radius: 6px;
+                         -moz-border-radius: 6px;
+                         border-radius: 6px;}
+.popup-login-content .registered-users {float: left; font-size: 14px}
+.popup-login-content .form-list .input-box { width: 160px!important;}
+.popup-login-content .form-list input.input-text { width: 160px!important; float: none!important; border: 1px solid #b6b6b6!important}
+.popup-login-content .new-users {float: left; width: 50%; font-size: 16px; font-weight: bold; text-align: center}
+.popup-login-content .new-users>div {padding: 5px 0}
+.popup-login-content .create {margin-right: 35px}
+.popup-login-content .forgot {margin-top: 10px}
+.popup-login-content button#send2 {float: left}
+.popup-login-content button {margin-top: 5px; float: right}
+.popup-login-content .fbconnect .fbconnect {height: 23px;text-align: center;margin-top: 5px;}
+.popup-login-content #fb-connect {float: none!important}
+.popup-login-content #remember-me-box {margin: 0px!important}
+
+.amount { display: none; }
+.actions { float: right}
+.price-label {display: none!important}
