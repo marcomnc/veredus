@@ -81,13 +81,88 @@ class Veredus_Veredus_Helper_Media extends Veredus_Veredus_Helper_Data {
         $file = $this->getUploadDir() . $filename;
         if (file_exists($file)) {
             if (!unlink($file)) {
-                Mage::throwException($this->__('errore in fase di cancellazione di ' . $file));
+                Mage::throwException($this->__('errore in fase di cancellazione di') . " $file");
             }
         } else {
-            Mage::throwException($this->__('File da cancellare inesistente' ."($file)"));
+            Mage::throwException($this->__('File da cancellare inesistente') ." ($file)");
         }
     }
     
+    /**
+     * Legge la lista dei colori associati ad un articolo
+     * @param type $product
+     * @param type $attName
+     * @return type
+     */
+    public function loadColorList($product, $attName) {
+        
+        $list = array();
+        
+        foreach ($product->getTypeInstance(true)->getConfigurableAttributesAsArray($product) as $att) {
+            if ($attName == $att['attribute_code']) {
+                foreach ($att['values'] as $val) {
+                    $list[$val['value_index']] = $val['store_label'];
+                }
+            }
+         }
+        
+        return $list;
+        
+    }
+
+    /**
+     * Verifica se un'immagine deve essere sempre visibile per tutti i colori
+     * @param type $product
+     * @param type $imgFile
+     * @return type
+     */
+    public function AlwayEnable ($product, $imgFile) {
+        
+        return ($this->getAssociateColorValue($product, $imgFile) == '');
+        
+    }
+    
+    /**
+     * Ritorna i codice colore associato ad un immagine
+     * @param type $product
+     * @param type $imgFile
+     * @return type
+     */
+    public function getAssociateColorValue($product, $imgFile) {
+        
+        $value = '';
+        if ($product->hasMpsColorSwitcher()) {
+            $colors = unserialize($product->getMpsColorSwitcher());
+
+            foreach ($colors['Type'] as $val) {
+                
+                if ($val['key'] == $imgFile) {
+                    $value = $val['value'];
+                    break;
+                }            
+            }
+        } 
+        return $value;
+        
+    }
+    
+    public function IsDefault($product, $imgFile) {
+        $value = false;
+        if ($product->hasMpsColorSwitcher()) {
+            $colors = unserialize($product->getMpsColorSwitcher());
+
+            foreach ($colors['Default'] as $val) {
+                
+                if ($val['key'] == $imgFile) {
+                    $value = $val['value'];
+                    break;
+                }            
+            }
+        } 
+        return ($value)? 1: 0;
+    }
+
+
     public function getUploadDir() {
         return Mage::getBaseDir(Mage_Core_Model_Store::URL_TYPE_MEDIA) . DS . 'mps' . DS . 'colormanager' . DS;
     }

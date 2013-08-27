@@ -32,6 +32,7 @@
     <global>
         
         <events>
+<!-- Memorizzazione Attributi (per gestire le immagini) -->            
             <catalog_entity_attribute_save_after>
                 <observers>
                     <veredus_observer>
@@ -41,6 +42,17 @@
                     </veredus_observer>
                 </observers>
             </catalog_entity_attribute_save_after>
+
+<!-- Preparazione alla memorizzazione del  Prodotto  -->
+            <catalog_product_prepare_save>
+                <observers>
+                    <veredus_observer>
+                        <type>singleton</type>
+                        <class>Veredus_Veredus_Model_Product_Observer</class>
+                        <method>on_product_prepare_save</method>
+                    </veredus_observer>
+                </observers>
+            </catalog_product_prepare_save>
         </events>
 <!--
 Overload controller per gestione campagne ad su registrazione news letter
@@ -64,6 +76,7 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
                     <catalog_product_attribute_edit_tabs>Veredus_Veredus_Block_Adminhtml_Catalog_Attribute_Edit_Tabs</catalog_product_attribute_edit_tabs>
                     <!-- Aggiungo l'encrypt type sul form -->
                     <catalog_product_attribute_edit_form>Veredus_Veredus_Block_Adminhtml_Catalog_Attribute_Edit_Form</catalog_product_attribute_edit_form>
+                    <catalog_product_helper_form_gallery_content>Veredus_Veredus_Block_Adminhtml_Catalog_Product_Helper_Form_Gallery_Content</catalog_product_helper_form_gallery_content>
                 </rewrite>
             </adminhtml>
             <customer>

@@ -1173,11 +1173,23 @@ div.email-friend { width: 26px; height: 26px; background: url(../images/veredus_
 .product-view .product-img-box .more-views { float: left; min-height: 440px; min-width: 100px; }
 .product-view .product-img-box .more-views h2 { font-size:11px; margin:0 0 8px 8px; text-transform:uppercase; }
 .product-view .product-img-box .more-views ul { }
+
 .product-view .product-img-box .more-views li { margin:0 0 5px 9px; height: 90px }
 .product-view .product-img-box .more-views li.zoom-360 {height: auto}
 .product-view .product-img-box .more-views li a { float:left; width:90px; height:90px; overflow:hidden; border: 1px solid #605F62 }
 .product-view .product-img-box .more-views li.zoom-360 a { border: none; width:auto; height:auto; margin: 10px 0 0 10px }
 .product-view .product-img-box #wrap11 {position: absolute; right: 0px; top: 19px; z-index: 10000}
+
+.product-view .product-img-box .more-views li,
+.product-view .product-img-box .more-views li a{
+    transition:         all 300ms ease-in-out;
+    -moz-transition:	all 300ms ease-in-out;
+    -webkit-transition:	all 300ms ease-in-out;
+    -o-transition:	all 300ms ease-in-out; 
+}
+.product-view .product-img-box .more-views li.always {display: block!important} 
+.product-view .product-img-box .more-views li.hide {height: 0px} 
+.product-view .product-img-box .more-views li.hide a {height: 0px; border-width: 0px} 
 
 .product-image-popup { margin:0 auto; }
 .product-image-popup .buttons-set { float:right; clear:none; border:0; margin:0; padding:0; }

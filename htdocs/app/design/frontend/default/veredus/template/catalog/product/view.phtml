@@ -55,19 +55,8 @@
                     <h1>
                         <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
                     </h1>
-                    <?php 
-                        $allIds = $_product->getCategoryIds();                    
-                        $category = Mage::getModel('catalog/category')->load(isset($allIds[0]) ? $allIds[0] : $allIds );
-                        $category_url = (!is_null($category)) ? $this->getUrl($category->getUrlPath()) : "";
-                    ?>
                     <h2 class="produttore">
-                        <?php if ($category_url != ""):?>
-                        <a href="<?php echo $category_url; ?>">
-                        <?php endif;?>
-                        <?php echo $_product->getAttributeText('manufacturer');?>
-                        <?php if ($category_url != ""):?>
-                        </a>
-                        <?php endif;?>
+                        <?php echo $_helper->productAttribute($_product, $_product->getGridDescription(), 'grid_description') ?>
                     </h2>                
                 </div>
                 <?php if ($_product->hasBrandImg() && $_product->getBrandImg() != 'no_selection' && $_product->getBrandImg()): ?>
@@ -266,7 +255,7 @@ endif;
             <?php if ($_product->hasViewDescription() && $_product->getViewDescription() != ""): ?>
                 <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getViewDescription()), 'view_description'); ?>"</p>
             <?php elseif ($_product->getGridDescription() != ""): ?>
-                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getGridDescription()), 'grid_description'); ?>"</p>
+                <p>"<?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description'); ?>"</p>
             <?php else: ?>    
                 <p></p>
             <?php endif; ?>

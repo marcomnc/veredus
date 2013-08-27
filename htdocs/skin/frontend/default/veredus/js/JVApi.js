@@ -139,7 +139,7 @@ jQuery(document).ready(function(){
     
     $.fn.CreateSelect = function(elem, reload) {
         var $this = $(elem);
-        var opts = {type: 'normal', col: "1", default: '', class: '', imgBaseUrl: '', reloadElem: ''};
+        var opts = {type: 'normal', col: "1", default: '', class: '', imgBaseUrl: '', reloadElem: '', callback: ''};
 
         if (typeof($this.attr('mps-rel')) !=  'undefined') {
             eval('var a = {' + $this.attr('mps-rel') + '}');
@@ -278,7 +278,14 @@ jQuery(document).ready(function(){
                             $.fn.CreateSelect(document.getElementById(elemIds[i]), true);
                     }
                 } catch (ex) {
-                    console.log(ex);
+                    //console.log(ex);
+                }
+                try {
+                    if (opts.callback != '') {
+                        opts.callback($this.attr('id'));
+                    }
+                } catch (ex) {
+                
                 }
                 $('#'+id+" .mps-ui-select").trigger('click');
             });
@@ -368,3 +375,21 @@ jQuery(document).ready(function(){
         }
     };    
 })(jQuery, this);
+
+
+/**
+ * Utility per simulare il click in prototype
+ */
+function fireEvent(element,event){
+    if (document.createEventObject){
+        // IE
+        var evt = document.createEventObject();
+        return element.fireEvent('on'+event,evt)
+    }
+    else{
+        // Other
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent(event, true, true ); 
+        return !element.dispatchEvent(evt);
+    }
+}

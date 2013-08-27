@@ -70,7 +70,9 @@ if (!empty($img_sconto)) :?>
     <h2><?php echo $this->__('More Views') ?></h2>
     <ul>
     <?php foreach ($this->getGalleryImages() as $_image): ?>
-        <li>
+        <li class="<?php if(Mage::Helper('veredus/media')->AlwayEnable($this->getProduct(), $_image->getFile())): echo "always"; else: echo "hide"; endif;?>"
+            rel="value: <?php echo Mage::Helper('veredus/media')->getAssociateColorValue($this->getProduct(), $_image->getFile().'');?>,
+                 default: <?php echo Mage::Helper('veredus/media')->IsDefault($this->getProduct(), $_image->getFile().'');?>">
             <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1500); ?>"
                title="<?php echo $this->htmlEscape($_image->getLabel()) ?>"
                class="cloud-zoom-gallery"

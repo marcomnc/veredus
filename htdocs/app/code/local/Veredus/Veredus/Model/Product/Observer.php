@@ -64,6 +64,29 @@ class Veredus_Veredus_Model_Product_Observer {
         }
     }
     
+    /**
+     * Assegno al prodotto l'attributo mps_color_switcher
+     * @param type $observer
+     */
+    public function on_product_prepare_save($observer) {
+        
+        $product = $observer->getProduct();
+        $request = $observer->getRequest();
+        
+        try {
+            $data = $request->getPost('product');
+            Mage::log($data);
+            if (isset($data['media_gallery']['colors']) && $data['media_gallery']['colors'] != '') {
+                $colors = Mage::Helper('core')->jsonDecode($data['media_gallery']['colors']);
+                Mage::log($colors);
+                $product->setData('mps_color_switcher', serialize($colors));
+                $observer->setProduct($product);
+            }
+        } catch (Exception $ex) {
+            Mage::logException($ex);
+        }
+            
+    }
 }
 
 ?>
