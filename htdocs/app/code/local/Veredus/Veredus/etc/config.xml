@@ -176,11 +176,27 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
              </veredus>-->
         </menu>         
     </adminhtml>
-
+    
+    <default>
+        <veredus>
+            <settings>
+                <shop_by_plus_gg>30</shop_by_plus_gg>
+                <shop_by_plus_nritem>10</shop_by_plus_nritem>
+            </settings>
+        </veredus>
+    </default>
     
     
     <crontab>
         <jobs>
+            <veredus_calculate_index>
+                <schedule>
+                    <cron_expr>*/30 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>veredus/product_observer::scheduledIndex</model>
+                </run>
+            </veredus_calculate_index>
         </jobs>
     </crontab>
     

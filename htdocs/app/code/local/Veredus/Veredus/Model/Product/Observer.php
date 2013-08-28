@@ -87,6 +87,63 @@ class Veredus_Veredus_Model_Product_Observer {
         }
             
     }
+    
+    /**
+     * Calacolo automatico delle categorie legate ad indici
+     */
+    public function scheduledIndex() {
+        
+        $categoryLayred = Mage::getStoreConfig('veredus/settings/shop_by_plus') + 0;
+        
+        $optionList = Mage::getModel('eav/entity')
+                        ->setType(Mage::getModel('eav/entity_type')->LoadByCode('catalog_category')->getId())
+                        ->getAttribute('idx_type')
+                        ->getSource()->getAllOptions(false);
+//        echo "<pre>";
+//        var_dump ($optionList);
+//        var_dump ();
+//        echo "</pre>";
+        if ($categoryLayred > 0) {
+            $parent = Mage::getModel('catalog/category')->getCollection();
+                
+            $parent->getSelect()
+                   ->Where('e.parent_id = ?', $categoryLayred);
+            
+                      
+            Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
+            foreach ($parent as $children) {
+//                echo "--- " . $children->getId() . "<br>";
+                if ($categoryLayred != $children->getId()) {
+                    
+                    $category = Mage::getModel('catalog/category')->Load($children->getId());
+                    $idxType = $category->getIdxType();
+//                    echo "idx $idxType<br>";
+                    foreach ($optionList as $k => $v) {
+                        if ($idxType == $v['value']) {
+                            
+                            $elabType = Mage::Helper('veredus/index')->getElabType($k);
+                            
+//                            echo "category: " . $category->getName() . "<br>";
+//                            echo "Elab: $elabType<br>";
+//                            echo "Prototti da Associare<br><pre>";                            
+//                            print_r(Mage::Helper('veredus/index')->getProductReport($elabType));
+//                            echo "<pre><br>";
+                            
+                            $productList = Mage::Helper('veredus/index')->getProductReport($elabType);
+                            
+                            $category->setPostedProducts($productList);
+                            $category->setIsActive((sizeof($productList) == 0) ? false: true );
+                            $category->save();                            
+                        }
+                    }                                    
+                    
+                }
+                
+            }
+        }      
+        
+    }
+        
 }
 
 ?>

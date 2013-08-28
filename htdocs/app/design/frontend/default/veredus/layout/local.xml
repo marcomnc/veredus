@@ -104,7 +104,7 @@ Default layout, loads most of the pages
     </catalog_product_view>
     
     <customer_logged_in>
-        <reference name="top.links">
+<!--        <reference name="top.links">
             <action method="addLink" translate="label title" module="customer">
                 <label>Log Out</label>
                 <url helper="customer/getLogoutUrl"/>
@@ -113,7 +113,7 @@ Default layout, loads most of the pages
                 <urlParams/>
                 <position>100</position>
             </action>
-        </reference>
+        </reference>-->
     </customer_logged_in>
  
     <customer_logged_out>

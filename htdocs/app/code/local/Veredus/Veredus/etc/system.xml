@@ -153,7 +153,22 @@ L'attributo deve essere di tipo <strong>Text</strong>]]></comment>
                             <show_in_store>1</show_in_store>
                             <comment>Indica la categoria che raggruppa le categorie che verranno incluse nella barra laterale di ricerca</comment>
                         </shop_by_plus>
-                        
+                        <shop_by_plus_gg>
+                            <label>Periodo</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>                            
+                            <comment>Periodo sul quale vengono calcolati gli indici espresso in giorni</comment>
+                        </shop_by_plus_gg>
+                        <shop_by_plus_nritem>
+                            <label>Max Item</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>                            
+                            <comment>Numero massimo di prodotti da considerare nel calcolo</comment>
+                        </shop_by_plus_nritem>
                         <!--<category-brands>
                             <label>Categoria dei Brand</label>
                             <frontend_type>select</frontend_type>
