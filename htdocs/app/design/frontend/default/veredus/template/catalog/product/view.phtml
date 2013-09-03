@@ -131,7 +131,7 @@ endif;
                                                         <label class="required"><?php echo $this->__('Qty'); ?></label> 
                                                         <div class="input-box">
                                                         <select name="qty" id="qty" class="required-entry super-attribute-select"
-                                                                mps-rel="default: '<?php echo $this->__('Choose Qty');?>', type: 'custom', col: 5, class:'qty-selector'">
+                                                                mps-rel="'default': '<?php echo $this->__('Choose Qty');?>', 'type': 'custom', 'col': 5, 'class':'qty-selector'">
                                                         <option value="<?php $i ?>"><?php echo $this->__('Scegli Qta'); ?></option>
                                                         <?php for ($i = 1; $i <= 10; $i++): ?>
                                                         <option value="<?php echo $i ?>"><?php echo $i; ?></option>
@@ -149,7 +149,9 @@ endif;
 </div>
 
 		<div class="clearer"></div>
-								<div class="add-to-box">
+                <?php echo $this->getChildHtml('product.attachments'); ?>
+                <div class="clearer"></div>
+                <div class="add-to-box">
                 	  <?php echo $this->getPriceHtml($_product, false); ?>
                     <?php if($_product->isSaleable()): ?>
                         <?php echo $this->getChildHtml('addtocart') ?>                        

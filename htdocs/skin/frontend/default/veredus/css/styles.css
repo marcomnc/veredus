@@ -1163,7 +1163,7 @@ button.button .special-price .price { font-size:13px; font-weight:bold; color:#F
 .product-view button.btn-wishlist span { color: #3e3d40 }
 	
 /* Add to Links + Add to Cart */
-.add-to-box { margin:30px 0; }
+.add-to-box { margin:10px 0; }
 .add-to-box .add-to-cart { float:left; margin-right:10px }
 .add-to-box .or { float:left; font-weight:bold; margin:0 7px; color:#666; }
 .add-to-box .add-to-links { float:left; margin:0; font-size:12px !important; line-height:1.25 !important; text-align:left !important; }
@@ -2043,12 +2043,22 @@ INPUT[type="checkbox"],
                  -webkit-border-radius: 4px;
                  -moz-border-radius: 4px;
                  border-radius: 4px; 
-                 background:  #FFF url('../images/row-down.png') right 5px no-repeat;}
+        
+        background: #FFFFF; 
+        background: url('../images/row-down.png') right 5px no-repeat ; /* fallback */
+        background: url('../images/row-down.png') right 5px no-repeat, -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#FFF)); /* Saf4+, Chrome */
+        background: url('../images/row-down.png') right 5px no-repeat, -webkit-linear-gradient(top, #DDD, #FFF); /* Chrome 10+, Saf5.1+ */
+        background: url('../images/row-down.png') right 5px no-repeat,    -moz-linear-gradient(top, #DDD, #FFF); /* FF3.6+ */
+        background: url('../images/row-down.png') right 5px no-repeat,     -ms-linear-gradient(top, #DDD, #FFF); /* IE10 */
+        background: url('../images/row-down.png') right 5px no-repeat,      -o-linear-gradient(top, #DDD, #FFF); /* Opera 11.10+ */
+        background: url('../images/row-down.png') right 5px no-repeat,         linear-gradient(top, #DDD, #FFF); /* W3C */
+}
 .mps-ui-select .validation-advice { position: absolute; top: 15px; width: 300px }
 .mps-ui-select select {border: none; background: transparent; padding: 3px 0 2px 6px; -webkit-appearance: none; vertical-align: top;}
 .mps-ui-select-container.open .mps-ui-select {-webkit-border-radius:4px 4px 0px 0px ;
                     -moz-border-radius: 4px 4px 0px 0px ;
                     border-radius: 4px 4px 0px 0px ; }
+.mps-ui-select-container .options {clear: both}
 .mps-ui-select-container .options li {float: left; min-width: 30px; min-height: 40px; border-color: #efefef; border-style: solid; border-width: 1px; cursor: pointer; }
 .mps-ui-select-container .options li.first { border-left-width: 3px; border-left-color: #DBDBDB; }
 .mps-ui-select-container .options li.last  { border-right-width: 3px; border-right-color: #DBDBDB; }
@@ -2313,3 +2323,7 @@ button.btn-checkout span span{ font-size: 18px; background-position:100% 0; padd
 .amount { display: none; }
 .actions { float: right}
 .price-label {display: none!important}
+
+#product-attachment-specs-table.data-table tbody th,
+#product-attachment-specs-table.data-table tbody td { border-width: 0px }
+.collateral-box.attachment-specs {margin-top: 60px}

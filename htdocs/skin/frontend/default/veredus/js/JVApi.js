@@ -139,12 +139,12 @@ jQuery(document).ready(function(){
     
     $.fn.CreateSelect = function(elem, reload) {
         var $this = $(elem);
-        var opts = {type: 'normal', col: "1", default: '', class: '', imgBaseUrl: '', reloadElem: '', callback: ''};
+        var opts = {'type': 'normal', 'col': "1", 'default': '', 'class': '', 'imgBaseUrl': '', 'reloadElem': '', 'callback': ''};
 
         if (typeof($this.attr('mps-rel')) !=  'undefined') {
             eval('var a = {' + $this.attr('mps-rel') + '}');
             var relOpts = a;                
-            opts = $.extend({}, opts, relOpts);
+            opts = $.extend(true,{}, opts, relOpts);
         }
         var width = $this.outerWidth(true);
         $this.css({'width' : (width + 25)+'px'});        
@@ -165,11 +165,11 @@ jQuery(document).ready(function(){
         }
 
         if (!reload)
-            var $wrap = $this.wrapAll('<div class="mps-ui-select-container '+ opts.class +'" id="' + id + '"><div class="mps-ui-select" style="width: ' + width + 'px"/></div>');
+            var $wrap = $this.wrapAll('<div class="mps-ui-select-container '+ opts['class'] +'" id="' + id + '"><div class="mps-ui-select" style="width: ' + width + 'px"/></div>');
         
         if (opts.type != 'normal') {
             $this.css({'display': 'none'});
-            var initText = opts.default;
+            var initText = opts['default'];
             if ($this.find('option:selected').attr('value') != "") {
                  initText = $this.find('option:selected').text();
             }    
@@ -182,7 +182,8 @@ jQuery(document).ready(function(){
             if (reload) {
                 $('#'+id+" .options-container").remove();
             }
-            var html = "";                
+            var html = ""; 
+            
             for (var i = 0; i < $this.find('option').length; i++) {            
                 if (i == 0 || (i%(opts.col+1)) == 0) {
                     html += '<ul class="options" style="display:none">';
@@ -393,3 +394,31 @@ function fireEvent(element,event){
         return !element.dispatchEvent(evt);
     }
 }
+var ChangeColor = function (element) {
+                    var curVal = $(element).getValue(); 
+                    var $elemToFire = null;
+                    var $elemTiFireAlways = null;
+                    for(var i=0; i<$$('.more-views li').length; i++) {
+                        var $elem = $$('.more-views li')[i];
+                        eval('var data = {' + $elem.getAttribute('rel') + '}');
+                        if (!$elem.hasClassName('always')) {                           
+                           if ( data.value == curVal) {
+                               $elem.removeClassName('hide');                                                  
+                               if (data["default"]) {
+                                    $elemToFire = $elem.down('a');                                
+                                }
+                           } else {
+                               $elem.addClassName('hide');                               
+                           } 
+                       } else {
+                            if (data["default"]) {
+                                 $elemTiFireAlways = $elem.down('a');                                
+                            }
+                        }                      
+                    }
+                    
+                    if ($elemToFire == null) 
+                        $elemToFire = $elemTiFireAlways;
+                    if ($elemToFire != null) 
+                        fireEvent($elemToFire, 'click');
+                };

@@ -186,12 +186,13 @@
             $mouseTrap.bind('mouseleave', this, function (event) {
                 clearTimeout(controlTimer);
                 //event.data.removeBits();                
-				if(lens) { lens.fadeOut(299); }
-				if($tint) { $tint.fadeOut(299); }
-				if(softFocus) { softFocus.fadeOut(299); }
-				zoomDiv.fadeOut(300, function () {
-                    ctx.fadedOut();
-                });
+		if(lens) { lens.fadeOut(299); }
+		if($tint) { $tint.fadeOut(299); }
+		if(softFocus) { softFocus.fadeOut(299); }
+                if(zoomDiv) 
+		    zoomDiv.fadeOut(300, function () {
+                          ctx.fadedOut();
+                    });
                 $zoomStart.show();
                 return false;
             });

@@ -60,13 +60,13 @@ $_attributeSizeArray = preg_split('/,/', Mage::getStoreConfig('veredus/settings/
                 	      id="attribute<?php echo $_attribute->getAttributeId() ?>" 
                 	      class="required-entry super-attribute-select<?php if($_isColor): ?> color-change<?php endif; ?>"
                               rel="<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>"
-                	      mps-rel="default: '<?php echo $this->__('Choose Oprions');?>', 
-                                       type: 'custom', 
-                                       col: 3, 
-                                       class:'<?php echo $_attribute->getProductAttribute()->getAttributeCode(); ?>-selector'
-                                       <?php if($_isColor): ?>, imgBaseUrl: '<?php echo MAge::Helper('veredus/media')->getImageUrl(); ?>'<?php endif;?>
-                                       <?php if (sizeof($_elemetToReload)>0): ?>, reloadElem: '<?php echo implode(',', $_elemetToReload); ?>'<?php endif; ?>
-                                       <?php if($_isColor): ?>, callback: ChangeColor<?php endif;?>">
+                	      mps-rel="'default': '<?php echo $this->__('Choose Oprions');?>', 
+                                       'type': 'custom', 
+                                       'col': 3, 
+                                       'class':'<?php echo $_attribute->getProductAttribute()->getAttributeCode(); ?>-selector'
+                                       <?php if($_isColor): ?>, 'imgBaseUrl': '<?php echo MAge::Helper('veredus/media')->getImageUrl(); ?>'<?php endif;?>
+                                       <?php if (sizeof($_elemetToReload)>0): ?>, 'reloadElem': '<?php echo implode(',', $_elemetToReload); ?>'<?php endif; ?>
+                                       <?php if($_isColor): ?>, 'callback': ChangeColor<?php endif;?>">
                     <option value="">
                     	<?php echo $this->__('Choose Options') ?>
                     </option>
@@ -78,22 +78,6 @@ $_attributeSizeArray = preg_split('/,/', Mage::getStoreConfig('veredus/settings/
     <script type="text/javascript">
         var spConfig = new Product.Config(<?php echo Mage::Helper('core')->jsonEncode($_config) ?>);                
         
-        function ChangeColor(element) {
-            var curVal = $(element).getValue();            
-            $$('.more-views li').each(function(elem) {
-               if (!$(elem).hasClassName('always')) {
-                   eval('var data = {' + $(elem).getAttribute('rel') + '}');
-                   if ( data.value == curVal) {
-                       $(elem).removeClassName('hide');
-                       if (data.default) {
-                        fireEvent($(elem).down('a'), 'click');
-                       }                   
-                   } else {
-                       $(elem).addClassName('hide');
-                   }                   
-               }
-            });
-        }
     </script>
 <?php endif;?>
 

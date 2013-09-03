@@ -90,13 +90,14 @@ Default layout, loads most of the pages
 
             <action method="addCss"><stylesheet>css/cloud-zoom.css</stylesheet></action>
             <action method="addItem"><type>skin_js</type><name>js/cloud-zoom.1.0.2.js</name></action>
-            
+            <action method="addJs"><script>fileuploader/filepop.js</script></action>       
         </reference>        
         <reference name="right">
             <remove name="catalog.product.related"/>
             <remove name="right.reports.product.viewed" />
         </reference>
         <reference name="product.info">
+            <block type="fileuploader/fileuploader" name="product.attachments" template="fileuploader/desc_attachments.phtml"/>
             <block type="catalog/product_list_related" name="catalog.product.related" as="product_related" template="catalog/product/list/related.phtml"/>
             <block type="reports/product_viewed" name="reports.product.viewed" as="reports_product_viewed" template="reports/product_viewed.phtml" /> 
         </reference>
