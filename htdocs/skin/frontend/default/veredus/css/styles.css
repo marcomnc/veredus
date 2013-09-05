@@ -2059,7 +2059,8 @@ INPUT[type="checkbox"],
                     -moz-border-radius: 4px 4px 0px 0px ;
                     border-radius: 4px 4px 0px 0px ; }
 .mps-ui-select-container .options {clear: both}
-.mps-ui-select-container .options li {float: left; min-width: 30px; min-height: 40px; border-color: #efefef; border-style: solid; border-width: 1px; cursor: pointer; }
+.mps-ui-select-container .options li {float: left; min-height: 40px; border-color: #efefef; border-style: solid; border-width: 1px; cursor: pointer; }
+.mps-ui-select-container .options li.not-selectable {background-color: #dbdbdb; cursor: default; border-color: #dbdbdb}
 .mps-ui-select-container .options li.first { border-left-width: 3px; border-left-color: #DBDBDB; }
 .mps-ui-select-container .options li.last  { border-right-width: 3px; border-right-color: #DBDBDB; }
 .mps-ui-select-container .options.first li { border-top-width: 3px; border-top-color: #DBDBDB; }
@@ -2091,6 +2092,7 @@ INPUT[type="checkbox"],
 .mps-ui-select-container.qty-selector .options .select-li-value {text-align: center; padding-top: 10px; font-size: 16px}
 .mps-ui-select-container.qty-selector .options li.over {background-color: #ABD7C5}
 .mps-ui-select-container.qty-selector .options li.selected {background-color: #79978B }
+.mps-ui-select-container.qty-selector .mps-ui-select {width: 150px!important}
 
 /* Size Selecttor */
 .mps-ui-select-container.taglia-selector .options .select-li-value {text-align: center; padding-top: 10px; font-size: 16px}
@@ -2105,7 +2107,8 @@ INPUT[type="checkbox"],
 .mps-ui-select-container.colore-selector .options li.selected div,
 .mps-ui-select-container.color-selector .options li.selected div {border: 2px solid #79978B; }
 
-.mps-ui-select-container.color-selector .options .select-li-value {height: 40px; width: 30px;}
+.mps-ui-select-container.color-selector .options .select-li-value {height: 40px; width: auto;}
+.mps-ui-select-container.color-selector .options li.not-selectable {padding: 2px}
 
 .set-container {width: 100%; height: auto;}
 .set-container .set-left {float: left}

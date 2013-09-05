@@ -210,7 +210,7 @@ jQuery(document).ready(function(){
                 }
             }
 
-            $("#"+id).append($('<div>', {'class': 'options-container', 'style': 'display:none;'}).append(html));
+            $("#"+id).append($('<div>', {'class': 'options-container', 'style': 'display:none; width:' + ($('#'+id).find('.mps-ui-select').outerWidth()-2) + 'px'}).append(html));
             
             $('#'+id+" .options").each(function(idx, elem) {
                 if (idx == 0) {
@@ -218,12 +218,14 @@ jQuery(document).ready(function(){
                 } 
                 if (idx == ($('#'+id+" .options").length-1)) {
                     $(elem).addClass('last');              
-                    if (idx != 0) {
+                    if ($('#'+id+" .options li").length > 0) {
                         while ($(elem).find('li').length < opts.col) {                    
-                            $(elem).append($('<li>'));
+                            $(elem).append($('<li>', {class: 'not-selectable'}));
                         }
                     }
                 }
+                
+                var border = 0;
                 
                 $(elem).find('li').each(function(idxLi, elemLi) {
                     if (idxLi == 0) {
@@ -231,6 +233,12 @@ jQuery(document).ready(function(){
                     }
                     if (idxLi == ($(elem).find('li').length-1)) {
                         $(elemLi).addClass('last');                      
+                    }
+                    border += $(elemLi).outerWidth() - $(elemLi).width();
+                    
+                    if (idxLi = $(elem).find('li').length-1) {
+                        var widthLi = ($('#'+id+' .options-container').width()-border)/opts.col;
+                        $(elem).find('li').width(widthLi);
                     }
                 });
             });
@@ -249,7 +257,7 @@ jQuery(document).ready(function(){
                    }
                    $('#'+id).addClass('open');                       
                    $('#'+id+" .options-container").css({'display': 'block'});
-                   if ($('#'+id+" .options-container").width() <= (width+4)){
+                   if ($('#'+id+" .options-container").width() <= ($('#'+id+'.mps-ui-select-container').width()-2)){
                        $('#'+id+" .options-container").addClass('no-angle');
                    } else {
                        $('#'+id+" .options-container").removeClass('no-angle');                           
