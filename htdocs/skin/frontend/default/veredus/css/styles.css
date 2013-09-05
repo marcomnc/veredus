@@ -2101,13 +2101,15 @@ INPUT[type="checkbox"],
 
 /* colore-selector */
 .mps-ui-select-container.colore-selector .options li div,
-.mps-ui-select-container.color-selector .options li div { width: 30px; height: 40px; border: 2px solid #FFFFFF;}
+.mps-ui-select-container.color-selector .options li div { width: auto; height: 40px; border: 2px solid #FFFFFF;}
 .mps-ui-select-container.colore-selector .options li.over div,
 .mps-ui-select-container.color-selector .options li.over div {border: 2px solid #abd7c5; }
 .mps-ui-select-container.colore-selector .options li.selected div,
 .mps-ui-select-container.color-selector .options li.selected div {border: 2px solid #79978B; }
 
+.mps-ui-select-container.colore-selector .options .select-li-value,
 .mps-ui-select-container.color-selector .options .select-li-value {height: 40px; width: auto;}
+.mps-ui-select-container.colore-selector .options li.not-selectable,
 .mps-ui-select-container.color-selector .options li.not-selectable {padding: 2px}
 
 .set-container {width: 100%; height: auto;}

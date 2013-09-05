@@ -60,7 +60,7 @@ $_attributeSizeArray = preg_split('/,/', Mage::getStoreConfig('veredus/settings/
                 	      id="attribute<?php echo $_attribute->getAttributeId() ?>" 
                 	      class="required-entry super-attribute-select<?php if($_isColor): ?> color-change<?php endif; ?>"
                               rel="<?php echo $this->__('Choose') . ' ' . $_attribute->getLabel();?>"
-                	      mps-rel="'default': '<?php echo $this->__('Choose Oprtions');?>', 
+                	      mps-rel="'default': '<?php echo $this->__('Choose Options');?>', 
                                        'type': 'custom', 
                                        'col': 3, 
                                        'class':'<?php echo $_attribute->getProductAttribute()->getAttributeCode(); ?>-selector'
