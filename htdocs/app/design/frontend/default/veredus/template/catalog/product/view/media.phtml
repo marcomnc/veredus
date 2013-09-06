@@ -89,14 +89,22 @@ if (!empty($img_sconto)) :?>
     </ul>
     <?php if ($_product->hasData('zoom_360_url') && $_product->getData('zoom_360_url') != ""):  ?>
 <script>
+    <?php 
+        $w = $_product->getData('zoom_360_width') + 0;
+        $h = $_product->getData('zoom_360_height') + 0;
+        if ($w == 0)
+            $w = MAge::getStoreConfig('veredus/settings/zoom_360_width');
+        if ($h == 0)
+            $h = MAge::getStoreConfig('veredus/settings/zoom_360_height');
+    ?>
     jQuery(document).ready(function() {
         jQuery("a#zoom360").fancybox({
                         'transitionIn'	:	'elastic',
                         'transitionOut'	:	'elastic',
                         'speedIn'		:	600, 
                         'speedOut'		:	200, 
-                        'width':400,
-                        'height':400
+                        'width':<?php echo $w; ?>,
+                        'height':<?php echo $h; ?>
                 });
     });
 </script>

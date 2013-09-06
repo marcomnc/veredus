@@ -169,6 +169,22 @@ L'attributo deve essere di tipo <strong>Text</strong>]]></comment>
                             <show_in_website>1</show_in_website>                            
                             <comment>Numero massimo di prodotti da considerare nel calcolo</comment>
                         </shop_by_plus_nritem>
+                        <zoom_360_height>
+                            <label>Zoom 360 Altezza</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>                            
+                            <comment>Altezza di default per lo Zoom 360</comment>
+                            <validate>validate-number</validate>
+                        </zoom_360_height>
+                        <zoom_360_width>
+                            <label>Zoom 360 Larghezza</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>                          
+                            <comment>Larghezza di default per lo Zoom 360</comment>
+                            <validate>validate-number</validate>
+                        </zoom_360_width>
                         <!--<category-brands>
                             <label>Categoria dei Brand</label>
                             <frontend_type>select</frontend_type>

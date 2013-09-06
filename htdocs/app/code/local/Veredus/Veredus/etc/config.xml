@@ -1,7 +1,7 @@
 <config>
     <modules>
         <Veredus_Veredus>
-            <version>0.1.5</version>
+            <version>0.1.6</version>
         </Veredus_Veredus>
     </modules>
     
@@ -182,6 +182,8 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
             <settings>
                 <shop_by_plus_gg>30</shop_by_plus_gg>
                 <shop_by_plus_nritem>10</shop_by_plus_nritem>
+                <zoom_360_height>800</zoom_360_height>
+                <zoom_360_width>500</zoom_360_width>
             </settings>
         </veredus>
     </default>

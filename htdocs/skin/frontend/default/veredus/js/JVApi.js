@@ -183,9 +183,10 @@ jQuery(document).ready(function(){
                 $('#'+id+" .options-container").remove();
             }
             var html = ""; 
-            
-            for (var i = 0; i < $this.find('option').length; i++) {            
-                if (i == 0 || (i%(opts.col+1)) == 0) {
+            var liCounter = 0;
+            for (var i = 0; i < $this.find('option').length; i++) {    
+            	html +="\n<!--"+ i + " - " + liCounter%(opts.col) + "-->";
+                if (i == 0 || (liCounter%(opts.col)) == 0) {
                     html += '<ul class="options" style="display:none">';
                 }
 
@@ -203,13 +204,14 @@ jQuery(document).ready(function(){
                         html += '<div class="select-li-value" rel="' + $this.find('option')[i].value + '">'+$this.find('option')[i].text+'</div>';
                     }                        
                     html += '</li>';
+                    liCounter++;
                 }
 
-                if (i == ($this.find('option').length - 1) || ( i != 0  &&  ((i%opts.col) == 0))) {
+                if (i == ($this.find('option').length - 1) || ( i != 0  &&  ((liCounter%opts.col) == 0))) {
                     html += "</ul>";
                 }
             }
-
+console.log(html);
             $("#"+id).append($('<div>', {'class': 'options-container', 'style': 'display:none; width:' + ($('#'+id).find('.mps-ui-select').outerWidth()-2) + 'px'}).append(html));
             
             $('#'+id+" .options").each(function(idx, elem) {
