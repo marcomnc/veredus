@@ -211,7 +211,7 @@ jQuery(document).ready(function(){
                     html += "</ul>";
                 }
             }
-console.log(html);
+
             $("#"+id).append($('<div>', {'class': 'options-container', 'style': 'display:none; width:' + ($('#'+id).find('.mps-ui-select').outerWidth()-2) + 'px'}).append(html));
             
             $('#'+id+" .options").each(function(idx, elem) {
@@ -408,8 +408,11 @@ var ChangeColor = function (element) {
                     var curVal = $(element).getValue(); 
                     var $elemToFire = null;
                     var $elemTiFireAlways = null;
-                    for(var i=0; i<$$('.more-views li').length; i++) {
+                    for(var i=0; i<$$('.more-views li').length; i++) {                        
                         var $elem = $$('.more-views li')[i];
+                        if ($elem.hasClassName('zoom-360')) {
+                            continue;
+                        }
                         eval('var data = {' + $elem.getAttribute('rel') + '}');
                         if (!$elem.hasClassName('always')) {                           
                            if ( data.value == curVal) {
