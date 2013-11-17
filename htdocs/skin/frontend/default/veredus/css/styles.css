@@ -2334,3 +2334,27 @@ button.btn-checkout span span{ font-size: 18px; background-position:100% 0; padd
 #product-attachment-specs-table.data-table tbody th,
 #product-attachment-specs-table.data-table tbody td { border-width: 0px }
 .collateral-box.attachment-specs {margin-top: 60px}
+
+#local_autocompleter { z-index:999; overflow: hidden; border:1px solid #b6b6b6; 
+                 padding:2px; position: relative;
+                 -webkit-border-radius: 4px;
+                 -moz-border-radius: 4px;
+                 border-radius: 4px; 
+        
+        background: #FFFFF; /* fallback */
+        background: -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#FFF)); /* Saf4+, Chrome */
+        background:                              -webkit-linear-gradient(top, #DDD, #FFF); /* Chrome 10+, Saf5.1+ */
+        background:                                 -moz-linear-gradient(top, #DDD, #FFF); /* FF3.6+ */
+        background:                                  -ms-linear-gradient(top, #DDD, #FFF); /* IE10 */
+        background:                                   -o-linear-gradient(top, #DDD, #FFF); /* Opera 11.10+ */
+        background:                                      linear-gradient(top, #DDD, #FFF); /* W3C */}
+#local_autocompleter ul { background-color:#f9f5f0; }
+#local_autocompleter li { text-align:left; border-bottom:1px solid #f4eee7; padding:2px 8px 1px 8px; cursor:pointer; width: 100% }
+#local_autocompleter li.odd { background-color:#fffefb; }
+#local_autocompleter li.selected { background: #DDD; /* fallback */
+        background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#DDD)); /* Saf4+, Chrome */
+        background:                              -webkit-linear-gradient(top, #FFF, #DDD); /* Chrome 10+, Saf5.1+ */
+        background:                                 -moz-linear-gradient(top, #FFF, #DDD); /* FF3.6+ */
+        background:                                  -ms-linear-gradient(top, #FFF, #DDD); /* IE10 */
+        background:                                   -o-linear-gradient(top, #FFF, #DDD); /* Opera 11.10+ */
+        background:                                      linear-gradient(top, #FFF, #DDD); /* W3C */}

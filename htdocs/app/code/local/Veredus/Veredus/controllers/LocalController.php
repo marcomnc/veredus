@@ -34,6 +34,32 @@ class Veredus_Veredus_LocalController extends Mage_Core_Controller_Front_Action
         
         $this->getResponse()->setBody(json_encode($return));
     }
+    
+    public function localajaxAction() {
+        $str = $this->getRequest()->getPost('billing:city');
+        $country = $this->getRequest()->getPost('country');
+        
+        $read = Mage::getSingleton('core/resource')->getConnection('core_read'); 
+        $select = "SELECT comune FROM veredus_comuni WHERE comune like '$str%' AND country_id = '$country'";
+        
+        $fetch = $read->FetchAll($select);
+        
+        $html = "";
+        if (sizeof($fetch) > 0) {
+         
+            $html = "<UL>";
+
+            foreach ($fetch as $record) {
+
+                $html .= "<LI>" . $record['comune'] . "</LI>";
+                
+            }
+            
+            $html .= "</UL>";
+        }
+        
+        $this->getResponse()->setBody($html);
+    }
 }
 
 ?>
