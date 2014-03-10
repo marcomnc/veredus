@@ -2,6 +2,7 @@ nbproject/
 htdocs/app/code/community/Phoenix/
 htdocs/app/code/core/
 htdocs/app/code/local/MpsSistemi/
+htdocs/app/code/local/SevenLike/
 htdocs/app/design/adminhtml/default/default/layout/
 htdocs/app/design/adminhtml/default/default/locale/
 htdocs/app/design/adminhtml/default/default/template/
@@ -10,11 +11,13 @@ htdocs/app/design/frontend/default/blank/
 htdocs/app/design/frontend/default/default/
 htdocs/app/design/frontend/default/iphone/
 htdocs/app/design/frontend/default/modern/
+htdocs/app/design/frontend/enterprise/
 htdocs/app/design/install/
 htdocs/app/etc/config.xml
 htdocs/app/etc/local.xml.additional
 htdocs/app/etc/local.xml.template
 htdocs/app/etc/local.xml
+htdocs/app/etc/modules/SevenLike_MailUp.xml
 htdocs/app/locale/
 htdocs/app/shell/
 htdocs/app/.htaccess
@@ -49,6 +52,7 @@ htdocs/LICENSE_EE*
 htdocs/mage
 htdocs/media/catalog/
 htdocs/media/customer/
+htdocs/media/css/
 htdocs/media/dhl/
 htdocs/media/downloadable/
 htdocs/media/favicon/
