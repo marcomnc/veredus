@@ -50,6 +50,7 @@ htdocs/LICENSE.html
 htdocs/LICENSE.txt
 htdocs/LICENSE_EE*
 htdocs/mage
+htdocs/media/captcha/
 htdocs/media/catalog/
 htdocs/media/customer/
 htdocs/media/css/

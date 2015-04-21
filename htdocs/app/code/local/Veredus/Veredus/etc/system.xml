@@ -185,6 +185,22 @@ L'attributo deve essere di tipo <strong>Text</strong>]]></comment>
                             <comment>Larghezza di default per lo Zoom 360</comment>
                             <validate>validate-number</validate>
                         </zoom_360_width>
+                        <veredusimportqta>
+                            <label>Percorso impostazione Qta</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>                          
+                            <show_in_website>1</show_in_website>
+                            <comment>Partenza dalla cartella var</comment>                            
+                        </veredusimportqta>
+                        <veredusimportlog>
+                            <label>Percorso impostazione Qta</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>                          
+                            <show_in_website>1</show_in_website>
+                            <comment>Partenza dalla cartella var</comment>                            
+                        </veredusimportlog>
                         <!--<category-brands>
                             <label>Categoria dei Brand</label>
                             <frontend_type>select</frontend_type>
