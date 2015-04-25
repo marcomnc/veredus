@@ -73,7 +73,7 @@ class Veredus_Veredus_Model_Integration_Qta {
             }
             $this->_log("Sposto il file");
             
-            $this->_io->MoveFile2Log($file);
+            $this->_io->MoveFile2Log($file['text']);
             
             
             $this->_log("Inizio la ricostruzione degli indici");
@@ -82,7 +82,6 @@ class Veredus_Veredus_Model_Integration_Qta {
             $pProcess->reindexAll();
 
             $this->_log("terminata la ricorstruzione degli indici");
-            
             $this->_io->SaveLog($this->_logMessage);
         }
         
@@ -91,8 +90,8 @@ class Veredus_Veredus_Model_Integration_Qta {
     }   
     
     private function _log($message) {
-        $dt = new DateTime();
-        $this->_logMessage[] = array($dt->getTimestamp(), $message);
+        $dt = date("Ymd") . "T" . date("His") ;
+        $this->_logMessage[] = array($dt, $message);
     }
     
    

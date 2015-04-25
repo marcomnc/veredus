@@ -184,23 +184,7 @@ L'attributo deve essere di tipo <strong>Text</strong>]]></comment>
                             <show_in_default>1</show_in_default>                          
                             <comment>Larghezza di default per lo Zoom 360</comment>
                             <validate>validate-number</validate>
-                        </zoom_360_width>
-                        <veredusimportqta>
-                            <label>Percorso impostazione Qta</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>50</sort_order>
-                            <show_in_default>1</show_in_default>                          
-                            <show_in_website>1</show_in_website>
-                            <comment>Partenza dalla cartella var</comment>                            
-                        </veredusimportqta>
-                        <veredusimportlog>
-                            <label>Percorso impostazione Qta</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>51</sort_order>
-                            <show_in_default>1</show_in_default>                          
-                            <show_in_website>1</show_in_website>
-                            <comment>Partenza dalla cartella var</comment>                            
-                        </veredusimportlog>
+                        </zoom_360_width>                        
                         <!--<category-brands>
                             <label>Categoria dei Brand</label>
                             <frontend_type>select</frontend_type>
@@ -249,6 +233,59 @@ L'attributo deve essere di tipo <strong>Text</strong>]]></comment>
                     </fields>
                 </country>-->
              </groups>
-        </veredus>
+        </veredus>    
+        <integration>
+            <label>Importazione dati</label>
+            <tab>veredus</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>998</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <importqta>
+                    <label>Importazione quantita</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <fields>
+                        <veredusimportqta>
+                            <label>Percorso impostazione Qta</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>                          
+                            <show_in_website>0</show_in_website>
+                            <comment>Partenza dalla cartella var</comment>                            
+                        </veredusimportqta>
+                        <veredusimportlog>
+                            <label>Percorso impostazione Qta</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>                          
+                            <show_in_website>0</show_in_website>
+                            <comment>Partenza dalla cartella var</comment>                            
+                        </veredusimportlog>
+                        <veredusarchiveqta>
+                            <label>Archivia File Importati</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>                          
+                            <show_in_website>0</show_in_website>
+                            <comment>Se attivo archivia i file importati</comment>                            
+                        </veredusarchiveqta>
+                        <veredusarchivelog>
+                            <label>Archivia File di Log</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>                          
+                            <show_in_website>0</show_in_website>
+                            <comment>Se attivo archivia il log delle importazioni</comment>                            
+                        </veredusarchivelog>
+                    </fields>
+                </importqta>
+            </groups>
+        </integration>
     </sections>
 </config>

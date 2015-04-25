@@ -28,19 +28,22 @@ class Veredus_Veredus_Model_Integration_Io {
     protected $_path;
     protected $_ioFile;
     protected $_fileSize;
-
     
     protected $_pathTypeLog;
     protected $_pathLog;
     
     protected $_logName;
 
+    protected $_archiveQta = 0;
+    protected $_archiveLog = 0;
 
 
     public function __construct($pathType) {
-        $this->_pathType = Mage::getStoreConfig('veredus/settings/' . $pathType[0]);
-        $this->_pathTypeLog = Mage::getStoreConfig('veredus/settings/' . $pathType[1]);
+        $this->_pathType = Mage::getStoreConfig('integration/importqta/' . $pathType[0]);
+        $this->_pathTypeLog = Mage::getStoreConfig('integration/importqta/' . $pathType[1]);
         
+        $this->_archiveQta =  Mage::getStoreConfig('integration/importqta/veredusarchiveqta');
+        $this->_archiveLog =  Mage::getStoreConfig('integration/importqta/veredusarchivelog');
     }
     
     public function getIoAdapter()
@@ -127,10 +130,13 @@ class Veredus_Veredus_Model_Integration_Io {
     public function MoveFile2Log($file) {
         $this->_logName = date("Ymd") . "T" . date("His") . "_" . $file ;
        
-        if (file_exists($this->getPathLog())) {
-            $this->getIoAdapter()->cd($this->getPath());           
-     
-            $this->getIoAdapter()->mv($file, '../log'. $this->_logName .".bck" );
+        $this->getIoAdapter()->cd($this->getPath());           
+        
+        if ($this->_archiveQta) {
+            
+            $this->getIoAdapter()->mv($file, $this->_logName .".bak" );
+        } else {
+            $this->getIoAdapter()->rm($file);
         }
         
     }
@@ -139,13 +145,15 @@ class Veredus_Veredus_Model_Integration_Io {
         
         $this->getIoAdapter()->cd($this->getPathLog());
 
-        $this->open($this->_logName. ".log" );
-        
-        foreach ($log as $row) {
-            $this->getIoAdapter()->streamWriteCsv($row,' ', '');
+        if ($this->_archiveLog) {
+            $this->open($this->_logName. ".log" );
+
+            foreach ($log as $row) {
+                $this->getIoAdapter()->streamWrite("{$row[0]} - {$row[1]}\n");
+            }
+
+            $this->close();
         }
-        
-        $this->close();
         
     }
 

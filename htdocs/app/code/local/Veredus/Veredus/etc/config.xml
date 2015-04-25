@@ -136,6 +136,9 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
                                         <veredus>
                                             <title>Template configuration</title>
                                         </veredus>
+                                        <integration>
+                                            <title>Importazioni</title>
+                                        </integration>
                                     </children>
                                 </config>
                             </children>
@@ -184,11 +187,16 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
                 <shop_by_plus_nritem>10</shop_by_plus_nritem>
                 <zoom_360_height>800</zoom_360_height>
                 <zoom_360_width>500</zoom_360_width>
-            
-                <veredusimportqta>/import/qta</veredusimportqta>
-                <veredusimportlog>/import/log</veredusimportlog>
             </settings>
         </veredus>
+        <integration>
+            <importqta>
+                <veredusimportqta>/import/qta</veredusimportqta>
+                <veredusimportlog>/import/log</veredusimportlog>
+                <veredusarchiveqta>0</veredusarchiveqta>
+                <veredusarchivelog>0</veredusarchivelog>
+            </importqta>
+        </integration>
     </default>
     
     
@@ -204,7 +212,7 @@ http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_devel
             </veredus_calculate_index>
             <veredus_import_qta>
                 <schedule>
-                    <cron_expr>*/1 * * * *</cron_expr>
+                    <cron_expr>*/10 * * * *</cron_expr>
                 </schedule>
                 <run>
                     <model>veredus/observer::ImportQty</model>
